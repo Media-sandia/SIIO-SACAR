@@ -1,0 +1,22 @@
+@font-face {
+    font-family:Pill-bold-custom ;
+    src: url(../Fuentes/Pill\ Gothic\ 300mg\ Bold/);
+  } 
+  @font-face {
+    font-family:Pill-regular-custom ;
+    src: url(../Fuentes/Pill\ Gothic\ 300mg\ Regular/);
+  } 
+  
+  @font-face {
+    font-family: Pill-semibd-custom;
+    src: url(../Fuentes/Pill\ Gothic\ 300mg\ Semibd/);
+  } 
+
+  @font-face {
+    font-family: Pill-semi;
+    src: url(../Fuentes/pill/Pill_Gothic_300mg_Regular.ttf) format(truetype);
+  }
+
+  h1 .hi{
+      color: blue;
+  }
