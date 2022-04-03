@@ -1,5 +1,6 @@
-<form action="#" class="form_section form-inline" id="form_section1">
-
+<form action="{{ route('saveSection1') }}" class="form_section form-inline" id="form_section1" method="post"
+    enctype="multipart/form-data">
+    @csrf
     <fieldset class="container">
         <h3 class="txt_secction color-title-sacar">1.1 PRUEBA DEL PUENTE</h3>
 
@@ -306,9 +307,16 @@
             </select>
             <input type="text" class="form-control form-control-sm col-5" name="C2.1" placeholder="Comentario">
         </div>
+
+        Archivo para subida: <input type="file" name="file[]" multiple>
+        <div class="mt-3 text-center">
+            <label for="">Comentario</label>
+            <textarea name="body" class="form-control" id="" cols="40" rows="5"></textarea>
+        </div>
         <input type="button" name="previous" class="previous btn btn-primary txt_secction" value="Anterior" />
-        <input type="button" name="password" class="next btn btn-sacar" onclick="btn_secction001();" value="Guardar" />
-        <!-- Button trigger modal -->
+        {{-- <input type="button" name="password" class="next btn btn-sacar"  value="Guardar" /> --}}
+        <button type="submit" name="password" class="next btn btn-sacar">Guardar</button>
+        {{-- <!-- Button trigger modal -->
         <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modelId">
             Launch
         </button>
@@ -347,7 +355,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
     </fieldset>
 
 </form>

@@ -4,62 +4,92 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\ClienteGrua;
+use App\Models\coments;
+use App\Models\Fileables;
 use App\Models\Gruas;
 use App\Models\seccion3;
 use PDF;
 
 class HomeController extends Controller
 {
-    public function __construct(){
+    public function __construct()
+    {
         $this->middleware('auth');
-    } 
-
-    public function setfiles(Request $request){
-        dd($request->file("file"));
     }
 
-    public function home(){
+    public function saveSection1(Request $request)
+    {
+        $section = new seccion3();
+        $section->data = $request->all();
+        $section->save();
+        $comment = new coments();
+        $comment->body = $request->body;
+        $comment->save();
+        $files = $request->file('file', []);
+        for ($i = 0; $i < count($files); $i++) {
+            $file = new Fileables();
+            $file->Fileable_type = seccion3::class;
+            $file->Fileable_id = $section->id;
+            $file->id_coment = $comment->id;
+
+            $file->uri = $files[$i]->store('images');
+            $file->name = $files[$i]->getClientOriginalName();
+            $file->save();
+        }
+    }
+
+    public function home()
+    {
         return view('Layaut.layaut');
     } //Clientes
 
-    public function teams(){
+    public function teams()
+    {
         return view('sigs.table-teams');
-    } 
+    }
 
-    public function customers(){
+    public function customers()
+    {
         return view('sigs.table-clientesP');
     }
 
-    public function process_cliente(Request $request){
+    public function process_cliente(Request $request)
+    {
         ClienteGrua::create(request()->all());
-        return response()->json(['status'=>1]);
+        return response()->json(['status' => 1]);
     }
 
-    public function dataClientes(){
+    public function dataClientes()
+    {
         $clientes = ClienteGrua::all();
         return response()->json($clientes);
     }
 
-    public function process_teams(Request $request){
+    public function process_teams(Request $request)
+    {
         Gruas::create(request()->all());
-        return response()->json(['status'=>1]);
+        return response()->json(['status' => 1]);
     }
 
-    public function load_empresas($val){
-        $empresas = ClienteGrua::where('Sucursal',$val)->get();
+    public function load_empresas($val)
+    {
+        $empresas = ClienteGrua::where('Sucursal', $val)->get();
         return response()->json($empresas);
-    } 
+    }
 
-    public function load_business($val){
+    public function load_business($val)
+    {
         $business = ClienteGrua::find($val)->Grua;
         return response()->json($business);
     }
 
-    public function NewReport(){
+    public function NewReport()
+    {
         return view('sigs.nuevo-registro');
     }
 
-    public function pruebas(Request $request){
+    public function pruebas(Request $request)
+    {
         $seccion = new seccion3();
         $seccion->data = $request->all();
         $seccion->save();
@@ -83,23 +113,20 @@ class HomeController extends Controller
         }**/
         //$var = filled($request->all()); 
         //$array = array([$request->response[0]=>filled($request->data[0]),
-                        //$request->response[1]=>filled($request->data[1]),
-                        //$request->response[2]=>filled($request->data[2])]); 
-        
+        //$request->response[1]=>filled($request->data[1]),
+        //$request->response[2]=>filled($request->data[2])]); 
+
         //return response()->json(count($newarray));
     }
 
-    public function validator_folio(){
-
+    public function validator_folio()
+    {
     }
 
-    public function pdf_prueba(){
+    public function pdf_prueba()
+    {
         $vista = view('PDF.master');
         $pdf = PDF::loadHTML($vista);
         return $pdf->stream('Pruebas.pdf');
     }
-   
-
-
-
 }
