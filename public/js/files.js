@@ -32,12 +32,7 @@ $(document).ready(function () {
             Data.append("file", arrayFiles[i]);
 
             $.ajax({
-                headers: {
-                    "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr(
-                        "content"
-                    ),
-                },
-
+                headers: {"X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content"),},
                 type: "POST",
                 url: "/NuevoRegistro/setfiles",
                 data: Data,
