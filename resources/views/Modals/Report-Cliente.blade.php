@@ -1,9 +1,10 @@
-<div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="staticBackdropLabel">Selecciona Cliente</h5>
-        </div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Selecciona Cliente</h5>
+            </div>
             <div class="modal-body">
                 <div class="container">
                     <div class="col-md-12">
@@ -17,23 +18,29 @@
                             <option value="SONORA">SONORA</option>
                             <option value="PUEBLA">PUEBLA</option>
                         </select>
-                    </div> 
-                    
+                    </div>
+
                     <div class="col-md-12 mt-2">
                         <label for="Nom_empresa" class="form-label"><strong></strong>Empresa</label>
                         <select class="form-control form-control-sm" name="" id="select_empresa_report">
                         </select>
+                        <div id="error_empresa"></div>
                     </div>
 
                     <div class="col-md-12 mt-2">
-                        <label for="Nom_empresa" class="form-label"><strong></strong>Numero De Serie Del Equipo</label>
+                        <label for="Nom_empresa" class="form-label"><strong></strong>Numero De Serie Del
+                            Equipo</label>
                         <select class="form-control form-control-sm" name="" id="select-equipo-report">
                         </select>
+                        <div id="error_equipo"></div>
                     </div>
-                </div><!--end container--> 
-            </div><!--end modal-body--> 
+                </div>
+                <!--end container-->
+            </div>
+            <!--end modal-body-->
             <div class="modal-footer">
-                <button type="button" class="btn btn-primary btn-sm" data-dismiss="modal">Aceptar</button>
+                <button type="button" class="btn btn-danger btn-sm" id="close_report_customers">Cancelar</button>
+                <button type="button" class="btn btn-primary btn-sm" id="validate_report_customers">Aceptar</button>
             </div>
         </div>
     </div>

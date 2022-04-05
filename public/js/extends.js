@@ -1,23 +1,48 @@
 $(document).ready(function () {
-    var checkbox = $('.seccion3'); 
+    var checkbox = $(".seccion3");
 
-   
+    $("#form_section1").submit(function (e) {
+        e.preventDefault();
+        $.ajax({
+            type: $(this).attr("method"),
+            url: $(this).attr("action"),
+            headers: {
+                "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content"),
+            },
+            data: new FormData(this),
+            dataType: "json",
+            cache: false,
+            contentType: false,
+            processData: false,
+            success: function (response) {
+                if (data.status == 1) {
+                    success();
+                    $("#secction-002").fadeToggle(800);
+                } else {
+                    console.log("Error");
+                }
+            },
+        });
+    });
 
-    var current = 1,current_step,next_step,steps;
+    var current = 1,
+        current_step,
+        next_step,
+        steps;
     steps = $("fieldset").length;
-    $(".next").click(function(){
-      current_step = $(this).parent()
-      next_step = $(this).parent().next()
-      next_step.show();
-      current_step.hide();
+    $(".next").click(function () {
+        current_step = $(this).parent();
+        next_step = $(this).parent().next();
+        next_step.show();
+        current_step.hide();
     });
-    $(".previous").click(function(){
-      current_step = $(this).parent();
-      next_step = $(this).parent().prev()
-      next_step.show();
-      current_step.hide();
+    $(".previous").click(function () {
+        current_step = $(this).parent();
+        next_step = $(this).parent().prev();
+        next_step.show();
+        current_step.hide();
     });
-    
+
     /**var current = 1,current_step,next_step,steps;
     steps = $(".fieldset").length;
     $(".next").click(function(){
@@ -35,28 +60,26 @@ $(document).ready(function () {
       current_step.hide();
       //setProgressBar(--current);
     }); **/
-    assig_empresa();  
+    assig_empresa();
 
-    $('#btn-data-img').click(function(){
-        event.preventDefault(); 
+    $("#btn-data-img").click(function () {
+        event.preventDefault();
         Swal.fire({
-            title: 'Deseas agrgar mas imagenes?',
+            title: "Deseas agrgar mas imagenes?",
             showDenyButton: true,
             showCancelButton: true,
-            confirmButtonText: 'si',
+            confirmButtonText: "si",
             denyButtonText: `No`,
-          }).then((result) => {
+        }).then((result) => {
             /* Read more about isConfirmed, isDenied below */
             if (result.isConfirmed) {
             } else if (result.isDenied) {
-                Swal.fire('Saved!', '', 'success')
-                pdf(); 
+                Swal.fire("Saved!", "", "success");
+                pdf();
             }
-          })
+        });
     });
 
-
-   
     /**setProgressBar(current);
     // Change progress bar action
     function setProgressBar(curStep){
@@ -67,85 +90,86 @@ $(document).ready(function () {
         .html(percent+"%");   
     }**/
     form_hiden();
-    
+
     //select_clientes();
     //load_data();
     //select_sucursal()
-    $('#loading').hide();
-    
-    //$('#table_clientes').DataTable()
-    
-    $('#btn-modal').click(function () {
-        event.preventDefault();
-        $('#exampleModal').modal('show');
-    }); 
+    $("#loading").hide();
 
-    $('#btn-modal-clientes').click(function(){
+    //$('#table_clientes').DataTable()
+
+    $("#btn-modal").click(function () {
         event.preventDefault();
-        $('#modal-clientes').modal('show');
+        $("#exampleModal").modal("show");
     });
 
-    $('#btn-send').click(function () {
+    $("#btn-modal-clientes").click(function () {
         event.preventDefault();
-        var route = $('#new-equipo').data('uri') 
+        $("#modal-clientes").modal("show");
+    });
+
+    $("#btn-send").click(function () {
+        event.preventDefault();
+        var route = $("#new-equipo").data("uri");
         $.ajax({
-            url:route,
-            type:'POST',
-        	headers:{'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
-        	dataType: 'json',
-        	data:$('#new-equipo').serialize(),
-            success:function(data){
-               console.log(data)
-                if(data.status === 1){
-                success();
-               } else{
-                   console.log('Error')
-               }
-            }
-        })
-    }) 
-
-    /**$('#pruebas').click(function(event){
-        event.preventDefault(); 
-        $.ajax({
-            url:'NuevoRegistro/pruebas',
-            type:'POST',
-            headers:{'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
-            dataType:'json',
-            data:$('#prueba-radio').serialize(),
-            success:function(data){
-                console.log(data);
-            }
-
-        });
-    });**/
-
-    $('#view-form').click(function(event){
-        event.preventDefault(); 
-        //$('#secction-001').fadeToggle(800);
-        let timerInterval
-            Swal.fire({
-            title: 'Validando Folio',
-            html: 'Espere Porfavor <b></b>.',
-            timer: 1000,
-            timerProgressBar: true,
-            didOpen: () => {
-                Swal.showLoading()
-                const b = Swal.getHtmlContainer().querySelector('b')
-                timerInterval = setInterval(() => {
-                b.textContent = Swal.getTimerLeft()
-                }, 100)
+            url: route,
+            type: "POST",
+            headers: {
+                "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content"),
             },
-            willClose: () => {
-                clearInterval(timerInterval)
-            }
+            dataType: "json",
+            data: $("#new-equipo").serialize(),
+            success: function (data) {
+                console.log(data);
+                if (data.status === 1) {
+                    success();
+                } else {
+                    console.log("Error");
+                }
+            },
+        });
+    });
+
+    $("#view-form").click(function (event) {
+        event.preventDefault();
+        var Folio_service = $("#Folio_servicio").val();
+        var date_service = $("#Fecha_Servicio").val();
+        if (Folio_service == null || Folio_service == "") {
+            validate_Erros();
+            $("#error_Folio_hide").remove();
+            $("#error_Folio").append(
+                "<font color='#BF4949' size='2' id='error_Folio_hide'>Este Campo Es Oblogatorio</font>"
+            );
+        } else if (date_service == null || date_service == "") {
+            validate_Erros();
+            $("#error_Fecha_hide").remove();
+            $("#error_Fecha").append(
+                "<font color='#BF4949' size='2' id='error_Fecha_hide'>Este Campo Es Oblogatorio</font>"
+            );
+        } else {
+            let timerInterval;
+            Swal.fire({
+                title: "Validando Folio",
+                html: "Espere Porfavor <b></b>.",
+                timer: 1000,
+                timerProgressBar: true,
+                didOpen: () => {
+                    Swal.showLoading();
+                    const b = Swal.getHtmlContainer().querySelector("b");
+                    timerInterval = setInterval(() => {
+                        b.textContent = Swal.getTimerLeft();
+                    }, 100);
+                },
+                willClose: () => {
+                    clearInterval(timerInterval);
+                },
             }).then((result) => {
-            if (result.dismiss === Swal.DismissReason.timer) {
-                $('#secction-001').fadeToggle(800);
-            }
-})
-        
-        
+                if (result.dismiss === Swal.DismissReason.timer) {
+                    $("#secction-001").fadeToggle(800);
+                }
+            });
+        }
+
         /**$.ajax({
             url:'',
             type:'POST',
@@ -156,37 +180,66 @@ $(document).ready(function () {
                 console.log(data);
             }
         });**/
-    }); 
+    });
 
     form_hiden();
-    Empresas_Report();  
-    Equipos_Report();  
-    
-    Dropzone.options.myGreatDropzone = { // camelized version of the `id`
-        paramName: "file", // The name that will be used to transfer the file
-        maxFilesize: 4, // MB
-        maxFiles:4,
-        accept: function(file, done) {
-          if (file.name == "justinbieber.jpg") {
-            done("Naha, you don't.");
-          }
-          else { done(); }
+    Empresas_Report();
+    Equipos_Report();
+
+    $("#close_report_customers").click(function (e) {
+        e.preventDefault();
+        $("#staticBackdrop").modal("hide");
+        //$(location).attr("href", "/");
+    });
+
+    $("#validate_report_customers").click(function (e) {
+        e.preventDefault();
+        var team = $("#select-equipo-report").val();
+        var business = $("#select_empresa_report").val();
+
+        if (business === null || business == 0) {
+            validate_Erros();
+            $("#error_business_hide").remove();
+            $("#error_empresa").append(
+                "<font color='#BF4949' size='2' id='error_business_hide'>Este Campo Es Oblogatorio</font>"
+            );
+        } else if (team == 0) {
+            validate_Erros();
+            $("#error_team_hide").remove();
+            $("#error_equipo").append(
+                "<font color='#BF4949' size='2' id='error_team_hide'>Este Campo Es Oblogatorio</font>"
+            );
+        } else {
+            $("#id_equipo").val(team);
+            $("#error_team_hide").remove();
+            $("#error_business_hide").remove();
+            $("#staticBackdrop").modal("hide");
         }
-      };
+    });
+}); // fin del document ready
 
-})// fin del document ready  
-
-function check(checkbox){
-    var subseccion = checkbox.filter(':checked').map(function(){
-        return $(this).attr('name');
-     }).get();
-     console.log(subseccion)
+function check(checkbox) {
+    var subseccion = checkbox
+        .filter(":checked")
+        .map(function () {
+            return $(this).attr("name");
+        })
+        .get();
+    console.log(subseccion);
 }
 
+function validate_Erros() {
+    toastr.error(
+        "Hay algunos errores de validación, corrígelos.",
+        "Error de validación",
+        {
+            timeOut: 4000,
+            positionClass: "toast-top-full-width",
+        }
+    );
+}
 
-
-function form_hiden(){
-    
+function form_hiden() {
     $("#secction-001").css("display", "none");
     $("#secction-002").css("display", "none");
     $("#secction-003").css("display", "none");
@@ -200,20 +253,18 @@ function form_hiden(){
     $("#secction-011").css("display", "none");
     $("#secction-anexos").css("display", "none");
     //$("#secction-004").css("display", "none");
-
 }
 
-function Uppercase(exp){
+function Uppercase(exp) {
     exp.value = exp.value.toUpperCase();
 }
 
-function pdf(){
-    $('#ejemplo_reporte').click(function(){
-        event.preventDefault()
-        var route = 'Reporte/prueba';
-        return window.open(route ,'Prueba');
+function pdf() {
+    $("#ejemplo_reporte").click(function () {
+        var route = "Reporte/prueba";
+        return window.open(route, "Prueba");
         //$('#staticBackdrop').modal('show');
-    })
+    });
 }
 
 /**function load_data(){
@@ -228,26 +279,29 @@ function pdf(){
     })
 }**/
 
-function show_clientes(response){
-    var table_clien = $('#table_clientes').DataTable({
-        "processing": true,
-		"scroller": false,
-		"pageLength": 15,
-		"data": response,
-        "columns":[
-            {data:'Nom_empresa'},
-            {data:'id_sucursal'},
-            {data:'Marca'},
-            {data:'Modelo'},
-            {data: null,
+function show_clientes(response) {
+    var table_clien = $("#table_clientes").DataTable({
+        processing: true,
+        scroller: false,
+        pageLength: 15,
+        data: response,
+        columns: [
+            { data: "Nom_empresa" },
+            { data: "id_sucursal" },
+            { data: "Marca" },
+            { data: "Modelo" },
+            {
+                data: null,
                 orderable: false,
-                render:function(data, type, row){
-                    return "<button class='Editar btn btn-outline-success btn-sm btn-rounded ml-1' id='editar'><i class='fas fa-edit'></i></button>"+
-                           "<button class='Eliminar btn btn-outline-danger btn-sm btn-rounded ml-1'><i class='fas fa-trash-alt'></i></button>";
-                }
-            }
-        ]
-    })// fin de la tabla clientes
+                render: function (data, type, row) {
+                    return (
+                        "<button class='Editar btn btn-outline-success btn-sm btn-rounded ml-1' id='editar'><i class='fas fa-edit'></i></button>" +
+                        "<button class='Eliminar btn btn-outline-danger btn-sm btn-rounded ml-1'><i class='fas fa-trash-alt'></i></button>"
+                    );
+                },
+            },
+        ],
+    }); // fin de la tabla clientes
 }
 
 /**function select_sucursal(){
@@ -263,65 +317,79 @@ function show_clientes(response){
             });//select_clientes
         }
     });
-}**/ 
+}**/
 
-function assig_empresa(){
-    $('#sucursal_empresa').change(function(){
-        var val =  $('#sucursal_empresa').val();
+function assig_empresa() {
+    $("#sucursal_empresa").change(function () {
+        var val = $("#sucursal_empresa").val();
         //console.log(val);
         $.ajax({
-            url:'teams/dataClientes/'+val+'',
-            type:'GET',
-            dataType:'json',
-            success:function(data){
-            $('#select_empresa').empty();
-            $('#select_empresa').append("<option selected='selected'>- Selecciona -</option>");
-            $.each(data,function(k,v){
-                $('#select_empresa').append("<option value='"+v.id+"'>"+v.Nom_empresa+"</option>");
-            }); 
-            
-            $('#select_empresa').change(function(){
-                var val1 =  $('#select_empresa').val(); 
-                $('#id_cliente').val(val1);
-                var newArr = data.filter(function(el){
-                    return (el.id == val1);
-                });  
+            url: "teams/dataClientes/" + val + "",
+            type: "GET",
+            dataType: "json",
+            success: function (data) {
+                $("#select_empresa").empty();
+                $("#select_empresa").append(
+                    "<option selected='selected'>- Selecciona -</option>"
+                );
+                $.each(data, function (k, v) {
+                    $("#select_empresa").append(
+                        "<option value='" +
+                            v.id +
+                            "'>" +
+                            v.Nom_empresa +
+                            "</option>"
+                    );
+                });
 
-                $.each(newArr,function(k,v){
-                    $('#Direccion').val(v.Direccion);
-                    $('#Contacto').val(v.Contacto);
-                })
+                $("#select_empresa").change(function () {
+                    var val1 = $("#select_empresa").val();
+                    $("#id_cliente").val(val1);
+                    var newArr = data.filter(function (el) {
+                        return el.id == val1;
+                    });
 
-            });
-            }
-        });// fin de la funcion ajax
+                    $.each(newArr, function (k, v) {
+                        $("#Direccion").val(v.Direccion);
+                        $("#Contacto").val(v.Contacto);
+                    });
+                });
+            },
+        }); // fin de la funcion ajax
     });
-}  
+}
 
-function Empresas_Report(){
-    $('#select_sucursal_Report').change(function(){
-        var val = $('#select_sucursal_Report').val();
-        $('#select_empresa_report').empty();
-        $('#select_empresa_report').append("<option selected='selected'>- Selecciona -</option>");
-        $.each(Empresas(val),function(k,v){
-            $('#select_empresa_report').append("<option value='"+v.id+"'>"+v.Nom_empresa+"</option>")
+function Empresas_Report() {
+    $("#select_sucursal_Report").change(function () {
+        var val = $("#select_sucursal_Report").val();
+        $("#select_empresa_report").empty();
+        $("#select_empresa_report").append(
+            "<option selected='selected'  value='0'>- Selecciona -</option>"
+        );
+        $.each(Empresas(val), function (k, v) {
+            $("#select_empresa_report").append(
+                "<option value='" + v.id + "'>" + v.Nom_empresa + "</option>"
+            );
         });
-
     });
-} 
-function Equipos_Report(){
-    $('#select_empresa_report').change(function(){
-        var val = $('#select_empresa_report').val();
-        $('#select-equipo-report').empty();
-        $('#select-equipo-report').append("<option selected='selected'>- Selecciona -</option>");
-        $.each(Equipos(val),function(k,v){
-            $('#select-equipo-report').append("<option value='"+v.id+"'>"+v.N_serie+"</option>")
+}
+function Equipos_Report() {
+    $("#select_empresa_report").change(function () {
+        var val = $("#select_empresa_report").val();
+        $("#select-equipo-report").empty();
+        $("#select-equipo-report").append(
+            "<option selected='selected' value='0'>- Selecciona -</option>"
+        );
+        $.each(Equipos(val), function (k, v) {
+            $("#select-equipo-report").append(
+                "<option value='" + v.id + "'>" + v.N_serie + "</option>"
+            );
         });
-    }); 
-   
-    $('#select-equipo-report').change(function(){
-        var val1 = $('#select-equipo-report').val();
-        var response = Equipos(val1); 
+    });
+
+    $("#select-equipo-report").change(function () {
+        var val1 = $("#select-equipo-report").val();
+        var response = Equipos(val1);
         console.log(response);
         /**var newArr = response.filter(function(el){
             return (el.id == val1);
@@ -334,55 +402,55 @@ function Equipos_Report(){
     });
 }
 
-function Equipos(val){
+function Equipos(val) {
     var response;
     $.ajax({
-        async:false,
-        url:'NuevoRegistro/business/'+val+'',
-        type:'GET',
-        dataType:'json',
-        success:function(data){
-            response = (data)
-        }
+        async: false,
+        url: "NuevoRegistro/business/" + val + "",
+        type: "GET",
+        dataType: "json",
+        success: function (data) {
+            response = data;
+        },
     });
-    return response
+    return response;
 }
 
-function Empresas(val){
+function Empresas(val) {
     var response;
     $.ajax({
-        async:false,
-        url:'teams/dataClientes/'+val+'',
-        type:'GET',
-        dataType:'json',
-        success:function(data){
-            response = (data)
-        }
+        async: false,
+        url: "teams/dataClientes/" + val + "",
+        type: "GET",
+        dataType: "json",
+        success: function (data) {
+            response = data;
+        },
     });
-    return response
+    return response;
 }
 
-function send_customers(){
-    var route = $('#new-customers').data('uri')  
+function send_customers() {
+    var route = $("#new-customers").data("uri");
     $.ajax({
-        url:route,
-        type:'POST',
-        headers:{'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
-        dataType:'json',
-        data:$('#new-customers').serialize(),
-        success:function(data){
+        url: route,
+        type: "POST",
+        headers: {
+            "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content"),
+        },
+        dataType: "json",
+        data: $("#new-customers").serialize(),
+        success: function (data) {
             //console.log(data);
-            if(data.status === 1){
+            if (data.status === 1) {
                 success();
-            }
-            else{
-                console.log('Error');
+            } else {
+                console.log("Error");
             }
             //show_clientes(data);
-        }
-    })
+        },
+    });
 }
-
 
 /**function select_clientes(){
     $.ajax({
@@ -400,47 +468,46 @@ function send_customers(){
     });
 }**/
 
-function check(check){
-    var check = $('.form-check-input');
-    var subseccion = check.filter(':checked').map(function(){
-        return $(this).value();
-    }).get();
+function check(check) {
+    var check = $(".form-check-input");
+    var subseccion = check
+        .filter(":checked")
+        .map(function () {
+            return $(this).value();
+        })
+        .get();
     console.log(subseccion);
 }
 
-function reset_form(){
-    $('#new-empresa')[0].reset();
-    $('#select_sucursal' ).val('').trigger('change');
-} 
+function reset_form() {
+    $("#new-empresa")[0].reset();
+    $("#select_sucursal").val("").trigger("change");
+}
 
 /** funciones de mensajes del sistemas*/
 
-function success(){
-    Swal.fire(
-        'Exito!',
-        'Registro Guardado',
-        'success'
-    ) 
+function success() {
+    Swal.fire("Exito!", "Registro Guardado", "success");
 }
 
 /** Funciones de los botones del formulario por secciones**/
 
-function btn_secction001(){
-    success()
-    $('#secction-002').fadeToggle(800);
-}
-
-function btn_secction002(){
-    success()
-    $('#secction-002').fadeToggle();
-    $('#secction-003').fadeToggle(800);
-}
-
-function btn_secction003(){
+function btn_secction001() {
     success();
-    $('#secction-003').fadeToggle();
-    $('#secction-004').fadeToggle(800);
-   
+    $("#secction-002").fadeToggle(800);
+}
+
+function btn_secction002() {
+    success();
+    $("#secction-002").fadeToggle();
+    $("#secction-003").fadeToggle(800);
+}
+
+function btn_secction003() {
+    success();
+    $("#secction-003").fadeToggle();
+    $("#secction-004").fadeToggle(800);
+
     /**var checkbox = $('.seccion3');
     var title = $('.title-3');
 
@@ -471,52 +538,50 @@ function btn_secction003(){
         });**/
 }
 
-function btn_secction004(){
-    success()
-    $('#secction-004').fadeToggle();
-    $('#secction-005').fadeToggle(800);
+function btn_secction004() {
+    success();
+    $("#secction-004").fadeToggle();
+    $("#secction-005").fadeToggle(800);
 }
 
-function btn_secction005(){
-    success()
-    $('#secction-005').fadeToggle();
-    $('#secction-006').fadeToggle(800);
+function btn_secction005() {
+    success();
+    $("#secction-005").fadeToggle();
+    $("#secction-006").fadeToggle(800);
 }
 
-function btn_secction006(){
-    success()
-    $('#secction-006').fadeToggle();
-    $('#secction-007').fadeToggle(800);
+function btn_secction006() {
+    success();
+    $("#secction-006").fadeToggle();
+    $("#secction-007").fadeToggle(800);
 }
 
-function btn_secction007(){
-    success()
-    $('#secction-007').fadeToggle();
-    $('#secction-008').fadeToggle(800);
+function btn_secction007() {
+    success();
+    $("#secction-007").fadeToggle();
+    $("#secction-008").fadeToggle(800);
 }
 
-function btn_secction008(){
-    success()
-    $('#secction-008').fadeToggle();
-    $('#secction-009').fadeToggle(800);
+function btn_secction008() {
+    success();
+    $("#secction-008").fadeToggle();
+    $("#secction-009").fadeToggle(800);
 }
 
-function btn_secction009(){
-    success()
-    $('#secction-009').fadeToggle();
-    $('#secction-010').fadeToggle(800);
-} 
-
-function btn_secction010(){
-    success()
-    $('#secction-010').fadeToggle();
-    $('#secction-011').fadeToggle(800);
+function btn_secction009() {
+    success();
+    $("#secction-009").fadeToggle();
+    $("#secction-010").fadeToggle(800);
 }
 
-function btn_secction011(){
-    success()
-    $('#secction-010').fadeToggle();
-    $('#secction-anexos').fadeToggle(800);
+function btn_secction010() {
+    success();
+    $("#secction-010").fadeToggle();
+    $("#secction-011").fadeToggle(800);
 }
 
-
+function btn_secction011() {
+    success();
+    $("#secction-010").fadeToggle();
+    $("#secction-anexos").fadeToggle(800);
+}

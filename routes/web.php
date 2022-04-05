@@ -2,12 +2,18 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Controller;
 use App\Http\Controllers\HomeController;
 
 
-Route::get('/files', function(){});// 
+
+Route::get('/files', function(){});
+
+Route::get('/welcome', function(){});
+
 
 Route::post('NuevoRegistro/setfiles', [HomeController::class,'setFiles']);
+Route::post('saveSection1', [HomeController::class,'saveSection1'])->name('saveSection1');
 
 
 Route::get('/', [LoginController::class,'ShowLoginForm'])->name('showlogin');

@@ -8,8 +8,15 @@
     <title>Reporte De Servicio</title>
 
     <style>
+        @font-face {
+            font-family: 'msyh';
+            font-style: normal;
+            font-weight: Bold !important;
+            src: url('{{ asset('fonts/pill/Pill_Gothic_300mg_Regular2.ttf') }}') format('truetype');
+        }
+
         body {
-            font-family: "RobotoCondensed-Regular";
+            font-family: 'msyh';
             text-transform: uppercase;
             color: #242b52;
             line-height: 1;
@@ -65,7 +72,7 @@
         }
 
         .formlabel {
-            font-family: "RobotoCondensed-Bold";
+            font-family: 'DejaVuSerif';
         }
 
         .textLeft {
@@ -81,7 +88,7 @@
         }
 
         .headerText {
-            font-family: "RobotoCondensed-Bold";
+            font-family: 'Pill-Regular';
             background-color: #061f5c;
             color: #FFF;
             font-size: 16px !important;
@@ -170,94 +177,94 @@
         }
 
         .borderL {
-            border-left: 1px solid black !important;
-        }
 
-        .borderT {
-            border-top: 1px solid black !important;
-        }
 
-        .borderB {
-            border-bottom: 1px solid black !important;
-        }
+            .borderT {
+                border-top: 1px solid black !important;
+            }
 
-        div.page-break {
-            page-break-after: always;
-        }
+            .borderB {
+                border-bottom: 1px solid black !important;
+            }
 
-        div.page-break:last-child {
-            page-break-after: never;
-        }
+            div.page-break {
+                page-break-after: always;
+            }
 
-        div.headerSpacer {
-            height: 25%;
-        }
+            div.page-break:last-child {
+                page-break-after: never;
+            }
 
-        div {
-            margin: 4px;
-        }
+            div.headerSpacer {
+                height: 25%;
+            }
 
-        footer:before {
-            /* page-break-after: always;  */
-        }
+            div {
+                margin: 4px;
+            }
 
-        table.quoteTable,
-        table.quoteTable td {
-            border: 1px solid #061f5c;
-        }
+            footer:before {
+                /* page-break-after: always;  */
+            }
 
-        table.quoteTable tr:first-child {
-            background-color: #061f5c;
-            color: #FFF;
-            font-size: 11px;
-            font-family: "RobotoCondensed-Bold";
-        }
+            table.quoteTable,
+            table.quoteTable td {
+                border: 1px solid #061f5c;
+            }
 
-        table.servicesTable {
-            border-bottom: 1px solid #061f5c;
-        }
+            table.quoteTable tr:first-child {
+                background-color: #061f5c;
+                color: #FFF;
+                font-size: 11px;
+                font-family: 'DejaVuSerif';
+            }
 
-        table.servicesTable tr:first-child {
-            color: #061f5c;
-            font-size: 13px;
-            font-family: "RobotoCondensed-Bold";
-        }
+            table.servicesTable {
+                border-bottom: 1px solid #061f5c;
+            }
 
-        table.quoteTable tr td {
-            padding: 4px 10px;
-        }
+            table.servicesTable tr:first-child {
+                color: #061f5c;
+                font-size: 13px;
+                font-family: 'DejaVuSerif';
+            }
 
-        .subHeaderText {
-            background-color: #eae9ef !important;
-            color: #061f5c !important;
-        }
+            table.quoteTable tr td {
+                padding: 4px 10px;
+            }
 
-        h3 {
-            font-family: "RobotoCondensed-Bold";
-            margin: 0;
-            /* margin-top: 3px; */
-        }
+            .subHeaderText {
+                background-color: #eae9ef !important;
+                color: #061f5c !important;
+            }
 
-        .pt-10 {
-            padding-top: 10px !important;
-        }
+            h3 {
+                font-family: Arial;
+                margin: 0;
+                font-weight: 800;
+                /* margin-top: 3px; */
+            }
 
-        .pt-5 {
-            padding-top: 5px !important;
-        }
+            .pt-10 {
+                padding-top: 10px !important;
+            }
 
-        .pb-10 {
-            padding-bottom: 10px !important;
-        }
+            .pt-5 {
+                padding-top: 5px !important;
+            }
 
-        .pb-5 {
-            padding-bottom: 5px !important;
-        }
+            .pb-10 {
+                padding-bottom: 10px !important;
+            }
+
+            .pb-5 {
+                padding-bottom: 5px !important;
+            }
 
     </style>
 </head>
 
-<body>
+<!--<body>
     <header>
         <table class="header">
             <tr class="grid">
@@ -347,7 +354,6 @@
         </table>
     </header>
     <br><br>
-    <!-- <div class="headerSpacer"></div> -->
 
     <main>
 
@@ -392,6 +398,8 @@
                 </tr>
             </tbody>
         </table>
+
+        <h3>Hola Mundo</h3>
 
         <section style="margin-top: 5%">
             <table class="separate">
@@ -800,47 +808,47 @@
                         <td COLSPAN=2>Carro principal</td>
                         <td COLSPAN=2>Carro auxiliar</td>
                         <td></td>
-       
+
                     </tr>
                     <tr>
                         <td>4.2.1</td>
                         <td>Corriente línea 1 (1ra Velocidad)/td>
                         <td COLSPAN=2>CL1= ________</td>
-                        <td COLSPAN=2 >CL1= ________</td>
-                        <td ></td>
-                
+                        <td COLSPAN=2>CL1= ________</td>
+                        <td></td>
+
                     </tr>
                     <tr>
                         <td>4.2.1</td>
                         <td>Corriente línea 1 (1ra Velocidad)/td>
                         <td COLSPAN=2>CL1= ________</td>
-                        <td COLSPAN=2 >CL1= ________</td>
-                        <td ></td>
-                
+                        <td COLSPAN=2>CL1= ________</td>
+                        <td></td>
+
                     </tr>
                     <tr>
                         <td>4.2.1</td>
                         <td>Corriente línea 1 (1ra Velocidad)/td>
                         <td COLSPAN=2>CL1= ________</td>
-                        <td COLSPAN=2 >CL1= ________</td>
-                        <td ></td>
-                
+                        <td COLSPAN=2>CL1= ________</td>
+                        <td></td>
+
                     </tr>
                     <tr>
                         <td>4.2.1</td>
                         <td>Corriente línea 1 (1ra Velocidad)/td>
                         <td COLSPAN=2>CL1= ________</td>
-                        <td COLSPAN=2 >CL1= ________</td>
-                        <td ></td>
-                
+                        <td COLSPAN=2>CL1= ________</td>
+                        <td></td>
+
                     </tr>
                     <tr>
                         <td>4.2.1</td>
                         <td>Corriente línea 1 (1ra Velocidad)/td>
                         <td COLSPAN=2>CL1= ________</td>
-                        <td COLSPAN=2 >CL1= ________</td>
-                        <td ></td>
-                
+                        <td COLSPAN=2>CL1= ________</td>
+                        <td></td>
+
                     </tr>
 
                     <tr style="background-color: #061f5c;color: #FFF">
@@ -849,15 +857,6 @@
                         <td COLSPAN=2> </td>
                         <td COLSPAN=2> </td>
                         <td></td>
-       
-                    </tr>
-                    <tr>
-                        <td>4.2.1</td>
-                        <td>Corriente línea 1 (1ra Velocidad)/td>
-                        <td COLSPAN=2>CL1= ________</td>
-                        <td COLSPAN=2 style="background-color: #061f5c;color"></td>
-                        <td ></td>
-                        <td ></td>
 
                     </tr>
                     <tr>
@@ -865,8 +864,8 @@
                         <td>Corriente línea 1 (1ra Velocidad)/td>
                         <td COLSPAN=2>CL1= ________</td>
                         <td COLSPAN=2 style="background-color: #061f5c;color"></td>
-                        <td ></td>
-                        <td ></td>
+                        <td></td>
+                        <td></td>
 
                     </tr>
                     <tr>
@@ -874,8 +873,17 @@
                         <td>Corriente línea 1 (1ra Velocidad)/td>
                         <td COLSPAN=2>CL1= ________</td>
                         <td COLSPAN=2 style="background-color: #061f5c;color"></td>
-                        <td ></td>
-                        <td ></td>
+                        <td></td>
+                        <td></td>
+
+                    </tr>
+                    <tr>
+                        <td>4.2.1</td>
+                        <td>Corriente línea 1 (1ra Velocidad)/td>
+                        <td COLSPAN=2>CL1= ________</td>
+                        <td COLSPAN=2 style="background-color: #061f5c;color"></td>
+                        <td></td>
+                        <td></td>
 
                     </tr>
                 </tbody>
@@ -884,6 +892,10 @@
     </main>
 
 
+</body>-->
+
+<body>
+    <h1>Reporte de Servicio</h1>
 </body>
 
 </html>

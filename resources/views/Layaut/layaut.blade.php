@@ -22,8 +22,10 @@
     <link type="text/css" href="{{ asset('/assets/css/argon.css?v=1.0.0') }}" rel="stylesheet">
     <!-- custom-styles -->
     <link href="{{ asset('/custom-styles/custom-styles.css') }}" rel="stylesheet">
-    <!--DropZone.js-->
+    <!--DropZone.css-->
     <link rel="stylesheet" href="https://unpkg.com/dropzone@5/dist/min/dropzone.min.css" type="text/css" />
+    <!--Toarts.css-->
+    <link href="{{ asset('/assets/toastr/toastr.css') }}" rel="stylesheet">
 </head>
 
 <body>
@@ -244,7 +246,8 @@
                                 <i class="ni ni-user-run"></i>
                                 <span>Salir</span>
                             </a>
-                            <form action="{{ route('logout') }}" method="POST" id="logout_form" style="display: none;">
+                            <form action="{{ route('logout') }}" method="POST" id="logout_form"
+                                style="display: none;">
                                 {{ csrf_field() }}
                             </form>
                         </div>
@@ -293,11 +296,11 @@
     <script src="{{ asset('js/extends.js') }}"></script>
     <!--DropZone.js-->
     <script src="https://unpkg.com/dropzone@5/dist/min/dropzone.min.js"></script>
+    <!--Toarts.css-->
+    <script src="{{ asset('/assets/toastr/toastr.js') }}"></script>
     <script>
         $(".preloader").fadeOut();
     </script>
-    <script src="{{ asset('js/files.js') }}"></script>
-
 </body>
 
 </html>
