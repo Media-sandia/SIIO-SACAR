@@ -1,9 +1,8 @@
 <form action="{{ route('saveSection1') }}" class="form_section form-inline" id="form_section1" method="post"
     enctype="multipart/form-data">
-
-    <input type="hidden" id="id_equipo" value="">
-    <input type="hidden" id="Folio_service" value="">
-    <input type="hidden" id="date_service" value="">
+    <input type="hidden" id="id_equipo" name='id_equipo' value="">
+    <input type="hidden" id="Folio_service" name='Folio_service' value="">
+    <input type="hidden" id="date_service" name='date_service' value="">
     <fieldset class="container">
         <h3 class="txt_secction color-title-sacar">1.1 PRUEBA DEL PUENTE</h3>
 
@@ -311,15 +310,22 @@
             <input type="text" class="form-control form-control-sm col-5" name="C1.3.11" placeholder="Comentario">
         </div>
 
-        Archivo para subida: <input type="file" class="form-control" id="file" name="files[]" multiple />
+        <div class=" col-12" style="margin-bottom: 10px">
+            <div class="text-center" style="margin-right: 18px;">
+                <h4>Archivo para subida</h4>
+            </div>
+            <center><input type="file" class="form-control" id="file" name="files[]" multiple /></center>
+        </div>
 
         <div class="mt-3 text-center">
-            <label for="">Comentario</label>
-            <textarea name="body" class="form-control" id="" cols="40" rows="5"></textarea>
+            <h4 for="">Comentario</h4>
+            <center>
+                <textarea name="body" class="form-control" id="" cols="60" rows="5"></textarea>
+            </center>
         </div>
-        <input type="button" name="previous" class="previous btn btn-primary txt_secction" value="Anterior" />
-        {{-- <input type="button" name="password" class="next btn btn-sacar"  value="Guardar" /> --}}
-        <button type="submit" name="password" class="next btn btn-sacar">Guardar</button>
+
+        <input type="button" name="previous" class="previous btn btn-primary txt_secction mt-4" value="Anterior" />
+        <button type="submit" name="password" class="next btn btn-sacar mt-4">Guardar</button>
     </fieldset>
 
 </form>

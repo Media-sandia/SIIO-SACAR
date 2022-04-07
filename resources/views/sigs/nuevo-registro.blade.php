@@ -13,10 +13,11 @@
                 </div>
                 <div class="card-body">
                     <div class="row">
+                        <input type="hidden" id="id_equipo_registro" value="">
                         <div class="col-md-3">
                             <label for="id_sucursal" class="form-label"><strong></strong>Folio Del Servicio</label>
                             <input class="form-control form-control-sm" id="Folio_servicio" type="text"
-                                aria-label=".form-control-sm example">
+                                aria-label=".form-control-sm example" onkeyup="Uppercase(this)">
                             <div id="error_Folio"></div>
                         </div>
 

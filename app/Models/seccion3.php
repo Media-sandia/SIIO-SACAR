@@ -9,6 +9,9 @@ class seccion3 extends Model
 {
     use HasFactory;
     protected $fillable = [
+        'id_equipo',
+        'Folio',
+        'Fecha',
         'data',
     ];
 

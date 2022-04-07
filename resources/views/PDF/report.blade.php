@@ -168,6 +168,22 @@
             border-left: 1px solid black !important;
         }
 
+        .tinyText {
+            font-size: 20px !important;
+            font-family: 'msyh';
+            color: #000000;
+            border: 0px !important;
+            margin: 0px !important;
+        }
+
+        .tinyTex {
+            font-size: 18px !important;
+            font-family: 'msyh';
+            color: #000000;
+            border: 0px !important;
+            margin: 0px !important;
+        }
+
     </style>
 </head>
 
@@ -221,30 +237,30 @@
                             <td colspan="1">
                                 <p class="formlabel">EMPRESA:</p>
                             </td>
-                            <td colspan="11" class="blankspace tinyText"></td>
+                            <td colspan="11" class="blankspace tinyText">{{ $customer->Nom_empresa }}</td>
 
                         </tr>
                         <tr>
                             <td colspan="1">
                                 <p class="formlabel">DIRECCION:</p>
                             </td>
-                            <td colspan="11" class="blankspace tinyText"></td>
+                            <td colspan="11" class="blankspace tinyText">{{ $customer->Direccion }}</td>
                         </tr>
                         <tr>
                             <td colspan="1">
                                 <p class="formlabel">CONTACTO:</p>
                             </td>
-                            <td colspan="11" class="blankspace tinyText"></td>
+                            <td colspan="11" class="blankspace tinyText">{{ $customer->Contacto }}</td>
                         </tr>
                         <tr>
                             <td>
                                 <p class="formlabel">FECHA:</p>
                             </td>
-                            <td colspan="3" class="blankspace tinyText"></td>
+                            <td colspan="3" class="blankspace tinyText">{{ $seccion1[0]->Fecha }}</td>
                             <td colspan="4">
                                 <p class="formlabel">ORDEN DE SERVICIO:</p>
                             </td>
-                            <td colspan="5" class="blankspace tinyText"></td>
+                            <td colspan="5" class="blankspace tinyText">{{ $seccion1[0]->Folio }}</td>
                         </tr>
                     </table>
                 </td>
@@ -287,17 +303,17 @@
                             <td colspan="1">
                                 <p class="formlabel">MARCA:</p>
                             </td>
-                            <td colspan="2" class="blankspace tinyText"></td>
+                            <td colspan="2" class="blankspace tinyTex">{{ $Grua->Marca }} </td>
 
                             <td colspan="1">
                                 <p class="formlabel">RECORRIDO:</p>
                             </td>
-                            <td colspan="2" class="blankspace tinyText"></td>
+                            <td colspan="2" class="blankspace tinyText">{{ $Grua->Recorrido }}</td>
 
                             <td colspan="1">
                                 <p class="formlabel">VOLTAJE:</p>
                             </td>
-                            <td colspan="4" class="blankspace tinyText"></td>
+                            <td colspan="4" class="blankspace tinyText">{{ $Grua->Voltaje }}</td>
                         </tr>
                         <tr>
                             <td></td>
@@ -309,17 +325,17 @@
                             <td colspan="1">
                                 <p class="formlabel">MODELO(s):</p>
                             </td>
-                            <td colspan="2" class="blankspace tinyText"></td>
+                            <td colspan="2" class="blankspace tinyText">{{ $Grua->Modelo }}</td>
 
                             <td colspan="1">
                                 <p class="formlabel">CLARO:</p>
                             </td>
-                            <td colspan="2" class="blankspace tinyText"></td>
+                            <td colspan="2" class="blankspace tinyText">{{ $Grua->Claro }}</td>
 
                             <td colspan="1">
                                 <p class="formlabel">RESPONSABLE:</p>
                             </td>
-                            <td colspan="4" class="blankspace tinyText"></td>
+                            <td colspan="4" class="blankspace tinyText">{{ $Grua->Responsable }}</td>
                         </tr>
                         <tr>
                             <td></td>
@@ -332,12 +348,12 @@
                             <td colspan="1">
                                 <p class="formlabel">N°SERIE(s):</p>
                             </td>
-                            <td colspan="4" class="blankspace tinyText"></td>
+                            <td colspan="4" class="blankspace tinyText">{{ $Grua->N_serie }}</td>
 
                             <td colspan="1">
                                 <p class="formlabel">ALTURA:</p>
                             </td>
-                            <td colspan="5" class="blankspace tinyText"></td>
+                            <td colspan="5" class="blankspace tinyText">{{ $Grua->Altura }}</td>
                         </tr>
                         <tr>
                             <td></td>
@@ -355,12 +371,12 @@
                             <td colspan="1">
                                 <p class="formlabel">AREA:</p>
                             </td>
-                            <td colspan="4" class="blankspace tinyText"></td>
+                            <td colspan="4" class="blankspace tinyText">{{ $Grua->Area }}</td>
 
                             <td colspan="1">
                                 <p class="formlabel">CAPACIDAD:</p>
                             </td>
-                            <td colspan="5" class="blankspace tinyText"></td>
+                            <td colspan="5" class="blankspace tinyText">{{ $Grua->Capacidad }}</td>
                         </tr>
 
                     </table>
@@ -391,7 +407,8 @@
                 <tbody>
                     <tr>
                         <td class="titlesacarbody">
-                            Este reporte aplica para METRICAN ESTAMPADOS SA DE CV y el equipo descrito en el encabezado.
+                            Este reporte aplica para {{ $customer->Nom_empresa }} y el equipo descrito en el
+                            encabezado.
                         </td>
                     </tr>
                 </tbody>
@@ -449,14 +466,42 @@
                         <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
                         <td style="width: 30%;" class="bodertd borde-sep textCenter">Comentarios</td>
                     </tr>
-                    <tr class="titlesubsection ">
-                        <td style="width: 4%;" class="bodertd borde-sep">1.1.1</td>
-                        <td style="width: 40%;" class="bodertd borde-sep ">Frenado del puente</td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 30%;" class="bodertd borde-sep"></td>
-                    </tr>
+
+                    @switch($seccion1[0]->data['1_1_1'])
+                        @case(1)
+                            <tr class="titlesubsection ">
+                                <td style="width: 4%;" class="bodertd borde-sep">1.1.1</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Frenado del puente</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 30%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(2)
+                            <tr class="titlesubsection ">
+                                <td style="width: 4%;" class="bodertd borde-sep">1.1.1</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Frenado del puente</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 30%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(3)
+                            <tr class="titlesubsection ">
+                                <td style="width: 4%;" class="bodertd borde-sep">1.1.1</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Frenado del puente</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 30%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+                    @endswitch
+
 
                     <tr class="titlesubsection ">
                         <td style="width: 4%;" class="bodertd borde-sep">1.1.2</td>
@@ -873,442 +918,442 @@
 
 
 
-        <section style="margin-top: 5%">
-            <table BORDER>
-                <tr class="textCenter headerText">
-                    <th COLSPAN=1>1</th>
-                    <th COLSPAN=5>Prueba inicial(sin carga)</th>
-                </tr>
-                <tbody style="border: 1px solid  black; font-family: 'Roboto', sans-serif;font-size:100%;">
-                    <tr style="background-color: #061f5c;color: #FFF">
-                        <td>1.1.1</td>
-                        <td style="width: 100%;">Prueba del puente</td>
-                        <td>OK</td>
-                        <td>NOK</td>
-                        <td>NA</td>
-                        <td>COMENTARIOS</td>
-                    </tr>
-                    <tr>
-                        <td>1.1.1</td>
-                        <td>Recorrido del puente</td>
-                        <td style="background-color: rgb(211,211,211);"></td>
-                        <td style="background-color: rgb(211,211,211);"></td>
-                        <td style="background-color: rgb(211,211,211);"></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>1.1.1</td>
-                        <td>Recorrido del puente</td>
-                        <td style="background-color: rgb(211,211,211);"></td>
-                        <td style="background-color: rgb(211,211,211);"></td>
-                        <td style="background-color: rgb(211,211,211);"></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>1.1.1</td>
-                        <td>Recorrido del puente</td>
-                        <td style="background-color: rgb(211,211,211);"></td>
-                        <td style="background-color: rgb(211,211,211);"></td>
-                        <td style="background-color: rgb(211,211,211);"></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>1.1.1</td>
-                        <td>Recorrido del puente</td>
-                        <td style="background-color: rgb(211,211,211);"></td>
-                        <td style="background-color: rgb(211,211,211);"></td>
-                        <td style="background-color: rgb(211,211,211);"></td>
-                        <td></td>
-                    </tr>
-                    <tr style="background-color: #061f5c;color: #FFF">
-                        <td>1.2</td>
-                        <td style="width: 100%;">Prueba del carro</td>
-                        <td>OK</td>
-                        <td>NOK</td>
-                        <td>NA</td>
-                        <td>COMENTARIOS</td>
-                    </tr>
-                    <tr>
-                        <td>1.1.1</td>
-                        <td>Recorrido del puente</td>
-                        <td style="background-color: rgb(211,211,211);"></td>
-                        <td style="background-color: rgb(211,211,211);"></td>
-                        <td style="background-color: rgb(211,211,211);"></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>1.1.1</td>
-                        <td>Recorrido del puente</td>
-                        <td style="background-color: rgb(211,211,211);"></td>
-                        <td style="background-color: rgb(211,211,211);"></td>
-                        <td style="background-color: rgb(211,211,211);"></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>1.1.1</td>
-                        <td>Recorrido del puente</td>
-                        <td style="background-color: rgb(211,211,211);"></td>
-                        <td style="background-color: rgb(211,211,211);"></td>
-                        <td style="background-color: rgb(211,211,211);"></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>1.1.1</td>
-                        <td>Recorrido del puente</td>
-                        <td style="background-color: rgb(211,211,211);"></td>
-                        <td style="background-color: rgb(211,211,211);"></td>
-                        <td style="background-color: rgb(211,211,211);"></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>1.1.1</td>
-                        <td>Recorrido del puente</td>
-                        <td style="background-color: rgb(211,211,211);"></td>
-                        <td style="background-color: rgb(211,211,211);"></td>
-                        <td style="background-color: rgb(211,211,211);"></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>1.1.1</td>
-                        <td>Recorrido del puente</td>
-                        <td style="background-color: rgb(211,211,211);"></td>
-                        <td style="background-color: rgb(211,211,211);"></td>
-                        <td style="background-color: rgb(211,211,211);"></td>
-                        <td></td>
-                    </tr>
-                    <tr style="background-color: #061f5c;color: #FFF">
-                        <td>1.3</td>
-                        <td style="width: 100%;">Prueba del polipasto</td>
-                        <td>OK</td>
-                        <td>NOK</td>
-                        <td>NA</td>
-                        <td>COMENTARIOS</td>
-                    </tr>
-                    <tr>
-                        <td>1.1.1</td>
-                        <td>Recorrido del puente</td>
-                        <td style="background-color: rgb(211,211,211);"></td>
-                        <td style="background-color: rgb(211,211,211);"></td>
-                        <td style="background-color: rgb(211,211,211);"></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>1.1.1</td>
-                        <td>Recorrido del puente</td>
-                        <td style="background-color: rgb(211,211,211);"></td>
-                        <td style="background-color: rgb(211,211,211);"></td>
-                        <td style="background-color: rgb(211,211,211);"></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>1.1.1</td>
-                        <td>Recorrido del puente</td>
-                        <td style="background-color: rgb(211,211,211);"></td>
-                        <td style="background-color: rgb(211,211,211);"></td>
-                        <td style="background-color: rgb(211,211,211);"></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>1.1.1</td>
-                        <td>Recorrido del puente</td>
-                        <td style="background-color: rgb(211,211,211);"></td>
-                        <td style="background-color: rgb(211,211,211);"></td>
-                        <td style="background-color: rgb(211,211,211);"></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>1.1.1</td>
-                        <td>Recorrido del puente</td>
-                        <td style="background-color: rgb(211,211,211);"></td>
-                        <td style="background-color: rgb(211,211,211);"></td>
-                        <td style="background-color: rgb(211,211,211);"></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>1.1.1</td>
-                        <td>Recorrido del puente</td>
-                        <td style="background-color: rgb(211,211,211);"></td>
-                        <td style="background-color: rgb(211,211,211);"></td>
-                        <td style="background-color: rgb(211,211,211);"></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>1.1.1</td>
-                        <td>Recorrido del puente</td>
-                        <td style="background-color: rgb(211,211,211);"></td>
-                        <td style="background-color: rgb(211,211,211);"></td>
-                        <td style="background-color: rgb(211,211,211);"></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>1.1.1</td>
-                        <td>Recorrido del puente</td>
-                        <td style="background-color: rgb(211,211,211);"></td>
-                        <td style="background-color: rgb(211,211,211);"></td>
-                        <td style="background-color: rgb(211,211,211);"></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>1.1.1</td>
-                        <td>Recorrido del puente</td>
-                        <td style="background-color: rgb(211,211,211);"></td>
-                        <td style="background-color: rgb(211,211,211);"></td>
-                        <td style="background-color: rgb(211,211,211);"></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>1.1.1</td>
-                        <td>Recorrido del puente</td>
-                        <td style="background-color: rgb(211,211,211);"></td>
-                        <td style="background-color: rgb(211,211,211);"></td>
-                        <td style="background-color: rgb(211,211,211);"></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>1.1.1</td>
-                        <td>Recorrido del puente</td>
-                        <td style="background-color: rgb(211,211,211);"></td>
-                        <td style="background-color: rgb(211,211,211);"></td>
-                        <td style="background-color: rgb(211,211,211);"></td>
-                        <td></td>
-                    </tr>
-                    <tr style="background-color: #061f5c;color: #FFF">
-                        <td>2</td>
-                        <td style="width: 100%;">Batorena</td>
-                        <td>OK</td>
-                        <td>NOK</td>
-                        <td>NA</td>
-                        <td>COMENTARIOS</td>
-                    </tr>
-                    <tr>
-                        <td>1.1.1</td>
-                        <td>Recorrido del puente</td>
-                        <td style="background-color: rgb(211,211,211);"></td>
-                        <td style="background-color: rgb(211,211,211);"></td>
-                        <td style="background-color: rgb(211,211,211);"></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>1.1.1</td>
-                        <td>Recorrido del puente</td>
-                        <td style="background-color: rgb(211,211,211);"></td>
-                        <td style="background-color: rgb(211,211,211);"></td>
-                        <td style="background-color: rgb(211,211,211);"></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>1.1.1</td>
-                        <td>Recorrido del puente</td>
-                        <td style="background-color: rgb(211,211,211);"></td>
-                        <td style="background-color: rgb(211,211,211);"></td>
-                        <td style="background-color: rgb(211,211,211);"></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>1.1.1</td>
-                        <td>Recorrido del puente</td>
-                        <td style="background-color: rgb(211,211,211);"></td>
-                        <td style="background-color: rgb(211,211,211);"></td>
-                        <td style="background-color: rgb(211,211,211);"></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>1.1.1</td>
-                        <td>Recorrido del puente</td>
-                        <td style="background-color: rgb(211,211,211);"></td>
-                        <td style="background-color: rgb(211,211,211);"></td>
-                        <td style="background-color: rgb(211,211,211);"></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>1.1.1</td>
-                        <td>Recorrido del puente</td>
-                        <td style="background-color: rgb(211,211,211);"></td>
-                        <td style="background-color: rgb(211,211,211);"></td>
-                        <td style="background-color: rgb(211,211,211);"></td>
-                        <td></td>
-                    </tr>
-                    <tr style="background-color: #061f5c;color: #FFF">
-                        <td>3</td>
-                        <td style="width: 100%;">Radio control</td>
-                        <td>OK</td>
-                        <td>NOK</td>
-                        <td>NA</td>
-                        <td>COMENTARIOS</td>
-                    </tr>
-                    <tr>
-                        <td>1.1.1</td>
-                        <td>Recorrido del puente</td>
-                        <td style="background-color: rgb(211,211,211);"></td>
-                        <td style="background-color: rgb(211,211,211);"></td>
-                        <td style="background-color: rgb(211,211,211);"></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>1.1.1</td>
-                        <td>Recorrido del puente</td>
-                        <td style="background-color: rgb(211,211,211);"></td>
-                        <td style="background-color: rgb(211,211,211);"></td>
-                        <td style="background-color: rgb(211,211,211);"></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>1.1.1</td>
-                        <td>Recorrido del puente</td>
-                        <td style="background-color: rgb(211,211,211);"></td>
-                        <td style="background-color: rgb(211,211,211);"></td>
-                        <td style="background-color: rgb(211,211,211);"></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>1.1.1</td>
-                        <td>Recorrido del puente</td>
-                        <td style="background-color: rgb(211,211,211);"></td>
-                        <td style="background-color: rgb(211,211,211);"></td>
-                        <td style="background-color: rgb(211,211,211);"></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>1.1.1</td>
-                        <td>Recorrido del puente</td>
-                        <td style="background-color: rgb(211,211,211);"></td>
-                        <td style="background-color: rgb(211,211,211);"></td>
-                        <td style="background-color: rgb(211,211,211);"></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>1.1.1</td>
-                        <td>Recorrido del puente</td>
-                        <td style="background-color: rgb(211,211,211);"></td>
-                        <td style="background-color: rgb(211,211,211);"></td>
-                        <td style="background-color: rgb(211,211,211);"></td>
-                        <td></td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-        <section style="margin-top: 15%">
-            <table BORDER>
-                <tr class="textCenter headerText">
-                    <th COLSPAN=1>4</th>
-                    <th COLSPAN=6>Mediciones electricas</th>
-                </tr>
-                <tbody style="border: 1px solid  black; font-family: 'Roboto', sans-serif;font-size:100%;">
-                    <tr style="background-color: #061f5c;color: #FFF">
-                        <td>4.1</td>
-                        <td style="width: 100%;">Voltaje de alimentacion nominal</td>
-                        <td></td>
-                        <td>OK</td>
-                        <td>NOK</td>
-                        <td>NA</td>
-                        <td>COMENTARIOS</td>
-                    </tr>
-                    <tr>
-                        <td>4.1</td>
-                        <td>Voltaje linea-linea</td>
-                        <td>VLL=_________</td>
-                        <td style="background-color: rgb(211,211,211);"></td>
-                        <td style="background-color: rgb(211,211,211);"></td>
-                        <td style="background-color: rgb(211,211,211);"></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>4.1</td>
-                        <td>Voltaje linea-linea</td>
-                        <td>VLL=_________</td>
-                        <td style="background-color: rgb(211,211,211);"></td>
-                        <td style="background-color: rgb(211,211,211);"></td>
-                        <td style="background-color: rgb(211,211,211);"></td>
-                        <td></td>
-                    </tr>
-                    <tr style="background-color: #061f5c;color: #FFF">
-                        <td>4.2</td>
-                        <td style="width: 100%;">Corriente de elevacion de carro</td>
-                        <td COLSPAN=2>Carro principal</td>
-                        <td COLSPAN=2>Carro auxiliar</td>
-                        <td></td>
+                <section style="margin-top: 5%">
+                    <table BORDER>
+                        <tr class="textCenter headerText">
+                            <th COLSPAN=1>1</th>
+                            <th COLSPAN=5>Prueba inicial(sin carga)</th>
+                        </tr>
+                        <tbody style="border: 1px solid  black; font-family: 'Roboto', sans-serif;font-size:100%;">
+                            <tr style="background-color: #061f5c;color: #FFF">
+                                <td>1.1.1</td>
+                                <td style="width: 100%;">Prueba del puente</td>
+                                <td>OK</td>
+                                <td>NOK</td>
+                                <td>NA</td>
+                                <td>COMENTARIOS</td>
+                            </tr>
+                            <tr>
+                                <td>1.1.1</td>
+                                <td>Recorrido del puente</td>
+                                <td style="background-color: rgb(211,211,211);"></td>
+                                <td style="background-color: rgb(211,211,211);"></td>
+                                <td style="background-color: rgb(211,211,211);"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>1.1.1</td>
+                                <td>Recorrido del puente</td>
+                                <td style="background-color: rgb(211,211,211);"></td>
+                                <td style="background-color: rgb(211,211,211);"></td>
+                                <td style="background-color: rgb(211,211,211);"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>1.1.1</td>
+                                <td>Recorrido del puente</td>
+                                <td style="background-color: rgb(211,211,211);"></td>
+                                <td style="background-color: rgb(211,211,211);"></td>
+                                <td style="background-color: rgb(211,211,211);"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>1.1.1</td>
+                                <td>Recorrido del puente</td>
+                                <td style="background-color: rgb(211,211,211);"></td>
+                                <td style="background-color: rgb(211,211,211);"></td>
+                                <td style="background-color: rgb(211,211,211);"></td>
+                                <td></td>
+                            </tr>
+                            <tr style="background-color: #061f5c;color: #FFF">
+                                <td>1.2</td>
+                                <td style="width: 100%;">Prueba del carro</td>
+                                <td>OK</td>
+                                <td>NOK</td>
+                                <td>NA</td>
+                                <td>COMENTARIOS</td>
+                            </tr>
+                            <tr>
+                                <td>1.1.1</td>
+                                <td>Recorrido del puente</td>
+                                <td style="background-color: rgb(211,211,211);"></td>
+                                <td style="background-color: rgb(211,211,211);"></td>
+                                <td style="background-color: rgb(211,211,211);"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>1.1.1</td>
+                                <td>Recorrido del puente</td>
+                                <td style="background-color: rgb(211,211,211);"></td>
+                                <td style="background-color: rgb(211,211,211);"></td>
+                                <td style="background-color: rgb(211,211,211);"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>1.1.1</td>
+                                <td>Recorrido del puente</td>
+                                <td style="background-color: rgb(211,211,211);"></td>
+                                <td style="background-color: rgb(211,211,211);"></td>
+                                <td style="background-color: rgb(211,211,211);"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>1.1.1</td>
+                                <td>Recorrido del puente</td>
+                                <td style="background-color: rgb(211,211,211);"></td>
+                                <td style="background-color: rgb(211,211,211);"></td>
+                                <td style="background-color: rgb(211,211,211);"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>1.1.1</td>
+                                <td>Recorrido del puente</td>
+                                <td style="background-color: rgb(211,211,211);"></td>
+                                <td style="background-color: rgb(211,211,211);"></td>
+                                <td style="background-color: rgb(211,211,211);"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>1.1.1</td>
+                                <td>Recorrido del puente</td>
+                                <td style="background-color: rgb(211,211,211);"></td>
+                                <td style="background-color: rgb(211,211,211);"></td>
+                                <td style="background-color: rgb(211,211,211);"></td>
+                                <td></td>
+                            </tr>
+                            <tr style="background-color: #061f5c;color: #FFF">
+                                <td>1.3</td>
+                                <td style="width: 100%;">Prueba del polipasto</td>
+                                <td>OK</td>
+                                <td>NOK</td>
+                                <td>NA</td>
+                                <td>COMENTARIOS</td>
+                            </tr>
+                            <tr>
+                                <td>1.1.1</td>
+                                <td>Recorrido del puente</td>
+                                <td style="background-color: rgb(211,211,211);"></td>
+                                <td style="background-color: rgb(211,211,211);"></td>
+                                <td style="background-color: rgb(211,211,211);"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>1.1.1</td>
+                                <td>Recorrido del puente</td>
+                                <td style="background-color: rgb(211,211,211);"></td>
+                                <td style="background-color: rgb(211,211,211);"></td>
+                                <td style="background-color: rgb(211,211,211);"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>1.1.1</td>
+                                <td>Recorrido del puente</td>
+                                <td style="background-color: rgb(211,211,211);"></td>
+                                <td style="background-color: rgb(211,211,211);"></td>
+                                <td style="background-color: rgb(211,211,211);"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>1.1.1</td>
+                                <td>Recorrido del puente</td>
+                                <td style="background-color: rgb(211,211,211);"></td>
+                                <td style="background-color: rgb(211,211,211);"></td>
+                                <td style="background-color: rgb(211,211,211);"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>1.1.1</td>
+                                <td>Recorrido del puente</td>
+                                <td style="background-color: rgb(211,211,211);"></td>
+                                <td style="background-color: rgb(211,211,211);"></td>
+                                <td style="background-color: rgb(211,211,211);"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>1.1.1</td>
+                                <td>Recorrido del puente</td>
+                                <td style="background-color: rgb(211,211,211);"></td>
+                                <td style="background-color: rgb(211,211,211);"></td>
+                                <td style="background-color: rgb(211,211,211);"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>1.1.1</td>
+                                <td>Recorrido del puente</td>
+                                <td style="background-color: rgb(211,211,211);"></td>
+                                <td style="background-color: rgb(211,211,211);"></td>
+                                <td style="background-color: rgb(211,211,211);"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>1.1.1</td>
+                                <td>Recorrido del puente</td>
+                                <td style="background-color: rgb(211,211,211);"></td>
+                                <td style="background-color: rgb(211,211,211);"></td>
+                                <td style="background-color: rgb(211,211,211);"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>1.1.1</td>
+                                <td>Recorrido del puente</td>
+                                <td style="background-color: rgb(211,211,211);"></td>
+                                <td style="background-color: rgb(211,211,211);"></td>
+                                <td style="background-color: rgb(211,211,211);"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>1.1.1</td>
+                                <td>Recorrido del puente</td>
+                                <td style="background-color: rgb(211,211,211);"></td>
+                                <td style="background-color: rgb(211,211,211);"></td>
+                                <td style="background-color: rgb(211,211,211);"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>1.1.1</td>
+                                <td>Recorrido del puente</td>
+                                <td style="background-color: rgb(211,211,211);"></td>
+                                <td style="background-color: rgb(211,211,211);"></td>
+                                <td style="background-color: rgb(211,211,211);"></td>
+                                <td></td>
+                            </tr>
+                            <tr style="background-color: #061f5c;color: #FFF">
+                                <td>2</td>
+                                <td style="width: 100%;">Batorena</td>
+                                <td>OK</td>
+                                <td>NOK</td>
+                                <td>NA</td>
+                                <td>COMENTARIOS</td>
+                            </tr>
+                            <tr>
+                                <td>1.1.1</td>
+                                <td>Recorrido del puente</td>
+                                <td style="background-color: rgb(211,211,211);"></td>
+                                <td style="background-color: rgb(211,211,211);"></td>
+                                <td style="background-color: rgb(211,211,211);"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>1.1.1</td>
+                                <td>Recorrido del puente</td>
+                                <td style="background-color: rgb(211,211,211);"></td>
+                                <td style="background-color: rgb(211,211,211);"></td>
+                                <td style="background-color: rgb(211,211,211);"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>1.1.1</td>
+                                <td>Recorrido del puente</td>
+                                <td style="background-color: rgb(211,211,211);"></td>
+                                <td style="background-color: rgb(211,211,211);"></td>
+                                <td style="background-color: rgb(211,211,211);"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>1.1.1</td>
+                                <td>Recorrido del puente</td>
+                                <td style="background-color: rgb(211,211,211);"></td>
+                                <td style="background-color: rgb(211,211,211);"></td>
+                                <td style="background-color: rgb(211,211,211);"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>1.1.1</td>
+                                <td>Recorrido del puente</td>
+                                <td style="background-color: rgb(211,211,211);"></td>
+                                <td style="background-color: rgb(211,211,211);"></td>
+                                <td style="background-color: rgb(211,211,211);"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>1.1.1</td>
+                                <td>Recorrido del puente</td>
+                                <td style="background-color: rgb(211,211,211);"></td>
+                                <td style="background-color: rgb(211,211,211);"></td>
+                                <td style="background-color: rgb(211,211,211);"></td>
+                                <td></td>
+                            </tr>
+                            <tr style="background-color: #061f5c;color: #FFF">
+                                <td>3</td>
+                                <td style="width: 100%;">Radio control</td>
+                                <td>OK</td>
+                                <td>NOK</td>
+                                <td>NA</td>
+                                <td>COMENTARIOS</td>
+                            </tr>
+                            <tr>
+                                <td>1.1.1</td>
+                                <td>Recorrido del puente</td>
+                                <td style="background-color: rgb(211,211,211);"></td>
+                                <td style="background-color: rgb(211,211,211);"></td>
+                                <td style="background-color: rgb(211,211,211);"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>1.1.1</td>
+                                <td>Recorrido del puente</td>
+                                <td style="background-color: rgb(211,211,211);"></td>
+                                <td style="background-color: rgb(211,211,211);"></td>
+                                <td style="background-color: rgb(211,211,211);"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>1.1.1</td>
+                                <td>Recorrido del puente</td>
+                                <td style="background-color: rgb(211,211,211);"></td>
+                                <td style="background-color: rgb(211,211,211);"></td>
+                                <td style="background-color: rgb(211,211,211);"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>1.1.1</td>
+                                <td>Recorrido del puente</td>
+                                <td style="background-color: rgb(211,211,211);"></td>
+                                <td style="background-color: rgb(211,211,211);"></td>
+                                <td style="background-color: rgb(211,211,211);"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>1.1.1</td>
+                                <td>Recorrido del puente</td>
+                                <td style="background-color: rgb(211,211,211);"></td>
+                                <td style="background-color: rgb(211,211,211);"></td>
+                                <td style="background-color: rgb(211,211,211);"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>1.1.1</td>
+                                <td>Recorrido del puente</td>
+                                <td style="background-color: rgb(211,211,211);"></td>
+                                <td style="background-color: rgb(211,211,211);"></td>
+                                <td style="background-color: rgb(211,211,211);"></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+                <section style="margin-top: 15%">
+                    <table BORDER>
+                        <tr class="textCenter headerText">
+                            <th COLSPAN=1>4</th>
+                            <th COLSPAN=6>Mediciones electricas</th>
+                        </tr>
+                        <tbody style="border: 1px solid  black; font-family: 'Roboto', sans-serif;font-size:100%;">
+                            <tr style="background-color: #061f5c;color: #FFF">
+                                <td>4.1</td>
+                                <td style="width: 100%;">Voltaje de alimentacion nominal</td>
+                                <td></td>
+                                <td>OK</td>
+                                <td>NOK</td>
+                                <td>NA</td>
+                                <td>COMENTARIOS</td>
+                            </tr>
+                            <tr>
+                                <td>4.1</td>
+                                <td>Voltaje linea-linea</td>
+                                <td>VLL=_________</td>
+                                <td style="background-color: rgb(211,211,211);"></td>
+                                <td style="background-color: rgb(211,211,211);"></td>
+                                <td style="background-color: rgb(211,211,211);"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>4.1</td>
+                                <td>Voltaje linea-linea</td>
+                                <td>VLL=_________</td>
+                                <td style="background-color: rgb(211,211,211);"></td>
+                                <td style="background-color: rgb(211,211,211);"></td>
+                                <td style="background-color: rgb(211,211,211);"></td>
+                                <td></td>
+                            </tr>
+                            <tr style="background-color: #061f5c;color: #FFF">
+                                <td>4.2</td>
+                                <td style="width: 100%;">Corriente de elevacion de carro</td>
+                                <td COLSPAN=2>Carro principal</td>
+                                <td COLSPAN=2>Carro auxiliar</td>
+                                <td></td>
 
-                    </tr>
-                    <tr>
-                        <td>4.2.1</td>
-                        <td>Corriente línea 1 (1ra Velocidad)/td>
-                        <td COLSPAN=2>CL1= ________</td>
-                        <td COLSPAN=2>CL1= ________</td>
-                        <td></td>
+                            </tr>
+                            <tr>
+                                <td>4.2.1</td>
+                                <td>Corriente línea 1 (1ra Velocidad)/td>
+                                <td COLSPAN=2>CL1= ________</td>
+                                <td COLSPAN=2>CL1= ________</td>
+                                <td></td>
 
-                    </tr>
-                    <tr>
-                        <td>4.2.1</td>
-                        <td>Corriente línea 1 (1ra Velocidad)/td>
-                        <td COLSPAN=2>CL1= ________</td>
-                        <td COLSPAN=2>CL1= ________</td>
-                        <td></td>
+                            </tr>
+                            <tr>
+                                <td>4.2.1</td>
+                                <td>Corriente línea 1 (1ra Velocidad)/td>
+                                <td COLSPAN=2>CL1= ________</td>
+                                <td COLSPAN=2>CL1= ________</td>
+                                <td></td>
 
-                    </tr>
-                    <tr>
-                        <td>4.2.1</td>
-                        <td>Corriente línea 1 (1ra Velocidad)/td>
-                        <td COLSPAN=2>CL1= ________</td>
-                        <td COLSPAN=2>CL1= ________</td>
-                        <td></td>
+                            </tr>
+                            <tr>
+                                <td>4.2.1</td>
+                                <td>Corriente línea 1 (1ra Velocidad)/td>
+                                <td COLSPAN=2>CL1= ________</td>
+                                <td COLSPAN=2>CL1= ________</td>
+                                <td></td>
 
-                    </tr>
-                    <tr>
-                        <td>4.2.1</td>
-                        <td>Corriente línea 1 (1ra Velocidad)/td>
-                        <td COLSPAN=2>CL1= ________</td>
-                        <td COLSPAN=2>CL1= ________</td>
-                        <td></td>
+                            </tr>
+                            <tr>
+                                <td>4.2.1</td>
+                                <td>Corriente línea 1 (1ra Velocidad)/td>
+                                <td COLSPAN=2>CL1= ________</td>
+                                <td COLSPAN=2>CL1= ________</td>
+                                <td></td>
 
-                    </tr>
-                    <tr>
-                        <td>4.2.1</td>
-                        <td>Corriente línea 1 (1ra Velocidad)/td>
-                        <td COLSPAN=2>CL1= ________</td>
-                        <td COLSPAN=2>CL1= ________</td>
-                        <td></td>
+                            </tr>
+                            <tr>
+                                <td>4.2.1</td>
+                                <td>Corriente línea 1 (1ra Velocidad)/td>
+                                <td COLSPAN=2>CL1= ________</td>
+                                <td COLSPAN=2>CL1= ________</td>
+                                <td></td>
 
-                    </tr>
+                            </tr>
 
-                    <tr style="background-color: #061f5c;color: #FFF">
-                        <td>4.4</td>
-                        <td style="width: 100%;">Corriente en motor de cabezales</td>
-                        <td COLSPAN=2> </td>
-                        <td COLSPAN=2> </td>
-                        <td></td>
+                            <tr style="background-color: #061f5c;color: #FFF">
+                                <td>4.4</td>
+                                <td style="width: 100%;">Corriente en motor de cabezales</td>
+                                <td COLSPAN=2> </td>
+                                <td COLSPAN=2> </td>
+                                <td></td>
 
-                    </tr>
-                    <tr>
-                        <td>4.2.1</td>
-                        <td>Corriente línea 1 (1ra Velocidad)/td>
-                        <td COLSPAN=2>CL1= ________</td>
-                        <td COLSPAN=2 style="background-color: #061f5c;color"></td>
-                        <td></td>
-                        <td></td>
+                            </tr>
+                            <tr>
+                                <td>4.2.1</td>
+                                <td>Corriente línea 1 (1ra Velocidad)/td>
+                                <td COLSPAN=2>CL1= ________</td>
+                                <td COLSPAN=2 style="background-color: #061f5c;color"></td>
+                                <td></td>
+                                <td></td>
 
-                    </tr>
-                    <tr>
-                        <td>4.2.1</td>
-                        <td>Corriente línea 1 (1ra Velocidad)/td>
-                        <td COLSPAN=2>CL1= ________</td>
-                        <td COLSPAN=2 style="background-color: #061f5c;color"></td>
-                        <td></td>
-                        <td></td>
+                            </tr>
+                            <tr>
+                                <td>4.2.1</td>
+                                <td>Corriente línea 1 (1ra Velocidad)/td>
+                                <td COLSPAN=2>CL1= ________</td>
+                                <td COLSPAN=2 style="background-color: #061f5c;color"></td>
+                                <td></td>
+                                <td></td>
 
-                    </tr>
-                    <tr>
-                        <td>4.2.1</td>
-                        <td>Corriente línea 1 (1ra Velocidad)/td>
-                        <td COLSPAN=2>CL1= ________</td>
-                        <td COLSPAN=2 style="background-color: #061f5c;color"></td>
-                        <td></td>
-                        <td></td>
+                            </tr>
+                            <tr>
+                                <td>4.2.1</td>
+                                <td>Corriente línea 1 (1ra Velocidad)/td>
+                                <td COLSPAN=2>CL1= ________</td>
+                                <td COLSPAN=2 style="background-color: #061f5c;color"></td>
+                                <td></td>
+                                <td></td>
 
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-    </main>-->
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+            </main>-->
 
 
 </body>

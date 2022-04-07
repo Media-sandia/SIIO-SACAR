@@ -1,9 +1,14 @@
 $(document).ready(function () {
-    var checkbox = $(".seccion3");
+    $("#ejemplo_reporte").click(function () {
+        var route = "Reporte/prueba";
+        return window.open(route, "Prueba");
+        //$('#staticBackdrop').modal('show');
+    });
 
     $("#form_section1").submit(function (e) {
         e.preventDefault();
-        $.ajax({
+        $("#secction-002").fadeToggle(800);
+        /**$.ajax({
             type: $(this).attr("method"),
             url: $(this).attr("action"),
             headers: {
@@ -15,7 +20,69 @@ $(document).ready(function () {
             contentType: false,
             processData: false,
             success: function (response) {
-                if (data.status == 1) {
+                console.log(response);
+                if (response.status == 1) {
+                    success();
+                    generate_report(response.url);
+                    $("#secction-002").fadeToggle(800);
+                } else {
+                    console.log("Error");
+                }
+            },
+        });**/
+    });
+
+    $("#form_section2").submit(function (e) {
+        e.preventDefault();
+        var Folio_service = $("#Folio_servicio").val();
+        var date_service = $("#Fecha_Servicio").val();
+        var equipo = $("#id_equipo_registro").val();
+        $("#Folio_service1").val(Folio_service);
+        $("#date_service1").val(date_service);
+        $("#id_equipo1").val(equipo);
+        $("#secction-002").fadeToggle();
+        $("#secction-003").fadeToggle(800);
+        //console.log(Folio_service, date_service, equipo);
+        /**$.ajax({
+            type: $(this).attr("method"),
+            url: $(this).attr("action"),
+            headers: {
+                "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content"),
+            },
+            data: new FormData(this),
+            dataType: "json",
+            cache: false,
+            contentType: false,
+            processData: false,
+            success: function (response) {
+                console.log(response);
+                /**if (response.status == 1) {
+                    console.log(response);
+                    //success();
+                    //$("#secction-003").fadeToggle(800);
+                } else {
+                    console.log("Error");
+                }
+            },
+        });**/
+    });
+
+    $("#form_section3").submit(function (e) {
+        e.preventDefault();
+        $.ajax({
+            type: $(this).attr("method"),
+            url: $(this).attr("action"),
+            headers: {
+                "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content"),
+            },
+            data: $("#form_section1").serialize(),
+            dataType: "json",
+            cache: false,
+            contentType: false,
+            processData: false,
+            success: function (response) {
+                console.log(response);
+                if (response.status == 1) {
                     success();
                     $("#secction-002").fadeToggle(800);
                 } else {
@@ -43,23 +110,6 @@ $(document).ready(function () {
         current_step.hide();
     });
 
-    /**var current = 1,current_step,next_step,steps;
-    steps = $(".fieldset").length;
-    $(".next").click(function(){
-      //alert('entre en el evento')
-      current_step = $(this).parent();
-      next_step = $(this).parent().next();
-      next_step.show();
-      current_step.hide();
-      //setProgressBar(++current);
-    });
-    $(".previous").click(function(){
-      current_step = $(this).parent();
-      next_step = $(this).parent().prev();
-      next_step.show();
-      current_step.hide();
-      //setProgressBar(--current);
-    }); **/
     assig_empresa();
 
     $("#btn-data-img").click(function () {
@@ -80,15 +130,6 @@ $(document).ready(function () {
         });
     });
 
-    /**setProgressBar(current);
-    // Change progress bar action
-    function setProgressBar(curStep){
-      var percent = parseFloat(100 / steps) * curStep;
-      percent = percent.toFixed();
-      $(".progress-bar")
-        .css("width",percent+"%")
-        .html(percent+"%");   
-    }**/
     form_hiden();
 
     //select_clientes();
@@ -142,6 +183,7 @@ $(document).ready(function () {
             );
         } else if (date_service == null || date_service == "") {
             validate_Erros();
+            $("#error_Folio_hide").remove();
             $("#error_Fecha_hide").remove();
             $("#error_Fecha").append(
                 "<font color='#BF4949' size='2' id='error_Fecha_hide'>Este Campo Es Oblogatorio</font>"
@@ -165,6 +207,10 @@ $(document).ready(function () {
                 },
             }).then((result) => {
                 if (result.dismiss === Swal.DismissReason.timer) {
+                    $("#error_Folio_hide").remove();
+                    $("#error_Fecha_hide").remove();
+                    $("#Folio_service").val(Folio_service);
+                    $("#date_service").val(date_service);
                     $("#secction-001").fadeToggle(800);
                 }
             });
@@ -189,7 +235,7 @@ $(document).ready(function () {
     $("#close_report_customers").click(function (e) {
         e.preventDefault();
         $("#staticBackdrop").modal("hide");
-        //$(location).attr("href", "/");
+        $(location).attr("href", "/");
     });
 
     $("#validate_report_customers").click(function (e) {
@@ -205,16 +251,24 @@ $(document).ready(function () {
             );
         } else if (team == 0) {
             validate_Erros();
+            $("#error_business_hide").remove();
             $("#error_team_hide").remove();
             $("#error_equipo").append(
                 "<font color='#BF4949' size='2' id='error_team_hide'>Este Campo Es Oblogatorio</font>"
             );
         } else {
+            $("#id_equipo_registro").val(team);
             $("#id_equipo").val(team);
             $("#error_team_hide").remove();
             $("#error_business_hide").remove();
             $("#staticBackdrop").modal("hide");
         }
+    });
+
+    $("#btn_secction003").click(function (e) {
+        e.preventDefault();
+        $("#secction-003").fadeToggle();
+        $("#secction-004").fadeToggle(800);
     });
 }); // fin del document ready
 
@@ -259,12 +313,17 @@ function Uppercase(exp) {
     exp.value = exp.value.toUpperCase();
 }
 
-function pdf() {
-    $("#ejemplo_reporte").click(function () {
-        var route = "Reporte/prueba";
-        return window.open(route, "Prueba");
-        //$('#staticBackdrop').modal('show');
-    });
+function generate_report(url) {
+    return window.open(url, "Prueba");
+}
+
+function inicializeFolio() {
+    var Folio_service = $("#Folio_servicio").val();
+    var date_service = $("#Fecha_Servicio").val();
+    var equipo = $("#id_equipo_registro").val();
+    $("#Folio_service").val(Folio_service);
+    $("#date_service").val(date_service);
+    $("#id_equipo").val(equipo);
 }
 
 /**function load_data(){
@@ -390,7 +449,7 @@ function Equipos_Report() {
     $("#select-equipo-report").change(function () {
         var val1 = $("#select-equipo-report").val();
         var response = Equipos(val1);
-        console.log(response);
+        //console.log(response);
         /**var newArr = response.filter(function(el){
             return (el.id == val1);
         });**/
@@ -450,9 +509,8 @@ function send_customers() {
             //show_clientes(data);
         },
     });
-}
 
-/**function select_clientes(){
+    /**function select_clientes(){
     $.ajax({
         url:'/Clientes/dataClientes',
         type:'GET',
@@ -468,45 +526,40 @@ function send_customers() {
     });
 }**/
 
-function check(check) {
-    var check = $(".form-check-input");
-    var subseccion = check
-        .filter(":checked")
-        .map(function () {
-            return $(this).value();
-        })
-        .get();
-    console.log(subseccion);
-}
+    function check(check) {
+        var check = $(".form-check-input");
+        var subseccion = check
+            .filter(":checked")
+            .map(function () {
+                return $(this).value();
+            })
+            .get();
+        console.log(subseccion);
+    }
 
-function reset_form() {
-    $("#new-empresa")[0].reset();
-    $("#select_sucursal").val("").trigger("change");
-}
+    function reset_form() {
+        $("#new-empresa")[0].reset();
+        $("#select_sucursal").val("").trigger("change");
+    }
 
-/** funciones de mensajes del sistemas*/
+    /** funciones de mensajes del sistemas*/
 
-function success() {
-    Swal.fire("Exito!", "Registro Guardado", "success");
-}
+    function success() {
+        Swal.fire("Exito!", "Registro Guardado", "success");
+    }
 
-/** Funciones de los botones del formulario por secciones**/
+    /** Funciones de los botones del formulario por secciones**/
 
-function btn_secction001() {
-    success();
-    $("#secction-002").fadeToggle(800);
-}
+    // function btn_secction001() {
+    //     success();
+    //     $("#secction-002").fadeToggle(800);
+    // }
 
-function btn_secction002() {
-    success();
-    $("#secction-002").fadeToggle();
-    $("#secction-003").fadeToggle(800);
-}
-
-function btn_secction003() {
-    success();
-    $("#secction-003").fadeToggle();
-    $("#secction-004").fadeToggle(800);
+    // function btn_secction002() {
+    //     success();
+    //     $("#secction-002").fadeToggle();
+    //     $("#secction-003").fadeToggle(800);
+    // }
 
     /**var checkbox = $('.seccion3');
     var title = $('.title-3');

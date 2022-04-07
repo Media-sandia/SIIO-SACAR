@@ -15,6 +15,10 @@ class CreateSeccion2sTable extends Migration
     {
         Schema::create('seccion2s', function (Blueprint $table) {
             $table->id();
+            $table->string('id_equipo');
+            $table->string('Folio');
+            $table->string('Fecha');
+            $table->text('data');
             $table->timestamps();
         });
     }
