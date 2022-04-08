@@ -290,10 +290,8 @@
     <script src="{{ asset('/assets/vendor/datatables/dataTables.min.js') }}"></script>
     <!-- Argon JS -->
     <script src="{{ asset('/assets/js/argon.js?v=1.0.0') }}"></script>
-    <!--LineProgressbar js-->
-    <script src="{{ asset('/assets/ProgresBar/jquery.lineProgressbar.js') }}"></script>
     <!-- scrips Propios -->
-    <script src="{{ asset('js/extends.js') }}"></script>
+    <script src="{{ asset('js/servicio/extends.js') }}"></script>
     <!--DropZone.js-->
     <script src="https://unpkg.com/dropzone@5/dist/min/dropzone.min.js"></script>
     <!--Toarts.css-->
