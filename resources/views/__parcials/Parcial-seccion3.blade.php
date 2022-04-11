@@ -1,9 +1,8 @@
-<form action="route('saveSection3') }}"" class="   form_section form-inline" id="form_section3" method="post"
+<form action="{{ route('saveSection3') }}" class="      form_section form-inline" id="form_section3" method="post"
     enctype="multipart/form-data">
-    <input type="hidden" id="id_equipo" name='id_equipo' value="">
-    <input type="hidden" id="Folio_service" name='Folio_service' value="">
-    <input type="hidden" id="date_service" name='date_service' value="">
-    <input type="hidden" name="seccion3" value="seccion3">
+    <input type="hidden" id="id_equipo2" name='id_equipo' value="">
+    <input type="hidden" id="Folio_service2" name='Folio_service' value="">
+    <input type="hidden" id="date_service2" name='date_service' value="">
     <h3 class="txt_secction">RADIO-CONTROL</h3>
     <div class="container">
         <div class="row">
@@ -92,8 +91,7 @@
             </div>
 
         </div>
-        <div class="btn btn-sacar txt_secction mt-3" type='submit' id="btn_secction003">
-            Guardar</div>
+        <button type="submit" class="btn btn-sacar txt_secction">Guardar</button>
     </div>
     <!--end-container-->
 </form>

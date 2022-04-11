@@ -1,5 +1,5 @@
-<form action="{{ route('saveSection1') }}" class="form_section form-inline" id="form_section1" method="post"
-    enctype="multipart/form-data">
+<form action="{{ route('saveSection1') }}" class="form_section form-inline needs-validation" id="form_section1"
+    method="post" enctype="multipart/form-data" novalidate>
     <input type="hidden" id="id_equipo" name='id_equipo' value="">
     <input type="hidden" id="Folio_service" name='Folio_service' value="">
     <input type="hidden" id="date_service" name='date_service' value="">
@@ -10,7 +10,7 @@
             <div class="text-left" style="margin-right: 62px;">
                 <h4 class="">1.1.1 Recorrido del puente</h4>
             </div>
-            <select class="form-control col-2 form-control-sm  mr-3" name="1.1.1">
+            <select class="form-control col-2 form-control-sm  mr-3" name="1.1.1" required>
                 <option selected='selected'>Selecciona</option>
                 <option value="1">OK</option>
                 <option value="2">NOK</option>
@@ -301,12 +301,15 @@
             <div class="text-left" style="margin-right: 18px;">
                 <h4 class="">1.3.11 Capacidad en puente legible </h4>
             </div>
-            <select class="form-control col-2 form-control-sm  mr-3" name="1.3.11">
+            <select class="form-control col-2 form-control-sm  mr-3" name="1.3.11" required>
                 <option selected='selected'>Selecciona</option>
                 <option value="1">OK</option>
                 <option value="2">NOK</option>
                 <option value="3">NA</option>
             </select>
+            <div class="invalid-tooltip">
+                Please select a valid state.
+            </div>
             <input type="text" class="form-control form-control-sm col-5" name="C1.3.11" placeholder="Comentario">
         </div>
 

@@ -50,14 +50,14 @@ class HomeController extends Controller
 
     public function saveSection2(Request $request)
     {
-        /**$section = new seccion2();
+        $section = new seccion2();
         $section->id_equipo = $request->id_equipo;
         $section->Folio = $request->Folio_service;
         $section->Fecha = $request->date_service;
         $section->data = $request->all();
-        $section->save();**/
+        $section->save();
 
-        /**$comment = new coments();
+        $comment = new coments();
         $comment->body = $request->body;
         $comment->save();
 
@@ -71,8 +71,8 @@ class HomeController extends Controller
             $file->uri = $files[$i]->store('images');
             $file->name = $files[$i]->getClientOriginalName();
             $file->save();
-        }**/
-        return response()->json($request);
+        }
+        return response()->json(['status' => 1]);
     }
 
     public function saveSection3(Request $request)
@@ -99,7 +99,10 @@ class HomeController extends Controller
             $file->name = $files[$i]->getClientOriginalName();
             $file->save();
         }
+        return response()->json(['status' => 1]);
     }
+
+
 
 
 
@@ -193,8 +196,10 @@ class HomeController extends Controller
         $Grua = Gruas::find($id_equipo); //  consulta de informacion del equipo de la grua
         $customer = ClienteGrua::find($Grua->id_cliente); // consulta de informacion del cliente
         $seccion1 = seccion1::where('Folio', $Folio)->get();
+        $seccion2 = seccion2::where('Folio', $Folio)->get();
+        $seccion3 = seccion3::where('Folio', $Folio)->get();
         $data = $seccion1[0]->data['id_equipo'];
-        $pdf = PDF::loadView('PDF.report', compact('customer', 'Grua', 'seccion1', 'data'));
+        $pdf = PDF::loadView('PDF.report', compact('customer', 'Grua', 'seccion1', 'seccion2', 'seccion3', 'data'));
         return $pdf->stream('Pruebas.pdf');
     }
 }

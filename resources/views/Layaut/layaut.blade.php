@@ -216,7 +216,8 @@
                                     <img alt="Image placeholder" src={{ asset('/img/Jose-Muñiz.png') }}>
                                 </span>
                                 <div class="media-body ml-2 d-none d-lg-block">
-                                    <span class="mb-0  text-white  font-weight-bold">Jose Muñiz</span>
+                                    <span
+                                        class="mb-0  text-white  font-weight-bold">{{ auth()->user()->name }}</span>
                                 </div>
                             </div>
                         </a>
