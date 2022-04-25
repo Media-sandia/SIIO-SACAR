@@ -12,11 +12,15 @@
             </div>
             <select class="form-control col-2 form-control-sm  mr-3" name="1.1.1" required>
                 <option selected='selected'>Selecciona</option>
-                <option value="1">OK</option>
-                <option value="2">NOK</option>
+                <option value="1">CORRECTO</option>
+                <option value="2">INCORRECTO</option>
+                <option value="4">CORREGIDO</option>
                 <option value="3">NA</option>
             </select>
-            <input type="text" class="form-control form-control-sm col-6" name="C1.1.1" placeholder="Comentario">
+            <input type="text" class="form-control form-control-sm col-4" name="C1.1.1" placeholder="Comentario">
+            <button class="btn btn-sm btn-outline-default btn-rounded ml-4" onclick="evidence_img();"><i
+                    class="ni ni-camera-compact"></i>
+            </button>
         </div>
 
         <div class=" col-12 form-group" style="margin-bottom: 10px">
@@ -25,11 +29,15 @@
             </div>
             <select class="form-control col-2 form-control-sm  mr-3" name="1.1.2">
                 <option selected='selected'>Selecciona</option>
-                <option value="1">OK</option>
-                <option value="2">NOK</option>
+                <option value="1">CORRECTO</option>
+                <option value="2">INCORRECTO</option>
+                <option value="4">CORREGIDO</option>
                 <option value="3">NA</option>
             </select>
-            <input type="text" class="form-control form-control-sm col-6" name="C1.1.2" placeholder="Comentario">
+            <input type="text" class="form-control form-control-sm col-4" name="C1.1.2" placeholder="Comentario">
+            <button class="btn btn-sm btn-outline-default btn-rounded ml-4" onclick="evidence_img();"><i
+                    class="ni ni-camera-compact"></i>
+            </button>
         </div>
 
         <div class=" col-12 form-group" style="margin-bottom: 10px">
@@ -38,11 +46,13 @@
             </div>
             <select class="form-control col-2 form-control-sm  mr-3" name="1.1.3">
                 <option selected='selected'>Selecciona</option>
-                <option value="1">OK</option>
-                <option value="2">NOK</option>
+                <option value="1">CORRECTO</option>
+                <option value="2">INCORRECTO</option>
+                <option value="4">CORREGIDO</option>
                 <option value="3">NA</option>
             </select>
-            <input type="text" class="form-control form-control-sm col-6" name="C1.1.3" placeholder="Comentario">
+            <input type="text" class="form-control form-control-sm col-4" name="C1.1.3" placeholder="Comentario">
+            <button class="btn btn-sm btn-outline-default btn-rounded ml-4"><i class="ni ni-camera-compact"> </i>
         </div>
 
         <div class=" col-12 form-group" style="margin-bottom: 10px">
@@ -51,11 +61,13 @@
             </div>
             <select class="form-control col-2 form-control-sm  mr-3" name="1.1.4">
                 <option selected='selected'>Selecciona</option>
-                <option value="1">OK</option>
-                <option value="2">NOK</option>
+                <option value="1">CORRECTO</option>
+                <option value="2">INCORRECTO</option>
+                <option value="4">CORREGIDO</option>
                 <option value="3">NA</option>
             </select>
-            <input type="text" class="form-control form-control-sm col-6" name="C1.1.4" placeholder="Comentario">
+            <input type="text" class="form-control form-control-sm col-4" name="C1.1.4" placeholder="Comentario">
+            <button class="btn btn-sm btn-outline-default btn-rounded ml-4"><i class="ni ni-camera-compact"> </i>
         </div>
 
         <div class=" col-12 form-group" style="margin-bottom: 10px">
@@ -64,11 +76,13 @@
             </div>
             <select class="form-control col-2 form-control-sm  mr-3" name="1.1.5">
                 <option selected='selected'>Selecciona</option>
-                <option value="1">OK</option>
-                <option value="2">NOK</option>
-                <option value="3">NA</option>
+                <<option value="1">CORRECTO</option>
+                    <option value="2">INCORRECTO</option>
+                    <option value="4">CORREGIDO</option>
+                    <option value="3">NA</option>
             </select>
-            <input type="text" class="form-control form-control-sm col-6" name="C1.1.5" placeholder="Comentario">
+            <input type="text" class="form-control form-control-sm col-4" name="C1.1.5" placeholder="Comentario">
+            <button class="btn btn-sm btn-outline-default btn-rounded ml-4"><i class="ni ni-camera-compact"> </i>
         </div>
         <input type="button" name="password" class="next btn btn-success txt_secction" value="Siguiente" />
     </fieldset>
@@ -82,8 +96,9 @@
             </div>
             <select class="form-control col-2 form-control-sm  mr-3" name="1.2.1">
                 <option selected='selected'>Selecciona</option>
-                <option value="1">OK</option>
-                <option value="2">NOK</option>
+                <option value="1">CORRECTO</option>
+                <option value="2">INCORRECTO</option>
+                <option value="4">CORREGIDO</option>
                 <option value="3">NA</option>
             </select>
             <input type="text" class="form-control form-control-sm col-5" name="C1.2.1" placeholder="Comentario">
@@ -95,8 +110,9 @@
             </div>
             <select class="form-control col-2 form-control-sm  mr-3" name="1.2.2">
                 <option selected='selected'>Selecciona</option>
-                <option value="1">OK</option>
-                <option value="2">NOK</option>
+                <option value="1">CORRECTO</option>
+                <option value="2">INCORRECTO</option>
+                <option value="4">CORREGIDO</option>
                 <option value="3">NA</option>
             </select>
             <input type="text" class="form-control form-control-sm col-5" name="C1.2.2" placeholder="Comentario">
@@ -108,8 +124,9 @@
             </div>
             <select class="form-control col-2 form-control-sm  mr-3" name="1.2.3">
                 <option selected='selected'>Selecciona</option>
-                <option value="1">OK</option>
-                <option value="2">NOK</option>
+                <option value="1">CORRECTO</option>
+                <option value="2">INCORRECTO</option>
+                <option value="4">CORREGIDO</option>
                 <option value="3">NA</option>
             </select>
             <input type="text" class="form-control form-control-sm col-5" name="C1.2.3" placeholder="Comentario">
@@ -121,8 +138,9 @@
             </div>
             <select class="form-control col-2 form-control-sm  mr-3" name="1.2.4">
                 <option selected='selected'>Selecciona</option>
-                <option value="1">OK</option>
-                <option value="2">NOK</option>
+                <option value="1">CORRECTO</option>
+                <option value="2">INCORRECTO</option>
+                <option value="4">CORREGIDO</option>
                 <option value="3">NA</option>
             </select>
             <input type="text" class="form-control form-control-sm col-5" name="C1.2.4" placeholder="Comentario">
@@ -134,8 +152,9 @@
             </div>
             <select class="form-control col-2 form-control-sm  mr-3" name="1.2.5">
                 <option selected='selected'>Selecciona</option>
-                <option value="1">OK</option>
-                <option value="2">NOK</option>
+                <option value="1">CORRECTO</option>
+                <option value="2">INCORRECTO</option>
+                <option value="4">CORREGIDO</option>
                 <option value="3">NA</option>
             </select>
             <input type="text" class="form-control form-control-sm col-5" name="C1.2.5" placeholder="Comentario">
@@ -147,8 +166,9 @@
             </div>
             <select class="form-control col-2 form-control-sm  mr-3" name="1.2.6">
                 <option selected='selected'>Selecciona</option>
-                <option value="1">OK</option>
-                <option value="2">NOK</option>
+                <option value="1">CORRECTO</option>
+                <option value="2">INCORRECTO</option>
+                <option value="4">CORREGIDO</option>
                 <option value="3">NA</option>
             </select>
             <input type="text" class="form-control form-control-sm col-5" name="C1.2.6" placeholder="Comentario">
@@ -166,8 +186,9 @@
             </div>
             <select class="form-control col-2 form-control-sm  mr-3" name="1.3.1">
                 <option selected='selected'>Selecciona</option>
-                <option value="1">OK</option>
-                <option value="2">NOK</option>
+                <option value="1">CORRECTO</option>
+                <option value="2">INCORRECTO</option>
+                <option value="4">CORREGIDO</option>
                 <option value="3">NA</option>
             </select>
             <input type="text" class="form-control form-control-sm col-4" name="C1.3.1" placeholder="Comentario">
@@ -179,8 +200,9 @@
             </div>
             <select class="form-control col-2 form-control-sm  mr-3" name="1.3.2">
                 <option selected='selected'>Selecciona</option>
-                <option value="1">OK</option>
-                <option value="2">NOK</option>
+                <option value="1">CORRECTO</option>
+                <option value="2">INCORRECTO</option>
+                <option value="4">CORREGIDO</option>
                 <option value="3">NA</option>
             </select>
             <input type="text" class="form-control form-control-sm col-4" name="C1.3.2" placeholder="Comentario">
@@ -192,8 +214,9 @@
             </div>
             <select class="form-control col-2 form-control-sm  mr-3" name="1.3.3">
                 <option selected='selected'>Selecciona</option>
-                <option value="1">OK</option>
-                <option value="2">NOK</option>
+                <option value="1">CORRECTO</option>
+                <option value="2">INCORRECTO</option>
+                <option value="4">CORREGIDO</option>
                 <option value="3">NA</option>
             </select>
             <input type="text" class="form-control form-control-sm col-4" name="C1.3.3" placeholder="Comentario">
@@ -205,8 +228,9 @@
             </div>
             <select class="form-control col-2 form-control-sm  mr-3" name="1.3.4">
                 <option selected='selected'>Selecciona</option>
-                <option value="1">OK</option>
-                <option value="2">NOK</option>
+                <option value="1">CORRECTO</option>
+                <option value="2">INCORRECTO</option>
+                <option value="4">CORREGIDO</option>
                 <option value="3">NA</option>
             </select>
             <input type="text" class="form-control form-control-sm col-4" name="C1.3.4" placeholder="Comentario">
@@ -218,8 +242,9 @@
             </div>
             <select class="form-control col-2 form-control-sm  mr-3" name="1.3.5">
                 <option selected='selected'>Selecciona</option>
-                <option value="1">OK</option>
-                <option value="2">NOK</option>
+                <option value="1">CORRECTO</option>
+                <option value="2">INCORRECTO</option>
+                <option value="4">CORREGIDO</option>
                 <option value="3">NA</option>
             </select>
             <input type="text" class="form-control form-control-sm col-4" name="C1.3.5" placeholder="Comentario">
@@ -231,8 +256,9 @@
             </div>
             <select class="form-control col-2 form-control-sm  mr-3" name="1.3.6">
                 <option selected='selected'>Selecciona</option>
-                <option value="1">OK</option>
-                <option value="2">NOK</option>
+                <option value="1">CORRECTO</option>
+                <option value="2">INCORRECTO</option>
+                <option value="4">CORREGIDO</option>
                 <option value="3">NA</option>
             </select>
             <input type="text" class="form-control form-control-sm col-4" name="C1.3.6" placeholder="Comentario">
@@ -251,8 +277,9 @@
             </div>
             <select class="form-control col-2 form-control-sm  mr-3" name="1.3.7">
                 <option selected='selected'>Selecciona</option>
-                <option value="1">OK</option>
-                <option value="2">NOK</option>
+                <option value="1">CORRECTO</option>
+                <option value="2">INCORRECTO</option>
+                <option value="4">CORREGIDO</option>
                 <option value="3">NA</option>
             </select>
             <input type="text" class="form-control form-control-sm col-5" name="C1.3.7" placeholder="Comentario">
@@ -264,8 +291,9 @@
             </div>
             <select class="form-control col-2 form-control-sm  mr-3" name="1.3.8">
                 <option selected='selected'>Selecciona</option>
-                <option value="1">OK</option>
-                <option value="2">NOK</option>
+                <option value="1">CORRECTO</option>
+                <option value="2">INCORRECTO</option>
+                <option value="4">CORREGIDO</option>
                 <option value="3">NA</option>
             </select>
             <input type="text" class="form-control form-control-sm col-5" name="C1.3.8" placeholder="Comentario">
@@ -277,8 +305,9 @@
             </div>
             <select class="form-control col-2 form-control-sm  mr-3" name="1.3.9">
                 <option selected='selected'>Selecciona</option>
-                <option value="1">OK</option>
-                <option value="2">NOK</option>
+                <option value="1">CORRECTO</option>
+                <option value="2">INCORRECTO</option>
+                <option value="4">CORREGIDO</option>
                 <option value="3">NA</option>
             </select>
             <input type="text" class="form-control form-control-sm col-5" name="C1.3.9" placeholder="Comentario">
@@ -290,8 +319,9 @@
             </div>
             <select class="form-control col-2 form-control-sm  mr-3" name="1.3.10">
                 <option selected='selected'>Selecciona</option>
-                <option value="1">OK</option>
-                <option value="2">NOK</option>
+                <option value="1">CORRECTO</option>
+                <option value="2">INCORRECTO</option>
+                <option value="4">CORREGIDO</option>
                 <option value="3">NA</option>
             </select>
             <input type="text" class="form-control form-control-sm col-5" name="C1.3.10" placeholder="Comentario">
@@ -303,8 +333,9 @@
             </div>
             <select class="form-control col-2 form-control-sm  mr-3" name="1.3.11" required>
                 <option selected='selected'>Selecciona</option>
-                <option value="1">OK</option>
-                <option value="2">NOK</option>
+                <option value="1">CORRECTO</option>
+                <option value="2">INCORRECTO</option>
+                <option value="4">CORREGIDO</option>
                 <option value="3">NA</option>
             </select>
             <div class="invalid-tooltip">

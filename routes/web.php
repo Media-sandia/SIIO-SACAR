@@ -19,6 +19,16 @@ Route::post('NuevoRegistro/setfiles', [HomeController::class, 'setFiles']);
 Route::post('saveSection1', [HomeController::class, 'saveSection1'])->name('saveSection1');
 Route::post('saveSection2', [HomeController::class, 'saveSection2'])->name('saveSection2');
 Route::post('saveSection3', [HomeController::class, 'saveSection3'])->name('saveSection3');
+Route::post('saveSection4', [HomeController::class, 'saveSection4'])->name('saveSection4');
+Route::post('saveSection5', [HomeController::class, 'saveSection5'])->name('saveSection5');
+Route::post('saveSection6', [HomeController::class, 'saveSection6'])->name('saveSection6');
+Route::post('saveSection7', [HomeController::class, 'saveSection7'])->name('saveSection7');
+Route::post('saveSection8', [HomeController::class, 'saveSection8'])->name('saveSection8');
+Route::post('saveSection9', [HomeController::class, 'saveSection9'])->name('saveSection9');
+Route::post('saveSection10', [HomeController::class, 'saveSection10'])->name('saveSection10');
+Route::post('saveSection11', [HomeController::class, 'saveSection11'])->name('saveSection11');
+
+
 
 
 Route::get('/', [LoginController::class, 'ShowLoginForm'])->name('showlogin');

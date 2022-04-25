@@ -30,7 +30,7 @@
 
                         <div class="col-md-3" style="margin-top:32px;">
                             <button class="btn btn-sm btn-primary" id="view-form">Consultar</button>
-                            <button class="btn btn-sm btn-primary" onclick="pdf();" id="ejemplo_reporte">Reporte</button>
+                            {{-- <button class="btn btn-sm btn-primary" onclick="pdf();" id="ejemplo_reporte">Reporte</button> --}}
                         </div>
                     </div>
 
@@ -38,7 +38,7 @@
                         @include('__parcials.Parcial-seccion1')
                     </div>
 
-                    <div class="row mt-3" id="secction-002">
+                    {{-- <div class="row mt-3" id="secction-002">
                         @include('__parcials.Parcial-seccion2')
                     </div>
 
@@ -76,15 +76,17 @@
 
                     <div class="row mt-3" id="secction-011">
                         @include('__parcials.Parcial-seccion11')
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </div>
     </div>
-    <script>
+    {{-- <script>
         window.onload = function() { // también puede usar window.addEventListener('load', (event) => {
             $('#staticBackdrop').modal('show');
         };
-    </script>
+    </script> --}}
 @endsection
+<script src="{{ asset('js/servicio/ServiceImg.js') }}"></script>
 @include('Modals.Report-Cliente')
+@include('Modals.evidence-img')

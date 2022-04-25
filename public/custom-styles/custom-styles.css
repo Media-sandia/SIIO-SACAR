@@ -1,8 +1,46 @@
+@font-face {
+    font-family: 'msyh';
+    font-style: normal;
+    font-weight: Bold !important;
+    src: url('fonts/pill/Pill_Gothic_300mg_Bold.ttf') format('truetype');
+}
+
 h1 .hi{
     color: blue;
 }
 
+.dataTables_paginate a.paginate_button.current {
+    font-size: 12px;
+    color: #ebd037;
+    background-color: #001f50 !important;  
+    border-radius: 100%;
+    text-align: center;
+    padding: 4px 10px;
+    margin-right: 10px;
+    margin-left: 10px;
 
+  }
+  
+
+
+.table-hover-index > tbody > tr:hover{ /* estilos de la tabla de control de estaciones en el efecto hover */
+    border-top: 16px solid #E3BA00;
+    border-bottom: 2px solid #E3BA00;
+}
+
+.thead-index-existencias{ /* estilos de la tabla de existencias*/
+    border-top: 16px solid #E3BA00;
+    font-family: 'msyh';
+    color:#FFFFFF;
+    background: linear-gradient(to right,#2962FF 55%, #36bea6);
+}
+
+.thead-index{/* encabezado principal de la tabla estaciones */
+    border-radius: 20px !important;
+    color:#FFFFFF;
+    background: linear-gradient(to right,#0E3A8A 65%, #E3BA00);
+
+}
 
 .bg-auht{
     display: table;

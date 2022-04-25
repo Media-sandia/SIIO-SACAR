@@ -1,4 +1,4 @@
-<form action="{{ route('saveSection3') }}" class="      form_section form-inline" id="form_section3" method="post"
+<form action="{{ route('saveSection3') }}" class="form_section form-inline" id="form_section3" method="post"
     enctype="multipart/form-data">
     <input type="hidden" id="id_equipo2" name='id_equipo' value="">
     <input type="hidden" id="Folio_service2" name='Folio_service' value="">

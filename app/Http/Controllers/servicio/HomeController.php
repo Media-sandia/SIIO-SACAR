@@ -11,6 +11,14 @@ use App\Models\Gruas;
 use App\Models\seccion1;
 use App\Models\seccion2;
 use App\Models\seccion3;
+use App\Models\seccion4;
+use App\Models\seccion5;
+use App\Models\seccion6;
+use App\Models\seccion7;
+use App\Models\seccion8;
+use App\Models\seccion9;
+use App\Models\seccion10;
+use App\Models\seccion11;
 use PDF;
 use PhpParser\Node\Expr\FuncCall;
 
@@ -45,7 +53,7 @@ class HomeController extends Controller
             $file->name = $files[$i]->getClientOriginalName();
             $file->save();
         }
-        return response()->json(['url' => 'Reporte/prueba/' . $request->id_equipo . '/' . $request->Folio_service, 'status' => 1]);
+        return response()->json(['status' => 1]);
     }
 
     public function saveSection2(Request $request)
@@ -101,6 +109,223 @@ class HomeController extends Controller
         }
         return response()->json(['status' => 1]);
     }
+
+    public function saveSection4(Request $request)
+    {
+        $section = new seccion4();
+        $section->id_equipo = $request->id_equipo;
+        $section->Folio = $request->Folio_service;
+        $section->Fecha = $request->date_service;
+        $section->data = $request->all();
+        $section->save();
+
+        $comment = new coments();
+        $comment->body = $request->body;
+        $comment->save();
+
+        $files = $request->file('files', []);
+        for ($i = 0; $i < count($files); $i++) {
+            $file = new Fileables();
+            $file->Fileable_type = seccion4::class;
+            $file->Fileable_id = $section->id;
+            $file->id_coment = $comment->id;
+
+            $file->uri = $files[$i]->store('images');
+            $file->name = $files[$i]->getClientOriginalName();
+            $file->save();
+        }
+        return response()->json(['status' => 1]);
+    }
+
+    public function saveSection5(Request $request)
+    {
+        $section = new seccion5();
+        $section->id_equipo = $request->id_equipo;
+        $section->Folio = $request->Folio_service;
+        $section->Fecha = $request->date_service;
+        $section->data = $request->all();
+        $section->save();
+
+        $comment = new coments();
+        $comment->body = $request->body;
+        $comment->save();
+
+        $files = $request->file('files', []);
+        for ($i = 0; $i < count($files); $i++) {
+            $file = new Fileables();
+            $file->Fileable_type = seccion5::class;
+            $file->Fileable_id = $section->id;
+            $file->id_coment = $comment->id;
+
+            $file->uri = $files[$i]->store('images');
+            $file->name = $files[$i]->getClientOriginalName();
+            $file->save();
+        }
+        return response()->json(['status' => 1]);
+    }
+
+    public function saveSection6(Request $request)
+    {
+        $section = new seccion6();
+        $section->id_equipo = $request->id_equipo;
+        $section->Folio = $request->Folio_service;
+        $section->Fecha = $request->date_service;
+        $section->data = $request->all();
+        $section->save();
+
+        $comment = new coments();
+        $comment->body = $request->body;
+        $comment->save();
+
+        $files = $request->file('files', []);
+        for ($i = 0; $i < count($files); $i++) {
+            $file = new Fileables();
+            $file->Fileable_type = seccion6::class;
+            $file->Fileable_id = $section->id;
+            $file->id_coment = $comment->id;
+
+            $file->uri = $files[$i]->store('images');
+            $file->name = $files[$i]->getClientOriginalName();
+            $file->save();
+        }
+        return response()->json(['status' => 1]);
+    }
+
+    public function saveSection7(Request $request)
+    {
+        $section = new seccion7();
+        $section->id_equipo = $request->id_equipo;
+        $section->Folio = $request->Folio_service;
+        $section->Fecha = $request->date_service;
+        $section->data = $request->all();
+        $section->save();
+
+        $comment = new coments();
+        $comment->body = $request->body;
+        $comment->save();
+
+        $files = $request->file('files', []);
+        for ($i = 0; $i < count($files); $i++) {
+            $file = new Fileables();
+            $file->Fileable_type = seccion7::class;
+            $file->Fileable_id = $section->id;
+            $file->id_coment = $comment->id;
+
+            $file->uri = $files[$i]->store('images');
+            $file->name = $files[$i]->getClientOriginalName();
+            $file->save();
+        }
+        return response()->json(['status' => 1]);
+    }
+
+    public function saveSection8(Request $request)
+    {
+        $section = new seccion8();
+        $section->id_equipo = $request->id_equipo;
+        $section->Folio = $request->Folio_service;
+        $section->Fecha = $request->date_service;
+        $section->data = $request->all();
+        $section->save();
+
+        $comment = new coments();
+        $comment->body = $request->body;
+        $comment->save();
+
+        $files = $request->file('files', []);
+        for ($i = 0; $i < count($files); $i++) {
+            $file = new Fileables();
+            $file->Fileable_type = seccion8::class;
+            $file->Fileable_id = $section->id;
+            $file->id_coment = $comment->id;
+
+            $file->uri = $files[$i]->store('images');
+            $file->name = $files[$i]->getClientOriginalName();
+            $file->save();
+        }
+        return response()->json(['status' => 1]);
+    }
+
+    public function saveSection9(Request $request)
+    {
+        $section = new seccion9();
+        $section->id_equipo = $request->id_equipo;
+        $section->Folio = $request->Folio_service;
+        $section->Fecha = $request->date_service;
+        $section->data = $request->all();
+        $section->save();
+
+        $comment = new coments();
+        $comment->body = $request->body;
+        $comment->save();
+
+        $files = $request->file('files', []);
+        for ($i = 0; $i < count($files); $i++) {
+            $file = new Fileables();
+            $file->Fileable_type = seccion9::class;
+            $file->Fileable_id = $section->id;
+            $file->id_coment = $comment->id;
+
+            $file->uri = $files[$i]->store('images');
+            $file->name = $files[$i]->getClientOriginalName();
+            $file->save();
+        }
+        return response()->json(['status' => 1]);
+    }
+
+    public function saveSection10(Request $request)
+    {
+        $section = new seccion10();
+        $section->id_equipo = $request->id_equipo;
+        $section->Folio = $request->Folio_service;
+        $section->Fecha = $request->date_service;
+        $section->data = $request->all();
+        $section->save();
+
+        $comment = new coments();
+        $comment->body = $request->body;
+        $comment->save();
+
+        $files = $request->file('files', []);
+        for ($i = 0; $i < count($files); $i++) {
+            $file = new Fileables();
+            $file->Fileable_type = seccion10::class;
+            $file->Fileable_id = $section->id;
+            $file->id_coment = $comment->id;
+
+            $file->uri = $files[$i]->store('images');
+            $file->name = $files[$i]->getClientOriginalName();
+            $file->save();
+        }
+        return response()->json(['status' => 1]);
+    }
+
+    public function saveSection11(Request $request)
+    {
+        $section = new seccion11();
+        $section->id_equipo = $request->id_equipo;
+        $section->Folio = $request->Folio_service;
+        $section->Fecha = $request->date_service;
+        $section->data = $request->all();
+        $section->save();
+
+        $comment = new coments();
+        $comment->body = $request->body;
+        $comment->save();
+
+        $files = $request->file('files', []);
+        for ($i = 0; $i < count($files); $i++) {
+            $file = new Fileables();
+            $file->Fileable_type = seccion11::class;
+            $file->Fileable_id = $section->id;
+            $file->id_coment = $comment->id;
+
+            $file->uri = $files[$i]->store('images');
+            $file->name = $files[$i]->getClientOriginalName();
+            $file->save();
+        }
+        return response()->json(['status' => 1, 'url' => 'Reporte/prueba/' . $request->id_equipo . '/' . $request->Folio_service,]);
+    }
+
 
 
 
@@ -198,8 +423,16 @@ class HomeController extends Controller
         $seccion1 = seccion1::where('Folio', $Folio)->get();
         $seccion2 = seccion2::where('Folio', $Folio)->get();
         $seccion3 = seccion3::where('Folio', $Folio)->get();
+        $seccion4 = seccion4::where('Folio', $Folio)->get();
+        $seccion5 = seccion5::where('Folio', $Folio)->get();
+        $seccion6 = seccion6::where('Folio', $Folio)->get();
+        $seccion7 = seccion7::where('Folio', $Folio)->get();
+        $seccion8 = seccion8::where('Folio', $Folio)->get();
+        $seccion9 = seccion9::where('Folio', $Folio)->get();
+        $seccion10 = seccion10::where('Folio', $Folio)->get();
+        $seccion11 = seccion11::where('Folio', $Folio)->get();
         $data = $seccion1[0]->data['id_equipo'];
-        $pdf = PDF::loadView('PDF.report', compact('customer', 'Grua', 'seccion1', 'seccion2', 'seccion3', 'data'));
+        $pdf = PDF::loadView('PDF.report', compact('customer', 'Grua', 'seccion1', 'seccion2', 'seccion3', 'seccion4', 'seccion5', 'seccion6', 'seccion7', 'seccion8', 'seccion9', 'seccion10', 'seccion11', 'data'));
         return $pdf->stream('Pruebas.pdf');
     }
 }

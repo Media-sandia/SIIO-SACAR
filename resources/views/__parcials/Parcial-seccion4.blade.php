@@ -1,5 +1,9 @@
-<form action="#" class="form_section form-inline" id="form_section4">
+<form action="{{ route('saveSection4') }}" class="form_section form-inline" id="form_section4" method="post"
+    enctype="multipart/form-data">
     <fieldset class="container">
+        <input type="hidden" id="id_equipo3" name='id_equipo' value="">
+        <input type="hidden" id="Folio_service3" name='Folio_service' value="">
+        <input type="hidden" id="date_service3" name='date_service' value="">
         <h3 class="txt_secction color-title-sacar">4.1 VOLTAJE DE ALIMENTACION NOMINAL</h3>
 
         <div class=" col-12 form-group" style="margin-bottom: 10px">
@@ -169,8 +173,23 @@
             <input type="text" class="form-control form-control-sm col-2 mr-3" name="GP4.4.3" placeholder="CL3">
             <input type="text" class="form-control form-control-sm col-4" name="C4.4.3" placeholder="Comentario">
         </div>
-        <input type="button" name="previous" class="previous btn btn-primary txt_secction " value="Anterior" />
-        <input type="button" name="password" class="next btn btn-sacar" onclick="btn_secction004();" value="Guardar" />
+
+        <div class=" col-12" style="margin-bottom: 10px">
+            <div class="text-center" style="margin-right: 18px;">
+                <h4>Archivo para subida</h4>
+            </div>
+            <center><input type="file" class="form-control" id="file" name="files[]" multiple /></center>
+        </div>
+
+        <div class="mt-3 text-center">
+            <h4 for="">Comentarios</h4>
+            <center>
+                <textarea name="body" class="form-control" id="" cols="80" rows="5"></textarea>
+            </center>
+        </div>
+
+        <input type="button" name="previous" class="previous mt-3 btn btn-primary txt_secction " value="Anterior" />
+        <button type="submit" name="password" class="next btn btn-sacar mt-3">Guardar</button>
 
     </fieldset>
 </form>

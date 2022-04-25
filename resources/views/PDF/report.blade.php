@@ -1703,25 +1703,89 @@
                         <td style="width: 3%;" class="bodertd borde-sep textCenter">NA</td>
                         <td style="width: 25%;" class="bodertd borde-sep textCenter">Comentarios</td>
                     </tr>
-                    <tr class="titlesubsection">
-                        <td style="width: 4%;" class="bodertd borde-sep">4.1.1</td>
-                        <td style="width: 26%;" class="bodertd borde-sep ">Voltaje linea-linea </td>
-                        <td style="width: 15%;" class="bodertd borde-sep textCenter"> VLL=</td>
-                        <td style="width: 3%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 3%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 3%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 25%;" class="bodertd borde-sep"></td>
-                    </tr>
 
-                    <tr class="titlesubsection">
-                        <td style="width: 4%;" class="bodertd borde-sep">4.1.2</td>
-                        <td style="width: 26%;" class="bodertd borde-sep ">Voltaje línea-tierra </td>
-                        <td style="width: 25%;" class="bodertd borde-sep textCenter"> VLL=</td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 25%;" class="bodertd borde-sep"></td>
-                    </tr>
+
+                    @switch($seccion4[0]->data['4_1'])
+                        @case(1)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">4.1.1</td>
+                                <td style="width: 26%;" class="bodertd borde-sep ">Voltaje linea-linea </td>
+                                <td style="width: 15%;" class="bodertd borde-sep textCenter"> VLL=
+                                    {{ $seccion4[0]->data['VLL'] }}</td>
+                                <td style="width: 3%;" class="bodertd borde-sep textCenter">OK</td>
+                                <td style="width: 3%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 3%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 25%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(2)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">4.1.1</td>
+                                <td style="width: 26%;" class="bodertd borde-sep ">Voltaje linea-linea </td>
+                                <td style="width: 15%;" class="bodertd borde-sep textCenter"> VLL=
+                                    {{ $seccion4[0]->data['VLL'] }}</td>
+                                <td style="width: 3%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 3%;" class="bodertd borde-sep textCenter">NOK</td>
+                                <td style="width: 3%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 25%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(3)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">4.1.1</td>
+                                <td style="width: 26%;" class="bodertd borde-sep ">Voltaje linea-linea </td>
+                                <td style="width: 15%;" class="bodertd borde-sep textCenter"> VLL=
+                                    {{ $seccion4[0]->data['VLL'] }}</td>
+                                <td style="width: 3%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 3%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 3%;" class="bodertd borde-sep textCenter">NA</td>
+                                <td style="width: 25%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+                    @endswitch
+
+                    @switch($seccion4[0]->data['421'])
+                        @case(1)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">4.1.2</td>
+                                <td style="width: 26%;" class="bodertd borde-sep ">Voltaje línea-tierra </td>
+                                <td style="width: 25%;" class="bodertd borde-sep textCenter"> VLL=
+                                    {{ $seccion4[0]->data['VLL'] }}</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 25%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(2)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">4.1.2</td>
+                                <td style="width: 26%;" class="bodertd borde-sep ">Voltaje línea-tierra </td>
+                                <td style="width: 25%;" class="bodertd borde-sep textCenter"> VLL=
+                                    {{ $seccion4[0]->data['VLT'] }}</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 25%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(3)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">4.1.2</td>
+                                <td style="width: 26%;" class="bodertd borde-sep ">Voltaje línea-tierra </td>
+                                <td style="width: 25%;" class="bodertd borde-sep textCenter"> VLL=
+                                    {{ $seccion4[0]->data['VLT'] }}</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                <td style="width: 25%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+                    @endswitch
                 </tbody>
             </table>
             <table style="width: 99%; vertical-align:text-bottom;" class="borde-sep">
@@ -1736,48 +1800,60 @@
                     <tr class="titlesubsection">
                         <td style="width: 4%;" class="bodertd borde-sep">4.2.1</td>
                         <td style="width: 30%;" class="bodertd borde-sep ">Corriente línea 1 (1ra Velocidad)</td>
-                        <td style="width: 15%;" class="bodertd borde-sep textCenter">CL1=</td>
-                        <td style="width: 15%;" class="bodertd borde-sep textCenter">CL1=</td>
+                        <td style="width: 15%;" class="bodertd borde-sep textCenter">CL1=
+                            {{ $seccion4[0]->data['GP4_2_1'] }}</td>
+                        <td style="width: 15%;" class="bodertd borde-sep textCenter">CL1=
+                            {{ $seccion4[0]->data['GA4_2_1'] }}</td>
                         <td style="width: 35%;" class="bodertd borde-sep textCenter"></td>
                     </tr>
 
                     <tr class="titlesubsection">
                         <td style="width: 4%;" class="bodertd borde-sep">4.2.2</td>
                         <td style="width: 30%;" class="bodertd borde-sep ">Corriente línea 2 (1ra Velocidad)</td>
-                        <td style="width: 15%;" class="bodertd borde-sep textCenter">CL2=</td>
-                        <td style="width: 15%;" class="bodertd borde-sep textCenter">CL2=</td>
+                        <td style="width: 15%;" class="bodertd borde-sep textCenter">CL2=
+                            {{ $seccion4[0]->data['GP4_2_2'] }}</td>
+                        <td style="width: 15%;" class="bodertd borde-sep textCenter">CL2=
+                            {{ $seccion4[0]->data['GA4_2_2'] }}</td>
                         <td style="width: 35%;" class="bodertd borde-sep textCenter"></td>
                     </tr>
 
                     <tr class="titlesubsection">
                         <td style="width: 4%;" class="bodertd borde-sep">4.2.3</td>
                         <td style="width: 30%;" class="bodertd borde-sep ">Corriente línea 3 (1ra Velocidad)</td>
-                        <td style="width: 15%;" class="bodertd borde-sep textCenter">CL3=</td>
-                        <td style="width: 15%;" class="bodertd borde-sep textCenter">CL3=</td>
+                        <td style="width: 15%;" class="bodertd borde-sep textCenter">CL3=
+                            {{ $seccion4[0]->data['GP4_2_3'] }}</td>
+                        <td style="width: 15%;" class="bodertd borde-sep textCenter">CL3=
+                            {{ $seccion4[0]->data['GA4_2_3'] }}</td>
                         <td style="width: 35%;" class="bodertd borde-sep textCenter"></td>
                     </tr>
 
                     <tr class="titlesubsection">
                         <td style="width: 4%;" class="bodertd borde-sep">4.2.4</td>
                         <td style="width: 30%;" class="bodertd borde-sep ">Corriente línea 1 (2ra Velocidad)</td>
-                        <td style="width: 15%;" class="bodertd borde-sep textCenter">CL1=</td>
-                        <td style="width: 15%;" class="bodertd borde-sep textCenter">CL1=</td>
+                        <td style="width: 15%;" class="bodertd borde-sep textCenter">CL1=
+                            {{ $seccion4[0]->data['GP4_2_4'] }} </td>
+                        <td style="width: 15%;" class="bodertd borde-sep textCenter">CL1=
+                            {{ $seccion4[0]->data['GA4_2_4'] }}</td>
                         <td style="width: 35%;" class="bodertd borde-sep textCenter"></td>
                     </tr>
 
                     <tr class="titlesubsection">
                         <td style="width: 4%;" class="bodertd borde-sep">4.2.5</td>
                         <td style="width: 30%;" class="bodertd borde-sep ">Corriente línea 2 (2da Velocidad)</td>
-                        <td style="width: 15%;" class="bodertd borde-sep textCenter">CL2=</td>
-                        <td style="width: 15%;" class="bodertd borde-sep textCenter">CL2=</td>
+                        <td style="width: 15%;" class="bodertd borde-sep textCenter">CL2=
+                            {{ $seccion4[0]->data['GP4_2_5'] }}</td>
+                        <td style="width: 15%;" class="bodertd borde-sep textCenter">CL2=
+                            {{ $seccion4[0]->data['GA4_2_5'] }}</td>
                         <td style="width: 35%;" class="bodertd borde-sep textCenter"></td>
                     </tr>
 
                     <tr class="titlesubsection">
                         <td style="width: 4%;" class="bodertd borde-sep">4.2.6</td>
                         <td style="width: 30%;" class="bodertd borde-sep ">Corriente línea 3 (2da Velocidad)</td>
-                        <td style="width: 15%;" class="bodertd borde-sep textCenter">CL3=</td>
-                        <td style="width: 15%;" class="bodertd borde-sep textCenter">CL3=</td>
+                        <td style="width: 15%;" class="bodertd borde-sep textCenter">CL3=
+                            {{ $seccion4[0]->data['GP4_2_6'] }}</td>
+                        <td style="width: 15%;" class="bodertd borde-sep textCenter">CL3=
+                            {{ $seccion4[0]->data['GA4_2_6'] }}</td>
                         <td style="width: 35%;" class="bodertd borde-sep textCenter"></td>
                     </tr>
 
@@ -1792,24 +1868,30 @@
                     <tr class="titlesubsection">
                         <td style="width: 4%;" class="bodertd borde-sep">4.3.1</td>
                         <td style="width: 30%;" class="bodertd borde-sep ">Corriente línea 1</td>
-                        <td style="width: 15%;" class="bodertd borde-sep textCenter">CL1=</td>
-                        <td style="width: 15%;" class="bodertd borde-sep textCenter">CL1=</td>
+                        <td style="width: 15%;" class="bodertd borde-sep textCenter">CL1=
+                            {{ $seccion4[0]->data['GP4_3_1'] }}</td>
+                        <td style="width: 15%;" class="bodertd borde-sep textCenter">CL1=
+                            {{ $seccion4[0]->data['GA4_3_1'] }}</td>
                         <td style="width: 35%;" class="bodertd borde-sep textCenter"></td>
                     </tr>
 
                     <tr class="titlesubsection">
                         <td style="width: 4%;" class="bodertd borde-sep">4.3.2</td>
                         <td style="width: 30%;" class="bodertd borde-sep ">Corriente línea 2</td>
-                        <td style="width: 15%;" class="bodertd borde-sep textCenter">CL2=</td>
-                        <td style="width: 15%;" class="bodertd borde-sep textCenter">CL2=</td>
+                        <td style="width: 15%;" class="bodertd borde-sep textCenter">CL2=
+                            {{ $seccion4[0]->data['GP4_3_2'] }}</td>
+                        <td style="width: 15%;" class="bodertd borde-sep textCenter">CL2=
+                            {{ $seccion4[0]->data['GA4_3_2'] }}</td>
                         <td style="width: 35%;" class="bodertd borde-sep textCenter"></td>
                     </tr>
 
                     <tr class="titlesubsection">
                         <td style="width: 4%;" class="bodertd borde-sep">4.3.3</td>
                         <td style="width: 30%;" class="bodertd borde-sep ">Corriente línea 3</td>
-                        <td style="width: 15%;" class="bodertd borde-sep textCenter">CL3=</td>
-                        <td style="width: 15%;" class="bodertd borde-sep textCenter">CL3=</td>
+                        <td style="width: 15%;" class="bodertd borde-sep textCenter">CL3=
+                            {{ $seccion4[0]->data['GP4_3_3'] }}</td>
+                        <td style="width: 15%;" class="bodertd borde-sep textCenter">CL3=
+                            {{ $seccion4[0]->data['GA4_3_3'] }}</td>
                         <td style="width: 35%;" class="bodertd borde-sep textCenter" </td>
                     </tr>
 
@@ -1824,7 +1906,8 @@
                     <tr class="titlesubsection">
                         <td style="width: 4%;" class="bodertd borde-sep">4.4.1</td>
                         <td style="width: 30%;" class="bodertd borde-sep ">Corriente línea 1</td>
-                        <td style="width: 15%;" class="bodertd borde-sep textCenter">CL1=</td>
+                        <td style="width: 15%;" class="bodertd borde-sep textCenter">CL1=
+                            {{ $seccion4[0]->data['GP4_4_1'] }}</td>
                         <td style="width: 15%;" class="bodertd borde-sep textCenter bg-sacar"></td>
                         <td style="width: 35%;" class="bodertd borde-sep textCenter"></td>
                     </tr>
@@ -1832,7 +1915,8 @@
                     <tr class="titlesubsection">
                         <td style="width: 4%;" class="bodertd borde-sep">4.4.2</td>
                         <td style="width: 30%;" class="bodertd borde-sep ">Corriente línea 2</td>
-                        <td style="width: 15%;" class="bodertd borde-sep textCenter">CL2=</td>
+                        <td style="width: 15%;" class="bodertd borde-sep textCenter">CL2=
+                            {{ $seccion4[0]->data['GP4_4_2'] }}</td>
                         <td style="width: 15%;" class="bodertd borde-sep textCenter bg-sacar"></td>
                         <td style="width: 35%;" class="bodertd borde-sep textCenter"></td>
                     </tr>
@@ -1840,7 +1924,8 @@
                     <tr class="titlesubsection">
                         <td style="width: 4%;" class="bodertd borde-sep">4.4.3</td>
                         <td style="width: 30%;" class="bodertd borde-sep ">Corriente línea 3</td>
-                        <td style="width: 15%;" class="bodertd borde-sep textCenter">CL2=</td>
+                        <td style="width: 15%;" class="bodertd borde-sep textCenter">CL2=
+                            {{ $seccion4[0]->data['GP4_4_3'] }}</td>
                         <td style="width: 15%;" class="bodertd borde-sep textCenter bg-sacar"></td>
                         <td style="width: 35%;" class="bodertd borde-sep textCenter"></td>
                     </tr>
@@ -1861,23 +1946,81 @@
                         <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
                         <td style="width: 30%;" class="bodertd borde-sep textCenter">Comentarios</td>
                     </tr>
-                    <tr class="titlesubsection">
-                        <td style="width: 4%;" class="bodertd borde-sep">5.1</td>
-                        <td style="width: 40%;" class="bodertd borde-sep ">Tornilleria general de polipasto</td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 33%;" class="bodertd borde-sep"></td>
-                    </tr>
 
-                    <tr class="titlesubsection">
-                        <td style="width: 4%;" class="bodertd borde-sep">5.2</td>
-                        <td style="width: 40%;" class="bodertd borde-sep ">Condicion general de tapas </td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 33%;" class="bodertd borde-sep"></td>
-                    </tr>
+
+
+                    @switch($seccion5[0]->data['5_1'])
+                        @case(1)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.1</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Tornilleria general de polipasto</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(2)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.1</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Tornilleria general de polipasto</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(3)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.1</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Tornilleria general de polipasto</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+                    @endswitch
+
+
+
+
+                    @switch($seccion5[0]->data['5_2'])
+                        @case(1)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.2</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Condicion general de tapas </td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(2)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.2</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Condicion general de tapas </td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(3)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.2</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Condicion general de tapas </td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+                    @endswitch
 
                     <tr class="titlesection2">
                         <td style="width: 4%;" class="bodertd borde-sep">5.3</td>
@@ -1887,68 +2030,250 @@
                         <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
                         <td style="width: 33%;" class="bodertd borde-sep"></td>
                     </tr>
-                    <tr class="titlesubsection">
-                        <td style="width: 4%;" class="bodertd borde-sep">5.3.1</td>
-                        <td style="width: 40%;" class="bodertd borde-sep ">Rotación, cojineste</td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 33%;" class="bodertd borde-sep"></td>
-                    </tr>
+                    @switch($seccion5[0]->data['5_3_1'])
+                        @case(1)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.3.1</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Rotación, cojineste</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
 
-                    <tr class="titlesubsection">
-                        <td style="width: 4%;" class="bodertd borde-sep">5.3.2</td>
-                        <td style="width: 40%;" class="bodertd borde-sep ">Ranuras</td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 33%;" class="bodertd borde-sep"></td>
-                    </tr>
+                        @case(2)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.3.1</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Rotación, cojineste</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
 
-                    <tr class="titlesubsection">
-                        <td style="width: 4%;" class="bodertd borde-sep">5.3.3</td>
-                        <td style="width: 40%;" class="bodertd borde-sep ">Posicion de cable den ranuras</td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 33%;" class="bodertd borde-sep"></td>
-                    </tr>
+                        @case(3)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.3.1</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Rotación, cojineste</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+                    @endswitch
 
-                    <tr class="titlesubsection">
-                        <td style="width: 4%;" class="bodertd borde-sep">5.3.4</td>
-                        <td style="width: 40%;" class="bodertd borde-sep ">Bloqueo Axial</td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 33%;" class="bodertd borde-sep"></td>
-                    </tr>
+                    @switch($seccion5[0]->data['5_3_2'])
+                        @case(1)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.3.2</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Ranuras</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
 
-                    <tr class="titlesubsection">
-                        <td style="width: 4%;" class="bodertd borde-sep">5.3.5</td>
-                        <td style="width: 40%;" class="bodertd borde-sep ">Varillas de conexión</td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 33%;" class="bodertd borde-sep"></td>
-                    </tr>
+                        @case(2)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.3.2</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Ranuras</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
 
-                    <tr class="titlesubsection">
-                        <td style="width: 4%;" class="bodertd borde-sep">5.3.6</td>
-                        <td style="width: 40%;" class="bodertd borde-sep ">Corona dentada</td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 33%;" class="bodertd borde-sep"></td>
-                    </tr>
+                        @case(3)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.3.2</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Ranuras</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+                    @endswitch
 
-                    <tr class="titlesubsection">
-                        <td style="width: 4%;" class="bodertd borde-sep">5.3.7</td>
-                        <td style="width: 40%;" class="bodertd borde-sep ">Abrazadera de cable</td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 33%;" class="bodertd borde-sep"></td>
-                    </tr>
+                    @switch($seccion5[0]->data['5_3_3'])
+                        @case(1)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.3.3</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Posicion de cable den ranuras</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(2)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.3.3</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Posicion de cable den ranuras</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(3)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.3.3</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Posicion de cable den ranuras</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+                    @endswitch
+
+                    @switch($seccion5[0]->data['5_3_4'])
+                        @case(1)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.3.4</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Bloqueo Axial</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(2)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.3.4</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Bloqueo Axial</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(3)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.3.4</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Bloqueo Axial</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+                    @endswitch
+
+                    @switch($seccion5[0]->data['5_3_5'])
+                        @case(1)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.3.5</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Varillas de conexión</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(2)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.3.5</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Varillas de conexión</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(3)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.3.5</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Varillas de conexión</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+                    @endswitch
+
+                    @switch($seccion5[0]->data['5_3_6'])
+                        @case(1)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.3.6</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Corona dentada</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(2)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.3.6</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Corona dentada</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(3)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.3.6</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Corona dentada</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+                    @endswitch
+
+                    @switch($seccion5[0]->data['5_3_7'])
+                        @case(1)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.3.7</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Abrazadera de cable</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(2)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.3.7</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Abrazadera de cable</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(3)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.3.7</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Abrazadera de cable</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+                    @endswitch
 
                     <tr class="titlesection2">
                         <td style="width: 4%;" class="bodertd borde-sep">5.4</td>
@@ -1958,23 +2283,76 @@
                         <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
                         <td style="width: 33%;" class="bodertd borde-sep"></td>
                     </tr>
-                    <tr class="titlesubsection">
-                        <td style="width: 4%;" class="bodertd borde-sep">5.4.1</td>
-                        <td style="width: 40%;" class="bodertd borde-sep ">Movimiento</td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 33%;" class="bodertd borde-sep"></td>
-                    </tr>
 
-                    <tr class="titlesubsection">
-                        <td style="width: 4%;" class="bodertd borde-sep">5.4.2</td>
-                        <td style="width: 40%;" class="bodertd borde-sep ">Condicion</td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 33%;" class="bodertd borde-sep"></td>
-                    </tr>
+                    @switch($seccion5[0]->data['5_4_1'])
+                        @case(1)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.4.1</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Movimiento</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(2)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.4.1</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Movimiento</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(3)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.4.1</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Movimiento</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+                    @endswitch
+
+                    @switch($seccion5[0]->data['5_4_2'])
+                        @case(1)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.4.2</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Condicion</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(2)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.4.2</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Condicion</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(3)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.4.2</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Condicion</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+                    @endswitch
 
                     <tr class="titlesection2">
                         <td style="width: 4%;" class="bodertd borde-sep">5.5</td>
@@ -1984,45 +2362,158 @@
                         <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
                         <td style="width: 33%;" class="bodertd borde-sep"></td>
                     </tr>
-                    <tr class="titlesubsection">
-                        <td style="width: 4%;" class="bodertd borde-sep">5.5.1</td>
-                        <td style="width: 40%;" class="bodertd borde-sep ">Condicion general (Izquierdo)</td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 33%;" class="bodertd borde-sep"></td>
-                    </tr>
 
-                    <tr class="titlesubsection">
-                        <td style="width: 4%;" class="bodertd borde-sep">5.5.2</td>
-                        <td style="width: 40%;" class="bodertd borde-sep ">Medicion de diametro (Izquierdo)
-                            <div style="display: inline-block; margin-left: 30px;">D=</div>
-                        </td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 33%;" class="bodertd borde-sep"></td>
-                    </tr>
+                    @switch($seccion5[0]->data['5_5_1'])
+                        @case(1)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.5.1</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Condicion general (Izquierdo)</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
 
-                    <tr class="titlesubsection">
-                        <td style="width: 4%;" class="bodertd borde-sep">5.5.3</td>
-                        <td style="width: 40%;" class="bodertd borde-sep ">Condicion general (Derecho)</td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 33%;" class="bodertd borde-sep"></td>
-                    </tr>
+                        @case(2)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.5.1</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Condicion general (Izquierdo)</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
 
-                    <tr class="titlesubsection">
-                        <td style="width: 4%;" class="bodertd borde-sep">5.5.4</td>
-                        <td style="width: 40%;" class="bodertd borde-sep ">Medición de diámetro (Derecho)
-                            <div style="display: inline-block; margin-left: 30px;">D=</div>
-                        </td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 33%;" class="bodertd borde-sep"></td>
-                    </tr>
+                        @case(3)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.5.1</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Condicion general (Izquierdo)</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+                    @endswitch
+
+                    @switch($seccion5[0]->data['5_5_2'])
+                        @case(1)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.5.2</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Medicion de diametro (Izquierdo)
+                                    <div style="display: inline-block; margin-left: 30px;">D=</div>
+                                </td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(2)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.5.2</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Medicion de diametro (Izquierdo)
+                                    <div style="display: inline-block; margin-left: 30px;">D=</div>
+                                </td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(3)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.5.2</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Medicion de diametro (Izquierdo)
+                                    <div style="display: inline-block; margin-left: 30px;">D=</div>
+                                </td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+                    @endswitch
+
+                    @switch($seccion5[0]->data['5_5_3'])
+                        @case(1)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.5.3</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Condicion general (Derecho)</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(2)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.5.3</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Condicion general (Derecho)</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(3)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.5.3</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Condicion general (Derecho)</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+                    @endswitch
+
+                    @switch($seccion5[0]->data['5_5_4'])
+                        @case(1)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.5.4</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Medición de diámetro (Derecho)
+                                    <div style="display: inline-block; margin-left: 30px;">D=</div>
+                                </td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(2)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.5.4</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Medición de diámetro (Derecho)
+                                    <div style="display: inline-block; margin-left: 30px;">D=</div>
+                                </td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(3)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.5.4</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Medición de diámetro (Derecho)
+                                    <div style="display: inline-block; margin-left: 30px;">D=</div>
+                                </td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+                    @endswitch
                 </tbody>
             </table>
         </section>
@@ -2040,25 +2531,82 @@
                         <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
                         <td style="width: 33%;" class="bodertd borde-sep"></td>
                     </tr>
-                    <tr class="titlesubsection">
-                        <td style="width: 4%;" class="bodertd borde-sep">5.6.1</td>
-                        <td style="width: 40%;" class="bodertd borde-sep ">Abrazaderas (tuercas apretadas)</td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 33%;" class="bodertd borde-sep"></td>
-                    </tr>
 
-                    <tr class="titlesubsection">
-                        <td style="width: 4%;" class="bodertd borde-sep">5.6.2</td>
-                        <td style="width: 40%;" class="bodertd borde-sep ">Condicion de cable de acero dentro del
-                            punto
-                            fijo</td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 33%;" class="bodertd borde-sep"></td>
-                    </tr>
+                    @switch($seccion5[0]->data['5_6_1'])
+                        @case(1)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.6.1</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Abrazaderas (tuercas apretadas)</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(2)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.6.1</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Abrazaderas (tuercas apretadas)</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(3)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.6.1</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Abrazaderas (tuercas apretadas)</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+                    @endswitch
+
+                    @switch($seccion5[0]->data['5_6_2'])
+                        @case(1)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.6.2</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Condicion de cable de acero dentro del
+                                    punto
+                                    fijo</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(2)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.6.2</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Condicion de cable de acero dentro del
+                                    punto
+                                    fijo</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(3)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.6.2</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Condicion de cable de acero dentro del
+                                    punto
+                                    fijo</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+                    @endswitch
 
                     <tr class="titlesection2">
                         <td style="width: 4%;" class="bodertd borde-sep">5.7</td>
@@ -2069,23 +2617,75 @@
                         <td style="width: 33%;" class="bodertd borde-sep"></td>
                     </tr>
 
-                    <tr class="titlesubsection">
-                        <td style="width: 4%;" class="bodertd borde-sep">5.7.1</td>
-                        <td style="width: 40%;" class="bodertd borde-sep ">Activación manual</td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 33%;" class="bodertd borde-sep"></td>
-                    </tr>
+                    @switch($seccion5[0]->data['5_7_1'])
+                        @case(1)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.7.1</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Activación manual</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
 
-                    <tr class="titlesubsection">
-                        <td style="width: 4%;" class="bodertd borde-sep">5.7.2</td>
-                        <td style="width: 40%;" class="bodertd borde-sep ">Condición de tornillo de ajuste</td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 33%;" class="bodertd borde-sep"></td>
-                    </tr>
+                        @case(2)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.7.1</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Activación manual</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(3)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.7.1</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Activación manual</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+                    @endswitch
+
+                    @switch($seccion5[0]->data['5_7_2'])
+                        @case(1)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.7.2</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Condición de tornillo de ajuste</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(2)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.7.2</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Condición de tornillo de ajuste</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(3)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.7.2</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Condición de tornillo de ajuste</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+                    @endswitch
 
                     <tr class="titlesection2">
                         <td style="width: 4%;" class="bodertd borde-sep">5.8</td>
@@ -2096,32 +2696,110 @@
                         <td style="width: 33%;" class="bodertd borde-sep"></td>
                     </tr>
 
-                    <tr class="titlesubsection">
-                        <td style="width: 4%;" class="bodertd borde-sep">5.8.1</td>
-                        <td style="width: 40%;" class="bodertd borde-sep ">Condicion polea</td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 33%;" class="bodertd borde-sep"></td>
-                    </tr>
+                    @switch($seccion5[0]->data['5_8_1'])
+                        @case(1)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.8.1</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Condicion polea</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
 
-                    <tr class="titlesubsection">
-                        <td style="width: 4%;" class="bodertd borde-sep">5.8.2</td>
-                        <td style="width: 40%;" class="bodertd borde-sep ">Condicion rodamientos</td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 33%;" class="bodertd borde-sep"></td>
-                    </tr>
+                        @case(2)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.8.1</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Condicion polea</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
 
-                    <tr class="titlesubsection">
-                        <td style="width: 4%;" class="bodertd borde-sep">5.8.3</td>
-                        <td style="width: 40%;" class="bodertd borde-sep ">Eje de soporte de poleas</td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 33%;" class="bodertd borde-sep"></td>
-                    </tr>
+                        @case(3)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.8.1</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Condicion polea</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+                    @endswitch
+
+                    @switch($seccion5[0]->data['5_8_2'])
+                        @case(1)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.8.2</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Condicion rodamientos</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(2)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.8.2</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Condicion rodamientos</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(3)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.8.2</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Condicion rodamientos</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+                    @endswitch
+
+                    @switch($seccion5[0]->data['5_8_3'])
+                        @case(1)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.8.3</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Eje de soporte de poleas</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(2)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.8.3</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Eje de soporte de poleas</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(3)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.8.3</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Eje de soporte de poleas</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+                    @endswitch
 
                     <tr class="titlesection2">
                         <td style="width: 4%;" class="bodertd borde-sep">5.9</td>
@@ -2132,70 +2810,256 @@
                         <td style="width: 33%;" class="bodertd borde-sep"></td>
                     </tr>
 
-                    <tr class="titlesubsection">
-                        <td style="width: 4%;" class="bodertd borde-sep">5.9.1</td>
-                        <td style="width: 40%;" class="bodertd borde-sep ">Etiquetas</td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 33%;" class="bodertd borde-sep"></td>
-                    </tr>
+                    @switch($seccion5[0]->data['5_9_1'])
+                        @case(1)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.9.1</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Etiquetas</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
 
-                    <tr class="titlesubsection">
-                        <td style="width: 4%;" class="bodertd borde-sep">5.9.2</td>
-                        <td style="width: 40%;" class="bodertd borde-sep ">Tapas</td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 33%;" class="bodertd borde-sep"></td>
-                    </tr>
+                        @case(2)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.9.1</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Etiquetas</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
 
-                    <tr class="titlesubsection">
-                        <td style="width: 4%;" class="bodertd borde-sep">5.9.3</td>
-                        <td style="width: 40%;" class="bodertd borde-sep ">Dezplazamiento de cable en poleas</td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 33%;" class="bodertd borde-sep"></td>
-                    </tr>
+                        @case(3)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.9.1</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Etiquetas</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+                    @endswitch
 
-                    <tr class="titlesubsection">
-                        <td style="width: 4%;" class="bodertd borde-sep">5.9.4</td>
-                        <td style="width: 40%;" class="bodertd borde-sep ">Barra tranversal</td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 33%;" class="bodertd borde-sep"></td>
-                    </tr>
+                    @switch($seccion5[0]->data['5_9_2'])
+                        @case(1)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.9.2</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Tapas</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
 
-                    <tr class="titlesubsection">
-                        <td style="width: 4%;" class="bodertd borde-sep">5.9.5</td>
-                        <td style="width: 40%;" class="bodertd borde-sep ">Seguro de gancho</td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 33%;" class="bodertd borde-sep"></td>
-                    </tr>
+                        @case(2)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.9.2</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Tapas</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
 
-                    <tr class="titlesubsection">
-                        <td style="width: 4%;" class="bodertd borde-sep">5.9.6</td>
-                        <td style="width: 40%;" class="bodertd borde-sep ">Apertura de gancho
-                            <div style="display: inline-block; margin-left: 30px;">L=</div>
-                        </td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 33%;" class="bodertd borde-sep"></td>
-                    </tr>
+                        @case(3)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.9.2</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Tapas</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+                    @endswitch
 
-                    <tr class="titlesubsection">
-                        <td style="width: 4%;" class="bodertd borde-sep">5.9.7</td>
-                        <td style="width: 40%;" class="bodertd borde-sep ">Condicion general del gancho de carga</td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 33%;" class="bodertd borde-sep"></td>
-                    </tr>
+                    @switch($seccion5[0]->data['5_9_3'])
+                        @case(1)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.9.3</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Dezplazamiento de cable en poleas</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(2)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.9.3</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Dezplazamiento de cable en poleas</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(3)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.9.3</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Dezplazamiento de cable en poleas</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+                    @endswitch
+
+                    @switch($seccion5[0]->data['5_9_4'])
+                        @case(1)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.9.4</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Barra tranversal</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(2)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.9.4</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Barra tranversal</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(3)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.9.4</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Barra tranversal</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+                    @endswitch
+
+                    @switch($seccion5[0]->data['5_9_5'])
+                        @case(1)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.9.5</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Seguro de gancho</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(2)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.9.5</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Seguro de gancho</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(3)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.9.5</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Seguro de gancho</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+                    @endswitch
+
+                    @switch($seccion5[0]->data['5_9_6'])
+                        @case(1)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.9.6</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Apertura de gancho
+                                    <div style="display: inline-block; margin-left: 30px;">L=</div>
+                                </td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(2)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.9.6</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Apertura de gancho
+                                    <div style="display: inline-block; margin-left: 30px;">L=</div>
+                                </td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(3)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.9.6</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Apertura de gancho
+                                    <div style="display: inline-block; margin-left: 30px;">L=</div>
+                                </td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">N</td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+                    @endswitch
+
+                    @switch($seccion5[0]->data['5_9_7_'])
+                        @case(1)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.9.7</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Condicion general del gancho de carga</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(2)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.9.7</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Condicion general del gancho de carga</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(3)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.9.7</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Condicion general del gancho de carga</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+                    @endswitch
 
                     <tr class="titlesection2">
                         <td style="width: 4%;" class="bodertd borde-sep">5.10</td>
@@ -2206,59 +3070,215 @@
                         <td style="width: 33%;" class="bodertd borde-sep"></td>
                     </tr>
 
-                    <tr class="titlesubsection">
-                        <td style="width: 4%;" class="bodertd borde-sep">5.10.1</td>
-                        <td style="width: 40%;" class="bodertd borde-sep ">Comportamiento (Vibración/Ruido)</td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 33%;" class="bodertd borde-sep"></td>
-                    </tr>
+                    @switch($seccion5[0]->data['5_10_1'])
+                        @case(1)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.10.1</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Comportamiento (Vibración/Ruido)</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
 
-                    <tr class="titlesubsection">
-                        <td style="width: 4%;" class="bodertd borde-sep">5.10.2</td>
-                        <td style="width: 40%;" class="bodertd borde-sep ">Funcionamiento de ventilador</td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 33%;" class="bodertd borde-sep"></td>
-                    </tr>
+                        @case(2)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.10.1</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Comportamiento (Vibración/Ruido)</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
 
-                    <tr class="titlesubsection">
-                        <td style="width: 4%;" class="bodertd borde-sep">5.10.3</td>
-                        <td style="width: 40%;" class="bodertd borde-sep ">Fijación del motor</td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 33%;" class="bodertd borde-sep"></td>
-                    </tr>
+                        @case(3)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.10.1</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Comportamiento (Vibración/Ruido)</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+                    @endswitch
 
-                    <tr class="titlesubsection">
-                        <td style="width: 4%;" class="bodertd borde-sep">5.10.4</td>
-                        <td style="width: 40%;" class="bodertd borde-sep ">Guarda</td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 33%;" class="bodertd borde-sep"></td>
-                    </tr>
+                    @switch($seccion5[0]->data['5_10_2'])
+                        @case(1)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.10.2</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Funcionamiento de ventilador</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
 
-                    <tr class="titlesubsection">
-                        <td style="width: 4%;" class="bodertd borde-sep">5.10.5</td>
-                        <td style="width: 40%;" class="bodertd borde-sep ">Conexiones</td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 33%;" class="bodertd borde-sep"></td>
-                    </tr>
+                        @case(2)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.10.2</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Funcionamiento de ventilador</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
 
-                    <tr class="titlesubsection">
-                        <td style="width: 4%;" class="bodertd borde-sep">5.10.6</td>
-                        <td style="width: 40%;" class="bodertd borde-sep ">Condición general</td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 33%;" class="bodertd borde-sep"></td>
-                    </tr>
+                        @case(3)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.10.2</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Funcionamiento de ventilador</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+                    @endswitch
+
+                    @switch($seccion5[0]->data['5_10_3'])
+                        @case(1)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.10.3</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Fijación del motor</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(2)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.10.3</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Fijación del motor</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(3)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.10.3</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Fijación del motor</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+                    @endswitch
+
+                    @switch($seccion5[0]->data['5_10_4'])
+                        @case(1)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.10.4</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Guarda</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(2)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.10.4</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Guarda</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(3)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.10.4</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Guarda</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+                    @endswitch
+
+                    @switch($seccion5[0]->data['5_10_5'])
+                        @case(1)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.10.5</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Conexiones</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(2)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.10.5</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Conexiones</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(3)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.10.5</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Conexiones</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+                    @endswitch
+
+                    @switch($seccion5[0]->data['5_10_6'])
+                        @case(1)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.10.6</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Condición general</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(2)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.10.6</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Condición general</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(3)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.10.6</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Condición general</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+                    @endswitch
 
                     <tr class="titlesection2">
                         <td style="width: 4%;" class="bodertd borde-sep">5.11</td>
@@ -2269,45 +3289,157 @@
                         <td style="width: 33%;" class="bodertd borde-sep"></td>
                     </tr>
 
-                    <tr class="titlesubsection">
-                        <td style="width: 4%;" class="bodertd borde-sep">5.11.1</td>
-                        <td style="width: 40%;" class="bodertd borde-sep ">Medición del disco de freno
-                            <div style="display: inline-block; margin-left: 30px;">G=</div>
-                        </td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 33%;" class="bodertd borde-sep"></td>
-                    </tr>
+                    @switch($seccion5[0]->data['5_11_1'])
+                        @case(1)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.11.1</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Medición del disco de freno
+                                    <div style="display: inline-block; margin-left: 30px;">G=</div>
+                                </td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
 
-                    <tr class="titlesubsection">
-                        <td style="width: 4%;" class="bodertd borde-sep">5.11.2</td>
-                        <td style="width: 40%;" class="bodertd borde-sep ">Dientes del disco de freno</td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 33%;" class="bodertd borde-sep"></td>
-                    </tr>
+                        @case(2)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.11.1</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Medición del disco de freno
+                                    <div style="display: inline-block; margin-left: 30px;">G=</div>
+                                </td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
 
-                    <tr class="titlesubsection">
-                        <td style="width: 4%;" class="bodertd borde-sep">5.11.3</td>
-                        <td style="width: 40%;" class="bodertd borde-sep ">Condición del disco de fricción</td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 33%;" class="bodertd borde-sep"></td>
-                    </tr>
+                        @case(3)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.11.1</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Medición del disco de freno
+                                    <div style="display: inline-block; margin-left: 30px;">G=</div>
+                                </td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+                    @endswitch
 
-                    <tr class="titlesubsection">
-                        <td style="width: 4%;" class="bodertd borde-sep">5.11.4</td>
-                        <td style="width: 40%;" class="bodertd borde-sep ">Modelo del freno
-                            <div style="display: inline-block; margin-left: 30px;">M=</div>
-                        </td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter bg-sacar"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter bg-sacar"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter bg-sacar"></td>
-                        <td style="width: 33%;" class="bodertd borde-sep"></td>
-                    </tr>
+                    @switch($seccion5[0]->data['5_11_2'])
+                        @case(1)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.11.2</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Dientes del disco de freno</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(2)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.11.2</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Dientes del disco de freno</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(3)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.11.2</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Dientes del disco de freno</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+                    @endswitch
+
+                    @switch($seccion5[0]->data['5_11_3'])
+                        @case(1)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.11.3</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Condición del disco de fricción</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(2)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.11.3</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Condición del disco de fricción</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(3)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.11.3</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Condición del disco de fricción</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+                    @endswitch
+
+                    @switch($seccion5[0]->data['5_11_4'])
+                        @case(1)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.11.4</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Modelo del freno
+                                    <div style="display: inline-block; margin-left: 30px;">M=</div>
+                                </td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter bg-sacar">OK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter bg-sacar"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter bg-sacar"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(2)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.11.4</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Modelo del freno
+                                    <div style="display: inline-block; margin-left: 30px;">M=</div>
+                                </td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter bg-sacar"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter bg-sacar">NOK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter bg-sacar"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(3)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.11.4</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Modelo del freno
+                                    <div style="display: inline-block; margin-left: 30px;">M=</div>
+                                </td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter bg-sacar"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter bg-sacar"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter bg-sacar">NA</td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+                    @endswitch
 
                     <tr class="titlesection2">
                         <td style="width: 4%;" class="bodertd borde-sep">5.12</td>
@@ -2318,50 +3450,180 @@
                         <td style="width: 33%;" class="bodertd borde-sep"></td>
                     </tr>
 
-                    <tr class="titlesubsection">
-                        <td style="width: 4%;" class="bodertd borde-sep">5.12.1</td>
-                        <td style="width: 40%;" class="bodertd borde-sep ">Condición de tapa</td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 33%;" class="bodertd borde-sep"></td>
-                    </tr>
+                    @switch($seccion5[0]->data['5_12_1'])
+                        @case(1)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.12.1</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Condición de tapa</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
 
-                    <tr class="titlesubsection">
-                        <td style="width: 4%;" class="bodertd borde-sep">5.12.2</td>
-                        <td style="width: 40%;" class="bodertd borde-sep ">Condición de caja reductora</td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 33%;" class="bodertd borde-sep"></td>
-                    </tr>
+                        @case(2)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.12.1</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Condición de tapa</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
 
-                    <tr class="titlesubsection">
-                        <td style="width: 4%;" class="bodertd borde-sep">5.12.3</td>
-                        <td style="width: 40%;" class="bodertd borde-sep ">Comportamiento (Vibración/Ruido/Temp.)</td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 33%;" class="bodertd borde-sep"></td>
-                    </tr>
+                        @case(3)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.12.1</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Condición de tapa</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+                    @endswitch
 
-                    <tr class="titlesubsection">
-                        <td style="width: 4%;" class="bodertd borde-sep">5.12.4</td>
-                        <td style="width: 40%;" class="bodertd borde-sep ">Condición de tapón de respiradero</td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 33%;" class="bodertd borde-sep"></td>
-                    </tr>
+                    @switch($seccion5[0]->data['5_12_2'])
+                        @case(1)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.12.2</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Condición de caja reductora</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
 
-                    <tr class="titlesubsection">
-                        <td style="width: 4%;" class="bodertd borde-sep">5.12.5</td>
-                        <td style="width: 40%;" class="bodertd borde-sep ">Nivel de aceite</td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 33%;" class="bodertd borde-sep"></td>
-                    </tr>
+                        @case(2)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.12.2</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Condición de caja reductora</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(3)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.12.2</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Condición de caja reductora</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+                    @endswitch
+
+                    @switch($seccion5[0]->data['5_12_3'])
+                        @case(1)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.12.3</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Comportamiento (Vibración/Ruido/Temp.)</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(2)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.12.3</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Comportamiento (Vibración/Ruido/Temp.)</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(3)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.12.3</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Comportamiento (Vibración/Ruido/Temp.)</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+                    @endswitch
+
+                    @switch($seccion5[0]->data['5_12_4'])
+                        @case(1)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.12.4</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Condición de tapón de respiradero</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(2)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.12.4</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Condición de tapón de respiradero</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(3)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.12.4</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Condición de tapón de respiradero</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+                    @endswitch
+
+                    @switch($seccion5[0]->data['5_12_4'])
+                        @case(1)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.12.5</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Nivel de aceite</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(2)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.12.5</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Nivel de aceite</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(3)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">5.12.5</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Nivel de aceite</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+                    @endswitch
                 </tbody>
             </table>
         </section>
@@ -2383,41 +3645,148 @@
                         <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
                         <td style="width: 30%;" class="bodertd borde-sep textCenter">Comentarios</td>
                     </tr>
-                    <tr class="titlesubsection">
-                        <td style="width: 4%;" class="bodertd borde-sep">6.1.1</td>
-                        <td style="width: 40%;" class="bodertd borde-sep ">Uniones soldadas</td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 33%;" class="bodertd borde-sep"></td>
-                    </tr>
-                    <tr class="titlesubsection">
-                        <td style="width: 4%;" class="bodertd borde-sep">6.1.2</td>
-                        <td style="width: 40%;" class="bodertd borde-sep ">Uniones atornilladas (marca testigo)</td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 33%;" class="bodertd borde-sep"></td>
-                    </tr>
+                    @switch($seccion6[0]->data['6_1_1'])
+                        @case(1)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">6.1.1</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Uniones soldadas</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
 
-                    <tr class="titlesubsection">
-                        <td style="width: 4%;" class="bodertd borde-sep">6.1.3</td>
-                        <td style="width: 40%;" class="bodertd borde-sep ">Esparrago de carro (solo en grúa mono
-                            puente)</td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 33%;" class="bodertd borde-sep"></td>
-                    </tr>
+                        @case(2)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">6.1.1</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Uniones soldadas</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
 
-                    <tr class="titlesubsection">
-                        <td style="width: 4%;" class="bodertd borde-sep">6.2</td>
-                        <td style="width: 40%;" class="bodertd borde-sep ">Condición general de guardas</td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 33%;" class="bodertd borde-sep"></td>
-                    </tr>
+                        @case(3)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">6.1.1</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Uniones soldadas</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+                    @endswitch
+
+                    @switch($seccion6[0]->data['6_1_2'])
+                        @case(1)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">6.1.2</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Uniones atornilladas (marca testigo)</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(2)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">6.1.2</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Uniones atornilladas (marca testigo)</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(3)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">6.1.2</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Uniones atornilladas (marca testigo)</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+                    @endswitch
+
+                    @switch($seccion6[0]->data['6_1_3'])
+                        @case(1)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">6.1.3</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Esparrago de carro (solo en grúa mono
+                                    puente)</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(2)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">6.1.3</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Esparrago de carro (solo en grúa mono
+                                    puente)</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(3)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">6.1.3</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Esparrago de carro (solo en grúa mono
+                                    puente)</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+                    @endswitch
+
+                    @switch($seccion6[0]->data['6_2'])
+                        @case(1)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">6.2</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Condición general de guardas</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(2)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">6.2</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Condición general de guardas</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(3)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">6.2</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Condición general de guardas</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+                    @endswitch
 
                     <tr class="titlesection2">
                         <td style="width: 4%;" class="bodertd borde-sep">6.3</td>
@@ -2428,23 +3797,75 @@
                         <td style="width: 33%;" class="bodertd borde-sep"></td>
                     </tr>
 
-                    <tr class="titlesubsection">
-                        <td style="width: 4%;" class="bodertd borde-sep">6.3.1</td>
-                        <td style="width: 40%;" class="bodertd borde-sep ">Condición de los topes de goma</td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 33%;" class="bodertd borde-sep"></td>
-                    </tr>
+                    @switch($seccion6[0]->data['6_3_1'])
+                        @case(1)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">6.3.1</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Condición de los topes de goma</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
 
-                    <tr class="titlesubsection">
-                        <td style="width: 4%;" class="bodertd borde-sep">6.3.2</td>
-                        <td style="width: 40%;" class="bodertd borde-sep ">Condición de los topes estructurales</td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 33%;" class="bodertd borde-sep"></td>
-                    </tr>
+                        @case(2)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">6.3.1</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Condición de los topes de goma</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(3)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">6.3.1</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Condición de los topes de goma</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+                    @endswitch
+
+                    @switch($seccion6[0]->data['6_3_2'])
+                        @case(1)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">6.3.2</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Condición de los topes estructurales</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(2)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">6.3.2</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Condición de los topes estructurales</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(3)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">6.3.2</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Condición de los topes estructurales</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+                    @endswitch
 
                     <tr class="titlesection2">
                         <td style="width: 4%;" class="bodertd borde-sep">6.4</td>
@@ -2455,32 +3876,111 @@
                         <td style="width: 33%;" class="bodertd borde-sep"></td>
                     </tr>
 
-                    <tr class="titlesubsection">
-                        <td style="width: 4%;" class="bodertd borde-sep">6.4.1</td>
-                        <td style="width: 40%;" class="bodertd borde-sep ">Condicion general de ruedas</td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 33%;" class="bodertd borde-sep"></td>
-                    </tr>
 
-                    <tr class="titlesubsection">
-                        <td style="width: 4%;" class="bodertd borde-sep">6.4.2</td>
-                        <td style="width: 40%;" class="bodertd borde-sep ">Alineación </td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 33%;" class="bodertd borde-sep"></td>
-                    </tr>
+                    @switch($seccion6[0]->data['6_4_1'])
+                        @case(1)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">6.4.1</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Condicion general de ruedas</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
 
-                    <tr class="titlesubsection">
-                        <td style="width: 4%;" class="bodertd borde-sep">6.4.3</td>
-                        <td style="width: 40%;" class="bodertd borde-sep ">Estado de rodamientos (Vibraciones)</td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 33%;" class="bodertd borde-sep"></td>
-                    </tr>
+                        @case(2)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">6.4.1</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Condicion general de ruedas</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(3)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">6.4.1</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Condicion general de ruedas</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+                    @endswitch
+
+                    @switch($seccion6[0]->data['6_4_2'])
+                        @case(1)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">6.4.2</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Alineación </td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(2)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">6.4.2</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Alineación </td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(3)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">6.4.2</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Alineación </td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+                    @endswitch
+
+                    @switch($seccion6[0]->data['6_4_3'])
+                        @case(1)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">6.4.3</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Estado de rodamientos (Vibraciones)</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(2)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">6.4.3</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Estado de rodamientos (Vibraciones)</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(3)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">6.4.3</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Estado de rodamientos (Vibraciones)</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+                    @endswitch
 
                     <tr class="titlesection2">
                         <td style="width: 4%;" class="bodertd borde-sep">6.5</td>
@@ -2491,59 +3991,215 @@
                         <td style="width: 33%;" class="bodertd borde-sep"></td>
                     </tr>
 
-                    <tr class="titlesubsection">
-                        <td style="width: 4%;" class="bodertd borde-sep">6.5.1</td>
-                        <td style="width: 40%;" class="bodertd borde-sep ">Comportamiento (Vibración/Ruido)</td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 33%;" class="bodertd borde-sep"></td>
-                    </tr>
+                    @switch($seccion6[0]->data['6_5_1'])
+                        @case(1)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">6.5.1</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Comportamiento (Vibración/Ruido)</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
 
-                    <tr class="titlesubsection">
-                        <td style="width: 4%;" class="bodertd borde-sep">6.5.2</td>
-                        <td style="width: 40%;" class="bodertd borde-sep ">Funcionamiento de ventilador</td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 33%;" class="bodertd borde-sep"></td>
-                    </tr>
+                        @case(2)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">6.5.1</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Comportamiento (Vibración/Ruido)</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
 
-                    <tr class="titlesubsection">
-                        <td style="width: 4%;" class="bodertd borde-sep">6.5.3</td>
-                        <td style="width: 40%;" class="bodertd borde-sep ">Fijación del motor</td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 33%;" class="bodertd borde-sep"></td>
-                    </tr>
+                        @case(3)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">6.5.1</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Comportamiento (Vibración/Ruido)</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+                    @endswitch
 
-                    <tr class="titlesubsection">
-                        <td style="width: 4%;" class="bodertd borde-sep">6.5.4</td>
-                        <td style="width: 40%;" class="bodertd borde-sep ">Guarda</td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 33%;" class="bodertd borde-sep"></td>
-                    </tr>
+                    @switch($seccion6[0]->data['6_5_2'])
+                        @case(1)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">6.5.2</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Funcionamiento de ventilador</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
 
-                    <tr class="titlesubsection">
-                        <td style="width: 4%;" class="bodertd borde-sep">6.5.5</td>
-                        <td style="width: 40%;" class="bodertd borde-sep ">Conexiones</td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 33%;" class="bodertd borde-sep"></td>
-                    </tr>
+                        @case(2)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">6.5.2</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Funcionamiento de ventilador</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
 
-                    <tr class="titlesubsection">
-                        <td style="width: 4%;" class="bodertd borde-sep">6.5.6</td>
-                        <td style="width: 40%;" class="bodertd borde-sep ">Condición general</td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 33%;" class="bodertd borde-sep"></td>
-                    </tr>
+                        @case(3)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">6.5.2</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Funcionamiento de ventilador</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+                    @endswitch
+
+                    @switch($seccion6[0]->data['6_5_3'])
+                        @case(1)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">6.5.3</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Fijación del motor</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(2)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">6.5.3</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Fijación del motor</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(3)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">6.5.3</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Fijación del motor</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+                    @endswitch
+
+                    @switch($seccion6[0]->data['6_5_4'])
+                        @case(1)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">6.5.4</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Guarda</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(2)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">6.5.4</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Guarda</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(3)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">6.5.4</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Guarda</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+                    @endswitch
+
+                    @switch($seccion6[0]->data['6_5_5'])
+                        @case(1)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">6.5.5</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Conexiones</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(2)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">6.5.5</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Conexiones</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(3)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">6.5.5</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Conexiones</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+                    @endswitch
+
+                    @switch($seccion6[0]->data['6_5_6'])
+                        @case(1)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">6.5.6</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Condición general</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(2)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">6.5.6</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Condición general</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(3)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">6.5.6</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Condición general</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+                    @endswitch
 
                     <tr class="titlesection2">
                         <td style="width: 4%;" class="bodertd borde-sep">6.6</td>
@@ -2554,36 +4210,122 @@
                         <td style="width: 33%;" class="bodertd borde-sep"></td>
                     </tr>
 
-                    <tr class="titlesubsection">
-                        <td style="width: 4%;" class="bodertd borde-sep">6.6.1</td>
-                        <td style="width: 40%;" class="bodertd borde-sep ">Medición de entrehierro
-                            <div style="display: inline-block; margin-left: 30px;">EH=</div>
-                        </td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 33%;" class="bodertd borde-sep"></td>
-                    </tr>
+                    @switch($seccion6[0]->data['6_6_1'])
+                        @case(1)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">6.6.1</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Medición de entrehierro
+                                    <div style="display: inline-block; margin-left: 30px;">EH=</div>
+                                </td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
 
-                    <tr class="titlesubsection">
-                        <td style="width: 4%;" class="bodertd borde-sep">6.6.2</td>
-                        <td style="width: 40%;" class="bodertd borde-sep ">Medición del disco de freno
-                            <div style="display: inline-block; margin-left: 30px;">G=</div>
-                        </td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 33%;" class="bodertd borde-sep"></td>
-                    </tr>
+                        @case(2)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">6.6.1</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Medición de entrehierro
+                                    <div style="display: inline-block; margin-left: 30px;">EH=</div>
+                                </td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
 
-                    <tr class="titlesubsection">
-                        <td style="width: 4%;" class="bodertd borde-sep">6.6.3</td>
-                        <td style="width: 40%;" class="bodertd borde-sep ">Condicion dientes del disco de freno </td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 33%;" class="bodertd borde-sep"></td>
-                    </tr>
+                        @case(3)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">6.6.1</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Medición de entrehierro
+                                    <div style="display: inline-block; margin-left: 30px;">EH=</div>
+                                </td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+                    @endswitch
+
+                    @switch($seccion6[0]->data['6_6_2'])
+                        @case(1)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">6.6.2</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Medición del disco de freno
+                                    <div style="display: inline-block; margin-left: 30px;">G=</div>
+                                </td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(2)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">6.6.2</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Medición del disco de freno
+                                    <div style="display: inline-block; margin-left: 30px;">G=</div>
+                                </td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(3)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">6.6.2</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Medición del disco de freno
+                                    <div style="display: inline-block; margin-left: 30px;">G=</div>
+                                </td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+                    @endswitch
+
+                    @switch($seccion6[0]->data['6_6_3'])
+                        @case(1)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">6.6.3</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Condicion dientes del disco de freno </td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(2)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">6.6.3</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Condicion dientes del disco de freno </td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(3)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">6.6.3</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Condicion dientes del disco de freno </td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+                    @endswitch
 
                     <tr class="titlesection2">
                         <td style="width: 4%;" class="bodertd borde-sep">6.7</td>
@@ -2594,50 +4336,180 @@
                         <td style="width: 33%;" class="bodertd borde-sep"></td>
                     </tr>
 
-                    <tr class="titlesubsection">
-                        <td style="width: 4%;" class="bodertd borde-sep">6.7.1</td>
-                        <td style="width: 40%;" class="bodertd borde-sep ">Condición de tapa</td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 33%;" class="bodertd borde-sep"></td>
-                    </tr>
+                    @switch($seccion6[0]->data['6_7_1'])
+                        @case(1)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">6.7.1</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Condición de tapa</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
 
-                    <tr class="titlesubsection">
-                        <td style="width: 4%;" class="bodertd borde-sep">6.7.2</td>
-                        <td style="width: 40%;" class="bodertd borde-sep ">Condición de caja reductora</td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 33%;" class="bodertd borde-sep"></td>
-                    </tr>
+                        @case(2)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">6.7.1</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Condición de tapa</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
 
-                    <tr class="titlesubsection">
-                        <td style="width: 4%;" class="bodertd borde-sep">6.7.3</td>
-                        <td style="width: 40%;" class="bodertd borde-sep ">Comportamiento (Vibración/Ruido/Temp.)</td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 33%;" class="bodertd borde-sep"></td>
-                    </tr>
+                        @case(3)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">6.7.1</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Condición de tapa</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+                    @endswitch
 
-                    <tr class="titlesubsection">
-                        <td style="width: 4%;" class="bodertd borde-sep">6.7.4</td>
-                        <td style="width: 40%;" class="bodertd borde-sep ">Condición de tapón de respiradero</td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 33%;" class="bodertd borde-sep"></td>
-                    </tr>
+                    @switch($seccion6[0]->data['6_7_2'])
+                        @case(1)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">6.7.2</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Condición de caja reductora</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
 
-                    <tr class="titlesubsection">
-                        <td style="width: 4%;" class="bodertd borde-sep">6.7.5</td>
-                        <td style="width: 40%;" class="bodertd borde-sep ">Nivel de aceite</td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 33%;" class="bodertd borde-sep"></td>
-                    </tr>
+                        @case(2)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">6.7.2</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Condición de caja reductora</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(3)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">6.7.2</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Condición de caja reductora</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+                    @endswitch
+
+                    @switch($seccion6[0]->data['6_7_3'])
+                        @case(1)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">6.7.3</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Comportamiento (Vibración/Ruido/Temp.)</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(2)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">6.7.3</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Comportamiento (Vibración/Ruido/Temp.)</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(3)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">6.7.3</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Comportamiento (Vibración/Ruido/Temp.)</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+                    @endswitch
+
+                    @switch($seccion6[0]->data['6_7_4'])
+                        @case(1)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">6.7.4</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Condición de tapón de respiradero</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(2)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">6.7.4</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Condición de tapón de respiradero</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(3)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">6.7.4</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Condición de tapón de respiradero</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+                    @endswitch
+
+                    @switch($seccion6[0]->data['6_7_5'])
+                        @case(1)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">6.7.5</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Nivel de aceite</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(2)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">6.7.5</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Nivel de aceite</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(3)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">6.7.5</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Nivel de aceite</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+                    @endswitch
                 </tbody>
             </table>
 
@@ -2655,23 +4527,76 @@
                         <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
                         <td style="width: 30%;" class="bodertd borde-sep textCenter">Comentarios</td>
                     </tr>
-                    <tr class="titlesubsection">
-                        <td style="width: 4%;" class="bodertd borde-sep">7.1.1</td>
-                        <td style="width: 40%;" class="bodertd borde-sep ">Placa de amarre soldadas</td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 33%;" class="bodertd borde-sep"></td>
-                    </tr>
 
-                    <tr class="titlesubsection">
-                        <td style="width: 4%;" class="bodertd borde-sep">7.1.2</td>
-                        <td style="width: 40%;" class="bodertd borde-sep ">Uniones atornilladas (marca testigo)</td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 33%;" class="bodertd borde-sep"></td>
-                    </tr>
+                    @switch($seccion7[0]->data['7_1_1'])
+                        @case(1)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">7.1.1</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Placa de amarre soldadas</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(2)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">7.1.1</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Placa de amarre soldadas</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(3)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">7.1.1</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Placa de amarre soldadas</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+                    @endswitch
+
+                    @switch($seccion7[0]->data['7_1_2'])
+                        @case(1)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">7.1.2</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Uniones atornilladas (marca testigo)</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(2)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">7.1.2</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Uniones atornilladas (marca testigo)</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(3)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">7.1.2</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Uniones atornilladas (marca testigo)</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+                    @endswitch
 
                     <tr class="titlesection2">
                         <td style="width: 4%;" class="bodertd borde-sep">7.2</td>
@@ -2682,32 +4607,110 @@
                         <td style="width: 33%;" class="bodertd borde-sep"></td>
                     </tr>
 
-                    <tr class="titlesubsection">
-                        <td style="width: 4%;" class="bodertd borde-sep">7.2.1</td>
-                        <td style="width: 40%;" class="bodertd borde-sep ">Condición general</td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 33%;" class="bodertd borde-sep"></td>
-                    </tr>
+                    @switch($seccion7[0]->data['7_2_1'])
+                        @case(1)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">7.2.1</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Condición general</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
 
-                    <tr class="titlesubsection">
-                        <td style="width: 4%;" class="bodertd borde-sep">7.2.2</td>
-                        <td style="width: 40%;" class="bodertd borde-sep ">Alineación de los rieles (visual)</td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 33%;" class="bodertd borde-sep"></td>
-                    </tr>
+                        @case(2)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">7.2.1</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Condición general</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
 
-                    <tr class="titlesubsection">
-                        <td style="width: 4%;" class="bodertd borde-sep">7.2.3</td>
-                        <td style="width: 40%;" class="bodertd borde-sep ">Uniones de los rieles</td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 33%;" class="bodertd borde-sep"></td>
-                    </tr>
+                        @case(3)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">7.2.1</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Condición general</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+                    @endswitch
+
+                    @switch($seccion7[0]->data['7_2_2'])
+                        @case(1)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">7.2.2</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Alineación de los rieles (visual)</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(2)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">7.2.2</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Alineación de los rieles (visual)</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(3)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">7.2.2</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Alineación de los rieles (visual)</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+                    @endswitch
+
+                    @switch($seccion7[0]->data['7_2_3'])
+                        @case(1)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">7.2.3</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Uniones de los rieles</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(2)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">7.2.3</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Uniones de los rieles</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(3)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">7.2.3</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Uniones de los rieles</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+                    @endswitch
 
                     <tr class="titlesection2">
                         <td style="width: 4%;" class="bodertd borde-sep">7.4</td>
@@ -2718,23 +4721,75 @@
                         <td style="width: 33%;" class="bodertd borde-sep"></td>
                     </tr>
 
-                    <tr class="titlesubsection">
-                        <td style="width: 4%;" class="bodertd borde-sep">7.4.1</td>
-                        <td style="width: 40%;" class="bodertd borde-sep ">Condición de los topes de goma</td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 33%;" class="bodertd borde-sep"></td>
-                    </tr>
+                    @switch($seccion7[0]->data['7_4_1'])
+                        @case(1)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">7.4.1</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Condición de los topes de goma</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
 
-                    <tr class="titlesubsection">
-                        <td style="width: 4%;" class="bodertd borde-sep">7.4.2</td>
-                        <td style="width: 40%;" class="bodertd borde-sep ">Condición de los topes estructurales</td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 33%;" class="bodertd borde-sep"></td>
-                    </tr>
+                        @case(2)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">7.4.1</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Condición de los topes de goma</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(3)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">7.4.1</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Condición de los topes de goma</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+                    @endswitch
+
+                    @switch($seccion7[0]->data['7_4_2'])
+                        @case(1)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">7.4.2</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Condición de los topes estructurales</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(2)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">7.4.2</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Condición de los topes estructurales</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(3)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">7.4.2</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Condición de los topes estructurales</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+                    @endswitch
                 </tbody>
             </table>
         </section>
@@ -2753,32 +4808,110 @@
                         <td style="width: 33%;" class="bodertd borde-sep"></td>
                     </tr>
 
-                    <tr class="titlesubsection">
-                        <td style="width: 4%;" class="bodertd borde-sep">7.5.1</td>
-                        <td style="width: 40%;" class="bodertd borde-sep ">Condicion general de ruedas</td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 33%;" class="bodertd borde-sep"></td>
-                    </tr>
+                    @switch($seccion7[0]->data['7_5_1'])
+                        @case(1)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">7.5.1</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Condicion general de ruedas</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
 
-                    <tr class="titlesubsection">
-                        <td style="width: 4%;" class="bodertd borde-sep">7.5.2</td>
-                        <td style="width: 40%;" class="bodertd borde-sep ">Alineación (visual)</td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 33%;" class="bodertd borde-sep"></td>
-                    </tr>
+                        @case(2)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">7.5.1</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Condicion general de ruedas</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
 
-                    <tr class="titlesubsection">
-                        <td style="width: 4%;" class="bodertd borde-sep">7.5.3</td>
-                        <td style="width: 40%;" class="bodertd borde-sep ">Estado de rodamientos (Vibraciones)</td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 33%;" class="bodertd borde-sep"></td>
-                    </tr>
+                        @case(3)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">7.5.1</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Condicion general de ruedas</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+                    @endswitch
+
+                    @switch($seccion7[0]->data['7_5_2'])
+                        @case(1)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">7.5.2</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Alineación (visual)</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(2)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">7.5.2</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Alineación (visual)</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(3)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">7.5.2</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Alineación (visual)</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+                    @endswitch
+
+                    @switch($seccion7[0]->data['7_5_3'])
+                        @case(1)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">7.5.3</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Estado de rodamientos (Vibraciones)</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(2)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">7.5.3</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Estado de rodamientos (Vibraciones)</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(3)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">7.5.3</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Estado de rodamientos (Vibraciones)</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+                    @endswitch
 
                     <tr class="titlesection2">
                         <td style="width: 4%;" class="bodertd borde-sep">7.6</td>
@@ -2788,61 +4921,218 @@
                         <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
                         <td style="width: 33%;" class="bodertd borde-sep"></td>
                     </tr>
-                    <tr class="titlesubsection">
-                        <td style="width: 4%;" class="bodertd borde-sep">7.6.1</td>
-                        <td style="width: 40%;" class="bodertd borde-sep ">Comportamiento (Vibración/Ruido)</td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 33%;" class="bodertd borde-sep"></td>
-                    </tr>
 
-                    <tr class="titlesubsection">
-                        <td style="width: 4%;" class="bodertd borde-sep">7.6.2</td>
-                        <td style="width: 40%;" class="bodertd borde-sep ">Funcionamiento de ventilador</td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 33%;" class="bodertd borde-sep"></td>
-                    </tr>
+                    @switch($seccion7[0]->data['7_6_1'])
+                        @case(1)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">7.6.1</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Comportamiento (Vibración/Ruido)</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
 
-                    <tr class="titlesubsection">
-                        <td style="width: 4%;" class="bodertd borde-sep">7.6.3</td>
-                        <td style="width: 40%;" class="bodertd borde-sep ">Fijación de los motores</td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 33%;" class="bodertd borde-sep"></td>
-                    </tr>
+                        @case(2)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">7.6.1</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Comportamiento (Vibración/Ruido)</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
 
-                    <tr class="titlesubsection">
-                        <td style="width: 4%;" class="bodertd borde-sep">7.6.4</td>
-                        <td style="width: 40%;" class="bodertd borde-sep ">Guarda</td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 33%;" class="bodertd borde-sep"></td>
-                    </tr>
+                        @case(3)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">7.6.1</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Comportamiento (Vibración/Ruido)</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+                    @endswitch
 
-                    <tr class="titlesubsection">
-                        <td style="width: 4%;" class="bodertd borde-sep">7.6.5</td>
-                        <td style="width: 40%;" class="bodertd borde-sep ">Conexiones</td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 33%;" class="bodertd borde-sep"></td>
-                    </tr>
+                    @switch($seccion7[0]->data['7_6_2'])
+                        @case(1)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">7.6.2</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Funcionamiento de ventilador</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
 
-                    <tr class="titlesubsection">
-                        <td style="width: 4%;" class="bodertd borde-sep">7.6.6</td>
-                        <td style="width: 40%;" class="bodertd borde-sep ">Condición general</td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 33%;" class="bodertd borde-sep"></td>
-                    </tr>
+                        @case(2)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">7.6.2</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Funcionamiento de ventilador</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
 
-                    <tr class="titlesection2">
+                        @case(3)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">7.6.2</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Funcionamiento de ventilador</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+                    @endswitch
+
+                    @switch($seccion7[0]->data['7_6_3'])
+                        @case(1)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">7.6.3</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Fijación de los motores</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(2)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">7.6.3</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Fijación de los motores</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(3)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">7.6.3</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Fijación de los motores</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+                    @endswitch
+
+                    {{-- @switch($seccion7[0]->data['7_6_4_'])
+                        @case(1)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">7.6.4</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Guarda</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(2)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">7.6.4</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Guarda</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(3)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">7.6.4</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Guarda</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+                    @endswitch --}}
+
+                    {{-- @switch($seccion7[0]->data['7_6_5'])
+                        @case(1)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">7.6.5</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Conexiones</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(2)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">7.6.5</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Conexiones</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(3)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">7.6.5</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Conexiones</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+                    @endswitch
+
+                    @switch($seccion7[0]->data['7_6_6'])
+                        @case(1)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">7.6.6</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Condición general</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(2)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">7.6.6</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Condición general</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(3)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">7.6.6</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Condición general</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+                    @endswitch --}}
+
+                    {{-- <tr class="titlesection2">
                         <td style="width: 4%;" class="bodertd borde-sep">7.7</td>
                         <td style="width: 40%;" class="bodertd borde-sep ">Frenos de los cabezales</td>
                         <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
@@ -2851,36 +5141,122 @@
                         <td style="width: 33%;" class="bodertd borde-sep"></td>
                     </tr>
 
-                    <tr class="titlesubsection">
-                        <td style="width: 4%;" class="bodertd borde-sep">7.7.1</td>
-                        <td style="width: 40%;" class="bodertd borde-sep ">Medición de entrehierro
-                            <div style="display: inline-block; margin-left: 30px;">EH=</div>
-                        </td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 33%;" class="bodertd borde-sep"></td>
-                    </tr>
+                    @switch($seccion7[0]->data['7_7_1'])
+                        @case(1)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">7.7.1</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Medición de entrehierro
+                                    <div style="display: inline-block; margin-left: 30px;">EH=</div>
+                                </td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
 
-                    <tr class="titlesubsection">
-                        <td style="width: 4%;" class="bodertd borde-sep">7.7.2</td>
-                        <td style="width: 40%;" class="bodertd borde-sep ">Medición del disco de freno
-                            <div style="display: inline-block; margin-left: 30px;">G=</div>
-                        </td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 33%;" class="bodertd borde-sep"></td>
-                    </tr>
+                        @case(2)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">7.7.1</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Medición de entrehierro
+                                    <div style="display: inline-block; margin-left: 30px;">EH=</div>
+                                </td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
 
-                    <tr class="titlesubsection">
-                        <td style="width: 4%;" class="bodertd borde-sep">7.7.3</td>
-                        <td style="width: 40%;" class="bodertd borde-sep ">Condicion dientes del disco de freno</td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 33%;" class="bodertd borde-sep"></td>
-                    </tr>
+                        @case(3)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">7.7.1</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Medición de entrehierro
+                                    <div style="display: inline-block; margin-left: 30px;">EH=</div>
+                                </td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+                    @endswitch
+
+                    @switch($seccion7[0]->data['7_7_2'])
+                        @case(1)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">7.7.2</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Medición del disco de freno
+                                    <div style="display: inline-block; margin-left: 30px;">G=</div>
+                                </td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(2)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">7.7.2</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Medición del disco de freno
+                                    <div style="display: inline-block; margin-left: 30px;">G=</div>
+                                </td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(3)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">7.7.2</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Medición del disco de freno
+                                    <div style="display: inline-block; margin-left: 30px;">G=</div>
+                                </td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+                    @endswitch
+
+                    @switch($seccion7[0]->data['7_7_2'])
+                        @case(1)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">7.7.3</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Condicion dientes del disco de freno</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(2)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">7.7.3</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Condicion dientes del disco de freno</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(3)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">7.7.3</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Condicion dientes del disco de freno</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+                    @endswitch --}}
                 </tbody>
             </table>
             <table style="width: 99%" class="borde-sep">
@@ -2897,43 +5273,154 @@
                         <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
                         <td style="width: 30%;" class="bodertd borde-sep textCenter">Comentarios</td>
                     </tr>
-                    <tr class="titlesubsection">
-                        <td style="width: 4%;" class="bodertd borde-sep">8.1.1</td>
-                        <td style="width: 40%;" class="bodertd borde-sep ">Condicion general de contactor reversible
-                        </td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 33%;" class="bodertd borde-sep"></td>
-                    </tr>
-                    <tr class="titlesubsection">
-                        <td style="width: 4%;" class="bodertd borde-sep">8.1.2</td>
-                        <td style="width: 40%;" class="bodertd borde-sep ">Condicion general de contactor 2da
-                            velocidad</td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 33%;" class="bodertd borde-sep"></td>
-                    </tr>
+                    @switch($seccion8[0]->data['8_1_1'])
+                        @case(1)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">8.1.1</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Condicion general de contactor reversible
+                                </td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
 
-                    <tr class="titlesubsection">
-                        <td style="width: 4%;" class="bodertd borde-sep">8.1.3</td>
-                        <td style="width: 40%;" class="bodertd borde-sep ">Condicion general de contactor de freno
-                        </td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 33%;" class="bodertd borde-sep"></td>
-                    </tr>
+                        @case(2)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">8.1.1</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Condicion general de contactor reversible
+                                </td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
 
-                    <tr class="titlesubsection">
-                        <td style="width: 4%;" class="bodertd borde-sep">8.1.4</td>
-                        <td style="width: 40%;" class="bodertd borde-sep ">Condicion general de rectificador</td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 33%;" class="bodertd borde-sep"></td>
-                    </tr>
+                        @case(3)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">8.1.1</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Condicion general de contactor reversible
+                                </td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+                    @endswitch
+
+                    @switch($seccion8[0]->data['8_1_2'])
+                        @case(1)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">8.1.2</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Condicion general de contactor 2da
+                                    velocidad</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(2)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">8.1.2</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Condicion general de contactor 2da
+                                    velocidad</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(3)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">8.1.2</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Condicion general de contactor 2da
+                                    velocidad</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+                    @endswitch
+
+                    @switch($seccion8[0]->data['8_1_3'])
+                        @case(1)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">8.1.3</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Condicion general de contactor de freno
+                                </td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(2)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">8.1.3</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Condicion general de contactor de freno
+                                </td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(3)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">8.1.3</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Condicion general de contactor de freno
+                                </td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+                    @endswitch
+
+                    @switch($seccion8[0]->data['8_1_4'])
+                        @case(1)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">8.1.4</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Condicion general de rectificador</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(2)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">8.1.4</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Condicion general de rectificador</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(3)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">8.1.4</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Condicion general de rectificador</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+                    @endswitch
 
                     <tr class="titlesection2">
                         <td style="width: 4%;" class="bodertd borde-sep">8.2</td>
@@ -2944,41 +5431,145 @@
                         <td style="width: 33%;" class="bodertd borde-sep"></td>
                     </tr>
 
-                    <tr class="titlesubsection">
-                        <td style="width: 4%;" class="bodertd borde-sep">8.2.1</td>
-                        <td style="width: 40%;" class="bodertd borde-sep ">Condición general del variador</td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 33%;" class="bodertd borde-sep"></td>
-                    </tr>
+                    @switch($seccion8[0]->data['8_2_1'])
+                        @case(1)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">8.2.1</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Condición general del variador</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
 
-                    <tr class="titlesubsection">
-                        <td style="width: 4%;" class="bodertd borde-sep">8.2.2</td>
-                        <td style="width: 40%;" class="bodertd borde-sep ">LED de alarmas apagado</td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 33%;" class="bodertd borde-sep"></td>
-                    </tr>
+                        @case(2)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">8.2.1</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Condición general del variador</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
 
-                    <tr class="titlesubsection">
-                        <td style="width: 4%;" class="bodertd borde-sep">8.2.3</td>
-                        <td style="width: 40%;" class="bodertd borde-sep ">Conexiones</td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 33%;" class="bodertd borde-sep"></td>
-                    </tr>
+                        @case(3)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">8.2.1</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Condición general del variador</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+                    @endswitch
 
-                    <tr class="titlesubsection">
-                        <td style="width: 4%;" class="bodertd borde-sep">8.2.4</td>
-                        <td style="width: 40%;" class="bodertd borde-sep ">Historial de alarmas</td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 33%;" class="bodertd borde-sep"></td>
-                    </tr>
+                    @switch($seccion8[0]->data['8_2_2'])
+                        @case(1)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">8.2.2</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">LED de alarmas apagado</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(2)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">8.2.2</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">LED de alarmas apagado</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(3)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">8.2.2</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">LED de alarmas apagado</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+                    @endswitch
+
+                    @switch($seccion8[0]->data['8_2_3'])
+                        @case(1)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">8.2.3</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Conexiones</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(2)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">8.2.3</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Conexiones</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(3)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">8.2.3</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Conexiones</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+                    @endswitch
+
+                    @switch($seccion8[0]->data['8_2_4'])
+                        @case(1)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">8.2.4</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Historial de alarmas</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(2)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">8.2.4</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Historial de alarmas</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(3)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">8.2.4</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Historial de alarmas</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+                    @endswitch
 
                     <tr class="titlesection2">
                         <td style="width: 4%;" class="bodertd borde-sep">8.3</td>
@@ -2990,41 +5581,146 @@
                         <td style="width: 33%;" class="bodertd borde-sep"></td>
                     </tr>
 
-                    <tr class="titlesubsection">
-                        <td style="width: 4%;" class="bodertd borde-sep">8.3.1</td>
-                        <td style="width: 40%;" class="bodertd borde-sep ">Condición general del variador</td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 33%;" class="bodertd borde-sep"></td>
-                    </tr>
+                    @switch($seccion8[0]->data['8_3_1'])
+                        @case(1)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">8.3.1</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Condición general del variador</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
 
-                    <tr class="titlesubsection">
-                        <td style="width: 4%;" class="bodertd borde-sep">8.3.2</td>
-                        <td style="width: 40%;" class="bodertd borde-sep ">LED de alarmas apagado</td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 33%;" class="bodertd borde-sep"></td>
-                    </tr>
+                        @case(2)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">8.3.1</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Condición general del variador</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
 
-                    <tr class="titlesubsection">
-                        <td style="width: 4%;" class="bodertd borde-sep">8.3.3</td>
-                        <td style="width: 40%;" class="bodertd borde-sep ">Conexiones</td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 33%;" class="bodertd borde-sep"></td>
-                    </tr>
+                        @case(3)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">8.3.1</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Condición general del variador</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+                    @endswitch
 
-                    <tr class="titlesubsection">
-                        <td style="width: 4%;" class="bodertd borde-sep">8.3.4</td>
-                        <td style="width: 40%;" class="bodertd borde-sep ">Historial de alarmas</td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 33%;" class="bodertd borde-sep"></td>
-                    </tr>
+                    @switch($seccion8[0]->data['8_3_2'])
+                        @case(1)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">8.3.2</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">LED de alarmas apagado</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(2)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">8.3.2</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">LED de alarmas apagado</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(3)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">8.3.2</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">LED de alarmas apagado</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+                    @endswitch
+
+                    @switch($seccion8[0]->data['8_3_3'])
+                        @case(1)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">8.3.3</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Conexiones</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(2)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">8.3.3</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Conexiones</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(3)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">8.3.3</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Conexiones</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+                    @endswitch
+
+                    @switch($seccion8[0]->data['8_3_4'])
+                        @case(1)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">8.3.4</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Historial de alarmas</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(2)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">8.3.4</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Historial de alarmas</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(3)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">8.3.4</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Historial de alarmas</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+                    @endswitch
+
 
                     <tr class="titlesection2">
                         <td style="width: 4%;" class="bodertd borde-sep">8.4</td>
@@ -3036,43 +5732,151 @@
                         <td style="width: 33%;" class="bodertd borde-sep"></td>
                     </tr>
 
-                    <tr class="titlesubsection">
-                        <td style="width: 4%;" class="bodertd borde-sep">8.4.1</td>
-                        <td style="width: 40%;" class="bodertd borde-sep ">Condición general</td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 33%;" class="bodertd borde-sep"></td>
-                    </tr>
+                    @switch($seccion8[0]->data['8_4_1'])
+                        @case(1)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">8.4.1</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Condición general</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
 
-                    <tr class="titlesubsection">
-                        <td style="width: 4%;" class="bodertd borde-sep">8.4.2</td>
-                        <td style="width: 40%;" class="bodertd borde-sep ">Valor real del aparejo en pantalla
-                            <div style="display: inline-block; margin-left: 30px;">M=</div>
-                        </td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 33%;" class="bodertd borde-sep"></td>
-                    </tr>
+                        @case(2)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">8.4.1</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Condición general</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
 
-                    <tr class="titlesubsection">
-                        <td style="width: 4%;" class="bodertd borde-sep">8.4.3</td>
-                        <td style="width: 40%;" class="bodertd borde-sep ">LED de alarmas apagado</td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 33%;" class="bodertd borde-sep"></td>
-                    </tr>
+                        @case(3)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">8.4.1</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Condición general</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+                    @endswitch
 
-                    <tr class="titlesubsection">
-                        <td style="width: 4%;" class="bodertd borde-sep">8.4.4</td>
-                        <td style="width: 40%;" class="bodertd borde-sep ">Conexiones</td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                        <td style="width: 33%;" class="bodertd borde-sep"></td>
-                    </tr>
+                    @switch($seccion8[0]->data['8_4_2'])
+                        @case(1)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">8.4.2</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Valor real del aparejo en pantalla
+                                    <div style="display: inline-block; margin-left: 30px;">M=</div>
+                                </td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(2)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">8.4.2</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Valor real del aparejo en pantalla
+                                    <div style="display: inline-block; margin-left: 30px;">M=</div>
+                                </td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(3)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">8.4.2</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Valor real del aparejo en pantalla
+                                    <div style="display: inline-block; margin-left: 30px;">M=</div>
+                                </td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+                    @endswitch
+
+                    @switch($seccion8[0]->data['8_4_3'])
+                        @case(1)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">8.4.3</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">LED de alarmas apagado</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(2)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">8.4.3</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">LED de alarmas apagado</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(3)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">8.4.3</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">LED de alarmas apagado</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+                    @endswitch
+
+                    @switch($seccion8[0]->data['8_4_4'])
+                        @case(1)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">8.4.4</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Conexiones</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(2)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">8.4.4</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Conexiones</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+
+                        @case(3)
+                            <tr class="titlesubsection">
+                                <td style="width: 4%;" class="bodertd borde-sep">8.4.4</td>
+                                <td style="width: 40%;" class="bodertd borde-sep ">Conexiones</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                            </tr>
+                        @break
+                    @endswitch
                 </tbody>
             </table>
             <!--///////////////////////////////////////////////////////////Salto de pagina////////////////////////////////////////////////////////////////// -->
@@ -3093,42 +5897,152 @@
                             <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
                             <td style="width: 30%;" class="bodertd borde-sep textCenter">Comentarios</td>
                         </tr>
-                        <tr class="titlesubsection">
-                            <td style="width: 4%;" class="bodertd borde-sep">9.1.1</td>
-                            <td style="width: 40%;" class="bodertd borde-sep ">Identificación del interruptor</td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 33%;" class="bodertd borde-sep"></td>
-                        </tr>
-                        <tr class="titlesubsection">
-                            <td style="width: 4%;" class="bodertd borde-sep">9.1.2</td>
-                            <td style="width: 40%;" class="bodertd borde-sep ">Funcionamiento</td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 33%;" class="bodertd borde-sep"></td>
-                        </tr>
+                        @switch($seccion9[0]->data['9_1_1'])
+                            @case(1)
+                                <tr class="titlesubsection">
+                                    <td style="width: 4%;" class="bodertd borde-sep">9.1.1</td>
+                                    <td style="width: 40%;" class="bodertd borde-sep ">Identificación del interruptor</td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                    <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                </tr>
+                            @break
 
-                        <tr class="titlesubsection">
-                            <td style="width: 4%;" class="bodertd borde-sep">9.1.3</td>
-                            <td style="width: 40%;" class="bodertd borde-sep ">Orificio de bloqueo</td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 33%;" class="bodertd borde-sep"></td>
-                        </tr>
+                            @case(2)
+                                <tr class="titlesubsection">
+                                    <td style="width: 4%;" class="bodertd borde-sep">9.1.1</td>
+                                    <td style="width: 40%;" class="bodertd borde-sep ">Identificación del interruptor</td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                    <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                </tr>
+                            @break
 
-                        <tr class="titlesubsection">
-                            <td style="width: 4%;" class="bodertd borde-sep">9.1.4</td>
-                            <td style="width: 40%;" class="bodertd borde-sep ">Ausencia de voltaje en posición de
-                                apagado
-                            </td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 33%;" class="bodertd borde-sep"></td>
-                        </tr>
+                            @case(3)
+                                <tr class="titlesubsection">
+                                    <td style="width: 4%;" class="bodertd borde-sep">9.1.1</td>
+                                    <td style="width: 40%;" class="bodertd borde-sep ">Identificación del interruptor</td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                    <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                </tr>
+                            @break
+                        @endswitch
+
+                        @switch($seccion9[0]->data['9_1_2'])
+                            @case(1)
+                                <tr class="titlesubsection">
+                                    <td style="width: 4%;" class="bodertd borde-sep">9.1.2</td>
+                                    <td style="width: 40%;" class="bodertd borde-sep ">Funcionamiento</td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                    <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                </tr>
+                            @break
+
+                            @case(2)
+                                <tr class="titlesubsection">
+                                    <td style="width: 4%;" class="bodertd borde-sep">9.1.2</td>
+                                    <td style="width: 40%;" class="bodertd borde-sep ">Funcionamiento</td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                    <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                </tr>
+                            @break
+
+                            @case(3)
+                                <tr class="titlesubsection">
+                                    <td style="width: 4%;" class="bodertd borde-sep">9.1.2</td>
+                                    <td style="width: 40%;" class="bodertd borde-sep ">Funcionamiento</td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                    <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                </tr>
+                            @break
+                        @endswitch
+
+                        @switch($seccion9[0]->data['9_1_3'])
+                            @case(1)
+                                <tr class="titlesubsection">
+                                    <td style="width: 4%;" class="bodertd borde-sep">9.1.3</td>
+                                    <td style="width: 40%;" class="bodertd borde-sep ">Orificio de bloqueo</td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                    <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                </tr>
+                            @break
+
+                            @case(2)
+                                <tr class="titlesubsection">
+                                    <td style="width: 4%;" class="bodertd borde-sep">9.1.3</td>
+                                    <td style="width: 40%;" class="bodertd borde-sep ">Orificio de bloqueo</td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                    <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                </tr>
+                            @break
+
+                            @case(3)
+                                <tr class="titlesubsection">
+                                    <td style="width: 4%;" class="bodertd borde-sep">9.1.3</td>
+                                    <td style="width: 40%;" class="bodertd borde-sep ">Orificio de bloqueo</td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                    <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                </tr>
+                            @break
+                        @endswitch
+
+                        @switch($seccion9[0]->data['9_1_3'])
+                            @case(1)
+                                <tr class="titlesubsection">
+                                    <td style="width: 4%;" class="bodertd borde-sep">9.1.4</td>
+                                    <td style="width: 40%;" class="bodertd borde-sep ">Ausencia de voltaje en posición de
+                                        apagado
+                                    </td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                    <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                </tr>
+                            @break
+
+                            @case(2)
+                                <tr class="titlesubsection">
+                                    <td style="width: 4%;" class="bodertd borde-sep">9.1.4</td>
+                                    <td style="width: 40%;" class="bodertd borde-sep ">Ausencia de voltaje en posición de
+                                        apagado
+                                    </td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                    <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                </tr>
+                            @break
+
+                            @case(3)
+                                <tr class="titlesubsection">
+                                    <td style="width: 4%;" class="bodertd borde-sep">9.1.4</td>
+                                    <td style="width: 40%;" class="bodertd borde-sep ">Ausencia de voltaje en posición de
+                                        apagado
+                                    </td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                    <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                </tr>
+                            @break
+                        @endswitch
+
                         <tr class="titlesection2">
                             <td style="width: 4%;" class="bodertd borde-sep">9.2</td>
                             <td style="width: 40%;" class="bodertd borde-sep ">Fusibles</td>
@@ -3138,24 +6052,78 @@
                             <td style="width: 33%;" class="bodertd borde-sep"></td>
                         </tr>
 
-                        <tr class="titlesubsection">
-                            <td style="width: 4%;" class="bodertd borde-sep">9.2.1</td>
-                            <td style="width: 40%;" class="bodertd borde-sep ">Condición de fusibles (continuidad)
-                            </td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 33%;" class="bodertd borde-sep"></td>
-                        </tr>
+                        @switch($seccion9[0]->data['9_2_1'])
+                            @case(1)
+                                <tr class="titlesubsection">
+                                    <td style="width: 4%;" class="bodertd borde-sep">9.2.1</td>
+                                    <td style="width: 40%;" class="bodertd borde-sep ">Condición de fusibles (continuidad)
+                                    </td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                    <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                </tr>
+                            @break
 
-                        <tr class="titlesubsection">
-                            <td style="width: 4%;" class="bodertd borde-sep">9.2.2</td>
-                            <td style="width: 40%;" class="bodertd borde-sep ">Condición de base de fusibles</td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 33%;" class="bodertd borde-sep"></td>
-                        </tr>
+                            @case(2)
+                                <tr class="titlesubsection">
+                                    <td style="width: 4%;" class="bodertd borde-sep">9.2.1</td>
+                                    <td style="width: 40%;" class="bodertd borde-sep ">Condición de fusibles (continuidad)
+                                    </td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                    <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                </tr>
+                            @break
+
+                            @case(3)
+                                <tr class="titlesubsection">
+                                    <td style="width: 4%;" class="bodertd borde-sep">9.2.1</td>
+                                    <td style="width: 40%;" class="bodertd borde-sep ">Condición de fusibles (continuidad)
+                                    </td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                    <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                </tr>
+                            @break
+                        @endswitch
+
+                        @switch($seccion9[0]->data['9_2_2'])
+                            @case(1)
+                                <tr class="titlesubsection">
+                                    <td style="width: 4%;" class="bodertd borde-sep">9.2.2</td>
+                                    <td style="width: 40%;" class="bodertd borde-sep ">Condición de base de fusibles</td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                    <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                </tr>
+                            @break
+
+                            @case(2)
+                                <tr class="titlesubsection">
+                                    <td style="width: 4%;" class="bodertd borde-sep">9.2.2</td>
+                                    <td style="width: 40%;" class="bodertd borde-sep ">Condición de base de fusibles</td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                    <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                </tr>
+                            @break
+
+                            @case(3)
+                                <tr class="titlesubsection">
+                                    <td style="width: 4%;" class="bodertd borde-sep">9.2.2</td>
+                                    <td style="width: 40%;" class="bodertd borde-sep ">Condición de base de fusibles</td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                    <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                </tr>
+                            @break
+                        @endswitch
 
                         <tr class="titlesection2">
                             <td style="width: 4%;" class="bodertd borde-sep">9.3</td>
@@ -3166,52 +6134,186 @@
                             <td style="width: 33%;" class="bodertd borde-sep"></td>
                         </tr>
 
-                        <tr class="titlesubsection">
-                            <td style="width: 4%;" class="bodertd borde-sep">9.3.1</td>
-                            <td style="width: 40%;" class="bodertd borde-sep ">Soportería (ducto barra/AKAPP)</td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 33%;" class="bodertd borde-sep"></td>
-                        </tr>
+                        @switch($seccion9[0]->data['9_3_1'])
+                            @case(1)
+                                <tr class="titlesubsection">
+                                    <td style="width: 4%;" class="bodertd borde-sep">9.3.1</td>
+                                    <td style="width: 40%;" class="bodertd borde-sep ">Soportería (ducto barra/AKAPP)</td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                    <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                </tr>
+                            @break
 
-                        <tr class="titlesubsection">
-                            <td style="width: 4%;" class="bodertd borde-sep">9.3.2</td>
-                            <td style="width: 40%;" class="bodertd borde-sep ">Uniones</td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 33%;" class="bodertd borde-sep"></td>
-                        </tr>
+                            @case(2)
+                                <tr class="titlesubsection">
+                                    <td style="width: 4%;" class="bodertd borde-sep">9.3.1</td>
+                                    <td style="width: 40%;" class="bodertd borde-sep ">Soportería (ducto barra/AKAPP)</td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                    <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                </tr>
+                            @break
 
-                        <tr class="titlesubsection">
-                            <td style="width: 4%;" class="bodertd borde-sep">9.3.3</td>
-                            <td style="width: 40%;" class="bodertd borde-sep ">Condición de los conductores</td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 33%;" class="bodertd borde-sep"></td>
-                        </tr>
+                            @case(3)
+                                <tr class="titlesubsection">
+                                    <td style="width: 4%;" class="bodertd borde-sep">9.3.1</td>
+                                    <td style="width: 40%;" class="bodertd borde-sep ">Soportería (ducto barra/AKAPP)</td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                    <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                </tr>
+                            @break
+                        @endswitch
 
-                        <tr class="titlesubsection">
-                            <td style="width: 4%;" class="bodertd borde-sep">9.3.4</td>
-                            <td style="width: 40%;" class="bodertd borde-sep ">Condición de los colectores
-                                (zapatas/escobillas)</td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 33%;" class="bodertd borde-sep"></td>
-                        </tr>
+                        @switch($seccion9[0]->data['9_3_2'])
+                            @case(1)
+                                <tr class="titlesubsection">
+                                    <td style="width: 4%;" class="bodertd borde-sep">9.3.2</td>
+                                    <td style="width: 40%;" class="bodertd borde-sep ">Uniones</td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                    <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                </tr>
+                            @break
 
-                        <tr class="titlesubsection">
-                            <td style="width: 4%;" class="bodertd borde-sep">9.3.5</td>
-                            <td style="width: 40%;" class="bodertd borde-sep ">Condición del deslizador (brazo/carro)
-                            </td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 33%;" class="bodertd borde-sep"></td>
-                        </tr>
+                            @case(2)
+                                <tr class="titlesubsection">
+                                    <td style="width: 4%;" class="bodertd borde-sep">9.3.2</td>
+                                    <td style="width: 40%;" class="bodertd borde-sep ">Uniones</td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                    <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                </tr>
+                            @break
+
+                            @case(3)
+                                <tr class="titlesubsection">
+                                    <td style="width: 4%;" class="bodertd borde-sep">9.3.2</td>
+                                    <td style="width: 40%;" class="bodertd borde-sep ">Uniones</td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                    <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                </tr>
+                            @break
+                        @endswitch
+
+                        @switch($seccion9[0]->data['9_3_3'])
+                            @case(1)
+                                <tr class="titlesubsection">
+                                    <td style="width: 4%;" class="bodertd borde-sep">9.3.3</td>
+                                    <td style="width: 40%;" class="bodertd borde-sep ">Condición de los conductores</td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                    <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                </tr>
+                            @break
+
+                            @case(2)
+                                <tr class="titlesubsection">
+                                    <td style="width: 4%;" class="bodertd borde-sep">9.3.3</td>
+                                    <td style="width: 40%;" class="bodertd borde-sep ">Condición de los conductores</td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                    <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                </tr>
+                            @break
+
+                            @case(3)
+                                <tr class="titlesubsection">
+                                    <td style="width: 4%;" class="bodertd borde-sep">9.3.3</td>
+                                    <td style="width: 40%;" class="bodertd borde-sep ">Condición de los conductores</td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                    <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                </tr>
+                            @break
+                        @endswitch
+
+                        @switch($seccion9[0]->data['9_3_4'])
+                            @case(1)
+                                <tr class="titlesubsection">
+                                    <td style="width: 4%;" class="bodertd borde-sep">9.3.4</td>
+                                    <td style="width: 40%;" class="bodertd borde-sep ">Condición de los colectores
+                                        (zapatas/escobillas)</td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                    <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                </tr>
+                            @break
+
+                            @case(2)
+                                <tr class="titlesubsection">
+                                    <td style="width: 4%;" class="bodertd borde-sep">9.3.4</td>
+                                    <td style="width: 40%;" class="bodertd borde-sep ">Condición de los colectores
+                                        (zapatas/escobillas)</td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                    <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                </tr>
+                            @break
+
+                            @case(3)
+                                <tr class="titlesubsection">
+                                    <td style="width: 4%;" class="bodertd borde-sep">9.3.4</td>
+                                    <td style="width: 40%;" class="bodertd borde-sep ">Condición de los colectores
+                                        (zapatas/escobillas)</td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                    <td style="width: 33%;" class="bodertd borde-sep">NA</td>
+                                </tr>
+                            @break
+                        @endswitch
+
+                        @switch($seccion9[0]->data['9_3_5'])
+                            @case(1)
+                                <tr class="titlesubsection">
+                                    <td style="width: 4%;" class="bodertd borde-sep">9.3.5</td>
+                                    <td style="width: 40%;" class="bodertd borde-sep ">Condición del deslizador (brazo/carro)
+                                    </td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                    <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                </tr>
+                            @break
+
+                            @case(2)
+                                <tr class="titlesubsection">
+                                    <td style="width: 4%;" class="bodertd borde-sep">9.3.5</td>
+                                    <td style="width: 40%;" class="bodertd borde-sep ">Condición del deslizador (brazo/carro)
+                                    </td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                    <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                </tr>
+                            @break
+
+                            @case(3)
+                                <tr class="titlesubsection">
+                                    <td style="width: 4%;" class="bodertd borde-sep">9.3.5</td>
+                                    <td style="width: 40%;" class="bodertd borde-sep ">Condición del deslizador (brazo/carro)
+                                    </td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                    <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                </tr>
+                            @break
+                        @endswitch
 
                         <tr class="titlesection2">
                             <td style="width: 4%;" class="bodertd borde-sep">9.5</td>
@@ -3222,41 +6324,151 @@
                             <td style="width: 33%;" class="bodertd borde-sep"></td>
                         </tr>
 
+                        @switch($seccion9[0]->data['9_5'])
+                            @case(1)
+                                <tr class="titlesubsection">
+                                    <td style="width: 4%;" class="bodertd borde-sep">9.5.1</td>
+                                    <td style="width: 40%;" class="bodertd borde-sep ">Condición general del cable</td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                    <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                </tr>
+                            @break
+
+                            @case(2)
+                                <tr class="titlesubsection">
+                                    <td style="width: 4%;" class="bodertd borde-sep">9.5.1</td>
+                                    <td style="width: 40%;" class="bodertd borde-sep ">Condición general del cable</td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                    <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                </tr>
+                            @break
+
+                            @case(3)
+                                <tr class="titlesubsection">
+                                    <td style="width: 4%;" class="bodertd borde-sep">9.5.1</td>
+                                    <td style="width: 40%;" class="bodertd borde-sep ">Condición general del cable</td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                    <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                </tr>
+                            @break
+                        @endswitch
+
+                        {{-- @switch($seccion9[0]->data['9_5_2'])
+                        @case(1)
                         <tr class="titlesubsection">
-                            <td style="width: 4%;" class="bodertd borde-sep">9.5.1</td>
-                            <td style="width: 40%;" class="bodertd borde-sep ">Condición general del cable</td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                            <td style="width: 4%;" class="bodertd borde-sep">9.5.2</td>
+                            <td style="width: 40%;" class="bodertd borde-sep ">Carretillas para cable</td>
+                            <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
                             <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
                             <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
                             <td style="width: 33%;" class="bodertd borde-sep"></td>
                         </tr>
-
+                        @break
+                        
+                        @case(2)
+                        <tr class="titlesubsection">
+                            <td style="width: 4%;" class="bodertd borde-sep">9.5.2</td>
+                            <td style="width: 40%;" class="bodertd borde-sep ">Carretillas para cable</td>
+                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                            <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                            <td style="width: 33%;" class="bodertd borde-sep"></td>
+                        </tr>
+                        @break
+                        
+                        
+                        @case(3)
                         <tr class="titlesubsection">
                             <td style="width: 4%;" class="bodertd borde-sep">9.5.2</td>
                             <td style="width: 40%;" class="bodertd borde-sep ">Carretillas para cable</td>
                             <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
                             <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                            <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                            <td style="width: 33%;" class="bodertd borde-sep"></td>
+                        </tr>
+                        @break
+                        
+                        @endswitch
+
+                        @switch($seccion9[0]->data['9_5_3'])
+                        @case(1)
+                        <tr class="titlesubsection">
+                            <td style="width: 4%;" class="bodertd borde-sep">9.5.3</td>
+                            <td style="width: 40%;" class="bodertd borde-sep ">Brazo de arrastre</td>
+                            <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
                             <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
                             <td style="width: 33%;" class="bodertd borde-sep"></td>
                         </tr>
-
+                        @break
+                        
+                        @case(2)
+                        <tr class="titlesubsection">
+                            <td style="width: 4%;" class="bodertd borde-sep">9.5.3</td>
+                            <td style="width: 40%;" class="bodertd borde-sep ">Brazo de arrastre</td>
+                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                            <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                            <td style="width: 33%;" class="bodertd borde-sep"></td>
+                        </tr>
+                        @break
+                        
+                        
+                        @case(3)
                         <tr class="titlesubsection">
                             <td style="width: 4%;" class="bodertd borde-sep">9.5.3</td>
                             <td style="width: 40%;" class="bodertd borde-sep ">Brazo de arrastre</td>
                             <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
                             <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                            <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                            <td style="width: 33%;" class="bodertd borde-sep"></td>
+                        </tr>
+                        @break
+                       
+                        @endswitch
+
+                        @switch($seccion9[0]->data['9_6'])
+                        @case(1)
+                        <tr class="titlesubsection">
+                            <td style="width: 4%;" class="bodertd borde-sep">9.6</td>
+                            <td style="width: 40%;" class="bodertd borde-sep ">Cable del motorreductor de cabezal</td>
+                            <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
                             <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
                             <td style="width: 33%;" class="bodertd borde-sep"></td>
                         </tr>
-
+                        @break
+                        
+                        @case(2)
+                        <tr class="titlesubsection">
+                            <td style="width: 4%;" class="bodertd borde-sep">9.6</td>
+                            <td style="width: 40%;" class="bodertd borde-sep ">Cable del motorreductor de cabezal</td>
+                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                            <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                            <td style="width: 33%;" class="bodertd borde-sep"></td>
+                        </tr>
+                        @break
+                        
+                        
+                        @case(3)
                         <tr class="titlesubsection">
                             <td style="width: 4%;" class="bodertd borde-sep">9.6</td>
                             <td style="width: 40%;" class="bodertd borde-sep ">Cable del motorreductor de cabezal</td>
                             <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
                             <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                            <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
                             <td style="width: 33%;" class="bodertd borde-sep"></td>
                         </tr>
+                        @break
+                        
+                        @endswitch --}}
                     </tbody>
                 </table>
 
@@ -3274,127 +6486,474 @@
                             <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
                             <td style="width: 30%;" class="bodertd borde-sep textCenter">Comentarios</td>
                         </tr>
-                        <tr class="titlesubsection">
-                            <td style="width: 4%;" class="bodertd borde-sep">10.1.1</td>
-                            <td style="width: 40%;" class="bodertd borde-sep ">Condición del tablero</td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 33%;" class="bodertd borde-sep"></td>
-                        </tr>
-                        <tr class="titlesubsection">
-                            <td style="width: 4%;" class="bodertd borde-sep">10.1.2</td>
-                            <td style="width: 40%;" class="bodertd borde-sep ">Etiquetas externas</td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 33%;" class="bodertd borde-sep"></td>
-                        </tr>
 
-                        <tr class="titlesubsection">
-                            <td style="width: 4%;" class="bodertd borde-sep">10.1.3</td>
-                            <td style="width: 40%;" class="bodertd borde-sep ">Fijación del tablero</td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 33%;" class="bodertd borde-sep"></td>
-                        </tr>
+                        @switch($seccion10[0]->data['10_1_1'])
+                            @case(1)
+                                <tr class="titlesubsection">
+                                    <td style="width: 4%;" class="bodertd borde-sep">10.1.1</td>
+                                    <td style="width: 40%;" class="bodertd borde-sep ">Condición del tablero</td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                    <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                </tr>
+                            @break
 
-                        <tr class="titlesubsection">
-                            <td style="width: 4%;" class="bodertd borde-sep">10.1.4</td>
-                            <td style="width: 40%;" class="bodertd borde-sep ">Condición de puertas</td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 33%;" class="bodertd borde-sep"></td>
-                        </tr>
+                            @case(2)
+                                <tr class="titlesubsection">
+                                    <td style="width: 4%;" class="bodertd borde-sep">10.1.1</td>
+                                    <td style="width: 40%;" class="bodertd borde-sep ">Condición del tablero</td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                    <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                </tr>
+                            @break
 
-                        <tr class="titlesubsection">
-                            <td style="width: 4%;" class="bodertd borde-sep">10.1.5</td>
-                            <td style="width: 40%;" class="bodertd borde-sep ">Condición de empaque</td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 33%;" class="bodertd borde-sep"></td>
-                        </tr>
+                            @case(3)
+                                <tr class="titlesubsection">
+                                    <td style="width: 4%;" class="bodertd borde-sep">10.1.1</td>
+                                    <td style="width: 40%;" class="bodertd borde-sep ">Condición del tablero</td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                    <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                </tr>
+                            @break
+                        @endswitch
 
-                        <tr class="titlesubsection">
-                            <td style="width: 4%;" class="bodertd borde-sep">10.1.6</td>
-                            <td style="width: 40%;" class="bodertd borde-sep ">Dispositivos de bloqueo</td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 33%;" class="bodertd borde-sep"></td>
-                        </tr>
+                        @switch($seccion10[0]->data['10_1_2'])
+                            @case(1)
+                                <tr class="titlesubsection">
+                                    <td style="width: 4%;" class="bodertd borde-sep">10.1.2</td>
+                                    <td style="width: 40%;" class="bodertd borde-sep ">Etiquetas externas</td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                    <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                </tr>
+                            @break
 
-                        <tr class="titlesubsection">
-                            <td style="width: 4%;" class="bodertd borde-sep">10.1.7</td>
-                            <td style="width: 40%;" class="bodertd borde-sep ">Conectores glándula</td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 33%;" class="bodertd borde-sep"></td>
-                        </tr>
+                            @case(2)
+                                <tr class="titlesubsection">
+                                    <td style="width: 4%;" class="bodertd borde-sep">10.1.2</td>
+                                    <td style="width: 40%;" class="bodertd borde-sep ">Etiquetas externas</td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                    <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                </tr>
+                            @break
 
-                        <tr class="titlesubsection">
-                            <td style="width: 4%;" class="bodertd borde-sep">10.1.8</td>
-                            <td style="width: 40%;" class="bodertd borde-sep ">Rieles DIN</td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 33%;" class="bodertd borde-sep"></td>
-                        </tr>
+                            @case(3)
+                                <tr class="titlesubsection">
+                                    <td style="width: 4%;" class="bodertd borde-sep">10.1.2</td>
+                                    <td style="width: 40%;" class="bodertd borde-sep ">Etiquetas externas</td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                    <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                </tr>
+                            @break
+                        @endswitch
 
-                        <tr class="titlesubsection">
-                            <td style="width: 4%;" class="bodertd borde-sep">10.1.10</td>
-                            <td style="width: 40%;" class="bodertd borde-sep ">Ductos/Canaletas</td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 33%;" class="bodertd borde-sep"></td>
-                        </tr>
+                        @switch($seccion10[0]->data['10_1_3'])
+                            @case(1)
+                                <tr class="titlesubsection">
+                                    <td style="width: 4%;" class="bodertd borde-sep">10.1.3</td>
+                                    <td style="width: 40%;" class="bodertd borde-sep ">Fijación del tablero</td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                    <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                </tr>
+                            @break
 
-                        <tr class="titlesubsection">
-                            <td style="width: 4%;" class="bodertd borde-sep">10.1.11</td>
-                            <td style="width: 40%;" class="bodertd borde-sep ">Cableado interno</td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 33%;" class="bodertd borde-sep"></td>
-                        </tr>
+                            @case(2)
+                                <tr class="titlesubsection">
+                                    <td style="width: 4%;" class="bodertd borde-sep">10.1.3</td>
+                                    <td style="width: 40%;" class="bodertd borde-sep ">Fijación del tablero</td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                    <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                </tr>
+                            @break
 
-                        <tr class="titlesubsection">
-                            <td style="width: 4%;" class="bodertd borde-sep">10.1.12</td>
-                            <td style="width: 40%;" class="bodertd borde-sep ">Condición de los contactores</td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 33%;" class="bodertd borde-sep"></td>
-                        </tr>
+                            @case(3)
+                                <tr class="titlesubsection">
+                                    <td style="width: 4%;" class="bodertd borde-sep">10.1.3</td>
+                                    <td style="width: 40%;" class="bodertd borde-sep ">Fijación del tablero</td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                    <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                </tr>
+                            @break
+                        @endswitch
 
-                        <tr class="titlesubsection">
-                            <td style="width: 4%;" class="bodertd borde-sep">10.1.13</td>
-                            <td style="width: 40%;" class="bodertd borde-sep ">Protecciones térmicas
-                                <div style="display: inline-block; margin-left: 30px;">C=</div>
-                            </td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 33%;" class="bodertd borde-sep"></td>
-                        </tr>
+                        @switch($seccion10[0]->data['10_1_4'])
+                            @case(1)
+                                <tr class="titlesubsection">
+                                    <td style="width: 4%;" class="bodertd borde-sep">10.1.4</td>
+                                    <td style="width: 40%;" class="bodertd borde-sep ">Condición de puertas</td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                    <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                </tr>
+                            @break
 
-                        <tr class="titlesubsection">
-                            <td style="width: 4%;" class="bodertd borde-sep">10.1.14</td>
-                            <td style="width: 40%;" class="bodertd borde-sep ">Guardamotores
-                                <div style="display: inline-block; margin-left: 30px;">C=</div>
-                            </td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 33%;" class="bodertd borde-sep"></td>
-                        </tr>
+                            @case(2)
+                                <tr class="titlesubsection">
+                                    <td style="width: 4%;" class="bodertd borde-sep">10.1.4</td>
+                                    <td style="width: 40%;" class="bodertd borde-sep ">Condición de puertas</td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                    <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                </tr>
+                            @break
 
-                        <tr class="titlesubsection">
+                            @case(3)
+                                @bre<tr class="titlesubsection">
+                                    <td style="width: 4%;" class="bodertd borde-sep">10.1.4</td>
+                                    <td style="width: 40%;" class="bodertd borde-sep ">Condición de puertas</td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                    <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                    <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                </tr>ak
+                            @endswitch
+
+                            @switch($seccion10[0]->data['10_1_5'])
+                                @case(1)
+                                    <tr class="titlesubsection">
+                                        <td style="width: 4%;" class="bodertd borde-sep">10.1.5</td>
+                                        <td style="width: 40%;" class="bodertd borde-sep ">Condición de empaque</td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                    </tr>
+                                @break
+
+                                @case(2)
+                                    <tr class="titlesubsection">
+                                        <td style="width: 4%;" class="bodertd borde-sep">10.1.5</td>
+                                        <td style="width: 40%;" class="bodertd borde-sep ">Condición de empaque</td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                    </tr>
+                                @break
+
+                                @case(3)
+                                    <tr class="titlesubsection">
+                                        <td style="width: 4%;" class="bodertd borde-sep">10.1.5</td>
+                                        <td style="width: 40%;" class="bodertd borde-sep ">Condición de empaque</td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                        <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                    </tr>
+                                @break
+                            @endswitch
+
+                            @switch($seccion10[0]->data['10_1_6'])
+                                @case(1)
+                                    <tr class="titlesubsection">
+                                        <td style="width: 4%;" class="bodertd borde-sep">10.1.6</td>
+                                        <td style="width: 40%;" class="bodertd borde-sep ">Dispositivos de bloqueo</td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                    </tr>
+                                @break
+
+                                @case(2)
+                                    <tr class="titlesubsection">
+                                        <td style="width: 4%;" class="bodertd borde-sep">10.1.6</td>
+                                        <td style="width: 40%;" class="bodertd borde-sep ">Dispositivos de bloqueo</td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                    </tr>
+                                @break
+
+                                @case(3)
+                                    <tr class="titlesubsection">
+                                        <td style="width: 4%;" class="bodertd borde-sep">10.1.6</td>
+                                        <td style="width: 40%;" class="bodertd borde-sep ">Dispositivos de bloqueo</td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                        <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                    </tr>
+                                @break
+                            @endswitch
+
+                            @switch($seccion10[0]->data['10_1_7'])
+                                @case(1)
+                                    <tr class="titlesubsection">
+                                        <td style="width: 4%;" class="bodertd borde-sep">10.1.7</td>
+                                        <td style="width: 40%;" class="bodertd borde-sep ">Conectores glándula</td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                    </tr>
+                                @break
+
+                                @case(2)
+                                    <tr class="titlesubsection">
+                                        <td style="width: 4%;" class="bodertd borde-sep">10.1.7</td>
+                                        <td style="width: 40%;" class="bodertd borde-sep ">Conectores glándula</td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                    </tr>
+                                @break
+
+                                @case(3)
+                                    <tr class="titlesubsection">
+                                        <td style="width: 4%;" class="bodertd borde-sep">10.1.7</td>
+                                        <td style="width: 40%;" class="bodertd borde-sep ">Conectores glándula</td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                        <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                    </tr>
+                                @break
+                            @endswitch
+
+                            @switch($seccion10[0]->data['10_1_8'])
+                                @case(1)
+                                    <tr class="titlesubsection">
+                                        <td style="width: 4%;" class="bodertd borde-sep">10.1.8</td>
+                                        <td style="width: 40%;" class="bodertd borde-sep ">Rieles DIN</td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                    </tr>
+                                @break
+
+                                @case(2)
+                                    <tr class="titlesubsection">
+                                        <td style="width: 4%;" class="bodertd borde-sep">10.1.8</td>
+                                        <td style="width: 40%;" class="bodertd borde-sep ">Rieles DIN</td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                    </tr>
+                                @break
+
+                                @case(3)
+                                    <tr class="titlesubsection">
+                                        <td style="width: 4%;" class="bodertd borde-sep">10.1.8</td>
+                                        <td style="width: 40%;" class="bodertd borde-sep ">Rieles DIN</td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                        <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                    </tr>
+                                @break
+                            @endswitch
+
+                            @switch($seccion10[0]->data['10_1_10'])
+                                @case(1)
+                                    <tr class="titlesubsection">
+                                        <td style="width: 4%;" class="bodertd borde-sep">10.1.10</td>
+                                        <td style="width: 40%;" class="bodertd borde-sep ">Ductos/Canaletas</td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                    </tr>
+                                @break
+
+                                @case(2)
+                                    <tr class="titlesubsection">
+                                        <td style="width: 4%;" class="bodertd borde-sep">10.1.10</td>
+                                        <td style="width: 40%;" class="bodertd borde-sep ">Ductos/Canaletas</td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                    </tr>
+                                @break
+
+                                @case(3)
+                                    <tr class="titlesubsection">
+                                        <td style="width: 4%;" class="bodertd borde-sep">10.1.10</td>
+                                        <td style="width: 40%;" class="bodertd borde-sep ">Ductos/Canaletas</td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                        <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                    </tr>
+                                @break
+                            @endswitch
+
+                            @switch($seccion10[0]->data['10_1_11'])
+                                @case(1)
+                                    <tr class="titlesubsection">
+                                        <td style="width: 4%;" class="bodertd borde-sep">10.1.11</td>
+                                        <td style="width: 40%;" class="bodertd borde-sep ">Cableado interno</td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                    </tr>
+                                @break
+
+                                @case(2)
+                                    <tr class="titlesubsection">
+                                        <td style="width: 4%;" class="bodertd borde-sep">10.1.11</td>
+                                        <td style="width: 40%;" class="bodertd borde-sep ">Cableado interno</td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                    </tr>
+                                @break
+
+                                @case(3)
+                                    <tr class="titlesubsection">
+                                        <td style="width: 4%;" class="bodertd borde-sep">10.1.11</td>
+                                        <td style="width: 40%;" class="bodertd borde-sep ">Cableado interno</td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                        <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                    </tr>
+                                @break
+                            @endswitch
+
+                            @switch($seccion10[0]->data['10_1_12'])
+                                @case(1)
+                                    <tr class="titlesubsection">
+                                        <td style="width: 4%;" class="bodertd borde-sep">10.1.12</td>
+                                        <td style="width: 40%;" class="bodertd borde-sep ">Condición de los contactores</td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                    </tr>
+                                @break
+
+                                @case(2)
+                                    <tr class="titlesubsection">
+                                        <td style="width: 4%;" class="bodertd borde-sep">10.1.12</td>
+                                        <td style="width: 40%;" class="bodertd borde-sep ">Condición de los contactores</td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                    </tr>
+                                @break
+
+                                @case(3)
+                                    <tr class="titlesubsection">
+                                        <td style="width: 4%;" class="bodertd borde-sep">10.1.12</td>
+                                        <td style="width: 40%;" class="bodertd borde-sep ">Condición de los contactores</td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                        <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                    </tr>
+                                @break
+                            @endswitch
+
+                            @switch($seccion10[0]->data['10_1_13'])
+                                @case(1)
+                                    <tr class="titlesubsection">
+                                        <td style="width: 4%;" class="bodertd borde-sep">10.1.13</td>
+                                        <td style="width: 40%;" class="bodertd borde-sep ">Protecciones térmicas
+                                            <div style="display: inline-block; margin-left: 30px;">C=</div>
+                                        </td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                    </tr>
+                                @break
+
+                                @case(2)
+                                    <tr class="titlesubsection">
+                                        <td style="width: 4%;" class="bodertd borde-sep">10.1.13</td>
+                                        <td style="width: 40%;" class="bodertd borde-sep ">Protecciones térmicas
+                                            <div style="display: inline-block; margin-left: 30px;">C=</div>
+                                        </td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                    </tr>
+                                @break
+
+                                @case(3)
+                                    <tr class="titlesubsection">
+                                        <td style="width: 4%;" class="bodertd borde-sep">10.1.13</td>
+                                        <td style="width: 40%;" class="bodertd borde-sep ">Protecciones térmicas
+                                            <div style="display: inline-block; margin-left: 30px;">C=</div>
+                                        </td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                        <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                    </tr>
+                                @break
+                            @endswitch
+
+                            @switch($seccion10[0]->data['10_1_14'])
+                                @case(1)
+                                    <tr class="titlesubsection">
+                                        <td style="width: 4%;" class="bodertd borde-sep">10.1.14</td>
+                                        <td style="width: 40%;" class="bodertd borde-sep ">Guardamotores
+                                            <div style="display: inline-block; margin-left: 30px;">C=</div>
+                                        </td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                    </tr>
+                                @break
+
+                                @case(2)
+                                    <tr class="titlesubsection">
+                                        <td style="width: 4%;" class="bodertd borde-sep">10.1.14</td>
+                                        <td style="width: 40%;" class="bodertd borde-sep ">Guardamotores
+                                            <div style="display: inline-block; margin-left: 30px;">C=</div>
+                                        </td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                    </tr>
+                                @break
+
+                                @case(3)
+                                    <tr class="titlesubsection">
+                                        <td style="width: 4%;" class="bodertd borde-sep">10.1.14</td>
+                                        <td style="width: 40%;" class="bodertd borde-sep ">Guardamotores
+                                            <div style="display: inline-block; margin-left: 30px;">C=</div>
+                                        </td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                        <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                    </tr>
+                                @break
+                            @endswitch
+
+                            {{-- <tr class="titlesubsection">
                             <td style="width: 4%;" class="bodertd borde-sep">10.1.15</td>
                             <td style="width: 40%;" class="bodertd borde-sep ">Fusibles
                                 <div style="display: inline-block; margin-left: 30px;">C=</div>
@@ -3421,254 +6980,630 @@
                             <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
                             <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
                             <td style="width: 33%;" class="bodertd borde-sep"></td>
-                        </tr>
+                        </tr> --}}
 
-                    </tbody>
-                </table>
-            </section>
-            <!--///////////////////////////////////////////////////////////Salto de pagina////////////////////////////////////////////////////////////////// -->
-            <div class="page"></div>
-            <div class="page"></div>
-            <section>
-                <table style="width: 99%" class="borde-sep">
-                    <tr class="textCenter titlesection2">
-                        <th COLSPAN=1>11</th>
-                        <th COLSPAN=5>Pruebas finales (sin carga)</th>
-                    </tr>
-                    <tbody>
-                        <tr class="titlesection2">
-                            <td style="width: 4%;" class="bodertd borde-sep">11.1</td>
-                            <td style="width: 30%;" class="bodertd borde-sep ">Prueba del puente</td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
-                            <td style="width: 30%;" class="bodertd borde-sep textCenter">Comentarios</td>
+                        </tbody>
+                    </table>
+                </section>
+                <!--///////////////////////////////////////////////////////////Salto de pagina////////////////////////////////////////////////////////////////// -->
+                <div class="page"></div>
+                <div class="page"></div>
+                <section>
+                    <table style="width: 99%" class="borde-sep">
+                        <tr class="textCenter titlesection2">
+                            <th COLSPAN=1>11</th>
+                            <th COLSPAN=5>Pruebas finales (sin carga)</th>
                         </tr>
+                        <tbody>
+                            <tr class="titlesection2">
+                                <td style="width: 4%;" class="bodertd borde-sep">11.1</td>
+                                <td style="width: 30%;" class="bodertd borde-sep ">Prueba del puente</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                <td style="width: 30%;" class="bodertd borde-sep textCenter">Comentarios</td>
+                            </tr>
 
-                        <tr class="titlesubsection">
-                            <td style="width: 4%;" class="bodertd borde-sep">11.1.1</td>
-                            <td style="width: 40%;" class="bodertd borde-sep ">Recorrido del puente</td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 33%;" class="bodertd borde-sep"></td>
-                        </tr>
-                        <tr class="titlesubsection">
-                            <td style="width: 4%;" class="bodertd borde-sep">11.1.2</td>
-                            <td style="width: 40%;" class="bodertd borde-sep ">Frenado del puente</td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 33%;" class="bodertd borde-sep"></td>
-                        </tr>
+                            @switch($seccion11[0]->data['11_1_1'])
+                                @case(1)
+                                    <tr class="titlesubsection">
+                                        <td style="width: 4%;" class="bodertd borde-sep">11.1.1</td>
+                                        <td style="width: 40%;" class="bodertd borde-sep ">Recorrido del puente</td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                    </tr>
+                                @break
 
-                        <tr class="titlesubsection">
-                            <td style="width: 4%;" class="bodertd borde-sep">11.1.3</td>
-                            <td style="width: 40%;" class="bodertd borde-sep ">Límite de fin de carrera/anticolisión
-                                del
-                                puente</td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 33%;" class="bodertd borde-sep"></td>
-                        </tr>
+                                @case(2)
+                                    <tr class="titlesubsection">
+                                        <td style="width: 4%;" class="bodertd borde-sep">11.1.1</td>
+                                        <td style="width: 40%;" class="bodertd borde-sep ">Recorrido del puente</td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                    </tr>
+                                @break
 
-                        <tr class="titlesection2">
-                            <td style="width: 4%;" class="bodertd borde-sep">11.2</td>
-                            <td style="width: 30%;" class="bodertd borde-sep ">Prueba del carro</td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
-                            <td style="width: 30%;" class="bodertd borde-sep textCenter">Comentarios</td>
-                        </tr>
+                                @case(3)
+                                    <tr class="titlesubsection">
+                                        <td style="width: 4%;" class="bodertd borde-sep">11.1.1</td>
+                                        <td style="width: 40%;" class="bodertd borde-sep ">Recorrido del puente</td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                        <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                    </tr>
+                                @break
+                            @endswitch
 
-                        <tr class="titlesubsection">
-                            <td style="width: 4%;" class="bodertd borde-sep">11.2.1</td>
-                            <td style="width: 40%;" class="bodertd borde-sep ">Recorrido del carro</td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 33%;" class="bodertd borde-sep"></td>
-                        </tr>
+                            @switch($seccion11[0]->data['11_1_2'])
+                                @case(1)
+                                    <tr class="titlesubsection">
+                                        <td style="width: 4%;" class="bodertd borde-sep">11.1.2</td>
+                                        <td style="width: 40%;" class="bodertd borde-sep ">Frenado del puente</td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                    </tr>
+                                @break
 
-                        <tr class="titlesubsection">
-                            <td style="width: 4%;" class="bodertd borde-sep">11.2.2</td>
-                            <td style="width: 40%;" class="bodertd borde-sep ">Frenado del carro</td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 33%;" class="bodertd borde-sep"></td>
-                        </tr>
+                                @case(2)
+                                    <tr class="titlesubsection">
+                                        <td style="width: 4%;" class="bodertd borde-sep">11.1.2</td>
+                                        <td style="width: 40%;" class="bodertd borde-sep ">Frenado del puente</td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                    </tr>
+                                @break
 
-                        <tr class="titlesubsection">
-                            <td style="width: 4%;" class="bodertd borde-sep">11.2.3</td>
-                            <td style="width: 40%;" class="bodertd borde-sep ">Limite de fin de carrera/anticolisión
-                                del
-                                carro</td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 33%;" class="bodertd borde-sep"></td>
-                        </tr>
+                                @case(3)
+                                    <tr class="titlesubsection">
+                                        <td style="width: 4%;" class="bodertd borde-sep">11.1.2</td>
+                                        <td style="width: 40%;" class="bodertd borde-sep ">Frenado del puente</td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                        <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                    </tr>
+                                @break
+                            @endswitch
 
-                        <tr class="titlesection2">
-                            <td style="width: 4%;" class="bodertd borde-sep">11.3</td>
-                            <td style="width: 30%;" class="bodertd borde-sep ">Prueba del polipasto</td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
-                            <td style="width: 30%;" class="bodertd borde-sep textCenter">Comentarios</td>
-                        </tr>
+                            @switch($seccion11[0]->data['11_1_3'])
+                                @case(1)
+                                    <tr class="titlesubsection">
+                                        <td style="width: 4%;" class="bodertd borde-sep">11.1.3</td>
+                                        <td style="width: 40%;" class="bodertd borde-sep ">Límite de fin de carrera/anticolisión
+                                            del
+                                            puente</td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                    </tr>
+                                @break
 
-                        <tr class="titlesubsection">
-                            <td style="width: 4%;" class="bodertd borde-sep">11.3.1</td>
-                            <td style="width: 40%;" class="bodertd borde-sep ">Recorrido de izaje</td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 33%;" class="bodertd borde-sep"></td>
-                        </tr>
+                                @case(2)
+                                    <tr class="titlesubsection">
+                                        <td style="width: 4%;" class="bodertd borde-sep">11.1.3</td>
+                                        <td style="width: 40%;" class="bodertd borde-sep ">Límite de fin de carrera/anticolisión
+                                            del
+                                            puente</td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                    </tr>
+                                @break
 
-                        <tr class="titlesubsection">
-                            <td style="width: 4%;" class="bodertd borde-sep">11.3.2</td>
-                            <td style="width: 40%;" class="bodertd borde-sep ">Frenado de izaje</td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 33%;" class="bodertd borde-sep"></td>
-                        </tr>
+                                @case(3)
+                                    <tr class="titlesubsection">
+                                        <td style="width: 4%;" class="bodertd borde-sep">11.1.3</td>
+                                        <td style="width: 40%;" class="bodertd borde-sep ">Límite de fin de carrera/anticolisión
+                                            del
+                                            puente</td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                        <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                    </tr>
+                                @break
+                            @endswitch
 
-                        <tr class="titlesubsection">
-                            <td style="width: 4%;" class="bodertd borde-sep">11.3.3</td>
-                            <td style="width: 40%;" class="bodertd borde-sep ">Movimiento del bloque de gancho</td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 33%;" class="bodertd borde-sep"></td>
-                        </tr>
+                            <tr class="titlesection2">
+                                <td style="width: 4%;" class="bodertd borde-sep">11.2</td>
+                                <td style="width: 30%;" class="bodertd borde-sep ">Prueba del carro</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                <td style="width: 30%;" class="bodertd borde-sep textCenter">Comentarios</td>
+                            </tr>
 
-                        <tr class="titlesubsection">
-                            <td style="width: 4%;" class="bodertd borde-sep">11.3.4</td>
-                            <td style="width: 40%;" class="bodertd borde-sep ">Límite superior del polipasto</td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 33%;" class="bodertd borde-sep"></td>
-                        </tr>
+                            @switch($seccion11[0]->data['11_2_1'])
+                                @case(1)
+                                    <tr class="titlesubsection">
+                                        <td style="width: 4%;" class="bodertd borde-sep">11.2.1</td>
+                                        <td style="width: 40%;" class="bodertd borde-sep ">Recorrido del carro</td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                    </tr>
+                                @break
 
-                        <tr class="titlesubsection">
-                            <td style="width: 4%;" class="bodertd borde-sep">11.3.6</td>
-                            <td style="width: 40%;" class="bodertd borde-sep ">Límites de desaceleración del polipasto
-                            </td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 33%;" class="bodertd borde-sep"></td>
-                        </tr>
+                                @case(2)
+                                    <tr class="titlesubsection">
+                                        <td style="width: 4%;" class="bodertd borde-sep">11.2.1</td>
+                                        <td style="width: 40%;" class="bodertd borde-sep ">Recorrido del carro</td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                    </tr>
+                                @break
 
-                        <tr class="titlesubsection">
-                            <td style="width: 4%;" class="bodertd borde-sep">11.3.7</td>
-                            <td style="width: 40%;" class="bodertd borde-sep ">Límite inferior del polipasto</td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 33%;" class="bodertd borde-sep"></td>
-                        </tr>
+                                @case(3)
+                                    <tr class="titlesubsection">
+                                        <td style="width: 4%;" class="bodertd borde-sep">11.2.1</td>
+                                        <td style="width: 40%;" class="bodertd borde-sep ">Recorrido del carro</td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                        <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                    </tr>
+                                @break
+                            @endswitch
 
-                        <tr class="titlesubsection">
-                            <td style="width: 4%;" class="bodertd borde-sep">11.3.8</td>
-                            <td style="width: 40%;" class="bodertd borde-sep ">Límite inferior del polipasto</td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 33%;" class="bodertd borde-sep"></td>
-                        </tr>
+                            @switch($seccion11[0]->data['11_2_2'])
+                                @case(1)
+                                    <tr class="titlesubsection">
+                                        <td style="width: 4%;" class="bodertd borde-sep">11.2.2</td>
+                                        <td style="width: 40%;" class="bodertd borde-sep ">Frenado del carro</td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                    </tr>
+                                @break
 
-                        <tr class="titlesubsection">
-                            <td style="width: 4%;" class="bodertd borde-sep">11.3.9</td>
-                            <td style="width: 40%;" class="bodertd borde-sep ">Paro de emergencia (Accionar)</td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                            <td style="width: 33%;" class="bodertd borde-sep"></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
-            <!--///////////////////////////////////////////////////////////Salto de pagina////////////////////////////////////////////////////////////////// -->
-            <div class="page"></div>
-            <div class="page"></div>
+                                @case(2)
+                                    <tr class="titlesubsection">
+                                        <td style="width: 4%;" class="bodertd borde-sep">11.2.2</td>
+                                        <td style="width: 40%;" class="bodertd borde-sep ">Frenado del carro</td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                    </tr>
+                                @break
 
-            <section style="margin-top: 5%">
-                <table class="separate">
-                    <tr>
-                        <td class="titlesacar"> 6.- EQUIPO DE TRABAJO </td>
-                    </tr>
-                    <tbody>
+                                @case(3)
+                                    <tr class="titlesubsection">
+                                        <td style="width: 4%;" class="bodertd borde-sep">11.2.2</td>
+                                        <td style="width: 40%;" class="bodertd borde-sep ">Frenado del carro</td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                        <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                    </tr>
+                                @break
+                            @endswitch
+
+
+                            @switch($seccion11[0]->data['11_2_3'])
+                                @case(1)
+                                    <tr class="titlesubsection">
+                                        <td style="width: 4%;" class="bodertd borde-sep">11.2.3</td>
+                                        <td style="width: 40%;" class="bodertd borde-sep ">Limite de fin de carrera/anticolisión
+                                            del
+                                            carro</td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                    </tr>
+                                @break
+
+                                @case(2)
+                                    <tr class="titlesubsection">
+                                        <td style="width: 4%;" class="bodertd borde-sep">11.2.3</td>
+                                        <td style="width: 40%;" class="bodertd borde-sep ">Limite de fin de carrera/anticolisión
+                                            del
+                                            carro</td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                    </tr>
+                                @break
+
+                                @case(3)
+                                    <tr class="titlesubsection">
+                                        <td style="width: 4%;" class="bodertd borde-sep">11.2.3</td>
+                                        <td style="width: 40%;" class="bodertd borde-sep ">Limite de fin de carrera/anticolisión
+                                            del
+                                            carro</td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                        <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                    </tr>
+                                @break
+                            @endswitch
+
+                            <tr class="titlesection2">
+                                <td style="width: 4%;" class="bodertd borde-sep">11.3</td>
+                                <td style="width: 30%;" class="bodertd borde-sep ">Prueba del polipasto</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                <td style="width: 30%;" class="bodertd borde-sep textCenter">Comentarios</td>
+                            </tr>
+
+                            @switch($seccion11[0]->data['11_3_1'])
+                                @case(1)
+                                    <tr class="titlesubsection">
+                                        <td style="width: 4%;" class="bodertd borde-sep">11.3.1</td>
+                                        <td style="width: 40%;" class="bodertd borde-sep ">Recorrido de izaje</td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                    </tr>
+                                @break
+
+                                @case(2)
+                                    <tr class="titlesubsection">
+                                        <td style="width: 4%;" class="bodertd borde-sep">11.3.1</td>
+                                        <td style="width: 40%;" class="bodertd borde-sep ">Recorrido de izaje</td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                    </tr>
+                                @break
+
+                                @case(3)
+                                    <tr class="titlesubsection">
+                                        <td style="width: 4%;" class="bodertd borde-sep">11.3.1</td>
+                                        <td style="width: 40%;" class="bodertd borde-sep ">Recorrido de izaje</td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                        <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                    </tr>
+                                @break
+                            @endswitch
+
+                            @switch($seccion11[0]->data['11_3_2'])
+                                @case(1)
+                                    <tr class="titlesubsection">
+                                        <td style="width: 4%;" class="bodertd borde-sep">11.3.2</td>
+                                        <td style="width: 40%;" class="bodertd borde-sep ">Frenado de izaje</td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                    </tr>
+                                @break
+
+                                @case(2)
+                                    <tr class="titlesubsection">
+                                        <td style="width: 4%;" class="bodertd borde-sep">11.3.2</td>
+                                        <td style="width: 40%;" class="bodertd borde-sep ">Frenado de izaje</td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                    </tr>
+                                @break
+
+                                @case(3)
+                                    <tr class="titlesubsection">
+                                        <td style="width: 4%;" class="bodertd borde-sep">11.3.2</td>
+                                        <td style="width: 40%;" class="bodertd borde-sep ">Frenado de izaje</td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                        <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                    </tr>
+                                @break
+                            @endswitch
+
+                            @switch($seccion11[0]->data['11_3_3'])
+                                @case(1)
+                                    <tr class="titlesubsection">
+                                        <td style="width: 4%;" class="bodertd borde-sep">11.3.3</td>
+                                        <td style="width: 40%;" class="bodertd borde-sep ">Movimiento del bloque de gancho</td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                    </tr>
+                                @break
+
+                                @case(2)
+                                    <tr class="titlesubsection">
+                                        <td style="width: 4%;" class="bodertd borde-sep">11.3.3</td>
+                                        <td style="width: 40%;" class="bodertd borde-sep ">Movimiento del bloque de gancho</td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                    </tr>
+                                @break
+
+                                @case(3)
+                                    <tr class="titlesubsection">
+                                        <td style="width: 4%;" class="bodertd borde-sep">11.3.3</td>
+                                        <td style="width: 40%;" class="bodertd borde-sep ">Movimiento del bloque de gancho</td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                        <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                    </tr>
+                                @break
+                            @endswitch
+
+                            @switch($seccion11[0]->data['11_3_4'])
+                                @case(1)
+                                    <tr class="titlesubsection">
+                                        <td style="width: 4%;" class="bodertd borde-sep">11.3.4</td>
+                                        <td style="width: 40%;" class="bodertd borde-sep ">Límite superior del polipasto</td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                    </tr>
+                                @break
+
+                                @case(2)
+                                    <tr class="titlesubsection">
+                                        <td style="width: 4%;" class="bodertd borde-sep">11.3.4</td>
+                                        <td style="width: 40%;" class="bodertd borde-sep ">Límite superior del polipasto</td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                    </tr>
+                                @break
+
+                                @case(3)
+                                    <tr class="titlesubsection">
+                                        <td style="width: 4%;" class="bodertd borde-sep">11.3.4</td>
+                                        <td style="width: 40%;" class="bodertd borde-sep ">Límite superior del polipasto</td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                        <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                    </tr>
+                                @break
+                            @endswitch
+
+                            @switch($seccion11[0]->data['11_3_5'])
+                                @case(1)
+                                    <tr class="titlesubsection">
+                                        <td style="width: 4%;" class="bodertd borde-sep">11.3.6</td>
+                                        <td style="width: 40%;" class="bodertd borde-sep ">Límites de desaceleración del polipasto
+                                        </td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                    </tr>
+                                @break
+
+                                @case(2)
+                                    <tr class="titlesubsection">
+                                        <td style="width: 4%;" class="bodertd borde-sep">11.3.6</td>
+                                        <td style="width: 40%;" class="bodertd borde-sep ">Límites de desaceleración del polipasto
+                                        </td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                    </tr>
+                                @break
+
+                                @case(3)
+                                    <tr class="titlesubsection">
+                                        <td style="width: 4%;" class="bodertd borde-sep">11.3.6</td>
+                                        <td style="width: 40%;" class="bodertd borde-sep ">Límites de desaceleración del polipasto
+                                        </td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                        <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                    </tr>
+                                @break
+                            @endswitch
+
+                            @switch($seccion11[0]->data['11_3_6'])
+                                @case(1)
+                                    <tr class="titlesubsection">
+                                        <td style="width: 4%;" class="bodertd borde-sep">11.3.7</td>
+                                        <td style="width: 40%;" class="bodertd borde-sep ">Límite inferior del polipasto</td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                    </tr>
+                                @break
+
+                                @case(2)
+                                    <tr class="titlesubsection">
+                                        <td style="width: 4%;" class="bodertd borde-sep">11.3.7</td>
+                                        <td style="width: 40%;" class="bodertd borde-sep ">Límite inferior del polipasto</td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                    </tr>
+                                @break
+
+                                @case(3)
+                                    <tr class="titlesubsection">
+                                        <td style="width: 4%;" class="bodertd borde-sep">11.3.7</td>
+                                        <td style="width: 40%;" class="bodertd borde-sep ">Límite inferior del polipasto</td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                        <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                    </tr>
+                                @break
+                            @endswitch
+
+                            @switch($seccion11[0]->data['11_3_7'])
+                                @case(1)
+                                    <tr class="titlesubsection">
+                                        <td style="width: 4%;" class="bodertd borde-sep">11.3.8</td>
+                                        <td style="width: 40%;" class="bodertd borde-sep ">Límite inferior del polipasto</td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                    </tr>
+                                @break
+
+                                @case(2)
+                                    <tr class="titlesubsection">
+                                        <td style="width: 4%;" class="bodertd borde-sep">11.3.8</td>
+                                        <td style="width: 40%;" class="bodertd borde-sep ">Límite inferior del polipasto</td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                    </tr>
+                                @break
+
+                                @case(3)
+                                    <tr class="titlesubsection">
+                                        <td style="width: 4%;" class="bodertd borde-sep">11.3.8</td>
+                                        <td style="width: 40%;" class="bodertd borde-sep ">Límite inferior del polipasto</td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                        <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                    </tr>
+                                @break
+                            @endswitch
+
+                            @switch($seccion11[0]->data['11_4_8'])
+                                @case(1)
+                                    <tr class="titlesubsection">
+                                        <td style="width: 4%;" class="bodertd borde-sep">11.3.9</td>
+                                        <td style="width: 40%;" class="bodertd borde-sep ">Paro de emergencia (Accionar)</td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                    </tr>
+                                @break
+
+                                @case(2)
+                                    <tr class="titlesubsection">
+                                        <td style="width: 4%;" class="bodertd borde-sep">11.3.9</td>
+                                        <td style="width: 40%;" class="bodertd borde-sep ">Paro de emergencia (Accionar)</td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter">NOK</td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                    </tr>
+                                @break
+
+                                @case(3)
+                                    <tr class="titlesubsection">
+                                        <td style="width: 4%;" class="bodertd borde-sep">11.3.9</td>
+                                        <td style="width: 40%;" class="bodertd borde-sep ">Paro de emergencia (Accionar)</td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
+                                        <td style="width: 5%;" class="bodertd borde-sep textCenter">NA</td>
+                                        <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                    </tr>
+                                @break
+                            @endswitch
+                        </tbody>
+                    </table>
+                </section>
+                <!--///////////////////////////////////////////////////////////Salto de pagina////////////////////////////////////////////////////////////////// -->
+                <div class="page"></div>
+                <div class="page"></div>
+
+                <section style="margin-top: 5%">
+                    <table class="separate">
                         <tr>
-                            <td class="titlesacarbody">
-
-                            </td>
+                            <td class="titlesacar"> 6.- EQUIPO DE TRABAJO </td>
                         </tr>
-                    </tbody>
-                </table>
+                        <tbody>
+                            <tr>
+                                <td class="titlesacarbody">
 
-                <table class="separate">
-                    <tr>
-                        <td class="titlesacar">7.- RECOMENDACIONES Y SUGERENCIAS</td>
-                    </tr>
-                    <tbody>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <table class="separate">
                         <tr>
-                            <td class="titlesacarbody">
-                                Se deben realizar inspecciones frecuentes, periódicas y mantenimientos preventivos de
-                                acuerdo
-                                con el manual de fabricante para asegurar el correcto funcionamiento.
-                                <br><br>
-                                AQUÍ SE DEBE DEJAR UN ESPACIO POR SI SE QUIERE REALIZAR COMENTARIOS ADICIONALES
-                            </td>
+                            <td class="titlesacar">7.- RECOMENDACIONES Y SUGERENCIAS</td>
                         </tr>
-                    </tbody>
-                </table>
+                        <tbody>
+                            <tr>
+                                <td class="titlesacarbody">
+                                    Se deben realizar inspecciones frecuentes, periódicas y mantenimientos preventivos de
+                                    acuerdo
+                                    con el manual de fabricante para asegurar el correcto funcionamiento.
+                                    <br><br>
+                                    AQUÍ SE DEBE DEJAR UN ESPACIO POR SI SE QUIERE REALIZAR COMENTARIOS ADICIONALES
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
 
-                <table class="separate">
-                    <tr>
-                        <td class="titlesacar">8.- CONCLUCION</td>
-                    </tr>
-                    <tbody>
+                    <table class="separate">
                         <tr>
-                            <td class="titlesacarbody">
-                                El equipo se encuentra funcionando correctamente, se recomienda realizar el cambio de lo
-                                que
-                                se detectó para mantener el equipo funcionando correctamente.
-                                <br><br>
-                                Sin más por el momento esperamos que esta información le sea la adecuada, sin embargo,
-                                si
-                                usted requiere información adicional no dude en contactarnos, con mucho gusto le
-                                atenderemos.
-                                <br><br>
-                                Sin más por el momento quedamos en espera de sus noticias.
-                            </td>
+                            <td class="titlesacar">8.- CONCLUCION</td>
                         </tr>
-                    </tbody>
-                </table>
+                        <tbody>
+                            <tr>
+                                <td class="titlesacarbody">
+                                    El equipo se encuentra funcionando correctamente, se recomienda realizar el cambio de lo
+                                    que
+                                    se detectó para mantener el equipo funcionando correctamente.
+                                    <br><br>
+                                    Sin más por el momento esperamos que esta información le sea la adecuada, sin embargo,
+                                    si
+                                    usted requiere información adicional no dude en contactarnos, con mucho gusto le
+                                    atenderemos.
+                                    <br><br>
+                                    Sin más por el momento quedamos en espera de sus noticias.
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
 
-                <br><br><br><br><br><br>
+                    <br><br><br><br><br><br>
 
-                <table class="separate">
-                    <tr>
-                        <td class="titlesacar textCenter">ATENTAMENTE</td>
-                    </tr>
-                    <tbody>
+                    <table class="separate">
                         <tr>
-                            <td class="titlesacarbody textCenter">
-                                Ing. Alejandro Acosta
-                            </td>
+                            <td class="titlesacar textCenter">ATENTAMENTE</td>
                         </tr>
-                    </tbody>
-                </table>
-            </section>
-    </main>
+                        <tbody>
+                            <tr>
+                                <td class="titlesacarbody textCenter">
+                                    Ing. Alejandro Acosta
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+        </main>
 
-</body>
+    </body>
 
-</html>
+    </html>
