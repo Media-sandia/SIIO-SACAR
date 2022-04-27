@@ -19,6 +19,7 @@ use App\Models\seccion8;
 use App\Models\seccion9;
 use App\Models\seccion10;
 use App\Models\seccion11;
+use Carbon\Carbon;
 use PDF;
 use PhpParser\Node\Expr\FuncCall;
 
@@ -30,14 +31,32 @@ class HomeController extends Controller
     }
 
     public function saveSection1(Request $request)
-    {   dd($request->all());
+    {
+        $files = $request->file('files', []);
+        dd( $files);
+        $nombre_subseccion = $request->input('nombre_subseccion', []);
+        $status_name = $request->input('status_name', []);
+        for ($i = 0; $i < count($nombre_subseccion); $i++) {
+            $section = new seccion1();
+            $section->id_equipo = 1;
+            $section->Folio = 123456;
+            $section->Fecha = Carbon::now();
+            $section->status = $status_name[$i];
+            $section->nombre_subseccion = $nombre_subseccion[$i];
+            $section->comentario = 'Lorem ipsum dolor sit amet cons';
+            $section->save();
 
-        $section = new seccion1();
-        $section->id_equipo = $request->id_equipo;
-        $section->Folio = $request->Folio_service;
-        $section->Fecha = $request->date_service;
-        $section->sub_seccion_id = $request->all();
-        $section->save();
+            // for ($i = 0; $i < count($files); $i++) {
+            //     $file = new Fileables();
+            //     $file->Fileable_type = seccion1::class;
+            //     $file->Fileable_id = $section->id;
+            //     $file->id_coment = $comment->id;
+
+            //     $file->uri = $files[$i]->store('images');
+            //     $file->name = $files[$i]->getClientOriginalName();
+            //     $file->save();
+            // }
+        }
 
         return response()->json(['status' => 1]);
     }

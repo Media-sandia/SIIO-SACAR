@@ -89,4 +89,4 @@
 @endsection
 <script src="{{ asset('js/servicio/ServiceImg.js') }}"></script>
 @include('Modals.Report-Cliente')
-@include('Modals.evidence-img')
+{{-- @include('Modals.evidence-img') --}}

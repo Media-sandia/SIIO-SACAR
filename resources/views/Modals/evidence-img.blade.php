@@ -8,7 +8,6 @@
             <div class="modal-body">
                 <div class="container">
                     <div class="row">
-                        <form action="">
                             <div class=" col-12" style="margin-bottom: 10px">
                                 <div class="text-center" style="margin-right: 18px;">
                                     <h4>Archivo para subida</h4>
@@ -23,8 +22,7 @@
                                     <textarea name="body" class="form-control" id="" cols="60" rows="5"></textarea>
                                 </center>
                             </div>
-                            <center><button type="submit" class="next btn btn-sacar mt-4">Guardar</button></center>
-                        </form>
+                            {{-- <center><button type="submit" class="next btn btn-sacar mt-4">Guardar</button></center> --}}
                     </div>
                 </div>
             </div>

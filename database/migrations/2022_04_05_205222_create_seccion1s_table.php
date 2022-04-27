@@ -20,8 +20,10 @@ class CreateSeccion1sTable extends Migration
             $table->string('Fecha');
             $table->string('status');
             $table->string('comentario');
-            $table->unsignedBigInteger('sub_seccion_id');
-            $table->foreign('sub_seccion_id')->references('id')->on('subsecciones')->onDelete('cascade');
+            // $table->unsignedBigInteger('sub_seccion_id');
+            // $table->foreign('sub_seccion_id')->references('id')->on('subsecciones')->onDelete('cascade');
+            $table->string('nombre_subseccion');
+
             $table->timestamps();
         });
     }

@@ -9,26 +9,29 @@
         <div class=" col-12 form-group" style="margin-bottom: 10px">
             <div class="text-left" style="margin-right: 62px;">
                 <h4 class="">1.1.1 Recorrido del puente</h4>
-                <input type="text" hidden value="1">
+                <input type="text" hidden name="nombre_subseccion[]" value="1.1.1 Recorrido del puente">
             </div>
-            <select class="form-control col-2 form-control-sm  mr-3" name="1.1.1" required>
+            <select class="form-control col-2 form-control-sm  mr-3" name="status_name[]" required>
                 <option selected='selected'>Selecciona</option>
                 <option value="1">CORRECTO</option>
                 <option value="2">INCORRECTO</option>
                 <option value="4">CORREGIDO</option>
                 <option value="3">NA</option>
             </select>
-            <input type="text" class="form-control form-control-sm col-4" name="C1.1.1" placeholder="Comentario">
+            <input type="text"  class="form-control form-control-sm col-4" name="C1.1.1" placeholder="Comentario">
             <button class="btn btn-sm btn-outline-default btn-rounded ml-4" onclick="evidence_img();"><i
                     class="ni ni-camera-compact"></i>
             </button>
+            @include('Modals.evidence-img')
         </div>
 
         <div class=" col-12 form-group" style="margin-bottom: 10px">
             <div class="text-left" style="margin-right: 71px;">
                 <h4 class="">1.1.2 Frenado del puente</h4>
+                <input type="text" hidden name="nombre_subseccion[]" value="1.1.2 Frenado del puente">
+
             </div>
-            <select class="form-control col-2 form-control-sm  mr-3" name="1.1.2">
+            <select class="form-control col-2 form-control-sm  mr-3" name="status_name[]">
                 <option selected='selected'>Selecciona</option>
                 <option value="1">CORRECTO</option>
                 <option value="2">INCORRECTO</option>
@@ -44,8 +47,10 @@
         <div class=" col-12 form-group" style="margin-bottom: 10px">
             <div class="text-left" style="margin-right: 44px;">
                 <h4 class="">1.1.3 Limite de fin de carrera</h4>
+                <input type="text" hidden name="nombre_subseccion[]" value="1.1.3 Limite de fin de carrera">
+
             </div>
-            <select class="form-control col-2 form-control-sm  mr-3" name="1.1.3">
+            <select class="form-control col-2 form-control-sm  mr-3" name="status_name[]">
                 <option selected='selected'>Selecciona</option>
                 <option value="1">CORRECTO</option>
                 <option value="2">INCORRECTO</option>
@@ -59,8 +64,10 @@
         <div class=" col-12 form-group" style="margin-bottom: 10px">
             <div class="text-left" style="margin-right: 23px;">
                 <h4 class="">1.1.4 Estado de amortiguadores </h4>
+                <input type="text" hidden name="nombre_subseccion[]" value="1.1.4 Estado de amortiguadores ">
+
             </div>
-            <select class="form-control col-2 form-control-sm  mr-3" name="1.1.4">
+            <select class="form-control col-2 form-control-sm  mr-3" name="status_name[]">
                 <option selected='selected'>Selecciona</option>
                 <option value="1">CORRECTO</option>
                 <option value="2">INCORRECTO</option>
@@ -74,10 +81,12 @@
         <div class=" col-12 form-group" style="margin-bottom: 10px">
             <div class="text-left" style="margin-right: 5px;">
                 <h4 class="">1.1.5 Ausencia de ruidos inusuales </h4>
+                <input type="text" hidden name="nombre_subseccion[]" value="1.1.5 Ausencia de ruidos inusuales ">
+
             </div>
-            <select class="form-control col-2 form-control-sm  mr-3" name="1.1.5">
+            <select class="form-control col-2 form-control-sm  mr-3" name="status_name[]">
                 <option selected='selected'>Selecciona</option>
-                <<option value="1">CORRECTO</option>
+                <option value="1">CORRECTO</option>
                     <option value="2">INCORRECTO</option>
                     <option value="4">CORREGIDO</option>
                     <option value="3">NA</option>
@@ -94,8 +103,10 @@
         <div class=" col-12 form-group" style="margin-bottom: 10px">
             <div class="text-left" style="margin-right: 82px;">
                 <h4 class="">1.2.1 Recorrido del carro</h4>
+                <input type="text" hidden name="nombre_subseccion[]" value="1.2.1 Recorrido del carro">
+
             </div>
-            <select class="form-control col-2 form-control-sm  mr-3" name="1.2.1">
+            <select class="form-control col-2 form-control-sm  mr-3" name="status_name[]">
                 <option selected='selected'>Selecciona</option>
                 <option value="1">CORRECTO</option>
                 <option value="2">INCORRECTO</option>
@@ -108,8 +119,10 @@
         <div class=" col-12 form-group" style="margin-bottom: 10px">
             <div class="text-left" style="margin-right: 92px;">
                 <h4 class="">1.2.2 Frenado del carro</h4>
+                <input type="text" hidden name="nombre_subseccion[]" value="1.2.2 Frenado del carro">
+
             </div>
-            <select class="form-control col-2 form-control-sm  mr-3" name="1.2.2">
+            <select class="form-control col-2 form-control-sm  mr-3" name="status_name[]">
                 <option selected='selected'>Selecciona</option>
                 <option value="1">CORRECTO</option>
                 <option value="2">INCORRECTO</option>
@@ -122,8 +135,10 @@
         <div class=" col-12 form-group" style="margin-bottom: 10px">
             <div class="text-left" style="margin-right: 52px;">
                 <h4 class="">1.2.3 Limite de fin de carrera</h4>
+                <input type="text" hidden name="nombre_subseccion[]" value="1.2.3 Limite de fin de carrera">
+
             </div>
-            <select class="form-control col-2 form-control-sm  mr-3" name="1.2.3">
+            <select class="form-control col-2 form-control-sm  mr-3" name="status_name[]">
                 <option selected='selected'>Selecciona</option>
                 <option value="1">CORRECTO</option>
                 <option value="2">INCORRECTO</option>
@@ -136,8 +151,10 @@
         <div class=" col-12 form-group" style="margin-bottom: 10px">
             <div class="text-left" style="margin-right: 32px;">
                 <h4 class="">1.2.4 Estado de amortiguadores </h4>
+                <input type="text" hidden name="nombre_subseccion[]" value="1.2.4 Estado de amortiguadores">
+
             </div>
-            <select class="form-control col-2 form-control-sm  mr-3" name="1.2.4">
+            <select class="form-control col-2 form-control-sm  mr-3" name="status_name[]">
                 <option selected='selected'>Selecciona</option>
                 <option value="1">CORRECTO</option>
                 <option value="2">INCORRECTO</option>
@@ -150,8 +167,10 @@
         <div class=" col-12 form-group" style="margin-bottom: 10px">
             <div class="text-left" style="margin-right: 12px;">
                 <h4 class="">1.2.5 Ausencia de ruidos inusuales </h4>
+                <input type="text" hidden name="nombre_subseccion[]" value="1.2.5 Ausencia de ruidos inusuales">
+
             </div>
-            <select class="form-control col-2 form-control-sm  mr-3" name="1.2.5">
+            <select class="form-control col-2 form-control-sm  mr-3" name="status_name[]">
                 <option selected='selected'>Selecciona</option>
                 <option value="1">CORRECTO</option>
                 <option value="2">INCORRECTO</option>
@@ -164,8 +183,10 @@
         <div class=" col-12 form-group" style="margin-bottom: 10px">
             <div class="text-left" style="margin-right: 40px;">
                 <h4 class="">1.2.6 Recorrido del cable plano </h4>
+                <input type="text" hidden name="nombre_subseccion[]" value="1.2.6 Recorrido del cable plano">
+
             </div>
-            <select class="form-control col-2 form-control-sm  mr-3" name="1.2.6">
+            <select class="form-control col-2 form-control-sm  mr-3" name="status_name[]">
                 <option selected='selected'>Selecciona</option>
                 <option value="1">CORRECTO</option>
                 <option value="2">INCORRECTO</option>
@@ -184,8 +205,10 @@
         <div class=" col-12 form-group" style="margin-bottom: 10px">
             <div class="text-left" style="margin-right: 172px;">
                 <h4 class="">1.3.1 Recorrido de izaje</h4>
+                <input type="text" hidden name="nombre_subseccion[]" value="1.3.1 Recorrido de izaje">
+
             </div>
-            <select class="form-control col-2 form-control-sm  mr-3" name="1.3.1">
+            <select class="form-control col-2 form-control-sm  mr-3" name="status_name[]">
                 <option selected='selected'>Selecciona</option>
                 <option value="1">CORRECTO</option>
                 <option value="2">INCORRECTO</option>
@@ -198,8 +221,10 @@
         <div class=" col-12 form-group" style="margin-bottom: 10px">
             <div class="text-left" style="margin-right: 182px;">
                 <h4 class="">1.3.2 Frenado de izaje</h4>
+                <input type="text" hidden name="nombre_subseccion[]" value="1.3.2 Frenado de izaje">
+
             </div>
-            <select class="form-control col-2 form-control-sm  mr-3" name="1.3.2">
+            <select class="form-control col-2 form-control-sm  mr-3" name="status_name[]">
                 <option selected='selected'>Selecciona</option>
                 <option value="1">CORRECTO</option>
                 <option value="2">INCORRECTO</option>
@@ -212,8 +237,10 @@
         <div class=" col-12 form-group" style="margin-bottom: 10px">
             <div class="text-left" style="margin-right: 52px;">
                 <h4 class="">1.3.3 Movimiento del bloque de gancho</h4>
+                <input type="text" hidden name="nombre_subseccion[]" value="1.3.3 Movimiento del bloque de gancho">
+
             </div>
-            <select class="form-control col-2 form-control-sm  mr-3" name="1.3.3">
+            <select class="form-control col-2 form-control-sm  mr-3" name="status_name[]">
                 <option selected='selected'>Selecciona</option>
                 <option value="1">CORRECTO</option>
                 <option value="2">INCORRECTO</option>
@@ -226,8 +253,10 @@
         <div class=" col-12 form-group" style="margin-bottom: 10px">
             <div class="text-left" style="margin-right: 90px;">
                 <h4 class="">1.3.4 Límite superior del polipasto </h4>
+                <input type="text" hidden name="nombre_subseccion[]" value="1.3.4 Límite superior del polipasto">
+
             </div>
-            <select class="form-control col-2 form-control-sm  mr-3" name="1.3.4">
+            <select class="form-control col-2 form-control-sm  mr-3" name="status_name[]">
                 <option selected='selected'>Selecciona</option>
                 <option value="1">CORRECTO</option>
                 <option value="2">INCORRECTO</option>
@@ -240,8 +269,10 @@
         <div class=" col-12 form-group" style="margin-bottom: 10px">
             <div class="text-left" style="margin-right: 88px;">
                 <h4 class="">1.3.5 Límite accionado por gancho </h4>
+                <input type="text" hidden name="nombre_subseccion[]" value="1.3.5 Límite accionado por gancho">
+
             </div>
-            <select class="form-control col-2 form-control-sm  mr-3" name="1.3.5">
+            <select class="form-control col-2 form-control-sm  mr-3" name="status_name[]">
                 <option selected='selected'>Selecciona</option>
                 <option value="1">CORRECTO</option>
                 <option value="2">INCORRECTO</option>
@@ -254,8 +285,10 @@
         <div class=" col-12 form-group" style="margin-bottom: 10px">
             <div class="text-left" style="margin-right: 11px;">
                 <h4 class="">1.3.6 Límites de desaceleración del polipasto </h4>
+                <input type="text" hidden name="nombre_subseccion[]" value="1.3.6 Límites de desaceleración del polipasto">
+
             </div>
-            <select class="form-control col-2 form-control-sm  mr-3" name="1.3.6">
+            <select class="form-control col-2 form-control-sm  mr-3" name="status_name[]">
                 <option selected='selected'>Selecciona</option>
                 <option value="1">CORRECTO</option>
                 <option value="2">INCORRECTO</option>
@@ -275,8 +308,11 @@
         <div class=" col-12 form-group" style="margin-bottom: 10px">
             <div class="text-left" style="margin-right: 32px;">
                 <h4 class="">1.3.7 Límite inferior del polipasto</h4>
+                <input type="text" hidden name="nombre_subseccion[]" value="1.3.7 Límite inferior del polipasto">
+
+
             </div>
-            <select class="form-control col-2 form-control-sm  mr-3" name="1.3.7">
+            <select class="form-control col-2 form-control-sm  mr-3" name="status_name[]">
                 <option selected='selected'>Selecciona</option>
                 <option value="1">CORRECTO</option>
                 <option value="2">INCORRECTO</option>
@@ -289,8 +325,10 @@
         <div class=" col-12 form-group" style="margin-bottom: 10px">
             <div class="text-left" style="margin-right: 22px;">
                 <h4 class="">1.3.8 Ausencia de ruidos inusuales</h4>
+                <input type="text" hidden name="nombre_subseccion[]" value="1.3.8 Ausencia de ruidos inusuales">
+
             </div>
-            <select class="form-control col-2 form-control-sm  mr-3" name="1.3.8">
+            <select class="form-control col-2 form-control-sm  mr-3" name="status_name[]">
                 <option selected='selected'>Selecciona</option>
                 <option value="1">CORRECTO</option>
                 <option value="2">INCORRECTO</option>
@@ -303,8 +341,10 @@
         <div class=" col-12 form-group" style="margin-bottom: 10px">
             <div class="text-left" style="margin-right:100px;">
                 <h4 class="">1.3.9 Vueltas de fricción </h4>
+                <input type="text" hidden name="nombre_subseccion[]" value="1.3.9 Vueltas de fricción">
+
             </div>
-            <select class="form-control col-2 form-control-sm  mr-3" name="1.3.9">
+            <select class="form-control col-2 form-control-sm  mr-3" name="status_name[]">
                 <option selected='selected'>Selecciona</option>
                 <option value="1">CORRECTO</option>
                 <option value="2">INCORRECTO</option>
@@ -317,8 +357,10 @@
         <div class=" col-12 form-group" style="margin-bottom: 10px">
             <div class="text-left" style="margin-right: 80px;">
                 <h4 class="">1.3.10 Paro de emergencia </h4>
+                <input type="text" hidden name="nombre_subseccion[]" value="1.3.10 Paro de emergencia">
+
             </div>
-            <select class="form-control col-2 form-control-sm  mr-3" name="1.3.10">
+            <select class="form-control col-2 form-control-sm  mr-3" name="status_name[]">
                 <option selected='selected'>Selecciona</option>
                 <option value="1">CORRECTO</option>
                 <option value="2">INCORRECTO</option>
@@ -331,8 +373,10 @@
         <div class=" col-12 form-group" style="margin-bottom: 10px">
             <div class="text-left" style="margin-right: 18px;">
                 <h4 class="">1.3.11 Capacidad en puente legible </h4>
+                <input type="text" hidden name="nombre_subseccion[]" value="1.3.11 Capacidad en puente legible">
+
             </div>
-            <select class="form-control col-2 form-control-sm  mr-3" name="1.3.11" required>
+            <select class="form-control col-2 form-control-sm  mr-3" name="status_name[]" required>
                 <option selected='selected'>Selecciona</option>
                 <option value="1">CORRECTO</option>
                 <option value="2">INCORRECTO</option>
