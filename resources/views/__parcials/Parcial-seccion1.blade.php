@@ -9,6 +9,7 @@
         <div class=" col-12 form-group" style="margin-bottom: 10px">
             <div class="text-left" style="margin-right: 62px;">
                 <h4 class="">1.1.1 Recorrido del puente</h4>
+                <input type="text" hidden value="1">
             </div>
             <select class="form-control col-2 form-control-sm  mr-3" name="1.1.1" required>
                 <option selected='selected'>Selecciona</option>

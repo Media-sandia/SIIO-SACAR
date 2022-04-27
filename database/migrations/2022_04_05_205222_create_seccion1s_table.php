@@ -18,7 +18,10 @@ class CreateSeccion1sTable extends Migration
             $table->string('id_equipo');
             $table->string('Folio');
             $table->string('Fecha');
-            $table->text('data');
+            $table->string('status');
+            $table->string('comentario');
+            $table->unsignedBigInteger('sub_seccion_id');
+            $table->foreign('sub_seccion_id')->references('id')->on('subsecciones')->onDelete('cascade');
             $table->timestamps();
         });
     }

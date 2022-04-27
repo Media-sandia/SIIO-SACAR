@@ -30,29 +30,15 @@ class HomeController extends Controller
     }
 
     public function saveSection1(Request $request)
-    {
+    {   dd($request->all());
+
         $section = new seccion1();
         $section->id_equipo = $request->id_equipo;
         $section->Folio = $request->Folio_service;
         $section->Fecha = $request->date_service;
-        $section->data = $request->all();
+        $section->sub_seccion_id = $request->all();
         $section->save();
 
-        $comment = new coments();
-        $comment->body = $request->body;
-        $comment->save();
-
-        $files = $request->file('files', []);
-        for ($i = 0; $i < count($files); $i++) {
-            $file = new Fileables();
-            $file->Fileable_type = seccion1::class;
-            $file->Fileable_id = $section->id;
-            $file->id_coment = $comment->id;
-
-            $file->uri = $files[$i]->store('images');
-            $file->name = $files[$i]->getClientOriginalName();
-            $file->save();
-        }
         return response()->json(['status' => 1]);
     }
 
