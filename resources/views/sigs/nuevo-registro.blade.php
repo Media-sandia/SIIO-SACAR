@@ -16,7 +16,7 @@
                         <input type="hidden" id="id_equipo_registro" value="">
                         <div class="col-md-3">
                             <label for="id_sucursal" class="form-label"><strong></strong>Folio Del Servicio</label>
-                            <input class="form-control form-control-sm" id="Folio_servicio" type="text"
+                            <input class="form-control form-control-sm" id="Folio_servicio" name="Folio_servicio" type="text"
                                 aria-label=".form-control-sm example" onkeyup="Uppercase(this)">
                             <div id="error_Folio"></div>
                         </div>
@@ -30,35 +30,34 @@
 
                         <div class="col-md-3" style="margin-top:32px;">
                             <button class="btn btn-sm btn-primary" id="view-form">Consultar</button>
-                            {{-- <button class="btn btn-sm btn-primary" onclick="pdf();" id="ejemplo_reporte">Reporte</button> --}}
                         </div>
                     </div>
 
-                    <div class="row mt-3" id="secction-001">
+                    {{-- <div class="row mt-3" id="secction-001">
                         @include('__parcials.Parcial-seccion1')
-                    </div>
+                    </div> --}}
 
                     {{-- <div class="row mt-3" id="secction-002">
                         @include('__parcials.Parcial-seccion2')
-                    </div>
+                    </div> --}}
 
-                    <div class="row mt-3" id="secction-003">
+                    {{-- <div class="row mt-3" id="secction-003">
                         @include('__parcials.Parcial-seccion3')
-                    </div>
+                    </div> --}}
 
-                    <div class="row mt-3" id="secction-004">
+                    {{-- <div class="row mt-3" id="secction-004">
                         @include('__parcials.Parcial-seccion4')
-                    </div>
+                    </div> --}}
 
-                    <div class="row mt-3" id="secction-005">
+                    {{-- <div class="row mt-3" id="secction-005">
                         @include('__parcials.Parcial-seccion5')
-                    </div>
+                    </div> --}}
 
                     <div class="row mt-3" id="secction-006">
                         @include('__parcials.Parcial-seccion6')
                     </div>
 
-                    <div class="row mt-3" id="secction-007">
+                    {{--<div class="row mt-3" id="secction-007">
                         @include('__parcials.Parcial-seccion7')
                     </div>
 

@@ -11,12 +11,16 @@
                 <h4 class="">11.1.1 Recorrido del puente </h4>
             </div>
             <select class="form-control col-2 form-control-sm  mr-3" name="11.1.1">
-                <option selected='selected'>Selecciona</option>
-                <option value="1">OK</option>
-                <option value="2">NOK</option>
+                <option value="0" selected='selected'>Selecciona</option>
+                <option value="1">CORRECTO</option>
+                <option value="2">INCORRECTO</option>
+                <option value="4">CORREGIDO</option>
                 <option value="3">NA</option>
             </select>
-            <input type="text" class="form-control form-control-sm col-4" name="C11.1.1" placeholder="Comentario">
+            <input type="text" class="form-control form-control-sm col-3" name="C11.1.1" placeholder="Comentario">
+            <button class="btn btn-sm btn-outline-default btn-rounded ml-4" onclick="evidence_img(11);"><i
+                class="ni ni-camera-compact"></i>
+            </button>
         </div>
 
         <div class=" col-12 form-group" style="margin-bottom: 10px">
@@ -24,12 +28,16 @@
                 <h4 class="">11.1.2 Frenado del puente </h4>
             </div>
             <select class="form-control col-2 form-control-sm  mr-3" name="11.1.2">
-                <option selected='selected'>Selecciona</option>
-                <option value="1">OK</option>
-                <option value="2">NOK</option>
+                <option value="0" selected='selected'>Selecciona</option>
+                <option value="1">CORRECTO</option>
+                <option value="2">INCORRECTO</option>
+                <option value="4">CORREGIDO</option>
                 <option value="3">NA</option>
             </select>
-            <input type="text" class="form-control form-control-sm col-4" name="C11.1.2" placeholder="Comentario">
+            <input type="text" class="form-control form-control-sm col-3" name="C11.1.2" placeholder="Comentario">
+            <button class="btn btn-sm btn-outline-default btn-rounded ml-4" onclick="evidence_img(11);"><i
+                class="ni ni-camera-compact"></i>
+            </button>
         </div>
 
         <div class=" col-12 form-group" style="margin-bottom: 10px">
@@ -37,12 +45,16 @@
                 <h4 class="">11.1.3 Límite de fin de carrera/anticolisión del puente </h4>
             </div>
             <select class="form-control col-2 form-control-sm  mr-3" name="11.1.3">
-                <option selected='selected'>Selecciona</option>
-                <option value="1">OK</option>
-                <option value="2">NOK</option>
+                <option value="0" selected='selected'>Selecciona</option>
+                <option value="1">CORRECTO</option>
+                <option value="2">INCORRECTO</option>
+                <option value="4">CORREGIDO</option>
                 <option value="3">NA</option>
             </select>
-            <input type="text" class="form-control form-control-sm col-4" name="C11.1.3" placeholder="Comentario">
+            <input type="text" class="form-control form-control-sm col-3" name="C11.1.3" placeholder="Comentario">
+            <button class="btn btn-sm btn-outline-default btn-rounded ml-4" onclick="evidence_img(11);"><i
+                class="ni ni-camera-compact"></i>
+            </button>
         </div>
         <input type="button" name="previous" class="previous btn btn-primary txt_secction" value="Anterior" />
         <input type="button" name="password" class="next btn btn-success" value="Siguiente" />
@@ -56,12 +68,16 @@
                 <h4 class="">11.2.1 Recorrido del carro</h4>
             </div>
             <select class="form-control col-2 form-control-sm  mr-3" name="11.2.1">
-                <option selected='selected'>Selecciona</option>
-                <option value="1">OK</option>
-                <option value="2">NOK</option>
+                <option value="0" selected='selected'>Selecciona</option>
+                <option value="1">CORRECTO</option>
+                <option value="2">INCORRECTO</option>
+                <option value="4">CORREGIDO</option>
                 <option value="3">NA</option>
             </select>
-            <input type="text" class="form-control form-control-sm col-4" name="C11.2.1" placeholder="Comentario">
+            <input type="text" class="form-control form-control-sm col-3" name="C11.2.1" placeholder="Comentario">
+            <button class="btn btn-sm btn-outline-default btn-rounded ml-4" onclick="evidence_img(11);"><i
+                class="ni ni-camera-compact"></i>
+            </button>
         </div>
 
         <div class=" col-12 form-group" style="margin-bottom: 10px">
@@ -69,12 +85,16 @@
                 <h4 class="">11.2.2 Frenado del carro</h4>
             </div>
             <select class="form-control col-2 form-control-sm  mr-3" name="11.2.2">
-                <option selected='selected'>Selecciona</option>
-                <option value="1">OK</option>
-                <option value="2">NOK</option>
+                <option value="0" selected='selected'>Selecciona</option>
+                <option value="1">CORRECTO</option>
+                <option value="2">INCORRECTO</option>
+                <option value="4">CORREGIDO</option>
                 <option value="3">NA</option>
             </select>
-            <input type="text" class="form-control form-control-sm col-4" name="C11.2.2" placeholder="Comentario">
+            <input type="text" class="form-control form-control-sm col-3" name="C11.2.2" placeholder="Comentario">
+            <button class="btn btn-sm btn-outline-default btn-rounded ml-4" onclick="evidence_img(11);"><i
+                class="ni ni-camera-compact"></i>
+            </button>
         </div>
 
         <div class=" col-12 form-group" style="margin-bottom: 10px">
@@ -82,12 +102,16 @@
                 <h4 class="">11.2.3 Limite de fin de carrera/anticolisión del carro</h4>
             </div>
             <select class="form-control col-2 form-control-sm  mr-3" name="11.2.3">
-                <option selected='selected'>Selecciona</option>
-                <option value="1">OK</option>
-                <option value="2">NOK</option>
+                <option value="0" selected='selected'>Selecciona</option>
+                <option value="1">CORRECTO</option>
+                <option value="2">INCORRECTO</option>
+                <option value="4">CORREGIDO</option>
                 <option value="3">NA</option>
             </select>
-            <input type="text" class="form-control form-control-sm col-4" name="C11.2.3" placeholder="Comentario">
+            <input type="text" class="form-control form-control-sm col-3" name="C11.2.3" placeholder="Comentario">
+            <button class="btn btn-sm btn-outline-default btn-rounded ml-4" onclick="evidence_img(11);"><i
+                class="ni ni-camera-compact"></i>
+            </button>
         </div>
         <input type="button" name="previous" class="previous btn btn-primary txt_secction" value="Anterior" />
         <input type="button" name="password" class="next btn btn-success" value="Siguiente" />
@@ -100,12 +124,16 @@
                 <h4 class="">11.3.1 Recorrido de izaje</h4>
             </div>
             <select class="form-control col-2 form-control-sm  mr-3" name="11.3.1">
-                <option selected='selected'>Selecciona</option>
-                <option value="1">OK</option>
-                <option value="2">NOK</option>
+                <option value="0" selected='selected'>Selecciona</option>
+                <option value="1">CORRECTO</option>
+                <option value="2">INCORRECTO</option>
+                <option value="4">CORREGIDO</option>
                 <option value="3">NA</option>
             </select>
-            <input type="text" class="form-control form-control-sm col-4" name="C11.3.1" placeholder="Comentario">
+            <input type="text" class="form-control form-control-sm col-3" name="C11.3.1" placeholder="Comentario">
+            <button class="btn btn-sm btn-outline-default btn-rounded ml-4" onclick="evidence_img(11);"><i
+                class="ni ni-camera-compact"></i>
+            </button>
         </div>
 
         <div class=" col-12 form-group" style="margin-bottom: 10px">
@@ -113,12 +141,16 @@
                 <h4 class="">11.3.2 Frenado de izaje </h4>
             </div>
             <select class="form-control col-2 form-control-sm  mr-3" name="11.3.2">
-                <option selected='selected'>Selecciona</option>
-                <option value="1">OK</option>
-                <option value="2">NOK</option>
+                <option value="0" selected='selected'>Selecciona</option>
+                <option value="1">CORRECTO</option>
+                <option value="2">INCORRECTO</option>
+                <option value="4">CORREGIDO</option>
                 <option value="3">NA</option>
             </select>
-            <input type="text" class="form-control form-control-sm col-4" name="C11.3.2" placeholder="Comentario">
+            <input type="text" class="form-control form-control-sm col-3" name="C11.3.2" placeholder="Comentario">
+            <button class="btn btn-sm btn-outline-default btn-rounded ml-4" onclick="evidence_img(11);"><i
+                class="ni ni-camera-compact"></i>
+            </button>
         </div>
 
         <div class=" col-12 form-group" style="margin-bottom: 10px">
@@ -126,12 +158,16 @@
                 <h4 class="">11.3.3 Movimiento del bloque de gancho</h4>
             </div>
             <select class="form-control col-2 form-control-sm  mr-3" name="11.3.3">
-                <option selected='selected'>Selecciona</option>
-                <option value="1">OK</option>
-                <option value="2">NOK</option>
+                <option value="0" selected='selected'>Selecciona</option>
+                <option value="1">CORRECTO</option>
+                <option value="2">INCORRECTO</option>
+                <option value="4">CORREGIDO</option>
                 <option value="3">NA</option>
             </select>
-            <input type="text" class="form-control form-control-sm col-4" name="C11.3.3" placeholder="Comentario">
+            <input type="text" class="form-control form-control-sm col-3" name="C11.3.3" placeholder="Comentario">
+            <button class="btn btn-sm btn-outline-default btn-rounded ml-4" onclick="evidence_img(11);"><i
+                class="ni ni-camera-compact"></i>
+            </button>
         </div>
 
         <div class=" col-12 form-group" style="margin-bottom: 10px">
@@ -139,12 +175,16 @@
                 <h4 class="">11.3.4 Límite superior del polipasto</h4>
             </div>
             <select class="form-control col-2 form-control-sm  mr-3" name="11.3.4">
-                <option selected='selected'>Selecciona</option>
-                <option value="1">OK</option>
-                <option value="2">NOK</option>
+                <option value="0" selected='selected'>Selecciona</option>
+                <option value="1">CORRECTO</option>
+                <option value="2">INCORRECTO</option>
+                <option value="4">CORREGIDO</option>
                 <option value="3">NA</option>
             </select>
-            <input type="text" class="form-control form-control-sm col-4" name="C11.3.4" placeholder="Comentario">
+            <input type="text" class="form-control form-control-sm col-3" name="C11.3.4" placeholder="Comentario">
+            <button class="btn btn-sm btn-outline-default btn-rounded ml-4" onclick="evidence_img(11);"><i
+                class="ni ni-camera-compact"></i>
+            </button>
         </div>
 
         <div class=" col-12 form-group" style="margin-bottom: 10px">
@@ -152,12 +192,16 @@
                 <h4 class="">11.3.5 Límites de desaceleración del polipasto </h4>
             </div>
             <select class="form-control col-2 form-control-sm  mr-3" name="11.3.5">
-                <option selected='selected'>Selecciona</option>
-                <option value="1">OK</option>
-                <option value="2">NOK</option>
+                <option value="0" selected='selected'>Selecciona</option>
+                <option value="1">CORRECTO</option>
+                <option value="2">INCORRECTO</option>
+                <option value="4">CORREGIDO</option>
                 <option value="3">NA</option>
             </select>
-            <input type="text" class="form-control form-control-sm col-4" name="C11.3.5" placeholder="Comentario">
+            <input type="text" class="form-control form-control-sm col-3" name="C11.3.5" placeholder="Comentario">
+            <button class="btn btn-sm btn-outline-default btn-rounded ml-4" onclick="evidence_img(11);"><i
+                class="ni ni-camera-compact"></i>
+            </button>
         </div>
 
         <input type="button" name="previous" class="previous btn btn-primary txt_secction" value="Anterior" />
@@ -170,12 +214,16 @@
                 <h4 class="">11.3.6 Límite inferior del polipasto</h4>
             </div>
             <select class="form-control col-2 form-control-sm  mr-3" name="11.3.6">
-                <option selected='selected'>Selecciona</option>
-                <option value="1">OK</option>
-                <option value="2">NOK</option>
+                <option value="0" selected='selected'>Selecciona</option>
+                <option value="1">CORRECTO</option>
+                <option value="2">INCORRECTO</option>
+                <option value="4">CORREGIDO</option>
                 <option value="3">NA</option>
             </select>
-            <input type="text" class="form-control form-control-sm col-5" name="C11.3.6" placeholder="Comentario">
+            <input type="text" class="form-control form-control-sm col-4" name="C11.3.6" placeholder="Comentario">
+            <button class="btn btn-sm btn-outline-default btn-rounded ml-4" onclick="evidence_img(11);"><i
+                class="ni ni-camera-compact"></i>
+            </button>
         </div>
 
         <div class=" col-12 form-group" style="margin-bottom: 10px">
@@ -183,12 +231,16 @@
                 <h4 class="">11.3.7 Ausencia de ruidos inusuales </h4>
             </div>
             <select class="form-control col-2 form-control-sm  mr-3" name="11.3.7">
-                <option selected='selected'>Selecciona</option>
-                <option value="1">OK</option>
-                <option value="2">NOK</option>
+                <option value="0" selected='selected'>Selecciona</option>
+                <option value="1">CORRECTO</option>
+                <option value="2">INCORRECTO</option>
+                <option value="4">CORREGIDO</option>
                 <option value="3">NA</option>
             </select>
-            <input type="text" class="form-control form-control-sm col-5" name="C11.3.7" placeholder="Comentario">
+            <input type="text" class="form-control form-control-sm col-4" name="C11.3.7" placeholder="Comentario">
+            <button class="btn btn-sm btn-outline-default btn-rounded ml-4" onclick="evidence_img(11);"><i
+                class="ni ni-camera-compact"></i>
+            </button>
         </div>
 
         <div class=" col-12 form-group" style="margin-bottom: 10px">
@@ -196,28 +248,17 @@
                 <h4 class="">11.4.8 Paro de emergencia (Accionar)</h4>
             </div>
             <select class="form-control col-2 form-control-sm  mr-3" name="11.4.8">
-                <option selected='selected'>Selecciona</option>
-                <option value="1">OK</option>
-                <option value="2">NOK</option>
+                <option value="0"selected='selected'>Selecciona</option>
+                <option value="1">CORRECTO</option>
+                <option value="2">INCORRECTO</option>
+                <option value="4">CORREGIDO</option>
                 <option value="3">NA</option>
             </select>
-            <input type="text" class="form-control form-control-sm col-5" name="C11.4.8" placeholder="Comentario">
+            <input type="text" class="form-control form-control-sm col-4" name="C11.4.8" placeholder="Comentario">
+            <button class="btn btn-sm btn-outline-default btn-rounded ml-4" onclick="evidence_img(11);"><i
+                class="ni ni-camera-compact"></i>
+            </button>
         </div>
-
-        <div class=" col-12" style="margin-bottom: 10px">
-            <div class="text-center" style="margin-right: 18px;">
-                <h4>Archivo para subida</h4>
-            </div>
-            <center><input type="file" class="form-control" id="file" name="files[]" multiple /></center>
-        </div>
-
-        <div class="mt-3 text-center">
-            <h4 for="">Comentarios</h4>
-            <center>
-                <textarea name="body" class="form-control" id="" cols="80" rows="5"></textarea>
-            </center>
-        </div>
-
         <input type="button" name="previous" class="previous btn mt-3 btn-primary txt_secction" value="Anterior" />
         <button type="submit" name="password" class="next btn mt-3 btn-sacar">Guardar</button>
     </fieldset>

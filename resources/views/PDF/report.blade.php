@@ -303,17 +303,17 @@
                             <td colspan="1">
                                 <p class="formlabel">MARCA:</p>
                             </td>
-                            <td colspan="2" class="blankspace tinyTex">{{ $Grua->Marca }} </td>
+                            <td colspan="2" class="blankspace tinyTex"><!--{{ $Grua->Marca }}--> </td>
 
                             <td colspan="1">
                                 <p class="formlabel">RECORRIDO:</p>
                             </td>
-                            <td colspan="2" class="blankspace tinyText">{{ $Grua->Recorrido }}</td>
+                            <td colspan="2" class="blankspace tinyText"><!--{{ $Grua->Recorrido }}--></td>
 
                             <td colspan="1">
                                 <p class="formlabel">VOLTAJE:</p>
                             </td>
-                            <td colspan="4" class="blankspace tinyText">{{ $Grua->Voltaje }}</td>
+                            <td colspan="4" class="blankspace tinyText"><!--{{ $Grua->Voltaje }}--></td>
                         </tr>
                         <tr>
                             <td></td>
@@ -325,17 +325,17 @@
                             <td colspan="1">
                                 <p class="formlabel">MODELO(s):</p>
                             </td>
-                            <td colspan="2" class="blankspace tinyText">{{ $Grua->Modelo }}</td>
+                            <td colspan="2" class="blankspace tinyText"><!--{{ $Grua->Modelo }}--></td>
 
                             <td colspan="1">
                                 <p class="formlabel">CLARO:</p>
                             </td>
-                            <td colspan="2" class="blankspace tinyText">{{ $Grua->Claro }}</td>
+                            <td colspan="2" class="blankspace tinyText"><!--{{ $Grua->Claro }}--></td>
 
                             <td colspan="1">
                                 <p class="formlabel">RESPONSABLE:</p>
                             </td>
-                            <td colspan="4" class="blankspace tinyText">{{ $Grua->Responsable }}</td>
+                            <td colspan="4" class="blankspace tinyText"><!--{{ $Grua->Responsable }}--></td>
                         </tr>
                         <tr>
                             <td></td>
@@ -348,12 +348,12 @@
                             <td colspan="1">
                                 <p class="formlabel">N°SERIE(s):</p>
                             </td>
-                            <td colspan="4" class="blankspace tinyText">{{ $Grua->N_serie }}</td>
+                            <td colspan="4" class="blankspace tinyText"><!--{{ $Grua->N_serie }}--></td>
 
                             <td colspan="1">
                                 <p class="formlabel">ALTURA:</p>
                             </td>
-                            <td colspan="5" class="blankspace tinyText">{{ $Grua->Altura }}</td>
+                            <td colspan="5" class="blankspace tinyText"><!--{{ $Grua->Altura }}--></td>
                         </tr>
                         <tr>
                             <td></td>
@@ -371,12 +371,12 @@
                             <td colspan="1">
                                 <p class="formlabel">AREA:</p>
                             </td>
-                            <td colspan="4" class="blankspace tinyText">{{ $Grua->Area }}</td>
+                            <td colspan="4" class="blankspace tinyText"><!--{{ $Grua->Area }}--></td>
 
                             <td colspan="1">
                                 <p class="formlabel">CAPACIDAD:</p>
                             </td>
-                            <td colspan="5" class="blankspace tinyText">{{ $Grua->Capacidad }}</td>
+                            <td colspan="5" class="blankspace tinyText"><!--{{ $Grua->Capacidad }}--></td>
                         </tr>
 
                     </table>
@@ -407,7 +407,7 @@
                 <tbody>
                     <tr>
                         <td class="titlesacarbody">
-                            Este reporte aplica para {{ $customer->Nom_empresa }} y el equipo descrito en el
+                            Este reporte aplica para <!--{{ $customer->Nom_empresa }}--> y el equipo descrito en el
                             encabezado.
                         </td>
                     </tr>
@@ -1293,10 +1293,10 @@
                             <tr class="titlesubsection">
                                 <td style="width: 4%;" class="bodertd borde-sep">2.1</td>
                                 <td style="width: 40%;" class="bodertd borde-sep ">Condición de los botones </td>
-                                <td style="width: 5%;" class="bodertd borde-sep textCenter">OK</td>
-                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                                <td style="width: 5%;" class="bodertd borde-sep textCenter"></td>
-                                <td style="width: 33%;" class="bodertd borde-sep"></td>
+                                <td style="width: 5%;" class="">OK</td>
+                                <td style="width: 5%;" class=""></td>
+                                <td style="width: 5%;" class=""></td>
+                                <td style="width: 33%;" class=""></td>
                             </tr>
                         @break
 
@@ -6370,7 +6370,7 @@
                             <td style="width: 33%;" class="bodertd borde-sep"></td>
                         </tr>
                         @break
-                        
+
                         @case(2)
                         <tr class="titlesubsection">
                             <td style="width: 4%;" class="bodertd borde-sep">9.5.2</td>
@@ -6381,8 +6381,8 @@
                             <td style="width: 33%;" class="bodertd borde-sep"></td>
                         </tr>
                         @break
-                        
-                        
+
+
                         @case(3)
                         <tr class="titlesubsection">
                             <td style="width: 4%;" class="bodertd borde-sep">9.5.2</td>
@@ -6393,7 +6393,7 @@
                             <td style="width: 33%;" class="bodertd borde-sep"></td>
                         </tr>
                         @break
-                        
+
                         @endswitch
 
                         @switch($seccion9[0]->data['9_5_3'])
@@ -6407,7 +6407,7 @@
                             <td style="width: 33%;" class="bodertd borde-sep"></td>
                         </tr>
                         @break
-                        
+
                         @case(2)
                         <tr class="titlesubsection">
                             <td style="width: 4%;" class="bodertd borde-sep">9.5.3</td>
@@ -6418,8 +6418,8 @@
                             <td style="width: 33%;" class="bodertd borde-sep"></td>
                         </tr>
                         @break
-                        
-                        
+
+
                         @case(3)
                         <tr class="titlesubsection">
                             <td style="width: 4%;" class="bodertd borde-sep">9.5.3</td>
@@ -6430,7 +6430,7 @@
                             <td style="width: 33%;" class="bodertd borde-sep"></td>
                         </tr>
                         @break
-                       
+
                         @endswitch
 
                         @switch($seccion9[0]->data['9_6'])
@@ -6444,7 +6444,7 @@
                             <td style="width: 33%;" class="bodertd borde-sep"></td>
                         </tr>
                         @break
-                        
+
                         @case(2)
                         <tr class="titlesubsection">
                             <td style="width: 4%;" class="bodertd borde-sep">9.6</td>
@@ -6455,8 +6455,8 @@
                             <td style="width: 33%;" class="bodertd borde-sep"></td>
                         </tr>
                         @break
-                        
-                        
+
+
                         @case(3)
                         <tr class="titlesubsection">
                             <td style="width: 4%;" class="bodertd borde-sep">9.6</td>
@@ -6467,7 +6467,7 @@
                             <td style="width: 33%;" class="bodertd borde-sep"></td>
                         </tr>
                         @break
-                        
+
                         @endswitch --}}
                     </tbody>
                 </table>

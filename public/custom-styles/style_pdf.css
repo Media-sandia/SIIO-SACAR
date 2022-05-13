@@ -1,22 +1,175 @@
 @font-face {
-    font-family:Pill-bold-custom ;
-    src: url(../Fuentes/Pill\ Gothic\ 300mg\ Bold/);
-  } 
-  @font-face {
-    font-family:Pill-regular-custom ;
-    src: url(../Fuentes/Pill\ Gothic\ 300mg\ Regular/);
-  } 
-  
-  @font-face {
-    font-family: Pill-semibd-custom;
-    src: url(../Fuentes/Pill\ Gothic\ 300mg\ Semibd/);
-  } 
+  font-family: 'msyh';
+  font-style: normal;
+  font-weight: Bold !important;
+  src: url('{{ asset('fonts/pill/Pill_Gothic_300mg_Bold.ttf') }}') format('truetype');
+}
 
-  @font-face {
-    font-family: Pill-semi;
-    src: url(../Fuentes/pill/Pill_Gothic_300mg_Regular.ttf) format(truetype);
-  }
+body {
+  font-family: 'msyh';
+  color: #242b52;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+}
 
-  h1 .hi{
-      color: blue;
-  }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 4px;
+  margin-top: 0;
+}
+
+table.separate {
+  border-collapse: separate;
+  border-spacing: 5px;
+}
+
+td {
+  width: 8.333333%;
+}
+
+
+
+p {
+  margin: 0;
+}
+
+.textCenter {
+  text-align: center;
+}
+
+.textLeft {
+  text-align: left;
+}
+
+.textRight {
+  text-align: right;
+}
+
+.headerText {
+  font-family: 'msyh';
+  background-color: #001f5b;
+  color: #FFF;
+  font-size: 35px !important;
+
+}
+
+.titlesection {
+  font-family: 'msyh';
+  background-color: #001f5b;
+  color: #FFF;
+  font-size: 25px !important;
+}
+
+.titlesection2 {
+  font-family: 'msyh';
+  background-color: #001f5b;
+  color: #FFF;
+  font-size: 18px !important;
+}
+
+.titlesubsection {
+  font-family: 'msyh';
+  color: #000000;
+  font-size: 18px !important;
+}
+
+.titlesacar {
+  font-family: 'msyh';
+  color: #001f5b;
+  font-size: 35px !important;
+}
+
+.titlesacarbody {
+  font-family: 'msyh';
+  color: #000000;
+  font-size: 25px !important;
+}
+
+.EquipoText {
+  font-family: 'msyh';
+  background-color: #001f5b;
+  color: #FFF;
+  font-size: 28px !important;
+}
+
+tr.grid td {
+  visibility: hidden;
+  height: 0px !important;
+  padding: 0;
+}
+
+.header {
+  font-size: 9px !important;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  /* position: fixed; */
+  top: 0;
+  height: 12.5%;
+}
+
+table.outter-border {
+  border: 1px solid black;
+}
+
+.borde-sep {
+  border: 1px solid black;
+}
+
+table.separate {
+  border-collapse: separate;
+  border-spacing: 5px;
+}
+
+.formlabel {
+  font-size: 25px;
+  padding-left: 4px;
+}
+
+td.blankspace {
+  background-color: #eae9ef;
+  padding-left: 20px;
+  /* padding: 9px 0px; */
+}
+
+td.blankdata {
+  background-color: #eae9ef;
+  padding-left: 10px;
+}
+
+div.page {
+  page-break-after: always;
+  page-break-inside: avoid;
+}
+
+tbody tr td.bodertd {
+  padding-top: 12px;
+}
+
+.borderR {
+  border-right: 1px solid black !important;
+}
+
+.borderL {
+  border-left: 1px solid black !important;
+}
+
+.tinyText {
+  font-size: 20px !important;
+  font-family: 'msyh';
+  color: #000000;
+  border: 0px !important;
+  margin: 0px !important;
+}
+
+.tinyTex {
+  font-size: 18px !important;
+  font-family: 'msyh';
+  color: #000000;
+  border: 0px !important;
+  margin: 0px !important;
+}

@@ -15,8 +15,8 @@ class CreateFileablesTable extends Migration
     {
         Schema::create('fileables', function (Blueprint $table) {
             $table->id();
-            $table->string('id_coment');
-            $table->morphs('Fileable');
+            $table->string('id_item');
+            $table->string('Folio');
             $table->string('uri');
             $table->string('name');
             $table->timestamps();

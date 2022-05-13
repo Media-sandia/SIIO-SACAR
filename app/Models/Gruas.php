@@ -11,15 +11,18 @@ class Gruas extends Model
 
     protected $fillable = [
         'id_cliente',
-        'Marca',
-        'Modelo',
-        'N_serie',
-        'Area',
-        'Recorrido',
+        'MarcaGrua',
+        'NSGrua',
+        'MarcaPolipasto',
+        'ModeloPoli',
+        'NSPoli',
         'Claro',
         'Altura',
         'Capacidad',
         'Voltaje',
-        'Responsable',
+        'Recorrido',
+        'TipoAlim',
+        'UbicacionAli',
+        'Area',
     ];
 }

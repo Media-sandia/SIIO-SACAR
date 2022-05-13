@@ -16,16 +16,19 @@ class CreateGruasTable extends Migration
         Schema::create('gruas', function (Blueprint $table) {
             $table->id();
             $table->string('id_cliente');
-            $table->string('Marca');
-            $table->string('Modelo');
-            $table->string('N_serie');
-            $table->string('Area');
+            $table->string('MarcaGrua');
+            $table->string('NSGrua');
+            $table->string('MarcaPolipasto');
+            $table->string('ModeloPoli');
+            $table->string('NSPoli');
             $table->string('Recorrido');
             $table->string('Claro');
             $table->string('Altura');
             $table->string('Capacidad');
             $table->string('Voltaje');
-            $table->string('Responsable');
+            $table->string('TipoAlim'); 
+            $table->string('UbicacionAli');
+            $table->string('Area');
             $table->timestamps();
         });
     }

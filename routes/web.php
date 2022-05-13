@@ -4,9 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\servicio\HomeController;
-
-
-
+use Barryvdh\Snappy\Facades\SnappyPdf;
+use App\Models\section;
 
 Route::get('/files', function () {
 });
@@ -28,6 +27,7 @@ Route::post('saveSection9', [HomeController::class, 'saveSection9'])->name('save
 Route::post('saveSection10', [HomeController::class, 'saveSection10'])->name('saveSection10');
 Route::post('saveSection11', [HomeController::class, 'saveSection11'])->name('saveSection11');
 
+Route::post('saveEvidence', [HomeController::class, 'Evidence'])->name('Evidence');
 
 
 
@@ -49,6 +49,9 @@ Route::get('teams/dataClientes/{val}', [HomeController::class, 'load_empresas'])
 Route::post('teams/process-teams', [HomeController::class, 'process_teams'])->name('process_teams');
 Route::get('NuevoRegistro/business/{val}', [HomeController::class, 'load_business']);
 
+Route::get('equipos/data/{id}', [HomeController::class, 'load_equipos']);
+
+
 
 
 /*Rutas relacionada con nuevos registros**/
@@ -56,4 +59,15 @@ Route::get('NuevoRegistro', [HomeController::class, 'NewReport'])->name('NewRepo
 
 Route::post('NuevoRegistro/pruebas', [HomeController::class, 'pruebas']);
 
-Route::get('Reporte/prueba/{id_equipo}/{Folio}', [HomeController::class, 'pdf_prueba']);
+Route::get('Reporte/prueba/{id_equipo}/{Folio}', [HomeController::class, 'service_report']);
+
+Route::get('/sections/{id}', [HomeController::class, 'sections']);
+
+Route::get('/subsections/{id}', [HomeController::class, 'subsection']);
+
+Route::get('/items/{id}', [HomeController::class, 'items']);
+
+Route::get('/prueba/{id}', [HomeController::class, 'Coments']);// Rutas de prueba en la aplicacion
+
+
+

@@ -10,12 +10,16 @@
                 <h4 class="">10.1.1 Condición del tablero </h4>
             </div>
             <select class="form-control col-2 form-control-sm  mr-3" name="10.1.1">
-                <option selected='selected'>Selecciona</option>
-                <option value="1">OK</option>
-                <option value="2">NOK</option>
-                <option value="3">NA</option>
+                    <option value="0" selected='selected'>Selecciona</option>
+                    <option value="1">CORRECTO</option>
+                    <option value="2">INCORRECTO</option>
+                    <option value="4">CORREGIDO</option>
+                    <option value="3">NA</option>
             </select>
-            <input type="text" class="form-control form-control-sm col-5" name="C10.1.1" placeholder="Comentario">
+            <input type="text" class="form-control form-control-sm col-4" name="C10.1.1" placeholder="Comentario">
+            <button class="btn btn-sm btn-outline-default btn-rounded ml-4" onclick="evidence_img(10);"><i
+                class="ni ni-camera-compact"></i>
+            </button>
         </div>
 
         <div class=" col-12 form-group" style="margin-bottom: 10px">
@@ -23,12 +27,16 @@
                 <h4 class="">10.1.2 Etiquetas externas </h4>
             </div>
             <select class="form-control col-2 form-control-sm  mr-3" name="10.1.2">
-                <option selected='selected'>Selecciona</option>
-                <option value="1">OK</option>
-                <option value="2">NOK</option>
+                <option value="0" selected='selected'>Selecciona</option>
+                <option value="1">CORRECTO</option>
+                <option value="2">INCORRECTO</option>
+                <option value="4">CORREGIDO</option>
                 <option value="3">NA</option>
             </select>
-            <input type="text" class="form-control form-control-sm col-5" name="C10.1.2" placeholder="Comentario">
+            <input type="text" class="form-control form-control-sm col-4" name="C10.1.2" placeholder="Comentario">
+            <button class="btn btn-sm btn-outline-default btn-rounded ml-4" onclick="evidence_img(10);"><i
+                class="ni ni-camera-compact"></i>
+            </button>
         </div>
 
         <div class=" col-12 form-group" style="margin-bottom: 10px">
@@ -36,12 +44,16 @@
                 <h4 class="">10.1.3 Fijación del tablero </h4>
             </div>
             <select class="form-control col-2 form-control-sm  mr-3" name="10.1.3">
-                <option selected='selected'>Selecciona</option>
-                <option value="1">OK</option>
-                <option value="2">NOK</option>
+                <option value="0" selected='selected'>Selecciona</option>
+                <option value="1">CORRECTO</option>
+                <option value="2">INCORRECTO</option>
+                <option value="4">CORREGIDO</option>
                 <option value="3">NA</option>
             </select>
-            <input type="text" class="form-control form-control-sm col-5" name="C10.1.3" placeholder="Comentario">
+            <input type="text" class="form-control form-control-sm col-4" name="C10.1.3" placeholder="Comentario">
+            <button class="btn btn-sm btn-outline-default btn-rounded ml-4" onclick="evidence_img(10);"><i
+                class="ni ni-camera-compact"></i>
+            </button>
         </div>
 
         <div class=" col-12 form-group" style="margin-bottom: 10px">
@@ -49,12 +61,16 @@
                 <h4 class="">10.1.4 Condición de puertas </h4>
             </div>
             <select class="form-control col-2 form-control-sm  mr-3" name="10.1.4">
-                <option selected='selected'>Selecciona</option>
-                <option value="1">OK</option>
-                <option value="2">NOK</option>
-                <option value="3">NA</option>
+                    <option value="0" selected='selected'>Selecciona</option>
+                    <option value="1">CORRECTO</option>
+                    <option value="2">INCORRECTO</option>
+                    <option value="4">CORREGIDO</option>
+                    <option value="3">NA</option>
             </select>
-            <input type="text" class="form-control form-control-sm col-5" name="C10.1.4" placeholder="Comentario">
+            <input type="text" class="form-control form-control-sm col-4" name="C10.1.4" placeholder="Comentario">
+            <button class="btn btn-sm btn-outline-default btn-rounded ml-4" onclick="evidence_img(10);"><i
+                class="ni ni-camera-compact"></i>
+            </button>
         </div>
 
         <div class=" col-12 form-group" style="margin-bottom: 10px">
@@ -62,12 +78,16 @@
                 <h4 class="">10.1.5 Condición de empaque </h4>
             </div>
             <select class="form-control col-2 form-control-sm  mr-3" name="10.1.5">
-                <option selected='selected'>Selecciona</option>
-                <option value="1">OK</option>
-                <option value="2">NOK</option>
-                <option value="3">NA</option>
+                    <option value="0" selected='selected'>Selecciona</option>
+                    <option value="1">CORRECTO</option>
+                    <option value="2">INCORRECTO</option>
+                    <option value="4">CORREGIDO</option>
+                    <option value="3">NA</option>
             </select>
-            <input type="text" class="form-control form-control-sm col-5" name="C10.1.5" placeholder="Comentario">
+            <input type="text" class="form-control form-control-sm col-4" name="C10.1.5" placeholder="Comentario">
+            <button class="btn btn-sm btn-outline-default btn-rounded ml-4" onclick="evidence_img(10);"><i
+                class="ni ni-camera-compact"></i>
+            </button>
         </div>
 
         <input type="button" name="previous" class="previous btn btn-primary txt_secction" value="Anterior" />
@@ -81,12 +101,16 @@
                 <h4 class="">10.1.6 Dispositivos de bloqueo</h4>
             </div>
             <select class="form-control col-2 form-control-sm  mr-3" name="10.1.6">
-                <option selected='selected'>Selecciona</option>
-                <option value="1">OK</option>
-                <option value="2">NOK</option>
-                <option value="3">NA</option>
+                    <option value="0" selected='selected'>Selecciona</option>
+                    <option value="1">CORRECTO</option>
+                    <option value="2">INCORRECTO</option>
+                    <option value="4">CORREGIDO</option>
+                    <option value="3">NA</option>
             </select>
-            <input type="text" class="form-control form-control-sm col-5" name="C10.1.6" placeholder="Comentario">
+            <input type="text" class="form-control form-control-sm col-4" name="C10.1.6" placeholder="Comentario">
+            <button class="btn btn-sm btn-outline-default btn-rounded ml-4" onclick="evidence_img(10);"><i
+                class="ni ni-camera-compact"></i>
+            </button>
         </div>
 
         <div class=" col-12 form-group" style="margin-bottom: 10px">
@@ -94,12 +118,16 @@
                 <h4 class="">10.1.7 Conectores glándula</h4>
             </div>
             <select class="form-control col-2 form-control-sm  mr-3" name="10.1.7">
-                <option selected='selected'>Selecciona</option>
-                <option value="1">OK</option>
-                <option value="2">NOK</option>
+                <option value="0" selected='selected'>Selecciona</option>
+                <option value="1">CORRECTO</option>
+                <option value="2">INCORRECTO</option>
+                <option value="4">CORREGIDO</option>
                 <option value="3">NA</option>
             </select>
-            <input type="text" class="form-control form-control-sm col-5" name="C10.1.7" placeholder="Comentario">
+            <input type="text" class="form-control form-control-sm col-4" name="C10.1.7" placeholder="Comentario">
+            <button class="btn btn-sm btn-outline-default btn-rounded ml-4" onclick="evidence_img(10);"><i
+                class="ni ni-camera-compact"></i>
+            </button>
         </div>
 
         <div class=" col-12 form-group" style="margin-bottom: 10px">
@@ -107,12 +135,16 @@
                 <h4 class="">10.1.8 Rieles DIN</h4>
             </div>
             <select class="form-control col-2 form-control-sm  mr-3" name="10.1.8">
-                <option selected='selected'>Selecciona</option>
-                <option value="1">OK</option>
-                <option value="2">NOK</option>
+                <option value="0" selected='selected'>Selecciona</option>
+                <option value="1">CORRECTO</option>
+                <option value="2">INCORRECTO</option>
+                <option value="4">CORREGIDO</option>
                 <option value="3">NA</option>
             </select>
-            <input type="text" class="form-control form-control-sm col-5" name="C10.1.8" placeholder="Comentario">
+            <input type="text" class="form-control form-control-sm col-4" name="C10.1.8" placeholder="Comentario">
+            <button class="btn btn-sm btn-outline-default btn-rounded ml-4" onclick="evidence_img(10);"><i
+                class="ni ni-camera-compact"></i>
+            </button>
         </div>
 
         <div class=" col-12 form-group" style="margin-bottom: 10px">
@@ -120,12 +152,16 @@
                 <h4 class="">10.1.9 Ductos/Canaletas</h4>
             </div>
             <select class="form-control col-2 form-control-sm  mr-3" name="10.1.9">
-                <option selected='selected'>Selecciona</option>
-                <option value="1">OK</option>
-                <option value="2">NOK</option>
+                <option value="0" selected='selected'>Selecciona</option>
+                <option value="1">CORRECTO</option>
+                <option value="2">INCORRECTO</option>
+                <option value="4">CORREGIDO</option>
                 <option value="3">NA</option>
             </select>
-            <input type="text" class="form-control form-control-sm col-5" name="C10.1.9" placeholder="Comentario">
+            <input type="text" class="form-control form-control-sm col-4" name="C10.1.9" placeholder="Comentario">
+            <button class="btn btn-sm btn-outline-default btn-rounded ml-4" onclick="evidence_img(10);"><i
+                class="ni ni-camera-compact"></i>
+            </button>
         </div>
 
 
@@ -134,12 +170,16 @@
                 <h4 class="">10.1.10 Cableado interno</h4>
             </div>
             <select class="form-control col-2 form-control-sm  mr-3" name="10.1.10">
-                <option selected='selected'>Selecciona</option>
-                <option value="1">OK</option>
-                <option value="2">NOK</option>
-                <option value="3">NA</option>
+                    <option value="0" selected='selected'>Selecciona</option>
+                    <option value="1">CORRECTO</option>
+                    <option value="2">INCORRECTO</option>
+                    <option value="4">CORREGIDO</option>
+                    <option value="3">NA</option>
             </select>
-            <input type="text" class="form-control form-control-sm col-5" name="C10.1.10" placeholder="Comentario">
+            <input type="text" class="form-control form-control-sm col-4" name="C10.1.10" placeholder="Comentario">
+            <button class="btn btn-sm btn-outline-default btn-rounded ml-4" onclick="evidence_img(10);"><i
+                class="ni ni-camera-compact"></i>
+            </button>
         </div>
 
 
@@ -148,12 +188,16 @@
                 <h4 class="">10.1.11 Condición de los contactores</h4>
             </div>
             <select class="form-control col-2 form-control-sm  mr-3" name="10.1.11">
-                <option selected='selected'>Selecciona</option>
-                <option value="1">OK</option>
-                <option value="2">NOK</option>
+                <option value="0" selected='selected'>Selecciona</option>
+                <option value="1">CORRECTO</option>
+                <option value="2">INCORRECTO</option>
+                <option value="4">CORREGIDO</option>
                 <option value="3">NA</option>
             </select>
-            <input type="text" class="form-control form-control-sm col-5" name="C10.1.11" placeholder="Comentario">
+            <input type="text" class="form-control form-control-sm col-4" name="C10.1.11" placeholder="Comentario">
+            <button class="btn btn-sm btn-outline-default btn-rounded ml-4" onclick="evidence_img(10);"><i
+                class="ni ni-camera-compact"></i>
+            </button>
         </div>
         <input type="button" name="previous" class="previous btn btn-primary txt_secction" value="Anterior" />
         <input type="button" name="password" class="next btn btn-success" value="Siguiente" />
@@ -165,13 +209,17 @@
                 <h4 class="">10.1.12 Protecciones térmicas</h4>
             </div>
             <select class="form-control col-2 form-control-sm  mr-3" name="10.1.12">
-                <option selected='selected'>Selecciona</option>
-                <option value="1">OK</option>
-                <option value="2">NOK</option>
+                <option value="0" selected='selected'>Selecciona</option>
+                <option value="1">CORRECTO</option>
+                <option value="2">INCORRECTO</option>
+                <option value="4">CORREGIDO</option>
                 <option value="3">NA</option>
             </select>
             <input type="text" class="form-control form-control-sm col-1 mr-3" name="NC10.1.12" placeholder="C">
-            <input type="text" class="form-control form-control-sm col-4" name="C10.1.12" placeholder="Comentario">
+            <input type="text" class="form-control form-control-sm col-3" name="C10.1.12" placeholder="Comentario">
+            <button class="btn btn-sm btn-outline-default btn-rounded ml-4" onclick="evidence_img(10);"><i
+                class="ni ni-camera-compact"></i>
+            </button>
         </div>
 
         <div class=" col-12 form-group" style="margin-bottom: 10px">
@@ -179,13 +227,17 @@
                 <h4 class="">10.1.13 Guardamotores </h4>
             </div>
             <select class="form-control col-2 form-control-sm  mr-3" name="10.1.13">
-                <option selected='selected'>Selecciona</option>
-                <option value="1">OK</option>
-                <option value="2">NOK</option>
+                <option value="0" selected='selected'>Selecciona</option>
+                <option value="1">CORRECTO</option>
+                <option value="2">INCORRECTO</option>
+                <option value="4">CORREGIDO</option>
                 <option value="3">NA</option>
             </select>
             <input type="text" class="form-control form-control-sm col-1 mr-3" name="NC10.1.13" placeholder="C">
-            <input type="text" class="form-control form-control-sm col-4" name="C10.1.13" placeholder="Comentario">
+            <input type="text" class="form-control form-control-sm col-3" name="C10.1.13" placeholder="Comentario">
+            <button class="btn btn-sm btn-outline-default btn-rounded ml-4" onclick="evidence_img(10);"><i
+                class="ni ni-camera-compact"></i>
+            </button>
         </div>
 
         <div class=" col-12 form-group" style="margin-bottom: 10px">
@@ -193,13 +245,17 @@
                 <h4 class="">10.1.14 Fusibles</h4>
             </div>
             <select class="form-control col-2 form-control-sm  mr-3" name="10.1.14">
-                <option selected='selected'>Selecciona</option>
-                <option value="1">OK</option>
-                <option value="2">NOK</option>
+                <option value="0" selected='selected'>Selecciona</option>
+                <option value="1">CORRECTO</option>
+                <option value="2">INCORRECTO</option>
+                <option value="4">CORREGIDO</option>
                 <option value="3">NA</option>
             </select>
             <input type="text" class="form-control form-control-sm col-1 mr-3" name="NC10.1.14" placeholder="C">
-            <input type="text" class="form-control form-control-sm col-4" name="C10.1.14" placeholder="Comentario">
+            <input type="text" class="form-control form-control-sm col-3" name="C10.1.14" placeholder="Comentario">
+            <button class="btn btn-sm btn-outline-default btn-rounded ml-4" onclick="evidence_img(10);"><i
+                class="ni ni-camera-compact"></i>
+            </button>
         </div>
 
         <div class=" col-12 form-group" style="margin-bottom: 10px">
@@ -207,12 +263,16 @@
                 <h4 class="">10.3.15 Condición de clemas </h4>
             </div>
             <select class="form-control col-2 form-control-sm  mr-3" name="10.3.15">
-                <option selected='selected'>Selecciona</option>
-                <option value="1">OK</option>
-                <option value="2">NOK</option>
+                <option value="0" selected='selected'>Selecciona</option>
+                <option value="1">CORRECTO</option>
+                <option value="2">INCORRECTO</option>
+                <option value="4">CORREGIDO</option>
                 <option value="3">NA</option>
             </select>
-            <input type="text" class="form-control form-control-sm col-5" name="C10.3.15" placeholder="Comentario">
+            <input type="text" class="form-control form-control-sm col-4" name="C10.3.15" placeholder="Comentario">
+            <button class="btn btn-sm btn-outline-default btn-rounded ml-4" onclick="evidence_img(10);"><i
+                class="ni ni-camera-compact"></i>
+            </button>
         </div>
 
         <div class=" col-12 form-group" style="margin-bottom: 10px">
@@ -220,25 +280,16 @@
                 <h4 class="">10.3.16 Conectores PLUG</h4>
             </div>
             <select class="form-control col-2 form-control-sm  mr-3" name="10.3.16">
-                <option selected='selected'>Selecciona</option>
-                <option value="1">OK</option>
-                <option value="2">NOK</option>
+                <option value="0" selected='selected'>Selecciona</option>
+                <option value="1">CORRECTO</option>
+                <option value="2">INCORRECTO</option>
+                <option value="4">CORREGIDO</option>
                 <option value="3">NA</option>
             </select>
-            <input type="text" class="form-control form-control-sm col-5" name="C10.3.16" placeholder="Comentario">
-        </div>
-        <div class=" col-12" style="margin-bottom: 10px">
-            <div class="text-center" style="margin-right: 18px;">
-                <h4>Archivo para subida</h4>
-            </div>
-            <center><input type="file" class="form-control" id="file" name="files[]" multiple /></center>
-        </div>
-
-        <div class="mt-3 text-center">
-            <h4 for="">Comentarios</h4>
-            <center>
-                <textarea name="body" class="form-control" id="" cols="80" rows="5"></textarea>
-            </center>
+            <input type="text" class="form-control form-control-sm col-4" name="C10.3.16" placeholder="Comentario">
+            <button class="btn btn-sm btn-outline-default btn-rounded ml-4" onclick="evidence_img(10);"><i
+                class="ni ni-camera-compact"></i>
+            </button>
         </div>
 
         <input type="button" name="previous" class="previous btn mt-3 btn-primary txt_secction" value="Anterior" />

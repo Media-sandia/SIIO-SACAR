@@ -1,5 +1,5 @@
-<form action="{{ route('saveSection2') }}" id="form_section2" class="form_section" method="post"
-    enctype="multipart/form-data">
+<form action="{{ route('saveSection2') }}" id="form_section2" class="form_section needs-validation" method="post"
+    enctype="multipart/form-data" novalidate>
 
     <input type="hidden" id="id_equipo1" name='id_equipo' value="">
     <input type="hidden" id="Folio_service1" name='Folio_service' value="">
@@ -34,50 +34,56 @@
             </div>
 
             <div class="col-2">
-                <select class="form-control col-12 form-control-sm mb-1" name="2.1">
-                    <option selected='selected'>Selecciona</option>
-                    <option value="1">OK</option>
-                    <option value="2">NOK</option>
+                <select class="form-control col-12 form-control-sm mb-1 validator1" title="2.1 Condiciones de los botones" id="2_1" name="2.1">
+                    <option value="0" selected='selected'>Selecciona</option>
+                    <option value="1">CORRECTO</option>
+                    <option value="2">INCORRECTO</option>
+                    <option value="4">CORREGIDO</option>
                     <option value="3">NA</option>
                 </select>
 
-                <select class="form-control col-12 form-control-sm mb-1" name="2.2">
-                    <option selected='selected'>Selecciona</option>
-                    <option value="1">OK</option>
-                    <option value="2">NOK</option>
+                <select class="form-control col-12 form-control-sm mb-1 validator1" title="2.2 Funcionamiento de los botones" id="2_2" name="2.2">
+                    <option value="0" selected='selected'>Selecciona</option>
+                    <option value="1">CORRECTO</option>
+                    <option value="2">INCORRECTO</option>
+                    <option value="4">CORREGIDO</option>
                     <option value="3">NA</option>
                 </select>
 
-                <select class="form-control col-12 form-control-sm mb-1" name="2.3">
-                    <option selected='selected'>Selecciona</option>
-                    <option value="1">OK</option>
-                    <option value="2">NOK</option>
+                <select class="form-control col-12 form-control-sm mb-1 validator1" title="2.3 Selector de polipasto" id="2_3" name="2.3">
+                    <option value="0" selected='selected'>Selecciona</option>
+                    <option value="1">CORRECTO</option>
+                    <option value="2">INCORRECTO</option>
+                    <option value="4">CORREGIDO</option>
                     <option value="3">NA</option>
                 </select>
 
-                <select class="form-control col-12 form-control-sm mb-1" name="2.4">
-                    <option selected='selected'>Selecciona</option>
-                    <option value="1">OK</option>
-                    <option value="2">NOK</option>
+                <select class="form-control col-12 form-control-sm mb-1 validator1" title="2.4 Direccion de movimiento" id="2_4" name="2.4">
+                    <option value="0" selected='selected'>Selecciona</option>
+                    <option value="1">CORRECTO</option>
+                    <option value="2">INCORRECTO</option>
+                    <option value="4">CORREGIDO</option>
                     <option value="3">NA</option>
                 </select>
 
-                <select class="form-control col-12 form-control-sm mb-1" name="2.5">
-                    <option selected='selected'>Selecciona</option>
-                    <option value="1">OK</option>
-                    <option value="2">NOK</option>
+                <select class="form-control col-12 form-control-sm mb-1 validator1" title="2.5 Condiciones de los botones" id="2_5" name="2.5">
+                    <option value="0" selected='selected'>Selecciona</option>
+                    <option value="1">CORRECTO</option>
+                    <option value="2">INCORRECTO</option>
+                    <option value="4">CORREGIDO</option>
                     <option value="3">NA</option>
                 </select>
 
-                <select class="form-control col-12 form-control-sm mb-1" name="2.6">
-                    <option selected='selected'>Selecciona</option>
-                    <option value="1">OK</option>
-                    <option value="2">NOK</option>
+                <select class="form-control col-12 form-control-sm mb-1 validator1" title="2.6 Cable de control" id="2_6" name="2.6">
+                    <option value="0" selected='selected'>Selecciona</option>
+                    <option value="1">CORRECTO</option>
+                    <option value="2">INCORRECTO</option>
+                    <option value="4">CORREGIDO</option>
                     <option value="3">NA</option>
                 </select>
             </div>
 
-            <div class="col-6">
+            <div class="col-4">
                 <input type="text" style="width: 100%" class="form-control form-control-sm mb-1" name="C2.1"
                     placeholder="Comentario">
                 <input type="text" style="width: 100%" class="form-control form-control-sm mb-1" name="C2.2"
@@ -92,16 +98,30 @@
                     placeholder="Comentario">
             </div>
 
-            <div class=" col-12" style="margin-bottom: 10px">
-                <div class="text-center" style="margin-right: 18px;">
-                    <h4>Archivo para subida</h4>
-                </div>
-                <center><input type="file" class="form-control" id="file" name="files[]" multiple /></center>
-            </div>
+            <div class="col-1">
+                <button class="btn btn-sm btn-outline-default btn-rounded" style="margin-top: 5px" onclick="evidence_img(2);"><i
+                    class="ni ni-camera-compact"></i>
+                </button>
 
-            <div class="mt-3 text-center col-12">
-                <h4 for="">Comentario</h4>
-                <textarea name="body" class="form-control" id="" cols="60" rows="5"></textarea>
+                <button class="btn btn-sm btn-outline-default btn-rounded" style="margin-top: 12px" onclick="evidence_img(2);"><i
+                    class="ni ni-camera-compact"></i>
+                </button>
+
+                <button class="btn btn-sm btn-outline-default btn-rounded " style="margin-top: 12px" onclick="evidence_img(2);"><i
+                    class="ni ni-camera-compact"></i>
+                </button>
+
+                <button class="btn btn-sm btn-outline-default btn-rounded" style="margin-top: 12px" onclick="evidence_img(2);"><i
+                    class="ni ni-camera-compact"></i>
+                </button>
+
+                <button class="btn btn-sm btn-outline-default btn-rounded" style="margin-top: 12px" onclick="evidence_img(2);"><i
+                    class="ni ni-camera-compact"></i>
+                </button>
+
+                <button class="btn btn-sm btn-outline-default btn-rounded" style="margin-top: 12px" onclick="evidence_img(2);"><i
+                    class="ni ni-camera-compact"></i>
+                </button>
             </div>
         </div>
         <button type="submit" class="btn btn-sacar txt_secction">Guardar</button>

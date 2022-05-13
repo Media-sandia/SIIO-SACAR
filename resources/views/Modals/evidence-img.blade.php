@@ -1,5 +1,4 @@
-<div class="modal fade" id="img-evidence-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-    aria-hidden="true">
+<div class="modal fade" id="img-evidence-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog ">
         <div class="modal-content">
             <div class="modal-header">
@@ -8,7 +7,38 @@
             <div class="modal-body">
                 <div class="container">
                     <div class="row">
-                        <form action="">
+                        <form action="{{route('Evidence')}}" method="post" enctype="multipart/form-data" id="FormEvidence">
+                        <input type="hidden" id="evidense_service" name='evidense_service' value="">
+                            <div class=" col-12" style="margin-bottom: 10px" >
+                            <center>
+                            <div class="text-center" style="margin-right: 18px;">
+                                    <h4>Seccion</h4>
+                                </div>
+                                <select class="form-control form-control-sm" id="seccion">
+                                </select>
+                            </center>    
+                            </div>
+
+                            <div class=" col-12" style="margin-bottom: 10px" >
+                            <center>
+                            <div class="text-center" style="margin-right: 18px;">
+                                    <h4>Subseccion</h4>
+                            </div>
+                            <select class="form-control form-control-sm" id="subsecion">
+                            </select>
+                            </center>    
+                            </div>
+
+                            <div class=" col-12" style="margin-bottom: 10px" >
+                            <center>
+                            <div class="text-center" style="margin-right: 18px;">
+                                    <h4>Item</h4>
+                                </div>
+                                <select class="form-control form-control-sm" id="items" name="items">
+                                </select>
+                            </center>    
+                            </div>
+
                             <div class=" col-12" style="margin-bottom: 10px">
                                 <div class="text-center" style="margin-right: 18px;">
                                     <h4>Archivo para subida</h4>
@@ -23,7 +53,7 @@
                                     <textarea name="body" class="form-control" id="" cols="60" rows="5"></textarea>
                                 </center>
                             </div>
-                            <center><button type="submit" class="next btn btn-sacar mt-4">Guardar</button></center>
+                            <center><button type="submit" class="btn btn-sacar mt-4">Guardar</button></center>
                         </form>
                     </div>
                 </div>

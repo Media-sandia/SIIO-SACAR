@@ -6,9 +6,38 @@ $(document).ready(function () {
     });
     //form_hiden();
     show_clientes();
-    //$("#secction-001").fadeToggle();
+    Empresas_Report();
+    Equipos_Report();
+    //show_equipos();
+    //$("#secction-002").fadeToggle();
 
-    $("#form_section1").submit(function (e) {
+    $('#seccion').change(function() {
+        var id = $('#seccion').val();
+        $("#subsecion").empty();
+        $("#subsecion").append(
+            "<option selected='selected'>- Selecciona -</option>"
+        );
+        $.each(subsection(id), function (k, v) {
+            $("#subsecion").append(
+                "<option value='" + v.id + "'>" + v.name + "</option>"
+            );
+        });
+    });
+
+    $('#subsecion').change(function(){
+        var id = $("#subsecion").val();
+        $("#items").empty();
+        $("#items").append(
+            "<option selected='selected'>- Selecciona -</option>"
+        );
+        $.each(items(id), function (k, v) {
+            $("#items").append(
+                "<option value='" + v.id + "'>" + v.name + "</option>"
+            );
+        });
+    });
+
+    $('#FormEvidence').submit(function(e){
         e.preventDefault();
         $.ajax({
             type: $(this).attr("method"),
@@ -22,79 +51,122 @@ $(document).ready(function () {
             contentType: false,
             processData: false,
             success: function (response) {
-                console.log(response);
-                if (response.status == 1) {
-                    Swal.fire("Exito!", "Registro Guardado", "success");
-                    $("#secction-001").fadeToggle();
-                    $("#secction-002").fadeToggle(800);
-                } else {
-                    console.log("Error");
+                if(response.status == 1){
+                Swal.fire("Exito!", "Registro Guardado", "success");
+                Form_Evidence_reset();
+                $("#img-evidence-modal").modal("hide");
                 }
-            },
+                else{
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Error',
+                        text: 'Verifique integridad de datos',
+                      })
+                    console.log(response.status);
+                }
+            }
         });
     });
 
-    $("#form_section2").submit(function (e) {
+    $("#form_section1").submit(function (e) {
         e.preventDefault();
+        var Folio_service = $("#Folio_servicio").val();
+        var date_service = $("#Fecha_Servicio").val();
+        const validator = Validator();
+        if(validator == true){
+            $.ajax({
+                type: $(this).attr("method"),
+                url: $(this).attr("action"),
+                headers: {
+                    "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content"),
+                },
+                data: new FormData(this),
+                dataType: "json",
+                cache: false,
+                contentType: false,
+                processData: false,
+                success: function (response) {
+                    console.log(response);
+                    if (response.status == 1) {
+                        Swal.fire("Exito!", "Registro Guardado", "success");
+                        $("#secction-001").fadeToggle();
+                        $("#secction-002").fadeToggle(800);
+                    } else {
+                        console.log("Error");
+                    }
+                },
+            });
+        }
+
+    });
+
+    $("#form_section2").submit(function(event) {
+        event.preventDefault();
         var Folio_service = $("#Folio_servicio").val();
         var date_service = $("#Fecha_Servicio").val();
         var equipo = $("#id_equipo_registro").val();
         $("#Folio_service1").val(Folio_service);
         $("#date_service1").val(date_service);
         $("#id_equipo1").val(equipo);
-        $.ajax({
-            type: $(this).attr("method"),
-            url: $(this).attr("action"),
-            headers: {
-                "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content"),
-            },
-            data: new FormData(this),
-            dataType: "json",
-            cache: false,
-            contentType: false,
-            processData: false,
-            success: function (response) {
-                if (response.status == 1) {
-                    Swal.fire("Exito!", "Registro Guardado", "success");
-                    $("#secction-002").fadeToggle();
-                    $("#secction-003").fadeToggle(800);
-                } else {
-                    console.log("Error");
-                }
-            },
-        });
+        const validator = Validator1();
+        if(validator == true){
+            $.ajax({
+                type: $(this).attr("method"),
+                url: $(this).attr("action"),
+                headers: {
+                    "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content"),
+                },
+                data: new FormData(this),
+                dataType: "json",
+                cache: false,
+                contentType: false,
+                processData: false,
+                success: function (response) {
+                    if (response.status == 1) {
+                        Swal.fire("Exito!", "Registro Guardado", "success");
+                        $("#secction-002").fadeToggle();
+                        $("#secction-003").fadeToggle(800);
+                    } else {
+                        console.log("Error");
+                    }
+                },
+            });
+        }
     });
 
-    $("#form_section3").submit(function (e) {
-        e.preventDefault();
+    $("#form_section3").submit(function (event) {
+        event.preventDefault();
         var Folio_service = $("#Folio_servicio").val();
         var date_service = $("#Fecha_Servicio").val();
         var equipo = $("#id_equipo_registro").val();
         $("#Folio_service2").val(Folio_service);
         $("#date_service2").val(date_service);
         $("#id_equipo2").val(equipo);
-        $.ajax({
-            type: $(this).attr("method"),
-            url: $(this).attr("action"),
-            headers: {
-                "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content"),
-            },
-            data: new FormData(this),
-            dataType: "json",
-            cache: false,
-            contentType: false,
-            processData: false,
-            success: function (response) {
-                console.log(response);
-                if (response.status == 1) {
-                    Swal.fire("Exito!", "Registro Guardado", "success");
-                    $("#secction-003").fadeToggle();
-                    $("#secction-004").fadeToggle(800);
-                } else {
-                    console.log("Error");
-                }
-            },
-        });
+        const validator = Validator2();
+        if(validator == true){
+            $.ajax({
+                type: $(this).attr("method"),
+                url: $(this).attr("action"),
+                headers: {
+                    "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content"),
+                },
+                data: new FormData(this),
+                dataType: "json",
+                cache: false,
+                contentType: false,
+                processData: false,
+                success: function (response) {
+                    console.log(response);
+                    if (response.status == 1) {
+                        Swal.fire("Exito!", "Registro Guardado", "success");
+                        $("#secction-003").fadeToggle();
+                        $("#secction-004").fadeToggle(800);
+                    } else {
+                        console.log("Error");
+                    }
+                },
+            });
+        }
     });
 
     $("#form_section4").submit(function (e) {
@@ -130,64 +202,66 @@ $(document).ready(function () {
 
     $("#form_section5").submit(function (e) {
         e.preventDefault();
-        var Folio_service = $("#Folio_servicio").val();
-        var date_service = $("#Fecha_Servicio").val();
-        var equipo = $("#id_equipo_registro").val();
-        $("#Folio_service4").val(Folio_service);
-        $("#date_service4").val(date_service);
-        $("#id_equipo4").val(equipo);
-        $.ajax({
-            type: $(this).attr("method"),
-            url: $(this).attr("action"),
-            headers: {
-                "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content"),
-            },
-            data: new FormData(this),
-            dataType: "json",
-            cache: false,
-            contentType: false,
-            processData: false,
-            success: function (response) {
-                if (response.status == 1) {
-                    Swal.fire("Exito!", "Registro Guardado", "success");
-                    $("#secction-005").fadeToggle();
-                    $("#secction-006").fadeToggle(800);
-                } else {
-                    console.log("Error");
-                }
-            },
-        });
+        Validator5();
+        // var Folio_service = $("#Folio_servicio").val();
+        // var date_service = $("#Fecha_Servicio").val();
+        // var equipo = $("#id_equipo_registro").val();
+        // $("#Folio_service4").val(Folio_service);
+        // $("#date_service4").val(date_service);
+        // $("#id_equipo4").val(equipo);
+        // $.ajax({
+        //     type: $(this).attr("method"),
+        //     url: $(this).attr("action"),
+        //     headers: {
+        //         "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content"),
+        //     },
+        //     data: new FormData(this),
+        //     dataType: "json",
+        //     cache: false,
+        //     contentType: false,
+        //     processData: false,
+        //     success: function (response) {
+        //         if (response.status == 1) {
+        //             Swal.fire("Exito!", "Registro Guardado", "success");
+        //             $("#secction-005").fadeToggle();
+        //             $("#secction-006").fadeToggle(800);
+        //         } else {
+        //             console.log("Error");
+        //         }
+        //     },
+        // });
     });
 
     $("#form_section6").submit(function (e) {
         e.preventDefault();
-        var Folio_service = $("#Folio_servicio").val();
-        var date_service = $("#Fecha_Servicio").val();
-        var equipo = $("#id_equipo_registro").val();
-        $("#Folio_service5").val(Folio_service);
-        $("#date_service5").val(date_service);
-        $("#id_equipo5").val(equipo);
-        $.ajax({
-            type: $(this).attr("method"),
-            url: $(this).attr("action"),
-            headers: {
-                "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content"),
-            },
-            data: new FormData(this),
-            dataType: "json",
-            cache: false,
-            contentType: false,
-            processData: false,
-            success: function (response) {
-                if (response.status == 1) {
-                    Swal.fire("Exito!", "Registro Guardado", "success");
-                    $("#secction-006").fadeToggle();
-                    $("#secction-007").fadeToggle(800);
-                } else {
-                    console.log("Error");
-                }
-            },
-        });
+        Validator6();
+        // var Folio_service = $("#Folio_servicio").val();
+        // var date_service = $("#Fecha_Servicio").val();
+        // var equipo = $("#id_equipo_registro").val();
+        // $("#Folio_service5").val(Folio_service);
+        // $("#date_service5").val(date_service);
+        // $("#id_equipo5").val(equipo);
+        // $.ajax({
+        //     type: $(this).attr("method"),
+        //     url: $(this).attr("action"),
+        //     headers: {
+        //         "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content"),
+        //     },
+        //     data: new FormData(this),
+        //     dataType: "json",
+        //     cache: false,
+        //     contentType: false,
+        //     processData: false,
+        //     success: function (response) {
+        //         if (response.status == 1) {
+        //             Swal.fire("Exito!", "Registro Guardado", "success");
+        //             $("#secction-006").fadeToggle();
+        //             $("#secction-007").fadeToggle(800);
+        //         } else {
+        //             console.log("Error");
+        //         }
+        //     },
+        // });
     });
 
     $("#form_section7").submit(function (e) {
@@ -338,7 +412,6 @@ $(document).ready(function () {
                     Swal.fire("Exito!", "Registro Guardado", "success");
                     $("#secction-011").fadeToggle();
                     generate_report(response.url);
-                    //$(location).attr("href", "/");
                 } else {
                     console.log("Error");
                 }
@@ -444,16 +517,13 @@ $(document).ready(function () {
                 if (result.dismiss === Swal.DismissReason.timer) {
                     $("#error_Folio_hide").remove();
                     $("#error_Fecha_hide").remove();
-                    $("#Folio_service").val(Folio_service);
+                    $("#Folio_service15").val(Folio_service);
                     $("#date_service").val(date_service);
                     $("#secction-001").fadeToggle(800);
                 }
             });
         }
     });
-
-    Empresas_Report();
-    Equipos_Report();
 
     $("#close_report_customers").click(function (e) {
         e.preventDefault();
@@ -495,7 +565,18 @@ $(document).ready(function () {
     });
 
     load_data();
+
+
+
+    //seccion();
 }); // fin del document ready
+
+function Form_Evidence_reset(){
+    $("#FormEvidence")[0].reset();
+    $("#seccion").val("").trigger("change");
+    $("#subsecion").val("").trigger("change");
+    $("#items").val("").trigger("change")
+}
 
 function check(checkbox) {
     var subseccion = checkbox
@@ -518,21 +599,21 @@ function validate_Erros() {
     );
 }
 
-// function form_hiden() {
-//     $("#secction-001").css("display", "none");
-//     $("#secction-002").css("display", "none");
-//     $("#secction-003").css("display", "none");
-//     $("#secction-004").css("display", "none");
-//     $("#secction-005").css("display", "none");
-//     $("#secction-006").css("display", "none");
-//     $("#secction-007").css("display", "none");
-//     $("#secction-008").css("display", "none");
-//     $("#secction-009").css("display", "none");
-//     $("#secction-010").css("display", "none");
-//     $("#secction-011").css("display", "none");
-//     $("#secction-anexos").css("display", "none");
-//     //$("#secction-004").css("display", "none");
-// }
+function form_hiden() {
+    $("#secction-001").css("display", "none");
+    $("#secction-002").css("display", "none");
+    $("#secction-003").css("display", "none");
+    $("#secction-004").css("display", "none");
+    $("#secction-005").css("display", "none");
+    $("#secction-006").css("display", "none");
+    $("#secction-007").css("display", "none");
+    $("#secction-008").css("display", "none");
+    $("#secction-009").css("display", "none");
+    $("#secction-010").css("display", "none");
+    $("#secction-011").css("display", "none");
+    $("#secction-anexos").css("display", "none");
+    //$("#secction-004").css("display", "none");
+}
 
 function Uppercase(exp) {
     exp.value = exp.value.toUpperCase();
@@ -671,7 +752,7 @@ function Equipos_Report() {
         );
         $.each(Equipos(val), function (k, v) {
             $("#select-equipo-report").append(
-                "<option value='" + v.id + "'>" + v.N_serie + "</option>"
+                "<option value='" + v.id + "'>" + v.NSGrua + "</option>"
             );
         });
     });
@@ -801,7 +882,7 @@ function send_customers() {
     var name = title.filter('.title-3').map(function(){
         return $(this).attr('id');
     }).get();**/
-    /**event.preventDefault(); 
+    /**event.preventDefault();
         $.ajax({
             url:'NuevoRegistro/pruebas',
             type:'POST',

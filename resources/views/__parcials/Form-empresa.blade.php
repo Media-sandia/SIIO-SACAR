@@ -42,29 +42,34 @@
     <input type="hidden" name="id_cliente" id="id_cliente" value="">
     <div class="form-row">
       <div class="col-md-3">
-        <label for="Marca" class="form-label"><strong></strong>Marca</label>
-        <input type="text" class="form-control form-control-sm" id="Marca" name="Marca"  required>
+        <label for="Marca" class="form-label"><strong></strong>Marca De La Grua</label>
+        <input type="text" class="form-control form-control-sm" id="Marca" name="MarcaGrua"  required>
       </div>
 
       <div class="col-md-3">
-        <label for="Modelo" class="form-label"><strong></strong>Modelo</label>
-        <input type="text" class="form-control form-control-sm" id="Modelo" name="Modelo"  required>
+        <label for="Modelo" class="form-label"><strong></strong>Numero De Serie De Grua</label>
+        <input type="text" class="form-control form-control-sm"  name="NSGrua"  required>
       </div>
 
       <div class="col-md-3">
-        <label for="N_serie" class="form-label"><strong></strong>Numero De Serie</label>
-        <input type="text" class="form-control form-control-sm" id="N_serie" name="N_serie"  required>
+        <label for="N_serie" class="form-label"><strong></strong>Marca De Polipasto</label>
+        <input type="text" class="form-control form-control-sm" id="MarcaPolipasto" name="MarcaPolipasto"  required>
       </div>
 
       <div class="col-md-3">
-        <label for="Area" class="form-label"><strong></strong>Area</label>
-        <input type="text" class="form-control form-control-sm" id="Area" name="Area"  required>
+        <label for="Area" class="form-label"><strong></strong>Modelo De Polipasto</label>
+        <input type="text" class="form-control form-control-sm" id="ModeloPoli" name="ModeloPoli"  required>
       </div>
     </div>
 
     <div class="form-row mt-3">
       <div class="col-md-3">
-        <label for="Recorrido" class="form-label"><strong></strong>Recorrido</label>
+        <label for="Recorrido" class="form-label"><strong></strong>Numero De Serie De Polipasto</label>
+        <input type="text" class="form-control form-control-sm" id="NSPoli" name="NSPoli"  required>
+      </div>
+
+      <div class="col-md-3">
+        <label for="Claro" class="form-label"><strong></strong>Recorrido</label>
         <input type="text" class="form-control form-control-sm" id="Recorrido" name="Recorrido"  required>
       </div>
 
@@ -77,22 +82,38 @@
         <label for="Altura" class="form-label"><strong></strong>Altura</label>
         <input type="text" class="form-control form-control-sm" id="Altura" name="Altura"  required>
       </div>
+    </div> 
 
+    <div class="form-row mt-3">
       <div class="col-md-3">
         <label for="Capacidad" class="form-label"><strong></strong>Capacidad</label>
         <input type="text" class="form-control form-control-sm" id="Capacidad" name="Capacidad"  required>
       </div>
-    </div> 
 
-    <div class="form-row mt-3">
       <div class="col-md-3">
         <label for="Voltaje" class="form-label"><strong></strong>Voltaje</label>
         <input type="text" class="form-control form-control-sm" id="Voltaje" name="Voltaje"  required>
       </div>
 
       <div class="col-md-3">
-        <label for="Responsable" class="form-label"><strong></strong>Responsable</label>
-        <input type="text" class="form-control form-control-sm" id="Responsable" name="Responsable"  required>
+        <label for="Responsable" class="form-label"><strong></strong>Tipo De Alimentacion</label>
+        <input type="text" class="form-control form-control-sm" id="TipoAlim" name="TipoAlim"  required>
+      </div>
+
+      <div class="col-md-3">
+        <label for="id_sucursal" class="form-label"><strong></strong>Ubicacion De Alimentacion</label>
+        <select class="form-control form-control-sm" name="UbicacionAli" id="UbicacionAli">
+          <option selected='selected'>- Selecciona -</option>
+          <option value="INT">INT</option>
+          <option value="FIN">FIN</option>
+        </select>
+      </div>
+    </div> 
+    
+    <div class="form-row mt-3">
+      <div class="col-md-3">
+        <label for="Responsable" class="form-label"><strong></strong>Area</label>
+        <input type="text" class="form-control form-control-sm" id="Area" name="Area"  required>
       </div>
     </div>
   </form>
