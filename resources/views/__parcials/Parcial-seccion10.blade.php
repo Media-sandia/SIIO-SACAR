@@ -1,4 +1,4 @@
-<form action="{{ route('saveSection10') }}" class="form_section form-inline" id="form_section10" method="post"
+<form action="{{ route('saveSection10') }}" class="form_section form-inline needs-validation" id="form_section10" method="post"
     enctype="multipart/form-data">
     <fieldset class="container">
         <input type="hidden" id="id_equipo9" name='id_equipo' value="">
@@ -9,7 +9,7 @@
             <div class="text-left" style="margin-right: 30px;">
                 <h4 class="">10.1.1 Condición del tablero </h4>
             </div>
-            <select class="form-control col-2 form-control-sm  mr-3" name="10.1.1">
+            <select class="form-control col-2 form-control-sm  mr-3 validator9" id="10_1_1" title="10.1.1 Condición del tablero" name="10.1.1">
                     <option value="0" selected='selected'>Selecciona</option>
                     <option value="1">CORRECTO</option>
                     <option value="2">INCORRECTO</option>
@@ -26,7 +26,7 @@
             <div class="text-left" style="margin-right: 50px;">
                 <h4 class="">10.1.2 Etiquetas externas </h4>
             </div>
-            <select class="form-control col-2 form-control-sm  mr-3" name="10.1.2">
+            <select class="form-control col-2 form-control-sm mr-3 validator9" id="10_1_2" title="10.1.2 Etiquetas externas" name="10.1.2">
                 <option value="0" selected='selected'>Selecciona</option>
                 <option value="1">CORRECTO</option>
                 <option value="2">INCORRECTO</option>
@@ -43,7 +43,7 @@
             <div class="text-left" style="margin-right: 46px;">
                 <h4 class="">10.1.3 Fijación del tablero </h4>
             </div>
-            <select class="form-control col-2 form-control-sm  mr-3" name="10.1.3">
+            <select class="form-control col-2 form-control-sm mr-3 validator9" id="10_1_3" title="10.1.3 Fijación del tablero "  name="10.1.3">
                 <option value="0" selected='selected'>Selecciona</option>
                 <option value="1">CORRECTO</option>
                 <option value="2">INCORRECTO</option>
@@ -60,7 +60,7 @@
             <div class="text-left" style="margin-right: 30px;">
                 <h4 class="">10.1.4 Condición de puertas </h4>
             </div>
-            <select class="form-control col-2 form-control-sm  mr-3" name="10.1.4">
+            <select class="form-control col-2 form-control-sm mr-3 validator9" id="10_1_4" title="10.1.4 Condición de puertas" name="10.1.4">
                     <option value="0" selected='selected'>Selecciona</option>
                     <option value="1">CORRECTO</option>
                     <option value="2">INCORRECTO</option>
@@ -77,7 +77,7 @@
             <div class="text-left" style="margin-right: 17px;">
                 <h4 class="">10.1.5 Condición de empaque </h4>
             </div>
-            <select class="form-control col-2 form-control-sm  mr-3" name="10.1.5">
+            <select class="form-control col-2 form-control-sm mr-3 validator9" id="10_1_5" title="10.1.5 Condición de empaque" name="10.1.5">
                     <option value="0" selected='selected'>Selecciona</option>
                     <option value="1">CORRECTO</option>
                     <option value="2">INCORRECTO</option>
@@ -100,7 +100,7 @@
             <div class="text-left" style="margin-right: 57px;">
                 <h4 class="">10.1.6 Dispositivos de bloqueo</h4>
             </div>
-            <select class="form-control col-2 form-control-sm  mr-3" name="10.1.6">
+            <select class="form-control col-2 form-control-sm mr-3 validator9" id="10_1_6" title="10.1.6 Dispositivos de bloqueo" name="10.1.6">
                     <option value="0" selected='selected'>Selecciona</option>
                     <option value="1">CORRECTO</option>
                     <option value="2">INCORRECTO</option>
@@ -117,7 +117,7 @@
             <div class="text-left" style="margin-right: 80px;">
                 <h4 class="">10.1.7 Conectores glándula</h4>
             </div>
-            <select class="form-control col-2 form-control-sm  mr-3" name="10.1.7">
+            <select class="form-control col-2 form-control-sm mr-3 validator9" id="10_1_7" title="10.1.7 Conectores glándula"  name="10.1.7">
                 <option value="0" selected='selected'>Selecciona</option>
                 <option value="1">CORRECTO</option>
                 <option value="2">INCORRECTO</option>
@@ -134,7 +134,7 @@
             <div class="text-left" style="margin-right: 153px;">
                 <h4 class="">10.1.8 Rieles DIN</h4>
             </div>
-            <select class="form-control col-2 form-control-sm  mr-3" name="10.1.8">
+            <select class="form-control col-2 form-control-sm mr-3 validator9" id="10_1_8" title="10.1.8 Rieles DIN" name="10.1.8">
                 <option value="0" selected='selected'>Selecciona</option>
                 <option value="1">CORRECTO</option>
                 <option value="2">INCORRECTO</option>
@@ -151,7 +151,7 @@
             <div class="text-left" style="margin-right: 99px;">
                 <h4 class="">10.1.9 Ductos/Canaletas</h4>
             </div>
-            <select class="form-control col-2 form-control-sm  mr-3" name="10.1.9">
+            <select class="form-control col-2 form-control-sm mr-3 validator9" id="10_1_9" title="10.1.9 Ductos/Canaletas" name="10.1.9">
                 <option value="0" selected='selected'>Selecciona</option>
                 <option value="1">CORRECTO</option>
                 <option value="2">INCORRECTO</option>
@@ -169,7 +169,7 @@
             <div class="text-left" style="margin-right: 93px;">
                 <h4 class="">10.1.10 Cableado interno</h4>
             </div>
-            <select class="form-control col-2 form-control-sm  mr-3" name="10.1.10">
+            <select class="form-control col-2 form-control-sm mr-3 validator9" id="10_1_10" title="10.1.10 Cableado interno" name="10.1.10">
                     <option value="0" selected='selected'>Selecciona</option>
                     <option value="1">CORRECTO</option>
                     <option value="2">INCORRECTO</option>
@@ -187,7 +187,7 @@
             <div class="text-left" style="margin-right: 10px;">
                 <h4 class="">10.1.11 Condición de los contactores</h4>
             </div>
-            <select class="form-control col-2 form-control-sm  mr-3" name="10.1.11">
+            <select class="form-control col-2 form-control-sm mr-3 validator9" id="10_1_11" title="10.1.11 Condición de los contactores" name="10.1.11">
                 <option value="0" selected='selected'>Selecciona</option>
                 <option value="1">CORRECTO</option>
                 <option value="2">INCORRECTO</option>
@@ -208,7 +208,7 @@
             <div class="text-left" style="margin-right: 25px;">
                 <h4 class="">10.1.12 Protecciones térmicas</h4>
             </div>
-            <select class="form-control col-2 form-control-sm  mr-3" name="10.1.12">
+            <select class="form-control col-2 form-control-sm mr-3 validator9" id="10_1_12" title="10.1.12 Protecciones térmicas"  name="10.1.12">
                 <option value="0" selected='selected'>Selecciona</option>
                 <option value="1">CORRECTO</option>
                 <option value="2">INCORRECTO</option>
@@ -226,7 +226,7 @@
             <div class="text-left" style="margin-right: 70px;">
                 <h4 class="">10.1.13 Guardamotores </h4>
             </div>
-            <select class="form-control col-2 form-control-sm  mr-3" name="10.1.13">
+            <select class="form-control col-2 form-control-sm mr-3 validator9" id="10_1_13" title="10.1.13 Guardamotores" name="10.1.13">
                 <option value="0" selected='selected'>Selecciona</option>
                 <option value="1">CORRECTO</option>
                 <option value="2">INCORRECTO</option>
@@ -244,7 +244,7 @@
             <div class="text-left" style="margin-right: 127px;">
                 <h4 class="">10.1.14 Fusibles</h4>
             </div>
-            <select class="form-control col-2 form-control-sm  mr-3" name="10.1.14">
+            <select class="form-control col-2 form-control-sm mr-3 validator9" id="10_1_14" title="10.1.14 Fusibles" name="10.1.14">
                 <option value="0" selected='selected'>Selecciona</option>
                 <option value="1">CORRECTO</option>
                 <option value="2">INCORRECTO</option>
@@ -262,7 +262,7 @@
             <div class="text-left" style="margin-right: 37px;">
                 <h4 class="">10.3.15 Condición de clemas </h4>
             </div>
-            <select class="form-control col-2 form-control-sm  mr-3" name="10.3.15">
+            <select class="form-control col-2 form-control-sm mr-3 validator9" id="10_1_15" title="10.3.15 Condición de clemas"  name="10.3.15">
                 <option value="0" selected='selected'>Selecciona</option>
                 <option value="1">CORRECTO</option>
                 <option value="2">INCORRECTO</option>
@@ -279,7 +279,7 @@
             <div class="text-left" style="margin-right: 60px;">
                 <h4 class="">10.3.16 Conectores PLUG</h4>
             </div>
-            <select class="form-control col-2 form-control-sm  mr-3" name="10.3.16">
+            <select class="form-control col-2 form-control-sm mr-3 validator9" id="10_1_16" title="10.3.16 Conectores PLUG" name="10.3.16">
                 <option value="0" selected='selected'>Selecciona</option>
                 <option value="1">CORRECTO</option>
                 <option value="2">INCORRECTO</option>
@@ -293,6 +293,6 @@
         </div>
 
         <input type="button" name="previous" class="previous btn mt-3 btn-primary txt_secction" value="Anterior" />
-        <button type="submit" name="password" class="next btn mt-3 btn-sacar">Guardar</button>
+        <button type="submit" name="password" class="btn mt-3 btn-sacar">Guardar</button>
     </fieldset>
 </form>

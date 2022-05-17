@@ -58,7 +58,7 @@
         </div>
 
         <div class=" col-12 form-group" style="margin-bottom: 10px">
-            <div class="text-left" style="margin-right: 158px;">
+            <div class="text-left" style="margin-right: 145px;">
                 <h4 class="">6.1.4 Condición general de guardas</h4>
             </div>
             <select class="form-control col-2 form-control-sm mr-3 validator5" id="6_1_4" title="6.1.4 Condición general de guardas"  name="6.1.4">

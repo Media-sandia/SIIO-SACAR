@@ -32,7 +32,7 @@
       <label for="Contacto" class="form-label"><strong></strong>Contacto</label>
       <input type="text" class="form-control form-control-sm" id="Contacto" name="Contacto"  required>
     </div>
-  </div> 
+  </div>
 </form>
 
 <form class="form-horizontal" id="new-equipo" data-uri="{{route('process_teams')}}">
@@ -45,6 +45,7 @@
         <label for="Marca" class="form-label"><strong></strong>Marca De La Grua</label>
         <input type="text" class="form-control form-control-sm" id="Marca" name="MarcaGrua"  required>
       </div>
+      <div id="error_Marca_Grua"></div>
 
       <div class="col-md-3">
         <label for="Modelo" class="form-label"><strong></strong>Numero De Serie De Grua</label>
@@ -82,7 +83,7 @@
         <label for="Altura" class="form-label"><strong></strong>Altura</label>
         <input type="text" class="form-control form-control-sm" id="Altura" name="Altura"  required>
       </div>
-    </div> 
+    </div>
 
     <div class="form-row mt-3">
       <div class="col-md-3">
@@ -108,8 +109,8 @@
           <option value="FIN">FIN</option>
         </select>
       </div>
-    </div> 
-    
+    </div>
+
     <div class="form-row mt-3">
       <div class="col-md-3">
         <label for="Responsable" class="form-label"><strong></strong>Area</label>

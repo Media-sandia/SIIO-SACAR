@@ -4,6 +4,7 @@ namespace App\Http\Controllers\servicio;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Http\Requests\TeamsRequest;
 use App\Models\ClienteGrua;
 use App\Models\coments;
 use App\Models\Fileables;
@@ -155,10 +156,6 @@ class HomeController extends Controller
     }
 
 
-
-
-
-
     public function home()
     {
         return view('Layaut.layaut');
@@ -186,7 +183,7 @@ class HomeController extends Controller
         return response()->json($clientes);
     }
 
-    public function process_teams(Request $request)
+    public function process_teams(TeamsRequest $request)
     {
         Gruas::create(request()->all());
         return response()->json(['status' => 1]);
@@ -209,36 +206,36 @@ class HomeController extends Controller
         return view('sigs.nuevo-registro');
     }
 
-    public function pruebas(Request $request)
-    {
-        $seccion = new seccion3();
-        $seccion->data = $request->all();
-        $seccion->save();
-        $data = $seccion->find(1)->data;
-        return response()->json($request);
-        // $array = array();
-        // $dataT = array($request->name[0]=>[filled($request->data->OK)]);
-        // /**for($i= 0;$i>=15;$i++){
-        //     array_unshift($newarray,$request->campos[$i]);
-        //     $newarray[] = $request->campos[$i];
-        // };**/
-        // $valor = (string)$res[0];
-        // $data = array($request->name[0]=>[filled($request->data->$request->campos[0]),filled($request->data->$request->campos[1]),filled($request->data->$request->campos[2])]);
-        // /**for($i=0; $i >=count($request->name);$i++){
-        //     $new = array($request->name[$i]=>[filled($request->campos[$a]),
-        //                                      filled($request->campos[$b]),
-        //                                      filled($request->campos[$c])]);
-        //     $a = $a+3;
-        //     $b = $b+3;
-        //     $c = $c+3;
-        // }**/
-        // $var = filled($request->all());
-        // $array = array([$request->response[0]=>filled($request->data[0]),
-        // $request->response[1]=>filled($request->data[1]),
-        // $request->response[2]=>filled($request->data[2])]);
+    // public function pruebas(Request $request)
+    // {
+    //     $seccion = new seccion3();
+    //     $seccion->data = $request->all();
+    //     $seccion->save();
+    //     $data = $seccion->find(1)->data;
+    //     return response()->json($request);
+    //     $array = array();
+    //     $dataT = array($request->name[0]=>[filled($request->data->OK)]);
+    //     /**for($i= 0;$i>=15;$i++){
+    //         array_unshift($newarray,$request->campos[$i]);
+    //         $newarray[] = $request->campos[$i];
+    //     };**/
+    //     $valor = $res[0];
+    //     $data = array($request->name[0]=>[filled($request->data->$request->campos[0]),filled($request->data->$request->campos[1]),filled($request->data->$request->campos[2])]);
+    //     /**for($i=0; $i >=count($request->name);$i++){
+    //         $new = array($request->name[$i]=>[filled($request->campos[$a]),
+    //                                          filled($request->campos[$b]),
+    //                                          filled($request->campos[$c])]);
+    //         $a = $a+3;
+    //         $b = $b+3;
+    //         $c = $c+3;
+    //     }**/
+    //     $var = filled($request->all());
+    //     $array = array([$request->response[0]=>filled($request->data[0]),
+    //     $request->response[1]=>filled($request->data[1]),
+    //     $request->response[2]=>filled($request->data[2])]);
 
-        //return response()->json(count($newarray));
-    }
+    //     return response()->json(count($newarray));
+    // }
 
     public function Evidence(Request $request){
         // dd( $request->items);

@@ -53,29 +53,29 @@
                         @include('__parcials.Parcial-seccion5')
                     </div> --}}
 
-                    <div class="row mt-3" id="secction-006">
+                    {{-- <div class="row mt-3" id="secction-006">
                         @include('__parcials.Parcial-seccion6')
-                    </div>
+                    </div> --}}
 
-                    {{--<div class="row mt-3" id="secction-007">
+                    {{-- <div class="row mt-3" id="secction-007">
                         @include('__parcials.Parcial-seccion7')
-                    </div>
+                    </div> --}}
 
-                    <div class="row mt-3" id="secction-008">
+                    {{-- <div class="row mt-3" id="secction-008">
                         @include('__parcials.Parcial-seccion8')
-                    </div>
+                    </div> --}}
 
-                    <div class="row mt-3" id="secction-009">
+                    {{-- <div class="row mt-3" id="secction-009">
                         @include('__parcials.Parcial-seccion9')
-                    </div>
+                    </div> --}}
 
-                    <div class="row mt-3" id="secction-010">
+                    {{-- <div class="row mt-3" id="secction-010">
                         @include('__parcials.Parcial-seccion10')
-                    </div>
+                    </div> --}}
 
                     <div class="row mt-3" id="secction-011">
                         @include('__parcials.Parcial-seccion11')
-                    </div> --}}
+                    </div>
                 </div>
             </div>
         </div>

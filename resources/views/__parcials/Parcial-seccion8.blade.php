@@ -10,7 +10,7 @@
             <div class="text-left" style="margin-right: 55px;">
                 <h4 class="">8.1.1 Condicion general de contactor reversible </h4>
             </div>
-            <select class="form-control col-2 form-control-sm  mr-3" name="8.1.1">
+            <select class="form-control col-2 form-control-sm mr-3 validator7" id="8_1_1" title="8.1.1 Condicion general de contactor reversible" name="8.1.1">
                 <option value="0" selected='selected'>Selecciona</option>
                 <option value="1">CORRECTO</option>
                 <option value="2">INCORRECTO</option>
@@ -27,7 +27,7 @@
             <div class="text-left" style="margin-right: 27px;">
                 <h4 class="">8.1.2 Condicion general de contactor 2da velocidad </h4>
             </div>
-            <select class="form-control col-2 form-control-sm  mr-3" name="8.1.2">
+            <select class="form-control col-2 form-control-sm mr-3 validator7" id="8_1_2" title="8.1.2 Condicion general de contactor 2da velocidad" name="8.1.2">
                 <option value="0" selected='selected'>Selecciona</option>
                 <option value="1">CORRECTO</option>
                 <option value="2">INCORRECTO</option>
@@ -44,7 +44,7 @@
             <div class="text-left" style="margin-right: 65px;">
                 <h4 class="">8.1.3 Condicion general de contactor de freno </h4>
             </div>
-            <select class="form-control col-2 form-control-sm  mr-3" name="8.1.3">
+            <select class="form-control col-2 form-control-sm mr-3 validator7" id="8_1_3" title="8.1.3 Condicion general de contactor de freno"  name="8.1.3">
                 <option value="0" selected='selected'>Selecciona</option>
                 <option value="1">CORRECTO</option>
                 <option value="2">INCORRECTO</option>
@@ -61,7 +61,7 @@
             <div class="text-left" style="margin-right: 117px;">
                 <h4 class="">8.1.4 Condicion general de rectificador </h4>
             </div>
-            <select class="form-control col-2 form-control-sm  mr-3" name="8.1.4">
+            <select class="form-control col-2 form-control-sm  mr-3 validator7" id="8_1_4" title="8.1.4 Condicion general de rectificador" name="8.1.4">
                 <option value="0" selected='selected'>Selecciona</option>
                 <option value="1">CORRECTO</option>
                 <option value="2">INCORRECTO</option>
@@ -85,7 +85,7 @@
             <div class="text-left" style="margin-right: 20px;">
                 <h4 class="">8.2.1 Condición general del variador </h4>
             </div>
-            <select class="form-control col-2 form-control-sm  mr-3" name="8.2.1">
+            <select class="form-control col-2 form-control-sm mr-3 validator7" id="8_2_1" title="8.2.1 Condición general del variador" name="8.2.1">
                 <option value="0" selected='selected'>Selecciona</option>
                 <option value="1">CORRECTO</option>
                 <option value="2">INCORRECTO</option>
@@ -102,7 +102,7 @@
             <div class="text-left" style="margin-right: 63px;">
                 <h4 class="">8.2.2 LED de alarmas apagado </h4>
             </div>
-            <select class="form-control col-2 form-control-sm  mr-3" name="8.2.2">
+            <select class="form-control col-2 form-control-sm  mr-3 validator7" id="8_2_2" title="8.2.2 LED de alarmas apagado"  name="8.2.2">
                 <option value="0" selected='selected'>Selecciona</option>
                 <option value="1">CORRECTO</option>
                 <option value="2">INCORRECTO</option>
@@ -119,7 +119,7 @@
             <div class="text-left" style="margin-right: 158px;">
                 <h4 class="">8.2.3 Conexiones </h4>
             </div>
-            <select class="form-control col-2 form-control-sm  mr-3" name="8.2.3">
+            <select class="form-control col-2 form-control-sm mr-3 validator7" id="8_2_3" title="8.2.3 Conexiones" name="8.2.3">
                 <option value="0" selected='selected'>Selecciona</option>
                 <option value="1">CORRECTO</option>
                 <option value="2">INCORRECTO</option>
@@ -136,7 +136,7 @@
             <div class="text-left" style="margin-right: 95px;">
                 <h4 class="">8.2.4 Historial de alarmas </h4>
             </div>
-            <select class="form-control col-2 form-control-sm  mr-3" name="8.2.4">
+            <select class="form-control col-2 form-control-sm mr-3 validator7" id="8_2_4" title="8.2.4 Historial de alarmas" name="8.2.4">
                 <option value="0" selected='selected'>Selecciona</option>
                 <option value="1">CORRECTO</option>
                 <option value="2">INCORRECTO</option>
@@ -158,7 +158,7 @@
             <div class="text-left" style="margin-right: 23px;">
                 <h4 class="">8.3.1 Condición general del variador</h4>
             </div>
-            <select class="form-control col-2 form-control-sm  mr-3" name="8.3.1">
+            <select class="form-control col-2 form-control-sm  mr-3 validator7" id="8_3_1" title="8.3.1 Condición general del variador" name="8.3.1">
                 <option value="0" selected='selected'>Selecciona</option>
                 <option value="1">CORRECTO</option>
                 <option value="2">INCORRECTO</option>
@@ -175,7 +175,7 @@
             <div class="text-left" style="margin-right: 65px;">
                 <h4 class="">8.3.2 LED de alarmas apagado </h4>
             </div>
-            <select class="form-control col-2 form-control-sm  mr-3" name="8.3.2">
+            <select class="form-control col-2 form-control-sm mr-3 validator7" id="8_3_2" title="8.3.2 LED de alarmas apagado" name="8.3.2">
                 <option value="0" selected='selected'>Selecciona</option>
                 <option value="1">CORRECTO</option>
                 <option value="2">INCORRECTO</option>
@@ -192,7 +192,7 @@
             <div class="text-left" style="margin-right: 160px;">
                 <h4 class="">8.3.3 Conexiones</h4>
             </div>
-            <select class="form-control col-2 form-control-sm  mr-3" name="8.3.3">
+            <select class="form-control col-2 form-control-sm mr-3 validator7" id="8_3_3" title="8.3.3 Conexiones"  name="8.3.3">
                 <option value="0" selected='selected'>Selecciona</option>
                 <option value="1">CORRECTO</option>
                 <option value="2">INCORRECTO</option>
@@ -209,7 +209,7 @@
             <div class="text-left" style="margin-right: 100px;">
                 <h4 class="">8.3.4 Historial de alarmas </h4>
             </div>
-            <select class="form-control col-2 form-control-sm  mr-3" name="8.3.4">
+            <select class="form-control col-2 form-control-sm  mr-3 validator7" id="8_3_4" title="8.3.4 Historial de alarmas"  name="8.3.4">
                 <option value="0" selected='selected'>Selecciona</option>
                 <option value="1">CORRECTO</option>
                 <option value="2">INCORRECTO</option>
@@ -232,7 +232,7 @@
             <div class="text-left" style="margin-right: 137px;">
                 <h4 class="">8.4.1 Condición general</h4>
             </div>
-            <select class="form-control col-2 form-control-sm  mr-3" name="8.4.1">
+            <select class="form-control col-2 form-control-sm mr-3 validator7" id="8_4_1" title="8.4.1 Condición general" name="8.4.1">
                 <option value="0" selected='selected'>Selecciona</option>
                 <option value="1">CORRECTO</option>
                 <option value="2">INCORRECTO</option>
@@ -249,7 +249,7 @@
             <div class="text-left" style="margin-right: 27px;">
                 <h4 class="">8.4.2 Valor real del aparejo en pantalla </h4>
             </div>
-            <select class="form-control col-2 form-control-sm  mr-3" name="8.4.2">
+            <select class="form-control col-2 form-control-sm mr-3 validator7" id="8_4_2" title="8.4.2 Valor real del aparejo en pantalla" name="8.4.2">
                 <option value="0" selected='selected'>Selecciona</option>
                 <option value="1">CORRECTO</option>
                 <option value="2">INCORRECTO</option>
@@ -267,7 +267,7 @@
             <div class="text-left" style="margin-right: 87px;">
                 <h4 class="">8.4.3 LED de alarmas apagado</h4>
             </div>
-            <select class="form-control col-2 form-control-sm  mr-3" name="8.4.3">
+            <select class="form-control col-2 form-control-sm mr-3 validator7" id="8_4_3" title="8.4.3 LED de alarmas apagado" name="8.4.3">
                 <option value="0" selected='selected'>Selecciona</option>
                 <option value="1">CORRECTO</option>
                 <option value="2">INCORRECTO</option>
@@ -284,7 +284,7 @@
             <div class="text-left" style="margin-right: 180px;">
                 <h4 class="">8.4.4 Conexiones</h4>
             </div>
-            <select class="form-control col-2 form-control-sm  mr-3" name="8.4.4">
+            <select class="form-control col-2 form-control-sm  mr-3 validator7" id="8_4_4" title="8.4.4 Conexiones"  name="8.4.4">
                 <option value="0" selected='selected'>Selecciona</option>
                 <option value="1">CORRECTO</option>
                 <option value="2">INCORRECTO</option>
@@ -297,6 +297,6 @@
             </button>
         </div>
         <input type="button" name="previous" class="previous btn mt-3 btn-primary txt_secction" value="Anterior" />
-        <button type="submit" name="password" class="next btn mt-3 btn-sacar">Guardar</button>
+        <button type="submit" name="password" class="btn mt-3 btn-sacar">Guardar</button>
     </fieldset>
 </form>

@@ -10,7 +10,7 @@
             <div class="text-left" style="margin-right: 205px;">
                 <h4 class="">11.1.1 Recorrido del puente </h4>
             </div>
-            <select class="form-control col-2 form-control-sm  mr-3" name="11.1.1">
+            <select class="form-control col-2 form-control-sm mr-3 validator10" id="11_1_1" title="11.1.1 Recorrido del puente" name="11.1.1">
                 <option value="0" selected='selected'>Selecciona</option>
                 <option value="1">CORRECTO</option>
                 <option value="2">INCORRECTO</option>
@@ -27,7 +27,7 @@
             <div class="text-left" style="margin-right: 215px;">
                 <h4 class="">11.1.2 Frenado del puente </h4>
             </div>
-            <select class="form-control col-2 form-control-sm  mr-3" name="11.1.2">
+            <select class="form-control col-2 form-control-sm  mr-3 validator10" id="11_1_2" title="11.1.1 Recorrido del puente"  name="11.1.2">
                 <option value="0" selected='selected'>Selecciona</option>
                 <option value="1">CORRECTO</option>
                 <option value="2">INCORRECTO</option>
@@ -44,7 +44,7 @@
             <div class="text-left" style="margin-right: 17px;">
                 <h4 class="">11.1.3 Límite de fin de carrera/anticolisión del puente </h4>
             </div>
-            <select class="form-control col-2 form-control-sm  mr-3" name="11.1.3">
+            <select class="form-control col-2 form-control-sm mr-3 validator10" id="11_1_3" title="11.1.3 Límite de fin de carrera/anticolisión del puente" name="11.1.3">
                 <option value="0" selected='selected'>Selecciona</option>
                 <option value="1">CORRECTO</option>
                 <option value="2">INCORRECTO</option>
@@ -67,7 +67,7 @@
             <div class="text-left" style="margin-right: 200px;">
                 <h4 class="">11.2.1 Recorrido del carro</h4>
             </div>
-            <select class="form-control col-2 form-control-sm  mr-3" name="11.2.1">
+            <select class="form-control col-2 form-control-sm mr-3 validator10" id="11_2_1" title="11.2.1 Recorrido del carro" name="11.2.1">
                 <option value="0" selected='selected'>Selecciona</option>
                 <option value="1">CORRECTO</option>
                 <option value="2">INCORRECTO</option>
@@ -84,7 +84,7 @@
             <div class="text-left" style="margin-right: 212px;">
                 <h4 class="">11.2.2 Frenado del carro</h4>
             </div>
-            <select class="form-control col-2 form-control-sm  mr-3" name="11.2.2">
+            <select class="form-control col-2 form-control-sm mr-3 validator10" id="11_2_2" title="11.2.2 Frenado del carro" name="11.2.2">
                 <option value="0" selected='selected'>Selecciona</option>
                 <option value="1">CORRECTO</option>
                 <option value="2">INCORRECTO</option>
@@ -101,7 +101,7 @@
             <div class="text-left" style="margin-right: 13px;">
                 <h4 class="">11.2.3 Limite de fin de carrera/anticolisión del carro</h4>
             </div>
-            <select class="form-control col-2 form-control-sm  mr-3" name="11.2.3">
+            <select class="form-control col-2 form-control-sm  mr-3 validator10" id="11_2_3" title="11.2.3 Limite de fin de carrera/anticolisión del carro" name="11.2.3">
                 <option value="0" selected='selected'>Selecciona</option>
                 <option value="1">CORRECTO</option>
                 <option value="2">INCORRECTO</option>
@@ -123,7 +123,7 @@
             <div class="text-left" style="margin-right: 173px;">
                 <h4 class="">11.3.1 Recorrido de izaje</h4>
             </div>
-            <select class="form-control col-2 form-control-sm  mr-3" name="11.3.1">
+            <select class="form-control col-2 form-control-sm mr-3 validator10" id="11_3_1" title="11.2.3 Limite de fin de carrera/anticolisión del carro" name="11.3.1">
                 <option value="0" selected='selected'>Selecciona</option>
                 <option value="1">CORRECTO</option>
                 <option value="2">INCORRECTO</option>
@@ -140,7 +140,7 @@
             <div class="text-left" style="margin-right: 183px;">
                 <h4 class="">11.3.2 Frenado de izaje </h4>
             </div>
-            <select class="form-control col-2 form-control-sm  mr-3" name="11.3.2">
+            <select class="form-control col-2 form-control-sm  mr-3 validator10" id="11_3_2" title="11.3.2 Frenado de izaje" name="11.3.2">
                 <option value="0" selected='selected'>Selecciona</option>
                 <option value="1">CORRECTO</option>
                 <option value="2">INCORRECTO</option>
@@ -157,7 +157,7 @@
             <div class="text-left" style="margin-right: 55px;">
                 <h4 class="">11.3.3 Movimiento del bloque de gancho</h4>
             </div>
-            <select class="form-control col-2 form-control-sm  mr-3" name="11.3.3">
+            <select class="form-control col-2 form-control-sm  mr-3 validator10" id="11_3_3" title="11.3.3 Movimiento del bloque de gancho" name="11.3.3">
                 <option value="0" selected='selected'>Selecciona</option>
                 <option value="1">CORRECTO</option>
                 <option value="2">INCORRECTO</option>
@@ -174,7 +174,7 @@
             <div class="text-left" style="margin-right: 93px;">
                 <h4 class="">11.3.4 Límite superior del polipasto</h4>
             </div>
-            <select class="form-control col-2 form-control-sm  mr-3" name="11.3.4">
+            <select class="form-control col-2 form-control-sm mr-3 validator10" id="11_3_4" title="11.3.4 Límite superior del polipasto" name="11.3.4">
                 <option value="0" selected='selected'>Selecciona</option>
                 <option value="1">CORRECTO</option>
                 <option value="2">INCORRECTO</option>
@@ -191,7 +191,7 @@
             <div class="text-left" style="margin-right: 15px;">
                 <h4 class="">11.3.5 Límites de desaceleración del polipasto </h4>
             </div>
-            <select class="form-control col-2 form-control-sm  mr-3" name="11.3.5">
+            <select class="form-control col-2 form-control-sm  mr-3 validator10" id="11_3_5" title="11.3.5 Límites de desaceleración del polipasto" name="11.3.5">
                 <option value="0" selected='selected'>Selecciona</option>
                 <option value="1">CORRECTO</option>
                 <option value="2">INCORRECTO</option>
@@ -213,7 +213,7 @@
             <div class="text-left" style="margin-right: 57px;">
                 <h4 class="">11.3.6 Límite inferior del polipasto</h4>
             </div>
-            <select class="form-control col-2 form-control-sm  mr-3" name="11.3.6">
+            <select class="form-control col-2 form-control-sm mr-3 validator10" id="11_3_6" title="11.3.6 Límite inferior del polipasto" name="11.3.6">
                 <option value="0" selected='selected'>Selecciona</option>
                 <option value="1">CORRECTO</option>
                 <option value="2">INCORRECTO</option>
@@ -230,7 +230,7 @@
             <div class="text-left" style="margin-right: 48px;">
                 <h4 class="">11.3.7 Ausencia de ruidos inusuales </h4>
             </div>
-            <select class="form-control col-2 form-control-sm  mr-3" name="11.3.7">
+            <select class="form-control col-2 form-control-sm mr-3 validator10" id="11_3_7" title="11.3.7 Ausencia de ruidos inusuales" name="11.3.7">
                 <option value="0" selected='selected'>Selecciona</option>
                 <option value="1">CORRECTO</option>
                 <option value="2">INCORRECTO</option>
@@ -247,7 +247,7 @@
             <div class="text-left" style="margin-right: 38px;">
                 <h4 class="">11.4.8 Paro de emergencia (Accionar)</h4>
             </div>
-            <select class="form-control col-2 form-control-sm  mr-3" name="11.4.8">
+            <select class="form-control col-2 form-control-sm mr-3 validator10" id="11_3_8" title="11.4.8 Paro de emergencia (Accionar)" name="11.4.8">
                 <option value="0"selected='selected'>Selecciona</option>
                 <option value="1">CORRECTO</option>
                 <option value="2">INCORRECTO</option>
@@ -260,6 +260,6 @@
             </button>
         </div>
         <input type="button" name="previous" class="previous btn mt-3 btn-primary txt_secction" value="Anterior" />
-        <button type="submit" name="password" class="next btn mt-3 btn-sacar">Guardar</button>
+        <button type="submit" name="password" class="btn mt-3 btn-sacar">Guardar</button>
     </fieldset>
 </form>

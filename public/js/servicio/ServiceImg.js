@@ -155,6 +155,121 @@ function Validator6(){
     return EvaluationErrors(Errors);
 }
 
+//Validacion seccion 7
+function Validator7(){
+    var Errors =  [];
+    var elementos = $(".validator6").map(function(){
+        return $(this).attr('id');
+    }).get();
+
+    for(i = 0;i < elementos.length; ++i){
+        var status;
+        var value = $('#'+elementos[i]).val();
+        if(value != 0){
+            $('#'+elementos[i]).removeClass('is-invalid');
+            $("#"+elementos[i]).addClass('is-valid');
+        }
+        else{
+            Errors.push(elementos[i]);
+            $("#"+elementos[i]).removeClass('is-valid');
+            $("#"+elementos[i]).addClass('is-invalid');
+        }
+    }
+    return EvaluationErrors(Errors);
+}
+
+//Validacion seccion 8
+function Validator8(){
+    var Errors =  [];
+    var elementos = $(".validator7").map(function(){
+        return $(this).attr('id');
+    }).get();
+
+    for(i = 0;i < elementos.length; ++i){
+        var status;
+        var value = $('#'+elementos[i]).val();
+        if(value != 0){
+            $('#'+elementos[i]).removeClass('is-invalid');
+            $("#"+elementos[i]).addClass('is-valid');
+        }
+        else{
+            Errors.push(elementos[i]);
+            $("#"+elementos[i]).removeClass('is-valid');
+            $("#"+elementos[i]).addClass('is-invalid');
+        }
+    }
+    return EvaluationErrors(Errors);
+}
+
+//Validacion seccion 9
+function Validator9(){
+    var Errors =  [];
+    var elementos = $(".validator8").map(function(){
+        return $(this).attr('id');
+    }).get();
+
+    for(i = 0;i < elementos.length; ++i){
+        var status;
+        var value = $('#'+elementos[i]).val();
+        if(value != 0){
+            $('#'+elementos[i]).removeClass('is-invalid');
+            $("#"+elementos[i]).addClass('is-valid');
+        }
+        else{
+            Errors.push(elementos[i]);
+            $("#"+elementos[i]).removeClass('is-valid');
+            $("#"+elementos[i]).addClass('is-invalid');
+        }
+    }
+    return EvaluationErrors(Errors);
+}
+
+//Validacion seccion 10
+function Validator10(){
+    var Errors =  [];
+    var elementos = $(".validator9").map(function(){
+        return $(this).attr('id');
+    }).get();
+
+    for(i = 0;i < elementos.length; ++i){
+        var status;
+        var value = $('#'+elementos[i]).val();
+        if(value != 0){
+            $('#'+elementos[i]).removeClass('is-invalid');
+            $("#"+elementos[i]).addClass('is-valid');
+        }
+        else{
+            Errors.push(elementos[i]);
+            $("#"+elementos[i]).removeClass('is-valid');
+            $("#"+elementos[i]).addClass('is-invalid');
+        }
+    }
+    return EvaluationErrors(Errors);
+}
+
+//Validacion seccion 11
+function Validator11(){
+    var Errors =  [];
+    var elementos = $(".validator10").map(function(){
+        return $(this).attr('id');
+    }).get();
+
+    for(i = 0;i < elementos.length; ++i){
+        var status;
+        var value = $('#'+elementos[i]).val();
+        if(value != 0){
+            $('#'+elementos[i]).removeClass('is-invalid');
+            $("#"+elementos[i]).addClass('is-valid');
+        }
+        else{
+            Errors.push(elementos[i]);
+            $("#"+elementos[i]).removeClass('is-valid');
+            $("#"+elementos[i]).addClass('is-invalid');
+        }
+    }
+    return EvaluationErrors(Errors);
+}
+
 function savesection(){
     $.ajax({
         type: $(this).attr("method"),
@@ -193,6 +308,58 @@ function teams_customer(id){
         }
     });
     return data;
+}
+
+function Equipos(val) {
+    var response;
+    $.ajax({
+        async: false,
+        url: "NuevoRegistro/business/" + val + "",
+        type: "GET",
+        dataType: "json",
+        success: function (data) {
+            response = data;
+        },
+    });
+    return response;
+}
+
+function Empresas(val) {
+    var response;
+    $.ajax({
+        async: false,
+        url: "teams/dataClientes/" + val + "",
+        type: "GET",
+        dataType: "json",
+        success: function (data) {
+            response = data;
+        },
+    });
+    return response;
+}
+
+
+function send_customers(){
+    var route = $("#new-customers").data("uri");
+    $.ajax({
+        url: route,
+        type: "POST",
+        headers: {
+            "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content"),
+        },
+        dataType: "json",
+        data: $("#new-customers").serialize(),
+        success: function (data) {
+            //console.log(data);
+            if (data.status === 1) {
+                $('#modal-clientes').modal('hide');
+                $("#new-customers")[0].reset();
+                success();
+            } else {
+                console.log("Error");
+            }
+        },
+    });
 }
 
 function load_equipos(){
@@ -285,6 +452,25 @@ function items(id){
         }
     });
     return data;
+}
+
+function show_erros_Form(data){
+    toastr.error(
+        'Hay algunos errores de validación, corrígelos.',
+        'Error de validación',
+        {
+            timeOut: 4000,
+            positionClass: "toast-top-full-width"
+        }
+    );
+
+    var response = data.responseText;
+    var jsonData = JSON.parse(response);
+        console.log(jsonData);
+    // $('#error_Marca').remove();
+    // if(jsonData.errors.Marca_cpu  != null){
+    //     $('#error_Marca_Grua').append("<font color='#BF4949' size='2' id='error_cpu'>" +jsonData.errors.MarcaGrua+ "</font>");
+    // }
 }
 
 

@@ -10,7 +10,7 @@
             <div class="text-left" style="margin-right: 103px;">
                 <h4 class="">7.1.1 Placa de amarre soldadas </h4>
             </div>
-            <select class="form-control col-2 form-control-sm  mr-3" name="7.1.1">
+            <select class="form-control col-2 form-control-sm  mr-3 validator6" id="7_1_1" title="7.1.1 Placa de amarre soldadas" name="7.1.1">
                 <option value="0" selected='selected'>Selecciona</option>
                 <option value="1">CORRECTO</option>
                 <option value="2">INCORRECTO</option>
@@ -30,7 +30,7 @@
             <div class="text-left" style="margin-right: 27px;">
                 <h4 class="">7.1.2 Uniones atornilladas (marca testigo) </h4>
             </div>
-            <select class="form-control col-2 form-control-sm  mr-3" name="7.1.2">
+            <select class="form-control col-2 form-control-sm  mr-3 validator6" id="7_1_2" title="7.1.2 Uniones atornilladas (marca testigo)" name="7.1.2">
                 <option value="0" selected='selected'>Selecciona</option>
                 <option value="1">CORRECTO</option>
                 <option value="2">INCORRECTO</option>
@@ -57,7 +57,7 @@
             <div class="text-left" style="margin-right: 109px;">
                 <h4 class="">7.2.1 Condición general </h4>
             </div>
-            <select class="form-control col-2 form-control-sm  mr-3" name="7.2.1">
+            <select class="form-control col-2 form-control-sm  mr-3 validator6" id="7_2_1" title="7.2.1 Condición general"  name="7.2.1">
                 <option value="0" selected='selected'>Selecciona</option>
                 <option value="1">CORRECTO</option>
                 <option value="2">INCORRECTO</option>
@@ -77,7 +77,7 @@
             <div class="text-left" style="margin-right: 19px;">
                 <h4 class="">7.2.2 Alineación de los rieles (visual) </h4>
             </div>
-            <select class="form-control col-2 form-control-sm  mr-3" name="7.2.2">
+            <select class="form-control col-2 form-control-sm  mr-3 validator6" id="7_2_2" title="7.2.2 Alineación de los rieles (visual)" name="7.2.2">
                 <option value="0" selected='selected'>Selecciona</option>
                 <option value="1">CORRECTO</option>
                 <option value="2">INCORRECTO</option>
@@ -97,7 +97,7 @@
             <div class="text-left" style="margin-right: 90px;">
                 <h4 class="">7.2.3 Uniones de los rieles </h4>
             </div>
-            <select class="form-control col-2 form-control-sm  mr-3" name="7.2.3">
+            <select class="form-control col-2 form-control-sm  mr-3 validator6" id="7_2_3" title="7.2.3 Uniones de los rieles" name="7.2.3">
                 <option value="0" selected='selected'>Selecciona</option>
                 <option value="1">CORRECTO</option>
                 <option value="2">INCORRECTO</option>
@@ -124,7 +124,7 @@
             <div class="text-left" style="margin-right: 63px;">
                 <h4 class="">7.3.1 Condición de los topes de goma</h4>
             </div>
-            <select class="form-control col-2 form-control-sm  mr-3" name="7.3.1">
+            <select class="form-control col-2 form-control-sm mr-3 validator6" id="7_3_1" title="7.3.1 Condición de los topes de goma" name="7.3.1">
                 <option value="0" selected='selected'>Selecciona</option>
                 <option value="1">CORRECTO</option>
                 <option value="2">INCORRECTO</option>
@@ -141,7 +141,7 @@
             <div class="text-left" style="margin-right: 30px;">
                 <h4 class="">7.3.2 Condición de los topes estructurales </h4>
             </div>
-            <select class="form-control col-2 form-control-sm  mr-3" name="7.3.2">
+            <select class="form-control col-2 form-control-sm mr-3 validator6" id="7_3_2" title="7.3.2 Condición de los topes estructurales" name="7.3.2">
                 <option value="0" selected='selected'>Selecciona</option>
                 <option value="1">CORRECTO</option>
                 <option value="2">INCORRECTO</option>
@@ -164,7 +164,7 @@
             <div class="text-left" style="margin-right: 87px;">
                 <h4 class="">7.4.1 Condicion general de ruedas</h4>
             </div>
-            <select class="form-control col-2 form-control-sm  mr-3" name="7.4.1">
+            <select class="form-control col-2 form-control-sm mr-3 validator6" id="7_4_1" title="7.4.1 Condicion general de ruedas" name="7.4.1">
                 <option value="0" selected='selected'>Selecciona</option>
                 <option value="1">CORRECTO</option>
                 <option value="2">INCORRECTO</option>
@@ -181,7 +181,7 @@
             <div class="text-left" style="margin-right: 162px;">
                 <h4 class="">7.4.2 Alineación (visual) </h4>
             </div>
-            <select class="form-control col-2 form-control-sm  mr-3" name="7.4.2">
+            <select class="form-control col-2 form-control-sm mr-3 validator6" id="7_4_2" title="7.4.2 Alineación (visual)" name="7.4.2">
                 <option value="0" selected='selected'>Selecciona</option>
                 <option value="1">CORRECTO</option>
                 <option value="2">INCORRECTO</option>
@@ -198,7 +198,7 @@
             <div class="text-left" style="margin-right: 27px;">
                 <h4 class="">7.4.3 Estado de rodamientos (Vibraciones) </h4>
             </div>
-            <select class="form-control col-2 form-control-sm  mr-3" name="7.4.3">
+            <select class="form-control col-2 form-control-sm  mr-3 validator6" id="7_4_3" title="7.4.3 Estado de rodamientos (Vibraciones)" name="7.4.3">
                 <option value="0" selected='selected'>Selecciona</option>
                 <option value="1">CORRECTO</option>
                 <option value="2">INCORRECTO</option>
@@ -220,7 +220,7 @@
             <div class="text-left" style="margin-right: 22px;">
                 <h4 class="">7.5.1 Comportamiento (Vibración/Ruido) </h4>
             </div>
-            <select class="form-control col-2 form-control-sm  mr-3" name="7.5.1">
+            <select class="form-control col-2 form-control-sm mr-3 validator6" id="7_5_1" title="7.5.1 Comportamiento (Vibración/Ruido)" name="7.5.1">
                 <option value="0" selected='selected'>Selecciona</option>
                 <option value="1">CORRECTO</option>
                 <option value="2">INCORRECTO</option>
@@ -237,7 +237,7 @@
             <div class="text-left" style="margin-right: 58px;">
                 <h4 class="">7.5.2 Funcionamiento de ventilador </h4>
             </div>
-            <select class="form-control col-2 form-control-sm  mr-3" name="7.5.2">
+            <select class="form-control col-2 form-control-sm mr-3 validator6" id="7_5_2" title="7.5.2 Funcionamiento de ventilador" name="7.5.2">
                 <option value="0" selected='selected'>Selecciona</option>
                 <option value="1">CORRECTO</option>
                 <option value="2">INCORRECTO</option>
@@ -254,7 +254,7 @@
             <div class="text-left" style="margin-right: 110px;">
                 <h4 class="">7.5.3 Fijación de los motores </h4>
             </div>
-            <select class="form-control col-2 form-control-sm  mr-3" name="7.5.3">
+            <select class="form-control col-2 form-control-sm mr-3 validator6" id="7_5_3" title="7.5.3 Fijación de los motores" name="7.5.3">
                 <option value="0" selected='selected'>Selecciona</option>
                 <option value="1">CORRECTO</option>
                 <option value="2">INCORRECTO</option>
@@ -271,7 +271,7 @@
             <div class="text-left" style="margin-right: 223px;">
                 <h4 class="">7.5.4 Guarda </h4>
             </div>
-            <select class="form-control col-2 form-control-sm  mr-3" name="7.5.4">
+            <select class="form-control col-2 form-control-sm mr-3 validator6" id="7_5_4" title="7.5.4 Guarda" name="7.5.4">
                 <option value="0" selected='selected'>Selecciona</option>
                 <option value="1">CORRECTO</option>
                 <option value="2">INCORRECTO</option>
@@ -288,7 +288,7 @@
             <div class="text-left" style="margin-right: 192px;">
                 <h4 class="">7.5.5 Conexiones </h4>
             </div>
-            <select class="form-control col-2 form-control-sm  mr-3" name="7.5.5">
+            <select class="form-control col-2 form-control-sm mr-3 validator6" id="7_5_5" title="7.5.5 Conexiones" name="7.5.5">
                 <option value="0" selected='selected'>Selecciona</option>
                 <option value="1">CORRECTO</option>
                 <option value="2">INCORRECTO</option>
@@ -305,7 +305,7 @@
             <div class="text-left" style="margin-right: 147px;">
                 <h4 class="">7.5.6 Condición general </h4>
             </div>
-            <select class="form-control col-2 form-control-sm  mr-3" name="7.5.6">
+            <select class="form-control col-2 form-control-sm mr-3 validator6" id="7_5_6" title="7.5.6 Condición general" name="7.5.6">
                 <option value="0" selected='selected'>Selecciona</option>
                 <option value="1">CORRECTO</option>
                 <option value="2">INCORRECTO</option>
@@ -327,7 +327,7 @@
             <div class="text-left" style="margin-right: 95px;">
                 <h4 class="">7.6.1 Medición de entrehierro</h4>
             </div>
-            <select class="form-control col-2 form-control-sm  mr-3" name="7.6.1">
+            <select class="form-control col-2 form-control-sm mr-3 validator6" id="7_6_1" title="7.6.1 Medición de entrehierro"  name="7.6.1">
                 <option value="0" selected='selected'>Selecciona</option>
                 <option value="1">CORRECTO</option>
                 <option value="2">INCORRECTO</option>
@@ -345,7 +345,7 @@
             <div class="text-left" style="margin-right: 70px;">
                 <h4 class="">7.6.2 Medición del disco de freno </h4>
             </div>
-            <select class="form-control col-2 form-control-sm  mr-3" name="7.6.2">
+            <select class="form-control col-2 form-control-sm mr-3 validator6" id="7_6_2" title="7.6.2 Medición del disco de freno" name="7.6.2">
                 <option value="0" selected='selected'>Selecciona</option>
                 <option value="1">CORRECTO</option>
                 <option value="2">INCORRECTO</option>
@@ -363,7 +363,7 @@
             <div class="text-left" style="margin-right: 7px;">
                 <h4 class="">7.6.3 Condicion dientes del disco de freno </h4>
             </div>
-            <select class="form-control col-2 form-control-sm  mr-3" name="7.6.3">
+            <select class="form-control col-2 form-control-sm mr-3 validator6" id="7_6_3" title="7.6.3 Condicion dientes del disco de freno" name="7.6.3">
                 <option value="0" selected='selected'>Selecciona</option>
                 <option value="1">CORRECTO</option>
                 <option value="2">INCORRECTO</option>
@@ -376,6 +376,6 @@
             </button>
         </div>
         <input type="button" name="previous" class="previous btn mt-3 btn-primary txt_secction" value="Anterior" />
-        <button type="submit" name="password" class="next btn mt-3 btn-sacar">Guardar</button>
+        <button type="submit" name="password" class="btn mt-3 btn-sacar">Guardar</button>
     </fieldset>
 </form>
